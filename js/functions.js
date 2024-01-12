@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const previews_arr = [
     [
-        `\n<div class="preview" onClick="window.location='projects/#myrssalgo'">
+        `\n<div class="preview" onClick="window.location='projects/#litprompts'">
         <img src="images/myrssalgo.png" class="preview_img"/>
         <b>Make AI work for you</b>
         <p>This extenion...</p></div>`,
@@ -56,7 +56,8 @@ function load_previews() {
     let html = "<h3>Random Projects <a href='javascript:load_previews();' style='text-decoration:none;'>⟳</a></h3>"
     html += previews_arr[0][Math.floor(Math.random() * (previews_arr[0].length))]
     html += previews_arr[1][Math.floor(Math.random() * (previews_arr[1].length))]
-    document.getElementById('previews').innerHTML = html ;
+    html += `\n<div class="button_row"><a href="projects" class="button">See all projects</a></div>`;
+    //document.getElementById('previews').innerHTML = html ;
 }
 
 //document.addEventListener('DOMContentLoaded', function () {
