@@ -14,7 +14,9 @@ function run_search() {
     let query = document.getElementById('query').value;
     document.getElementById('query').value = "";
     document.getElementById('query').style.display='none';
-    window.open('https://www.google.com/search?q='+query+'+site:sadlynothavocdinosaur.com');
+    if (confirm(`Until I get around to building a custom search tool I'm using Google Site Search. FYI, they're still in the process of indexing this site. So don't expext much. That being said, should we contine?`) == true) {
+        window.open('https://www.google.com/search?q='+query+'+site:sadlynothavocdinosaur.com');
+    }
 }
 
 function submitSearch(event) {
