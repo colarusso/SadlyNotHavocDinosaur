@@ -208,16 +208,16 @@ a.title_home {
 }
 
 a.anchor, a.anchor:focus {
-		display:block;
-		float:right;
-		margin-left:30px;
-		width:22px;
-		height:16px;
-		margin-bottom: 10px;
-		background-image: url("../images/link.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		outline: none;
+	display:block;
+	float:right;
+	margin-left:30px;
+	width:22px;
+	height:16px;
+	margin-bottom: 10px;
+	background-image: url("../images/link.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	outline: none;
 }
 
 hr {
