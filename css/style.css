@@ -175,7 +175,6 @@ a.title_home {
 	width:100%;
 }
 
-
 .featured_img {
 	float:left;
 	padding:0;
@@ -191,7 +190,6 @@ a.title_home {
 	max-width:450px;
 	box-sizing: border-box;
 }
-
 
 .caption {
 	padding:15px 5px 8px 5px;
@@ -219,6 +217,13 @@ a.anchor {
 		background-image: url("../images/link.png");
 		background-repeat: no-repeat;
 		background-position: center;
+}
+
+hr {
+	border: solid 0px; 
+	border-bottom: solid 1px #a9a9a9;
+	margin: 15px 0 15px 0;
+	float:left;width:100%;
 }
 
 .listing{
@@ -271,11 +276,6 @@ a.anchor {
 	border-radius: 5px;
 	border: 1px solid #a5a5a5;
 }
-
-.right_links {
-	text-align:right;
-}
-
 
 .footnotes {
 	font-size: 15px;
