@@ -166,7 +166,7 @@
   </p>
 
   <div class="button_row">
-    <a href="projects" class="button">Download prompt file</a>
+    <a href="javascript:void();" onClick="saveTextAsFile(JSON.stringify(prompts,null,2),'simulation_prompt.txt')" class="button">Download prompt file</a>
   </div>
 
   <hr>
@@ -191,7 +191,7 @@
 
   <div class="button_row">
     <a href="projects" class="button">View export</a>
-    <a href="projects" class="button">Download export</a>
+    <a href="javascript:void();" onClick="saveTextAsFile(exported,'simulation.html')" class="button">Download export</a>
   </div>
 
   <!-- Preview projects -->
@@ -212,8 +212,22 @@
 </div>
 
 <script>
-  new GreenAudioPlayer('.gap-example');
-  const audio_object = document.querySelector('.gap-example  audio');
+  var prompts = {
+    "Quick start advice": {
+      "prompt": "[# This template has an Output Type = Prompt and a Output To = Screen only. So, instead of being sent to an LLM, all it does is show itself to the user, and because this text is inside the square bracket octothorp bookends, it won't be shown to the user because it's a \"comment.\" #]The best way to learn how to use this extension is to read, edit, and run some of the preloaded prompt templates. You can start down this road by clicking the \"Templates & Settings\" button at the bottom of this window.",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "stop",
+      "hide_button": false
+    }}
+
+    (async () => {
+      exported = await loadFile('index.html');
+    })()
 </script>
 
 </BODY></HTML>
