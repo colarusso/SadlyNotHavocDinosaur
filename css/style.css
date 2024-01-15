@@ -255,16 +255,8 @@ hr {
 }
 
 code{
-	background: #e8e6e6;
-	padding:0 3px;
-}
-
-.code_wrapper {
-	padding:3px;
-	margin: 0px;
-	width:100%;
-	overflow-x: auto;
-	background:#e8e6e6 !important;
+	font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+	background: #f5f2f0;
 }
 
 .listing{

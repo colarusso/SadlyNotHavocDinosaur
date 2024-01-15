@@ -32,6 +32,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/functions.js"></script>
   <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
   
   <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
   <script src="js/green-audio-player.js"></script>
@@ -73,7 +76,7 @@
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This post is one of a hundred in my serise <a href="posts/100-days-of-lit-prompts">100 Days of LIT Prompts</i></a>.</p>
+  <p><i>This post is one of a hundred in my serise <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
   </p>
@@ -154,10 +157,22 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
   </p>
 
-  <pre class="code_wrapper"><code>
-    Code goes Here
-  </code></pre>
-
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{innerText}} [# FYI, the innerText variable will be replaced with the text from the current active browser tab, and because the Post-run Behavior is set to CHAT, you will be able to continue engaging with this text after the first reply. #]
+  
+Provide a short 150 word summary of the above text. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! 
+      </code></pre>
+  </section>
+  <p>
+      Output Type: <code>X</code>,  
+      Model: <code>X</code>,  
+      Temperature: <code>X</code>,  
+      Max Tokens: <code>X</code>,  
+      JSON: <code>X</code>,  
+      Output To: <code>X</code>,  
+      Post-run Behavior: <code>X</code>,  
+      Hide Button: <code>X</code>
+    </p>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
   </p>
@@ -228,9 +243,9 @@
       "hide_button": false
     }};
 
-    (async () => {
-      exported = await loadFile('index.html');
-    })()
+    //(async () => {
+    //  exported = await loadFile('index.html');
+    //})()
 </script>
 
 </BODY></HTML>
