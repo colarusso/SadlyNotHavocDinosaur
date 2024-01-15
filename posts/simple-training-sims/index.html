@@ -89,7 +89,7 @@
       <li><a href="posts/simple-training-sims/#1a">Install the extension</a></li>
       <li><a href="posts/simple-training-sims/#1b">Point it at an API</a></li>
     </ol>
-    <li><a href="posts/simple-training-sims/#2">Write your Prompt</a></li>
+    <li><a href="posts/simple-training-sims/#2">Write your Prompt Template</a></li>
     <li><a href="posts/simple-training-sims/#3">Export and Share</a></li>
   </ol>
 
@@ -151,7 +151,7 @@
  
   <hr>
 
-  <h2><a name="2" href="posts/simple-training-sims/#2" class="anchor" alt="deep link to this section"></a>2. Write Your Prompt </h2>
+  <h2><a name="2" href="posts/simple-training-sims/#2" class="anchor" alt="deep link to this section"></a>2. Write Your Prompt Template</h2>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
@@ -173,24 +173,20 @@ Provide a short 150 word summary of the above text. If asked any follow-up quest
       Post-run Behavior: <code>X</code>,  
       Hide Button: <code>X</code>
     </p>
-    <h3>Understanding the above prompt template</h3>
+    <h3>Understanding the above template</h3>
   <p>
 sadas
   </p>
-  <h3>Working with the above prompt template</h3>
+  <h3>Working with the above template</h3>
   <p>
-    Of course you can copy the above template and settings into LIT Prompts, but you can also download a file which you can upload directly. The only catch is it will replace you existing prompts. You choose. 
+    You could copy the promopt template and paramenters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. See 
   </p>
 
   <div class="featured_img_center" style="max-width:900px;">
     <img src="images/template_upload.png" ALT="Image of the Supreme Court of the United States building" class="list_img_file" style="border: 1px solid #a5a5a5;"/>
   </div>
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit.
-  </p>
-
-
+  <p>The only catch is that this would replace you existing prompts. That being said, you can download the prompt and its parameters here: </p>
 
   <div class="button_row">
     <a href="javascript:void('');" onClick="saveTextAsFile(JSON.stringify(prompts,null,2),'simulation_prompt.txt')" class="button" style="width:220px;">Download prompt file</a>
@@ -201,7 +197,7 @@ sadas
   <h2><a name="3" href="posts/simple-training-sims/#3" class="anchor" alt="deep link to this section"></a>3. Export and Share </h2>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
+    Once you have your prompt template producing the behavior you desire, you can export and share it with others. To do this simpily click the <i>Export...</i> button. This will produce and append any HTML you like to the beginning. warning about key.
   </p>
 
   <div class="featured_img_center" style="max-width:900px;">
@@ -209,9 +205,15 @@ sadas
   </div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
+    If you want to see what an exported file looks like without having to make one yourself. You can use the buttons below. X will open the file in your browser and Y will download a file based on the above prompt with the following custom header and no API key (that means you'll have to enter one when prompted to see it work, unless you've provided it here before)
   </p>
 
+  <p>Custom header:</p>
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;p>Use some HTML to frame things for your user, or don't. Leave this blank to show only buttons.&lt;/p> &lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></code></pre>
+  </section>
+
+  <p>Looking for tips on how to style your HTML? Check out XXX</p>
   <div class="button_row">
     <a href="projects" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'simulation.html')" class="button">Download export</a>
