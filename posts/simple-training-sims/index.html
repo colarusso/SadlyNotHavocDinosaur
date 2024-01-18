@@ -76,12 +76,12 @@
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <!--<p><i>This post is one of a hundred in my serise <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>-->
+  <!--<p><i>This post is one of a fifty in my serise <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>-->
 	<p>
     <span style="background:yellow">I plan to flesh this out, creating a proper description and framing at some point, but not just yet. If you're reading this, you are seeing this page before it is properly "public." <b>Do NOT share the link!</b> Do let David know if you have questions. </span>
   </p>
 
-  <!--<p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>-->
+  <p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>
 
   <p><b>Here are the steps we'll follow to get you up and running.</b> If you are familiar with the LIT Prompts extension, and already have it working, you can skip to step 2: <a href="posts/simple-training-sims/#2">Write your Template</a>.</p>
   <ol>
@@ -121,10 +121,10 @@
       <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
     </li>
     <li>
-      <b>Chrome:</b> <i>Coming soon.</i>
+      <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
     </li>
   </ul>
-  <p>If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>.</p>
+  <p>If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome?  You can <a href="https://www.google.com/chrome/" target="_blank">download it here</a>.</p>
 
   <h3><a name="1b" href="posts/simple-training-sims/#1b" class="anchor" alt="deep link to this section"></a>1(b). Point it at an API</h3>
 
@@ -213,10 +213,14 @@ Think about how your character would respond and craft an appropriate reply. Don
       <li>Hide Button: <code>unchecked</code></li>
   </ul>
 
-  <p><b>Here's a challenge for you.</b> Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>.</p>
-
+  <h3><a name="challenge" href="posts/simple-training-sims/#challenge" class="anchor" alt="deep link to this section"></a>Here's a challenge</h3> 
+  <p>
+    Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>.</p>
+  <p>
+    As noted above, eventually, you'll hit a limit to what you can simulate, but we will return to simulations in a future post.
+  </p>
   
-  <h3>Working with the above template</h3>
+  <h3><a name="working" href="posts/simple-training-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
   <p>
     To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. See 
   </p>
