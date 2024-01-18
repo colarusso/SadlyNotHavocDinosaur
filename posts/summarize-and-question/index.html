@@ -85,16 +85,16 @@
   <p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>
 
   <p>
-    <b>Here are the steps we'll follow to get you up and running.</b> If you have used the LIT Prompts extension before, you can skip to step 2: <a href="posts/simple-training-sims/#2">Write your Template</a>.
+    <b>Here are the steps we'll follow to get you up and running.</b> If you have used the LIT Prompts extension before, you can skip to step 2: <a href="posts/summarize-and-question/#2">Write your Template</a>.
   </p>
   <ol>
-    <li><a href="posts/simple-training-sims/#1" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/summarize-and-question/#1" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ol type="a">
-      <li><a href="posts/simple-training-sims/#1a" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/simple-training-sims/#1b" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/summarize-and-question/#1a" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/summarize-and-question/#1b" onClick="expand_setup();">Point it at an API</a></li>
     </ol>
-    <li><a href="posts/simple-training-sims/#2">Write your Template</a></li>
-    <li><a href="posts/simple-training-sims/#3">Export and Share</a></li>
+    <li><a href="posts/summarize-and-question/#2">Write your Template</a></li>
+    <li><a href="posts/summarize-and-question/#3">Export and Share</a></li>
   </ol>
   <!-- 
     =================================================
@@ -104,7 +104,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="1" href="posts/simple-training-sims/#1" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>1. Setup LIT Prompts </h2>
+  <h2><a name="1" href="posts/summarize-and-question/#1" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>1. Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -124,7 +124,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="1a" href="posts/simple-training-sims/#1a" class="anchor" alt="deep link to this section"></a>1(a). Install the extension</h3>
+    <h3><a name="1a" href="posts/summarize-and-question/#1a" class="anchor" alt="deep link to this section"></a>1(a). Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -137,7 +137,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome?  You can <a href="https://www.google.com/chrome/" target="_blank">download it here</a>.
     </p>
-    <h3><a name="1b" href="posts/simple-training-sims/#1b" class="anchor" alt="deep link to this section"></a>1(b). Point it at an API</h3>
+    <h3><a name="1b" href="posts/summarize-and-question/#1b" class="anchor" alt="deep link to this section"></a>1(b). Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credit. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -174,7 +174,7 @@
       If you are getting an error, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/simple-training-sims/#1">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/summarize-and-question/#1">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
  
@@ -186,7 +186,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="2" href="posts/simple-training-sims/#2" class="anchor" alt="deep link to this section"></a>2. Write Your Template</h2>
+  <h2><a name="2" href="posts/summarize-and-question/#2" class="anchor" alt="deep link to this section"></a>2. Write Your Template</h2>
 
   <div class="list_img">
     <a href="https://mytoymodels.org/" target="_blank"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -257,14 +257,14 @@ Think about how your character would respond and craft an appropriate reply. Don
       <li>Hide Button: <code>unchecked</code></li>
   </ul>
 
-  <h3><a name="challenge" href="posts/simple-training-sims/#challenge" class="anchor" alt="deep link to this section"></a>Here's a challenge</h3> 
+  <h3><a name="challenge" href="posts/summarize-and-question/#challenge" class="anchor" alt="deep link to this section"></a>Here's a challenge</h3> 
   <p>
     Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>.</p>
   <p>
     As noted above, eventually, you'll hit a limit on what you can simulate, but we we'll return to simulations with more functionaly in future posts.
   </p>
   
-  <h3><a name="working" href="posts/simple-training-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+  <h3><a name="working" href="posts/summarize-and-question/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
   <p>
     To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. See 
   </p>
@@ -287,7 +287,7 @@ Think about how your character would respond and craft an appropriate reply. Don
     =================================================
   --> 
   <hr>
-  <h2><a name="3" href="posts/simple-training-sims/#3" class="anchor" alt="deep link to this section"></a>3. Export and Share </h2>
+  <h2><a name="3" href="posts/summarize-and-question/#3" class="anchor" alt="deep link to this section"></a>3. Export and Share </h2>
 
   <p>
     After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
@@ -333,7 +333,7 @@ Think about how your character would respond and craft an appropriate reply. Don
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
   <div class="button_row">
-    <a href="posts/simple-training-sims/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="posts/summarize-and-question/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
 
@@ -360,8 +360,8 @@ Think about how your character would respond and craft an appropriate reply. Don
   }
   
   (async () => {
-    prompts = await loadFile('posts/simple-training-sims/prompt_template.txt');
-    exported = await loadFile('posts/simple-training-sims/interactions.html');
+    prompts = await loadFile('posts/summarize-and-question/prompt_template.txt');
+    exported = await loadFile('posts/summarize-and-question/interactions.html');
   })()
 </script>
 
