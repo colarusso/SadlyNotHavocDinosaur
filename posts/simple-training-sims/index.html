@@ -7,7 +7,7 @@
   <!-- Page-specific metadata -->
   <title>Craft Simple Training Simulations with an "AI Actor" | Sadly Not, Havoc Dinosaur</title>
   <meta property="og:type" content="website"/>
-  <meta property="og:publish_date" content="2024-01-17T00:00:00-0500"/>
+  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
 	<meta property="og:title" content='Craft Simple Training Simulations with an "AI Actor"'/>
 	<meta property="og:description" content="My name is David Colarusso.† I founded and co-direct Suffolk University Law School's Legal Innovation & Technology (LIT) Lab. By training I'm an attorney & science educator. By experience, I'm a data scientist, craftsman, and writer."/>
 	<meta property="og:image" content="images/comic.png"/>
@@ -66,7 +66,7 @@
   
 
   <div class="featured_img_right">
-    <img src="images/50-days/robot_actor.png" ALT="Image of the Supreme Court of the United States building" class="list_img_file"/>
+    <img src="images/50-days/robot_actor.png" ALT="Image of a 'robot' actor, a robot holding a Greek drama mask." class="list_img_file"/>
     <div class="caption">
       Actor, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
@@ -83,7 +83,7 @@
 
   <!--<p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>-->
 
-  <p><b>Here are the steps we'll follow to get you up and running.</b> If you are fmailiar with the LIT Prompts extinson, and already have it working, you can skip to step 2: <a href="posts/simple-training-sims/#2">Write your Template</a>.</p>
+  <p><b>Here are the steps we'll follow to get you up and running.</b> If you are familiar with the LIT Prompts extension, and already have it working, you can skip to step 2: <a href="posts/simple-training-sims/#2">Write your Template</a>.</p>
   <ol>
     <li><a href="posts/simple-training-sims/#1">Setup LIT Prompts</a></li>
     <ol type="a">
@@ -108,7 +108,7 @@
   </div>
 
   <p>
-    <i><b>LIT Prompts</b></i> is a browser extension designed by Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausable-sounding followup (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
+    <i><b>LIT Prompts</b></i> is a browser extension designed by Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
   </p>
   <p>
     To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below.</p>
@@ -118,7 +118,7 @@
   <p>Follow the links for your browser.</p>
   <ul>
     <li>
-      <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permisions.
+      <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
     </li>
     <li>
       <b>Chrome:</b> <i>Coming soon.</i>
@@ -128,7 +128,7 @@
 
   <h3><a name="1b" href="posts/simple-training-sims/#1b" class="anchor" alt="deep link to this section"></a>1(b). Point it at an API</h3>
 
-  <p>Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited API credit. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. </p>
+  <p>Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credit. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. </p>
   
   <p>
     Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
@@ -136,7 +136,7 @@
 
  
   <div class="featured_img_center">
-    <img src="images/50-days/OpenAI_keys.png" ALT="Image of the Supreme Court of the United States building" class="list_img_file" style="border: 1px solid #a5a5a5;"/>
+    <img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
   </div>
 
   <p>Once you are looking at the API docs. follow the steps outlined in the image above. That is:
@@ -145,7 +145,7 @@
     <li>Click "+ Create new secret key"</li>
   </ol>
   <div class="list_img">
-    <img src="images/50-days/templates_and_settings.png" ALT="Image of the Supreme Court of the United States building" class="list_img_file" style="max-width:215px;border: 1px solid #a5a5a5;"/>
+    <img src="images/50-days/templates_and_settings.png" ALT="Screenshot of the LIT Prompts extension popup showing where the 'Templates and Settings' button is located." class="list_img_file" style="max-width:215px;border: 1px solid #a5a5a5;"/>
   </div>
   <p>
     On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup. See screen shot.
@@ -158,18 +158,28 @@
   <h2><a name="2" href="posts/simple-training-sims/#2" class="anchor" alt="deep link to this section"></a>2. Write Your Template</h2>
 
   <div class="list_img">
-    <a href="https://mytoymodels.org/" target="_blank"><img src="images/boxquote.png" ALT="A Look Ahead" class="list_img_file"/></a>
+    <a href="https://mytoymodels.org/" target="_blank"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
     <div class="caption">
       Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
     </div>
   </div>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
+    LLMs are sentence completion engines. Their replies aren't based on any knowledge other than what words are likely to follow given their training data. So, we work to constrain those replies by packing a lot of information into our prompts. The more context we provide, the more we limit the set of likely next words. Sometimes we've worked to make sure the LLM's reply is almost entirely grounded in the prompt (e.g., our prompts aimed at summarizing texts), but here we need a little more wiggle room. Luckily, we don't have to worry too much about the LLM going off script because we're involved in an improv exercise. If it "makes things up," that's not a problem. We're happy to roll with it. <a href="https://en.wikipedia.org/wiki/Yes,_and..." target="_blank">Yes, and...</a>
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum ante ut sapien vulputate molestie. Quisque vitae blandit erat, non bibendum elit. Phasellus pellentesque mattis nisi eget tristique. Curabitur maximus id lorem eget bibendum. Etiam imperdiet malesuada tincidunt. Vivamus vitae ante eget nisl feugiat scelerisque a eu nunc. Aenean maximus felis pulvinar odio eleifend vehicula nec sed orci. Fusce ut justo felis. Nullam bibendum tristique mauris, eu efficitur lectus pellentesque eget. Duis eleifend diam odio, quis aliquam nulla ultrices ut. Suspendisse euismod ultricies quam a dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dignissim magna a magna venenatis, feugiat aliquet justo mattis. Aliquam eget tortor non lectus gravida pellentesque vel gravida urna. Pellentesque eleifend egestas urna eu bibendum. 
+    To allow for a dialog well be setting the Post-run Behavior to "Chat" and providing a robust set of instructions up front to set the stage. In the template below you'll see that I've made a instruction sandwich. I start by explaining the role the LLM will play and what it will be expected to do based on some context (line 1). I then provide that context and repeat the expectations along with specific instructions (line 19). I structure the context into three sections: (1) BACKGROUND; (2) DIRECTION; and (3) THE CONVERSATION SO FAR. And I frame the entire endeavor as an exercise in acting, telling the LLM that it is an actor playing a role and couching my instructions in the language of a director. Keep in mind, the LLM doesn't understand these instructions in the way a person would, rather it responds to the framing in a manner consistent with its training data. Presumably, it has seen a lot of scripts and acting notes. Our language is a way to leverage those aspects of its training. That is, it's probable that text following a framing like this will resemble what we're looking for. 
   </p>
+  <p>
+    When crafting a template, LIT Prompts makes use of a mix of natural language and placeholders. You can use double curly brackets to encase predefined variables and "questions" for your users. If the text between the brackets matches the name of a predefined variables, that section of text will be replaced with its content. If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. We'll use this below to capture the user's first interaction with our "AI Actor." By incorporating this user reply into our initial prompt we're able to control the "actors" first line ("Are you my attorney?") and make sure that it falls within our instruction sandwich. 
+  </p>
+  <p>
+    I invite you to swap in your own motivations and scenarios. In principle you should be able to create any number of simulated characters. Eventually, however, you'll hit a limit to what you can simulate. If you have designs on creating a simulated set of events, not just a conversation, I'm afraid you'll have to wait for some of our more advanced prompt patters. ;)
+  </p>
+  <p>
+    Here's a simple template based on my experience as a public defender. It's important to note that the attorney's goal during this interaction is rather constrained. They don't want to get into the facts of the case. Rather, they want to make sure they get the information they need to make a good bail argument. Roughly speaking this means being able to answer the question, "Why should the judge believe this person will show up for their next court date?" Consequently, they really want to learn about things like community ties. 
+  </p>
+
   <section class="line-numbers">
     <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are an actor playing the role of someone charged with committing a crime.  In this scene you are interacting with your court-appointed attorney. You are currently in custody at the Rockham District Court, located in Massachusetts where you live. In a moment you will meet your attorney for the first time. Your job is to stay in character and act out your part. You are aiming for a realistic performance. To help you get into character, here is some background information.
 
@@ -177,9 +187,9 @@ BACKGROUND
 
 Your name is John Doe. You're an 18 year-old Caucasian male. You're 5 foot 9 inches tall and weigh 197 pounds. You only recently graduated from high school and have been working at your father's construction company. You live with your father James Doe and your mother Jill Doe. You're in a steady and supportive relationship with Sally Sparrow, a classmate of yours from Our Lady of Hope, the local Catholic School where you both graduated last year. Sally's attending the local community college. You and Sally have been dating since you were both 15. You regularly attend church with your family on Sundays and help out with local community service projects. 
 
-Saturday night you were arrested and charged with disorderly conduct. Recently, you've been drinking a lot on weekends to the point of black out, and you really don't remember what happened last night. You know you went down to your local bar Joe Sent Me, by yourself, but from what you can gather, you were asked to leave. You've never been arrested before. You're scared but don't want to show it. Mostly, you want to know when you can get out of custody. You didn't sleep very well, and you have a wicked hangover. 
+Last night you were arrested and charged with disorderly conduct. Recently, you've been drinking a lot after work, sometimes to the point of black out, and you really don't remember what happened last night. You know you went down to your local bar Joe Sent Me, by yourself, but from what you can gather, you were asked to leave. You've never been arrested before. You're scared but don't want to show it. Mostly, you want to know when you can get out of custody. You didn't sleep very well, and you have a wicked hangover. 
 
-You spent the last two nights in jail, and this morning the police brought you over to court. You're currently in lock up with a few other men. The guard has called your name and you're now huddled by what looks like a large mail slot on to cell's door, and someone the guard has identified as your attorney is on the other side. 
+You spent the night in jail, and this morning the police brought you over to court. You're currently in lock up with a few other men. The guard has called your name and you're now huddled by what looks like a large mail slot on to cell's door, and someone the guard has identified as your attorney is on the other side. 
 
 DIRECTION
 
@@ -191,24 +201,28 @@ You are jumping into the scene in progress. You already greeted the you're attor
 
 Think about how your character would respond and craft an appropriate reply. Don't repeat your greeting. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply (e.g., do NOT preface the text with the name of the speaker).</code></pre>
   </section>
-  <p>
-      Output Type: <code>X</code>,  
-      Model: <code>X</code>,  
-      Temperature: <code>X</code>,  
-      Max Tokens: <code>X</code>,  
-      JSON: <code>X</code>,  
-      Output To: <code>X</code>,  
-      Post-run Behavior: <code>X</code>,  
-      Hide Button: <code>X</code>
-    </p>
+  <p>And here are the template's parameters:</p>
+  <ul>
+      <li>Output Type: <code>LLM</code></li>
+      <li>Model: <code>gpt-3.5-turbo</code></li>  
+      <li>Temperature: <code>0.7</code></li>  
+      <li>Max Tokens: <code>250</code></li>  
+      <li>JSON: <code>No</code></li>  
+      <li>Output To: <code>Screen Only</code></li>  
+      <li>Post-run Behavior: <code>Chat</code></li>  
+      <li>Hide Button: <code>unchecked</code></li>
+  </ul>
+
+  <p><b>Here's a challenge for you.</b> Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>.</p>
+
   
   <h3>Working with the above template</h3>
   <p>
-    To work with the above template, you could copy it and its paramenters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. See 
+    To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. See 
   </p>
 
   <div class="featured_img_center" style="max-width:900px;">
-    <img src="images/50-days/template_upload.png" ALT="Image of the Supreme Court of the United States building" class="list_img_file" style="border: 1px solid #a5a5a5;"/>
+    <img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
   </div>
 
   <p>You should know, this will replace your existing prompts. That being said, you can download a prompts file (the prompt and its parameters) suitable for upload here: </p>
@@ -222,22 +236,25 @@ Think about how your character would respond and craft an appropriate reply. Don
   <h2><a name="3" href="posts/simple-training-sims/#3" class="anchor" alt="deep link to this section"></a>3. Export and Share </h2>
 
   <p>
-    After you've made the template your own and have it behaving the way you like, you can export and share it with others. To do this simpily click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be append to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
+    After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
   </p>
 
   <div class="featured_img_center" style="max-width:900px;">
-    <img src="images/50-days/export_html.png" ALT="Image of the Supreme Court of the United States building" class="list_img_file" style="border: 1px solid #a5a5a5;"/>
+    <img src="images/50-days/export_html.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
   </div>
 
   <p>
-    If you want to see what an exported file looks like without having to make one yourself. You can use the buttons below. <i>View export in browser</i> will open the file in your browser, and <i>Download export</i> will download a file. In either case the following custom header will be inserted into your file. It will NOT include an API key. So, you'll have to enter one when asked to see things work, unless you've provided it here before.
+    If you want to see what an exported file looks like without having to make one yourself. You can use the buttons below. <i>View export in browser</i> will open the file in your browser, and <i>Download export</i> will download a file. In either case the following custom header will be inserted into your file. It will NOT include an API key. So, you'll have to enter one when asked if you want to see things work. <i>This information is saved in your browser. If you've provided it before, you won't be asked again. It is not shared with me. To remove this information for this site (and only this site, not individual files), you can follow the instructions found on my <a href="privacy">privacy page</a>.</i>
   </p>
 
   <p>Custom header:</p>
   <section class="line-numbers">
     <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>First Client Meeting&lt;/h2>
 &lt;p>
-  It's Monday morning and you're in the Rockham District Court, located in Massachusetts. You are today's duty attorney, meaning you will be picking up new cases as they come in for arraignments and bail arguments. The clerk has given you a folder containing the following documents, a complaint, incident report, and CORI. They also let you know that the prosecutor is looking to hold your client. Your client is downstairs in lockup. You've reviewed the documents. As far as you can tell, you're client has no prior record. No one was hurt, and there was no property damage. You head downstairs to meet them.
+  It's Friday morning and you're in the Rockham District Court, located in Massachusetts. You are today's duty attorney, meaning you will be picking up new cases as they come in for arraignments and bail arguments. The clerk has given you a folder containing the following documents, a complaint, incident report, and CORI. They also let you know that the prosecutor is looking to hold your client. Your client is downstairs in lockup. You've reviewed the documents. As far as you can tell, you're client has no prior record. No one was hurt, and there was no property damage. You head downstairs to meet them.
+&lt;/p>
+&lt;p>
+  Remember, you're goal is to avoid talking too much about the facts of the case. There will be time for that later in a more private location. You need to learn about your client and his community ties, anything that will help you make a bail argument.
 &lt;/p>
 &lt;p>
   You enter lockup and ask to speak with your client. The guard directs you to a holding cell shared by a couple of individuals and calls your client's name. Your client steps forward and speaks to you through the window...
@@ -245,10 +262,12 @@ Think about how your character would respond and craft an appropriate reply. Don
 &lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></code></pre>
   </section>
 
-  <p>Not sure what's up with all those greaterthan and lessthan signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">general HTML tutorial</a>.</p>
+  <p>
+    Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
+  </p>
   <div class="button_row">
     <a href="posts/simple-training-sims/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
-    <a href="javascript:void('');" onClick="saveTextAsFile(exported,'simulation.html')" class="button">Download export</a>
+    <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
 
   <!-- Preview projects -->
