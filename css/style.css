@@ -254,6 +254,10 @@ hr {
 	float:left;width:100%;
 }
 
+.soon {
+	color:#787777;
+}
+
 code{
 	font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
 	background: #f5f2f0;

@@ -5,10 +5,10 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Craft Simple Training Simulations with an "AI Actor" | Sadly Not, Havoc Dinosaur</title>
+  <title>Title Goes Here | Sadly Not, Havoc Dinosaur</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content='Craft Simple Training Simulations with an "AI Actor"'/>
+	<meta property="og:title" content='Title Goes Here'/>
 	<meta property="og:description" content="My name is David Colarusso.† I founded and co-direct Suffolk University Law School's Legal Innovation & Technology (LIT) Lab. By training I'm an attorney & science educator. By experience, I'm a data scientist, craftsman, and writer."/>
 	<meta property="og:image" content="images/comic.png"/>
 
@@ -36,9 +36,6 @@
   <link rel="stylesheet" href="css/prism.css" data-noprefix="">
   <script type="text/javascript" src="js/prism.js"></script>
   
-  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
-  <script src="js/green-audio-player.js"></script>
-
   <!-- RSS -->
   <!--<link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed/" />-->
 
@@ -60,112 +57,135 @@
 <div class="content">
   <!-- START PAGE CONTENT -->
   <div id="page">
- 
-  <h1 class="post_title_01">Craft Simple Training Simulations with an "AI Actor"</i></h1>
-  <div class="post_title_02">What if law students could log time in a simulator like pilots?</div>
-  
+  <!-- 
+    =================================================
+    
+                      INTRODUCTION
 
+    =================================================
+  -->
+  <h1 class="post_title_01">Title Goes Here</i></h1>
+  <div class="post_title_02">Subhead goes here, often it's a question?</div>
   <div class="featured_img_right">
     <img src="images/50-days/robot_actor.png" ALT="Image of a 'robot' actor, a robot holding a Greek drama mask." class="list_img_file"/>
     <div class="caption">
       Actor, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
-
   <p class="post_p">
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <!--<p><i>This post is one of a fifty in my serise <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>-->
+  <p><i>This post is <b>the first</b> of a fifty in my serise <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
-    <span style="background:yellow">I plan to flesh this out, creating a proper description and framing at some point, but not just yet. If you're reading this, you are seeing this page before it is properly "public." <b>Do NOT share the link!</b> Do let David know if you have questions. </span>
+    I've started to hear some variation on the following, "Sure, I played with ChatGPT when it came out, but I don't really get what the big deal is. You can't trust what it tells you, and it's a pretty mediocor writer." These are valid chritisisums, but if you stop there, it's clear you've only experienced a narrow set of what these tools can do. 
+    A lot of folks want to feed show narrow A lot of folks what to use these tools in the following waIf you've heard a chritisisum of LLMs itone thing about LLMs 
+    prompt injection 
   </p>
-
   <p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>
 
-  <p><b>Here are the steps we'll follow to get you up and running.</b> If you are familiar with the LIT Prompts extension, and already have it working, you can skip to step 2: <a href="posts/simple-training-sims/#2">Write your Template</a>.</p>
+  <p>
+    <b>Here are the steps we'll follow to get you up and running.</b> If you have used the LIT Prompts extension before, you can skip to step 2: <a href="posts/simple-training-sims/#2">Write your Template</a>.
+  </p>
   <ol>
-    <li><a href="posts/simple-training-sims/#1">Setup LIT Prompts</a></li>
+    <li><a href="posts/simple-training-sims/#1" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ol type="a">
-      <li><a href="posts/simple-training-sims/#1a">Install the extension</a></li>
-      <li><a href="posts/simple-training-sims/#1b">Point it at an API</a></li>
+      <li><a href="posts/simple-training-sims/#1a" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/simple-training-sims/#1b" onClick="expand_setup();">Point it at an API</a></li>
     </ol>
     <li><a href="posts/simple-training-sims/#2">Write your Template</a></li>
     <li><a href="posts/simple-training-sims/#3">Export and Share</a></li>
   </ol>
+  <!-- 
+    =================================================
+    
+                   Setup LIT Prompts
 
-  <br>
-
+    =================================================
+  --> 
   <hr>
-
-  <h2><a name="1" href="posts/simple-training-sims/#1" class="anchor" alt="deep link to this section"></a>1. Setup LIT Prompts </h2>
-  <div class="list_vid">
-    <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-    <div class="caption">
-      7 min intro video
+  <h2><a name="1" href="posts/simple-training-sims/#1" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>1. Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
     </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension designed by Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="1a" href="posts/simple-training-sims/#1a" class="anchor" alt="deep link to this section"></a>1(a). Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome?  You can <a href="https://www.google.com/chrome/" target="_blank">download it here</a>.
+    </p>
+    <h3><a name="1b" href="posts/simple-training-sims/#1b" class="anchor" alt="deep link to this section"></a>1(b). Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credit. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
+    </p>
+    <div class="featured_img_center">
+      <img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
+    </div>
+    <p>Once you are looking at the API docs. follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extenison</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>(3) enter the API Key (look for the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click away.
+    </p>
+    <div class="featured_img_center">
+      <img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
+    </div>
+    <p>
+      If you are getting an error, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/simple-training-sims/#1">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
   </div>
-  <p>
-    <i><b>LIT Prompts</b></i> is a browser extension designed by Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
-  </p>
-  <p>
-    To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
-  </p>
-  <h3><a name="1a" href="posts/simple-training-sims/#1a" class="anchor" alt="deep link to this section"></a>1(a). Install the extension</h3>
-  <p>Follow the links for your browser.</p>
-  <ul>
-    <li>
-      <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
-    </li>
-    <li>
-      <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
-    </li>
-  </ul>
-  <p>
-    If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome?  You can <a href="https://www.google.com/chrome/" target="_blank">download it here</a>.
-  </p>
-  <h3><a name="1b" href="posts/simple-training-sims/#1b" class="anchor" alt="deep link to this section"></a>1(b). Point it at an API</h3>
-  <p>
-    Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credit. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
-  </p>
-  <p>
-    Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
-  </p>
-  <div class="featured_img_center">
-    <img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
-  </div>
-  <p>Once you are looking at the API docs. follow the steps outlined in the image above. That is:
-  <ol>
-    <li>Select "API keys" from the left menu</li>
-    <li>Click "+ Create new secret key"</li>
-  </ol>
-  <hr>
-  <p>
-    On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
-  </p>
-  <ol>
-    <li>open the extenison</li>
-    <li>click on  <i>Templates & Settings</i></li>
-    <li>(3) enter the API Key (look for the section <i>OpenAI-Compatible API Integration</i>)</li>
-  </ol>
-  <div class="featured_img_center">
-    <img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
-  </div>
-  <p>
-    Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click away.
-  </p>
-  <div class="featured_img_center">
-    <img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
-  </div>
-  <p>
-    If you are getting an error, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
-  </p>
-  <p>
-    <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/simple-training-sims/#1">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
-  </p>
-  
-  <hr>
+ 
+  <!-- 
+    =================================================
+    
+                   Write Your Template
 
+    =================================================
+  --> 
+  <hr>
   <h2><a name="2" href="posts/simple-training-sims/#2" class="anchor" alt="deep link to this section"></a>2. Write Your Template</h2>
 
   <div class="list_img">
@@ -179,18 +199,24 @@
     LLMs are sentence completion engines. Their replies aren't based on any knowledge other than what words are likely to follow given their training data. So, we work to constrain those replies by packing a lot of information into our prompts. The more context we provide, the more we limit the set of likely next words. Sometimes we've worked to make sure the LLM's reply is almost entirely grounded in the prompt (e.g., our prompts aimed at summarizing texts), but here we need a little more wiggle room. Luckily, we don't have to worry too much about the LLM going off script because we're involved in an improv exercise. If it "makes things up," that's not a problem. We're happy to roll with it. <a href="https://en.wikipedia.org/wiki/Yes,_and..." target="_blank">Yes, and...</a>
   </p>
   <p>
-    To allow for a dialog we'll be setting the Post-run Behavior to "Chat" and providing a robust set of instructions up front to set the stage. In the template below you'll see that I've made a instruction sandwich. I start by explaining the role the LLM will play and what it will be expected to do based on some context (line 1). I then provide that context and repeat the expectations along with specific instructions (line 19). I structure the context into three sections: (1) BACKGROUND; (2) DIRECTION; and (3) THE CONVERSATION SO FAR. And I frame the entire endeavor as an exercise in acting, telling the LLM that it is an actor playing a role and couching my instructions in the language of a director. Keep in mind, the LLM doesn't understand these instructions in the way a person would, rather it responds to the framing in a manner consistent with its training data. Presumably, it has seen a lot of scripts and acting notes. Our language is a way to leverage those aspects of its training. That is, it's probable that text following a framing like this will resemble what we're looking for. 
+    To allow for a dialog well be setting the Post-run Behavior to "Chat" and providing a robust set of instructions up front to set the stage. In the template below you'll see that I've made a instruction sandwich. I start by explaining the role the LLM will play and what it will be expected to do based on some context (line 1). I then provide that context and repeat the expectations along with specific instructions (line 19). I structure the context into three sections: (1) BACKGROUND; (2) DIRECTION; and (3) THE CONVERSATION SO FAR. And I frame the entire endeavor as an exercise in acting, telling the LLM that it is an actor playing a role and couching my instructions in the language of a director. Keep in mind, the LLM doesn't understand these instructions in the way a person would, rather it responds to the framing in a manner consistent with its training data. Presumably, it has seen a lot of scripts and acting notes. Our language is a way to leverage those aspects of its training. That is, it's probable that text following a framing like this will resemble what we're looking for. 
   </p>
   <p>
     When crafting a template, LIT Prompts makes use of a mix of natural language and placeholders. You can use double curly brackets to encase predefined variables and "questions" for your users. If the text between the brackets matches the name of a predefined variables, that section of text will be replaced with its content. If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. We'll use this below to capture the user's first interaction with our "AI Actor." By incorporating this user reply into our initial prompt we're able to control the "actors" first line ("Are you my attorney?") and make sure that it falls within our instruction sandwich. 
   </p>
   <p>
-    I invite you to swap in your own motivations and scenarios. In principle you should be able to create any number of simulated characters. Eventually, however, you'll hit a limit to what you can simulate. If you have designs on creating a simulated set of events, not just a conversation, I'm afraid you'll have to wait for some of our more advanced prompt patters. ;)
+    I invite you to swap in your own motivations and scenarios. In principle you should be able to create any number of simulated characters. Eventually, however, you'll hit a limit on what you can simulate. If you have designs on creating a simulated set of events, not just a conversation, I'm afraid you'll have to wait for some of our more advanced prompt patters. ;)
   </p>
   <p>
     Here's a simple template based on my experience as a public defender. It's important to note that the attorney's goal during this interaction is rather constrained. They don't want to get into the facts of the case. Rather, they want to make sure they get the information they need to make a good bail argument. Roughly speaking this means being able to answer the question, "Why should the judge believe this person will show up for their next court date?" Consequently, they really want to learn about things like community ties. 
   </p>
-
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
   <section class="line-numbers">
     <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are an actor playing the role of someone charged with committing a crime.  In this scene you are interacting with your court-appointed attorney. You are currently in custody at the Rockham District Court, located in Massachusetts where you live. In a moment you will meet your attorney for the first time. Your job is to stay in character and act out your part. You are aiming for a realistic performance. To help you get into character, here is some background information.
 
@@ -212,6 +238,13 @@ You are jumping into the scene in progress. You already greeted the you're attor
 
 Think about how your character would respond and craft an appropriate reply. Don't repeat your greeting. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply (e.g., do NOT preface the text with the name of the speaker).</code></pre>
   </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
   <p>And here are the template's parameters:</p>
   <ul>
       <li>Output Type: <code>LLM</code></li>
@@ -228,7 +261,7 @@ Think about how your character would respond and craft an appropriate reply. Don
   <p>
     Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>.</p>
   <p>
-    As noted above, eventually, you'll hit a limit to what you can simulate, but we will return to simulations in a future post.
+    As noted above, eventually, you'll hit a limit on what you can simulate, but we we'll return to simulations with more functionaly in future posts.
   </p>
   
   <h3><a name="working" href="posts/simple-training-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
@@ -246,8 +279,14 @@ Think about how your character would respond and craft an appropriate reply. Don
     <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
   </div>
 
-  <hr>
+  <!-- 
+    =================================================
+    
+                    Export and Share
 
+    =================================================
+  --> 
+  <hr>
   <h2><a name="3" href="posts/simple-training-sims/#3" class="anchor" alt="deep link to this section"></a>3. Export and Share </h2>
 
   <p>
@@ -263,6 +302,13 @@ Think about how your character would respond and craft an appropriate reply. Don
   </p>
 
   <p>Custom header:</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
   <section class="line-numbers">
     <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>First Client Meeting&lt;/h2>
 &lt;p>
@@ -276,7 +322,13 @@ Think about how your character would respond and craft an appropriate reply. Don
 &lt;/p> 
 &lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></code></pre>
   </section>
-
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
   <p>
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
@@ -303,6 +355,10 @@ Think about how your character would respond and craft an appropriate reply. Don
 </div>
 
 <script>
+  if (!window.location.hash) { 
+    collapse_setup();
+  }
+  
   (async () => {
     prompts = await loadFile('posts/simple-training-sims/prompt_template.txt');
     exported = await loadFile('posts/simple-training-sims/interactions.html');

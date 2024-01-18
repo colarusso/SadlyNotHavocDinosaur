@@ -120,6 +120,18 @@ function load_previews() {
     //document.getElementById('previews').innerHTML = html ;
 }
 
+function expand_setup() {
+    document.getElementById('setup_extension').style.display='block';
+    document.getElementById('collapse_setup').style.display='block';
+    document.getElementById('expand_setup').style.display='none';
+}
+
+function collapse_setup() {
+    document.getElementById('setup_extension').style.display='none';
+    document.getElementById('collapse_setup').style.display='none';
+    document.getElementById('expand_setup').style.display='block';
+}
+
 //document.addEventListener('DOMContentLoaded', function () {
 //    load_previews();
 //});
