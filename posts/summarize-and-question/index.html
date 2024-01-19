@@ -5,12 +5,12 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Title Goes Here | Sadly Not, Havoc Dinosaur</title>
+  <title>Using AI to Distill and Question Texts | Summarize and question the contents of a webpage from within the browser</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content='Title Goes Here'/>
+	<meta property="og:title" content='Using AI to Distill and Question Texts | Summarize and question the contents of a webpage from within the browser'/>
 	<meta property="og:description" content="My name is David Colarusso.† I founded and co-direct Suffolk University Law School's Legal Innovation & Technology (LIT) Lab. By training I'm an attorney & science educator. By experience, I'm a data scientist, craftsman, and writer."/>
-	<meta property="og:image" content="images/comic.png"/>
+	<meta property="og:image" content="images/50-days/text_distillery.png"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
@@ -64,12 +64,12 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Title Goes Here</i></h1>
-  <div class="post_title_02">Subhead goes here, often it's a question?</div>
+  <h1 class="post_title_01">Using AI to Distill and Question Texts</i></h1>
+  <div class="post_title_02">Summarize and question the contents of a webpage from within the browser</div>
   <div class="featured_img_right">
-    <img src="images/50-days/robot_actor.png" ALT="Image of a 'robot' actor, a robot holding a Greek drama mask." class="list_img_file"/>
+    <img src="images/50-days/text_distillery.png" ALT="Image of a 'robot' actor, a robot holding a Greek drama mask." class="list_img_file"/>
     <div class="caption">
-      Actor, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      Text Distllery, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
@@ -78,12 +78,17 @@
   </p>
   <p><i>This post is <b>the first</b> of a fifty in my serise <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
-    I've started to hear some variation on the following, "Sure, I played with ChatGPT when it came out, but I don't really get what the big deal is. You can't trust what it tells you, and it's a pretty mediocor writer." These are valid chritisisums, but if you stop there, it's clear you've only experienced a narrow set of what these tools can do. 
-    A lot of folks want to feed show narrow A lot of folks what to use these tools in the following waIf you've heard a chritisisum of LLMs itone thing about LLMs 
-    prompt injection 
+    I've started seeing variations on the following, "Sure, I played with ChatGPT when it came out, but I don't really get what the big deal is. You can't trust what it tells you, and it's a pretty mediocor writer." These are valid chritisisums, but if you stop there, it's clear you've only experienced a narrow set of what these tools can do. When I speak of "these tools" I"m refering to a class of tools properly known as <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs). Most folks' first encounter with such tools was in the guise of a chat bot, but they are NOT general purpose thinking machines. LLMs are sentence completion engines. Their replies aren't based on any knowledge of the world other than that contained in the structure of the text upon which they were trained. In a very real way, they are "spicy autocomplete." Like machine learning (the pervious genration of tech to wear the AI monkier) they are <a href="https://www.predictionmachines.ai/" target="_blank">prediction machines</a>. Give them a prompt and they predict the most likely set of words. Prompts are what we call the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up. "Four score and seven..." might return "years ago our fathers brought forth..." because the Getisburg Address was in the training data and outside of quoting it, when else do people write like that? It's just a prediction.  
   </p>
-  <p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>
-
+  <p>
+    Of course, if the traing data of an LLM is large enough, it can make a lot of different predictions, like "given this multiple choice question the answer is...." For some folks saying that LLMs are just sentence completion machines undersells what they can do. To this I say, "you're undeselling the power of sentence completion machines." These tools are sentence competion machines, understanding that is important if we want to weild them well, or conversly, understand the dangers they present.
+  </p>
+  <p>
+    A lot of folks want to feed in 5 words and get out 500 (e.g., write me an essay discusing the lessons of the French Revloution). These are the uses referenced by those dismissing LLMs as BS artists and medeocar writers. The followup text is poorly constrained. So, it's not surprising that it sounds like the what you'd hear from a random guy on the street. If the tool is providing the most likely set of next words that will tend twoards what some have called "mansplaining as a service." I fear most folks have been looking through the wrong end of the telescope. Though there are times when it can be fun to look through the wrong end of the telescope, most of the time we need to turn it around. Instead of writing prompts with 5 words and expecting 500, we need to be provideing 500 and asking for 5. 
+  </p>
+  <p>
+    So for this, the first of 50 posts on prompt engineering, we will start with a summarization task. We'll give the LLM the text of a webpage and ask it to summarize it. Then we'll leave the "conversation" open so that we can ask questions of the text (e.g., you mentioned X in the summary, tell me more about that). After you have your workflow up and running, we'll kick the tires, introducing the concept of <a href="https://simonwillison.net/2023/Nov/27/prompt-injection-explained/" target="_blank">prompt injection</a> and developing a sense for how much we can trust the answers we're getting. In subsequent posts in this serise we'll also explore some of the <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">critical literature</a> around LLMs in general. 🦜 But before we do all of that, <b>let's build somehting!</b>
+  </p>
   <p>
     <b>Here are the steps we'll follow to get you up and running.</b> If you have used the LIT Prompts extension before, you can skip to step 2: <a href="posts/summarize-and-question/#2">Write your Template</a>.
   </p>
@@ -159,7 +164,7 @@
     <ol>
       <li>open the extenison</li>
       <li>click on  <i>Templates & Settings</i></li>
-      <li>(3) enter the API Key (look for the section <i>OpenAI-Compatible API Integration</i>)</li>
+      <li>enter the API Base and Key (look for the section <i>OpenAI-Compatible API Integration</i>)</li>
     </ol>
     <div class="featured_img_center">
       <img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
@@ -171,7 +176,7 @@
       <img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/>
     </div>
     <p>
-      If you are getting an error, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+      <span style="background:yellow;">If you recive an error after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
       <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/summarize-and-question/#1">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
@@ -364,6 +369,15 @@ Think about how your character would respond and craft an appropriate reply. Don
     exported = await loadFile('posts/summarize-and-question/interactions.html');
   })()
 </script>
+
+<!--
+Publication checklist:
+
+- Metadata title, description, and image: X
+- Updated anchor links e.g., "posts/summarize-and-question/": X
+- Updated prompt_template.txt file in folder: X
+- Metadata publication date: ? 
+-->
 
 </BODY></HTML>
 
