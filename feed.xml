@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Sadly Not, Havoc Dinosaur: The personal website of David Anthony Colarusso</title>
+  <link>https://sadlynothavocdinosaur.com</link>
+  <description>My name is David Colarusso. I founded and co-direct Suffolk University Law School's Legal Innovation & Technology (LIT) Lab. By training I'm an attorney & science educator. By experience, I'm a data scientist, craftsman, and writer. I build things: furniture, software, reasoned arguments...</description>
+  <language>en-us</language>
+  <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>50 Days of LIT Prompts: Learn prompt engineering through doing with new prompt patterns every weekday for 10 weeks</title>
+    <link>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts/</link>
+    <description>Every weekday for the next 10 weeks, I'll update this page with new prompt patterns and invite folks to play with them inside LIT Prompts. We'll be plugging into the technology that runs tools like ChatGPT, giving you a level of control that most people don't see. You won't have to do any &quot;coding,&quot; but we will think like coders. I'm still suspicious of the term prompt engineering, esp. when used as a job title. The idea that an entire job could be built around &quot;talking&quot; to an AI seems a bit too loosey goosey. So, we'll try to introduce some rigor. We'll aim to think about workflows and systems where writing prompts is just part of a larger endeavor. You'll be supported by the fact that LIT Prompts lets you produce reusable interconnecting prompt templates. This will let us build upon what we learn and improve our practice over time. We'll explore the promise and perils of this new technology while you build custom interactions/workflows. Plus, I'm pretty sure we'll have fun along the way.</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/lets_build.png" type="image/png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts/</guid>
+    <pubDate>Thur, 19 Jan 2024 17:00:00 GMT</pubDate>
+  </item>
+
+  <!-- Additional items here -->
+
+</channel>
+</rss>
