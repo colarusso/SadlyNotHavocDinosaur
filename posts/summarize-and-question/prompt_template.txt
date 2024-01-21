@@ -1,7 +1,7 @@
 {
   "Summerize and question": {
-    "prompt": "{{innerText}} \n\n---\n\nProvide a short 150 word summary of the above text. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, please provide a summary of the text. \n\n",
-    "model": "gpt-3.5-turbo",
+    "prompt": "{{innerText}} \n\n---\n\nProvide a short 150-word summary of the above text. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, please provide a summary of the text. \n\n",
+    "model": "gpt-3.5-turbo-16k",
     "temperature": 0,
     "max_tokens": 250,
     "output": 1,
