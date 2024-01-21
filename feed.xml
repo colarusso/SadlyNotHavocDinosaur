@@ -3,7 +3,7 @@
 <channel>
   <title>Sadly Not, Havoc Dinosaur: The personal website of David Anthony Colarusso</title>
   <link>https://sadlynothavocdinosaur.com</link>
-  <description>My name is David Colarusso. I founded and co-direct Suffolk University Law School's Legal Innovation & Technology (LIT) Lab. By training I'm an attorney & science educator. By experience, I'm a data scientist, craftsman, and writer. I build things: furniture, software, reasoned arguments...</description>
+  <description>My name is David Colarusso. I founded and co-direct Suffolk University Law School's Legal Innovation &amp; Technology (LIT) Lab. By training I'm an attorney &amp; science educator. By experience, I'm a data scientist, craftsman, and writer. I build things: furniture, software, reasoned arguments...</description>
   <language>en-us</language>
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
