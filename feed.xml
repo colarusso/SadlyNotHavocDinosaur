@@ -7,9 +7,18 @@
   <language>en-us</language>
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
+    <item>
+    <title>Using AI to Distill and Question Texts | Summarize and question the contents of a webpage from within the browser</title>
+    <link>https://sadlynothavocdinosaur.com/posts/summarize-and-question</link>
+    <description>I've started seeing variations on the following, &quote;Sure, I played with ChatGPT when it came out, but I don't really get what the big deal is. You can't trust what it tells you, and it's a pretty mediocre writer.&quote; These are valid criticisms, but if you stop there, it's clear you've only experienced a narrow set of what these tools can do. When I speak of &quote;these tools&quote; I'm referring to a class of tools properly known as Large Language Models (LLMs). Most folks' first encountered these tools under the guise of a chat bot, but they are NOT general purpose thinking machines. LLMs are sentence completion engines. Their replies aren't based on any knowledge of the world other than that contained in the co-occurrence of words in their training data. In a very real way, an LLM is &quote;spicy autocomplete.&quote; Like machine learning (the previous generation of tech to wear the AI moniker), LLMs are prediction machines. Give them a &quote;prompt&quote; and they predict the most likely set of words given their training data. Prompts are what we call the text on which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up. &quote;Four score and seven...&quote; might return &quote;years ago our fathers brought forth...&quote; because the Gettysburg Address was in the training data, and outside of quoting it, when else do people talk like that? If you hear someone say &quote;Four score and seven...&quote; what would you guess their next words would be? </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/text_distillery.png" type="image/png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/summarize-and-question</guid>
+    <pubDate>Mon, 22 Jan 2024 12:00:00 GMT</pubDate>
+  </item>
+  
   <item>
     <title>50 Days of LIT Prompts: Learn prompt engineering through doing with new prompt patterns every weekday for 10 weeks</title>
-    <link>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts/</link>
+    <link>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts</link>
     <description>Every weekday for the next 10 weeks, I'll update this page with new prompt patterns and invite folks to play with them inside LIT Prompts. We'll be plugging into the technology that runs tools like ChatGPT, giving you a level of control that most people don't see. You won't have to do any &quot;coding,&quot; but we will think like coders. I'm still suspicious of the term prompt engineering, esp. when used as a job title. The idea that an entire job could be built around &quot;talking&quot; to an AI seems a bit too loosey goosey. So, we'll try to introduce some rigor. We'll aim to think about workflows and systems where writing prompts is just part of a larger endeavor. You'll be supported by the fact that LIT Prompts lets you produce reusable interconnecting prompt templates. This will let us build upon what we learn and improve our practice over time. We'll explore the promise and perils of this new technology while you build custom interactions/workflows. Plus, I'm pretty sure we'll have fun along the way.</description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/lets_build.png" type="image/png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts/</guid>
