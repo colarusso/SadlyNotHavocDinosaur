@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>A Rose by Any Other Name: Define a selected word, phrase, idiom, or initialism on a webpage with AI</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
+	<meta property="og:title" content='A Rose by Any Other Name: Define a selected word, phrase, idiom, or initialism on a webpage with AI'/>
+	<meta property="og:description" content="I Google the definitions of words with surprising frequency, mostly as part of my writing process. As a dyslexic, it's mostly a backstop for spellcheck. After it has reassured me that I'm only using real words, I tend to use text-to-speech to read what I've written. If a word sounds off, I look it up to make sure it's really the word I intended. It's also good for double checking homophones (e.g., I thought I spelled &quote;discrete&quote;, but this seems to be &quote;discreet&quote;). After this idiosyncratic use, I find myself using search to discover the meanings of opaque anacronyms and initialisms, usually when I wonder off into some unfamiliar part of cyberspace. What does this person mean when they say &quote;SOP?&quote; Is that business speak? After wading through alphabet soup, the next most common hunt for meaning I find myself on is that of an old looking to understand the kiddos. How cringe? And I have to say, search has worked for me, but sometimes it takes some high-level Google-fu to track down what I'm looking for. What if I could just select a word or phrase, click a button, and get a definition be it word, idiom, or initialism? Well, I'm happy to say today's prompt template does just that."/>
+	<meta property="og:image" content="images/50-days/dictionary_square.png"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/functions.js"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>  
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+  
+  <div id="page">
+  <!-- 
+    =================================================
+    
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">A Rose by Any Other Name</i></h1>
+  <div class="post_title_02">Define a selected word, phrase, idiom, or initialism on a webpage with AI</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/dictionary.png"><img src="images/50-days/dictionary.png" ALT="A open dictionary atop a table in a library reading room." class="list_img_file"/></a>
+    <div class="caption">
+      A dictionary, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 2nd</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+  <p>
+    I Google the definitions of words with surprising frequency, mostly as part of my writing process. As a dyslexic, it's mostly a backstop for spellcheck. After it has reassured me that I'm only using real words, I tend to use text-to-speech to read what I've written. If a word sounds off, I look it up to make sure it's really the word I intended. It's also good for double checking homophones (e.g., I thought I spelled "discrete", but this seems to be "discreet"). After this idiosyncratic use, I find myself using search to discover the meanings of opaque anacronyms and initialisms, usually when I wonder off into some unfamiliar part of cyberspace. What does this person mean when they say "SOP?" Is that business speak? After wading through alphabet soup, the next most common hunt for meaning I find myself on is that of an old looking to understand the kiddos. How cringe? And I have to say, search has worked for me, but sometimes it takes some high-level Google-fu to track down what I'm looking for. <b>What if I could just select a word or phrase, click a button, and get a definition be it word, idiom, or initialism?</b> Well, I'm happy to say today's prompt template does just that. 
+  </p>
+	<p>
+    Of course, before we dive in, it's worth taking a moment to consider the implications of using such definitions. What's in a name Afterall? Though the essence of a thing remains unchanged whatever we call it, the definitions attached to these labels matter. "The judicial conception of lexical meaning—i.e., what judges think about what words mean, or, more importantly, how judges arrive at the meaning of contested terms—is often outcome determinative. Vast fortunes or years of confinement may balance precariously on the interpretation of a single word," opens <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1753333" target="_blank">The Dictionary Is Not a Fortress: Definitional Fallacies and a Corpus-Based Approach to Plain Meaning</a>. That note, the name legal scholars give to a common form of student-written paper, helped crystalize the use of corpus linguistics as an aid in discovering the meanings of words as they existed at some point in the past, an important endeavor for the <a href="https://en.wikipedia.org/wiki/Textualism" target="_blank">textualists</a> who purport to see no higher source of meaning when engaging in statutory interpretation. Why this detour into corpus linguistics, isn't this series about AI? Yes, but at the end of the day corpus linguistics, like <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) relies heavily on the co-occurrence of words. The idea is that we can discover the meaning of a word by examining how it is used. What to know what the founders meant by "carrying a firearm," look at what people were writing at the time and start counting. That oddly, is strangely analogous to how we build an LLM. It is here that we will engage with an important truth about LLMs, they encode the semantic meaning of words as they exist in their training data. To ask if this reflects a word's true meaning is to ask whether such can be found in that training data. The answer you arrive at will likely color your impressions of both LLMs and <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3567408" target="_blank">corpus linguistics</a>. 
+  </p>
+  <p>
+    In <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> the authors note the well-established fact that LLMs encode a number of biases, e.g., "stereo-typical and derogatory associations along gender, race, ethnicity, and disability status". This seems intuitive. LLMs work to predict the next word based on their training data. They are a mirror of sorts, encoding the bias existing in the texts they consume. Which is all easy enough to say, but how? How are these sentence completion machines made? The answer won't fit in this post, but if you give me a couple of weeks, I think we can get there using bite-sized explainers like what follows. 
+  </p>
+  <p>
+    The first step on this journey is to understand something called logistic regression. Yes, there's going to be some math, but there won't be a quiz, and I give you permission to skim over things if you like. That being said, if you can get through this, the payoff will be big. Like, understand what this AI thing actually is big. Anyhow, logistic regressions can be used to predict how likely something is to happen. Imagine I've been keeping track of snow days. I have a table showing how much snow fell and whether class was canceled. My first column shows the inches of snow fall and the second whether there was a snow day. 1 = snow day, 0 = no snow day. If I treat the first column as X and the second column as Y, I can plot these observations. See below. You'll notice that the snow days all lie on Y=1 and are off to the right. Just by looking at the plot, I can see that all the snow days occur when the accumulation is more than 4 inches. What a logistic regression does is provide us with a way to better describe this division. The blue line is that traced out by the equation and values you see to its left. If I fiddle with the values of <i>B<sub>0</sub></i> and <i>B<sub>1</sub></i>, I can change the shape of the blue line, something called a sigmoid, shifting it left-right and making it more or less S-like. If you want to have a go at changing the values you can do so <a href="https://www.desmos.com/calculator/z6mjdnchv0" target="_blank">here</a>. It's not important for us to know how exactly, but logistic regression fiddles with those values until there's a pretty good fit with the data. Once this is done, we can enter in a value for X (the amount of snow) and get out the value of Y. Remember Y=0 is no snow day and Y=1 is a snow day. So, it stands to reason that Y=0.5 corresponds to a 50% chance of there being a snow day. Y=0.75? A 75% chance. That's it, logistic regression from thirty thousand feet.
+  </p>
+  <div class="featured_img_center" style="width:100%;">
+    <a href="images/50-days/snow_days.png"><img src="images/50-days/snow_days.png" ALT="An image showing a logistic regression model visualized on a graphing calculator or graphing software interface. On the left side, there is a table with two columns: 'x' and 'y', where 'x' represents the independent variable and 'y' represents the binary dependent variable (0 or 1). The table includes seven x-values ranging from 0 to 5.2, with corresponding y-values that are either 0 or 1.
+
+      Below the table, there is a logistic function defined as:
+      f(x)=11+e−(B0+B1⋅x)f(x)=1+e−(B0​+B1​⋅x)1​
+      where B0B0​ and B1B1​ are parameters of the model. The values for B0B0​ and B1B1​ are given as -24 and 6, respectively, which are adjustable as indicated by sliders.
+      
+      On the right side of the image, there is a graph with a sigmoid curve, representing the logistic function. The curve is steep and transitions from near 0 to 1 between approximately 3.8 and 4.2 on the x-axis. The plotted points at x-values of 4.9, 5.2, and 5 correspond to y=1, and the points at x-values of 3.1, 1.5, 2.7, and 0 correspond to y=0. These points lie on the horizontal lines y=0 and y=1, showing the binary nature of the dependent variable. The curve fits these points, suggesting it's the model's attempt to predict the probability of y=1 given the x-values." class="list_img_file" style="border: 1px solid #a5a5a5;width:100%;"/></a>
+  </div>
+  <p>
+    It might not be clear how we get from predicting snow days based on snow fall to predicting words, but trust me we'll get there. Until then, <b>let's build something!</b>
+  </p>
+
+  <!-- END INTRO -->
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/define-words/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3>Up Next</h3>
+  <ul>
+    <li><a href="posts/define-words/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/define-words/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/define-words/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/define-words/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/define-words/#tires">Kick the Tires</a></li>
+    <li><a href="posts/define-words/#references">TL;DR References</a></li>
+  </ul>
+  <p>
+    <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
+  </p>
+  <!-- 
+    =================================================
+    
+                   Setup LIT Prompts
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="setup" href="posts/define-words/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/define-words/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/define-words/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/define-words/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+ 
+  <!-- 
+    =================================================
+    
+                   Write Your Template
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="template" href="posts/define-words/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our second predefined variable, <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in your active browser tab when you open the extension. This prompt pattern is pretty straight forward. Highlight a word or words; run the template, and get a definition. Where the definition comes from, less so. <a href="posts/summarize-and-question">Yesterday</a>, we expressed great skepticism for prompts that sought to generate replies longer than themselves. What's different here? Maybe nothing. Maybe the definitions of words are so tightly constrained as to mitigate the appearance of <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a>, or more likely, we don't expect to use these definitions as part of a court opinion and can tolerate a little noise. See above. As was true yesterday, we'll be in a better position to answer questions after we've had a chance to <a href="#tires">kick the tires</a>. 
+  </p>
+  <p>Here's the template text.</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>Define the following word/phrase: {{highlighted}}
+
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>Alternatively
+  <ul>
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models">OpenAI's list of models</a>. <a href="posts/summarize-and-question">Yesterday</a>, we used gpt-3.5-turbo-16k because we needed a big context window, here, not so much. </li>  
+      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. To help the reply stay in the mainstream, I chose the least "creative" option—0.</li>  
+      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but sometimes when running a chain of prompts, it can be useful to hide a button.</li>
+  </ul>
+  <h3><a name="working" href="posts/define-words/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+  <p>
+    To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!-- 
+    =================================================
+    
+                    Kick the Tires
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="tires" href="posts/define-words/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+    <li>
+      <b>Fancy words.</b> Here are some fancy words, see if the template can help with definitions.
+      <ul>
+        <li>abdicate</li>
+        <li>abet</li>
+        <li>antidisestablishmentarianism</li>
+        <li>beguile</li>
+        <li>benign</li>
+        <li>beseech</li>
+        <li>circuitous</li>
+        <li>clandestine</li>
+        <li>commensurate</li>
+      </ul>
+    </li>
+    <li>
+      <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the above template. Now try "A rose by any other name."
+    </li>
+    <li>
+      <b>Alphabet Soup.</b> Head on over to this list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> and see how well it does when you select just a set of initials. I found this exercise particularly entertaining. Who know there could be so many different meanings of apparently random strings of letters? Some of these are just too tough for the template. That being said, you might be able to improve your results if you add some context to the prompt template (e.g., something about these being acronyms used by the DOJ). See what I did there? I used DOJ... 
+    </li>
+    <li>
+      <b>You're the expert.</b> Find a website dealing with a community to which you belong and see how the template does with terms of art and slang from that community. 
+    </li>
+    <li>
+      <b>Worthy of Note</b>. As mentioned above the term "note" when applied to student schoalrship is a term or art. I strongly susspect that if you highlight the word "note" and run this template you won't get that meaning of the word. 🤔 Maybe we'll have to revisit this prompt some other day and correct that. 😉
+    </li>
+  </ul>
+  <!-- 
+    =================================================
+    
+                       References
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="references" href="posts/define-words/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
+  </p>
+  <ul>
+    <li><a href="https://www.gutenberg.org/ebooks/1513" target="_blank">Romeo and Juliet by William Shakespeare</a> by William Shakespeare. Technically, I didn't link to this above, but I did allude to it a couple of times. Either way, I'll take any chance I can to share the fact that Project Gutenberg has a great selection of public domain works available to read on the web or with your e-reader. The above link will get you the whole play. 
+    </li>
+    <li>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1753333" target="_blank">The Dictionary Is Not a Fortress: Definitional Fallacies and a Corpus-Based Approach to Plain Meaning</a> 
+      by Stephen C. Mouritsen. This paper discusses the limitations of relying solely on dictionaries for determining the meaning of statutory terms in legal interpretation. The author argues that dictionaries are not infallible and can be subject to definitional fallacies. Instead, the author proposes a corpus-based approach to determining the ordinary meaning of statutory terms, concluding that Corpus Linguistics has the potential to provide a more objective and empirical approach to statutory interpretation. As you might imagine the devil is in the details, and though many have taken up the charge of legal corpus linguistics others have questioned its application, hence, my next reference.
+    </li>
+    <li>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3567408" target="_blank">Legal Corpus Linguistics and the Half-Empirical Attitude</a> by Anya Bernstein. Its proponents argue that corpus linguistics provides empirical grounding to claims about ordinary language. However, the paper argues that legal corpus linguistics falls short in delivering on this promise because it ignores the relevant legal and institutional contexts in which legal language is produced and interpreted. The author refers to this approach as a "half-empirical attitude" because it treats normative claims as empirical findings. The paper suggests that legal corpus linguistics could be useful to legal theory if it embraces a more comprehensive empirical attitude.
+    </li>
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+    </li>
+    <!--<li><a href="">text</a></li>-->
+  </ul>
+  <!-- Preview projects -->
+  <div id="previews"></div>
+  <script>load_previews()</script>
+
+  
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a> 
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+  if (!window.location.hash) { 
+    collapse_setup();
+  }
+
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');*/
+  
+  (async () => {
+    prompts = await loadFile('posts/define-words/prompt_template.txt');
+    //exported = await loadFile('posts/define-words/interactions.html');
+  })()
+</script>
+
+<!--
+Publication checklist:
+
+- Metadata title, description, and image: X
+- Updated anchor links e.g., "posts/define-words/": X
+- Updated prompt_template.txt file in folder: X
+- Metadata publication date: ? 
+-->
+
+</BODY></HTML>
+

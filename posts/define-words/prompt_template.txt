@@ -1,0 +1,13 @@
+{
+  "Define selected word/phrase": {
+    "prompt": "Define the following word/phrase: {{highlighted}}\n\n",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}

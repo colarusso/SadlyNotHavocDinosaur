@@ -7,7 +7,18 @@
   <language>en-us</language>
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
-    <item>
+
+  <item>
+    <title>A Rose by Any Other Name: Define a selected word, phrase, idiom, or initialism on a webpage with AI</title>
+    <link>https://sadlynothavocdinosaur.com/posts/define-words</link>
+    <description>I Google the definitions of words with surprising frequency, mostly as part of my writing process. As a dyslexic, it's mostly a backstop for spellcheck. After it has reassured me that I'm only using real words, I tend to use text-to-speech to read what I've written. If a word sounds off, I look it up to make sure it's really the word I intended. It's also good for double checking homophones (e.g., I thought I spelled "discrete", but this seems to be "discreet"). After this idiosyncratic use, I find myself using search to discover the meanings of opaque anacronyms and initialisms, usually when I wonder off into some unfamiliar part of cyberspace. What does this person mean when they say "SOP?" Is that business speak? After wading through alphabet soup, the next most common hunt for meaning I find myself on is that of an old looking to understand the kiddos. How cringe? And I have to say, search has worked for me, but sometimes it takes some high-level Google-fu to track down what I'm looking for. What if I could just select a word or phrase, click a button, and get a definition be it word, idiom, or initialism? Well, I'm happy to say today's prompt template does just that.  </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_square.png" type="image/png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/define-words</guid>
+    <pubDate>Tue, 23 Jan 2024 06:40:00 GMT</pubDate>
+  </item>
+  
+
+  <item>
     <title>Using AI to Distill and Question Texts | Summarize and question the contents of a webpage from within the browser</title>
     <link>https://sadlynothavocdinosaur.com/posts/summarize-and-question</link>
     <description>I've started seeing variations on the following, "Sure, I played with ChatGPT when it came out, but I don't really get what the big deal is. You can't trust what it tells you, and it's a pretty mediocre writer." These are valid criticisms, but if you stop there, it's clear you've only experienced a narrow set of what these tools can do. When I speak of "these tools" I'm referring to a class of tools properly known as Large Language Models (LLMs). Most folks' first encountered these tools under the guise of a chat bot, but they are NOT general purpose thinking machines. LLMs are sentence completion engines. Their replies aren't based on any knowledge of the world other than that contained in the co-occurrence of words in their training data. In a very real way, an LLM is "spicy autocomplete." Like machine learning (the previous generation of tech to wear the AI moniker), LLMs are prediction machines. Give them a "prompt" and they predict the most likely set of words given their training data. Prompts are what we call the text on which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up. "Four score and seven..." might return "years ago our fathers brought forth..." because the Gettysburg Address was in the training data, and outside of quoting it, when else do people talk like that? If you hear someone say "Four score and seven..." what would you guess their next words would be? </description>
