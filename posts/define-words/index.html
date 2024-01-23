@@ -244,7 +244,7 @@
     When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our second predefined variable, <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in your active browser tab when you open the extension. This prompt pattern is pretty straight forward. Highlight a word or words; run the template, and get a definition. Where the definition comes from, less so. <a href="posts/summarize-and-question">Yesterday</a>, we expressed great skepticism for prompts that sought to generate replies longer than themselves. What's different here? Maybe nothing. Maybe the definitions of words are so tightly constrained as to mitigate the appearance of <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a>, or more likely, we don't expect to use these definitions as part of a court opinion and can tolerate a little noise. See above. As was true yesterday, we'll be in a better position to answer questions after we've had a chance to <a href="#tires">kick the tires</a>. 
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in your active browser tab when you open the extension. This prompt pattern is pretty straight forward. Highlight a word or words; run the template, and get a definition. Where the definition comes from, less so. <a href="posts/summarize-and-question">Yesterday</a>, we expressed great skepticism for prompts that sought to generate replies longer than themselves. What's different here? Maybe nothing. Maybe the definitions of words are so tightly constrained as to mitigate the appearance of <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a>, or more likely, we don't expect to use these definitions as part of a court opinion and can tolerate a little noise. See above. As was true yesterday, we'll be in a better position to answer questions after we've had a chance to <a href="posts/define-words/#tires">kick the tires</a>. 
   </p>
   <p>Here's the template text.</p>
   <!-- 
@@ -307,7 +307,7 @@
   </p>
   <ul>
     <li>
-      <b>Fancy words.</b> Here are some fancy words, see if the template can help with definitions.
+      <b>Fancy words.</b> Here are some fancy words. See if the template can help with definitions.
       <ul>
         <li>abdicate</li>
         <li>abet</li>
@@ -324,13 +324,13 @@
       <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the above template. Now try "A rose by any other name." Now try "LIT," and yes we were aware of this meaning when we named <a href="https://suffolklitlab.org/" target="_blank">the Lab</a>.
     </li>
     <li>
-      <b>Alphabet Soup.</b> Head on over to this list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> and see how well it does when you select just a set of initials. I found this exercise particularly entertaining. Who know there could be so many different meanings of apparently random strings of letters? Some of these are just too tough for the template. That being said, you might be able to improve your results if you add some context to the prompt template (e.g., something about these being acronyms used by the DOJ). See what I did there? I used DOJ... 
+      <b>Alphabet Soup.</b> Head on over to this list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> and see how well it does when you select just a set of initials. I found this exercise particularly entertaining. Who knew there could be so many different meanings of apparently random strings of letters? Some of these are just too tough for the template. That being said, you might be able to improve your results if you add some context to the prompt template (e.g., something about these being acronyms used by the DOJ). See what I did there? I used DOJ... 
     </li>
     <li>
       <b>You're the expert.</b> Find a website dealing published by a community to which you belong, and see how the template does with terms of art and slang from that community. 
     </li>
     <li>
-      <b>Worthy of Note</b>. As mentioned above the term "note" when applied to student schoalrship is a term or art. I strongly susspect that if you highlight the word "note" and run this template you won't get that meaning of the word. 🤔 Maybe we'll have to revisit this prompt some other day and correct that. 😉
+      <b>Worthy of Note</b>. As mentioned above the term "note" when applied to student schoalrship is a term or art. I strongly susspect that if you highlight the word "note" and run this template, you won't get that meaning of the word. 🤔 Maybe we'll have to revisit this prompt some other day and correct that. 😉
     </li>
   </ul>
   <!-- 
