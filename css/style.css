@@ -18,7 +18,8 @@ blockquote {
 }
 
 #msg_bar {
-	float:left;
+	display:none;
+	position: relative;
 	width:100%;
 	background:#ffffb8;;
 	text-align: center;
@@ -30,10 +31,7 @@ blockquote {
 		box-sizing: border-box;
 }
 
-
 .title_bar{
-	float:left;
-	width:100%;
 	padding: 25px 15px 20px 15px;
 	border-bottom: 1px solid #787878;
 	text-transform: uppercase;
@@ -140,8 +138,7 @@ a.title_home {
 
 .content {
 	margin:0 auto 0 auto;
-	padding:1px 10px;
-	min-height:100px;
+	padding:0 10px;
 	max-width:1000px;
 }
 
