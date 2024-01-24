@@ -238,7 +238,7 @@
     When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our second predefined variable, <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in your active browser tab at the moment you click the extension. This prompt patter is pretty striaght forward. Highlight a word or words; run the template, and get a definition. Where the definition comes from, less so. <a href="posts/summarize-and-question">Yesterday</a>, we expressed great sckeptisim for prompts that saught to generate replies longer than themselves. What's different here? Maybe nothing. Maybe the definitions of words is so tightly constrained that there's no room for <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a>, or maybe, we don't expect to use these definitions as part of a court opinion. See above. As we did yesterday, we'll have a better sense of the answers after we get a chance to <a href="#tires">kick the tires</a>. 
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in your active browser tab when you open the extension. This prompt pattern is pretty straight forward. Highlight a word or words; run the template, and get a definition. Where the definition comes from, less so. <a href="posts/summarize-and-question">Yesterday</a>, we expressed great skepticism for prompts that sought to generate replies longer than themselves. What's different here? Maybe nothing. Maybe the definitions of words are so tightly constrained as to mitigate the appearance of <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a>, or more likely, we don't expect to use these definitions as part of a court opinion and can tolerate a little noise. See above. As was true yesterday, we'll be in a better position to answer questions after we've had a chance to <a href="posts/define-words/#tires">kick the tires</a>. 
   </p>
   <p>Here's the template text.</p>
   <!-- 
@@ -260,7 +260,7 @@
     #########################
     #########################
   -->
-  <p>And here are the template's parameters:</p>
+  <p>And here are the template's parameters:</p>Alternatively
   <ul>
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
       <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models">OpenAI's list of models</a>. <a href="posts/summarize-and-question">Yesterday</a>, we used gpt-3.5-turbo-16k because we needed a big context window, here, not so much. </li>  
@@ -301,7 +301,30 @@
   </p>
   <ul>
     <li>
-      <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the this template. Now try "A rose by any other name."
+      <b>Fancy words.</b> Here are some fancy words. See if the template can help with definitions.
+      <ul>
+        <li>abdicate</li>
+        <li>abet</li>
+        <li>antidisestablishmentarianism</li>
+        <li>beguile</li>
+        <li>benign</li>
+        <li>beseech</li>
+        <li>circuitous</li>
+        <li>clandestine</li>
+        <li>commensurate</li>
+      </ul>
+    </li>
+    <li>
+      <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the above template. Now try "A rose by any other name." Now try "LIT," and yes we were aware of this meaning when we named <a href="https://suffolklitlab.org/" target="_blank">the Lab</a>.
+    </li>
+    <li>
+      <b>Alphabet Soup.</b> Head on over to this list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> and see how well it does when you select just a set of initials. I found this exercise particularly entertaining. Who knew there could be so many different meanings of apparently random strings of letters? Some of these are just too tough for the template. That being said, you might be able to improve your results if you add some context to the prompt template (e.g., something about these being acronyms used by the DOJ). See what I did there?
+    </li>
+    <li>
+      <b>You're the expert.</b> Find a website dealing published by a community to which you belong, and see how the template does with terms of art and slang from that community. 
+    </li>
+    <li>
+      <b>Worthy of Note</b>. As mentioned above the term "note" when applied to student schoalrship is a term of art. I strongly susspect that if you highlight the word "note" and run this template, you won't get that meaning of the word. 🤔 Maybe we'll have to revisit this prompt some other day and correct that. 😉
     </li>
   </ul>
   <!-- 
@@ -317,9 +340,18 @@
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
   </p>
   <ul>
-    <li><a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.</li>
-    <li><a href="TK" target="_blank">TK</a> by 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium, eros sed consectetur porttitor, felis ligula sagittis mi, a bibendum elit risus at arcu. Mauris ut libero eu nulla interdum accumsan a et sem. Proin feugiat enim metus, vitae varius felis facilisis eu. Praesent maximus sit amet urna lobortis porta. Quisque enim tellus, maximus sed euismod volutpat, tempus eget velit. Proin non tortor eu orci ornare pharetra. Pellentesque id pharetra libero, ut congue leo. Praesent felis felis, facilisis id velit eu, suscipit ultrices velit. Mauris lacinia cursus mi, ac imperdiet nulla pretium quis. Curabitur ante mauris, euismod vitae volutpat a, sollicitudin quis nulla. Proin tincidunt, ante et egestas interdum, nibh lacus tristique urna, ac pulvinar justo libero in orci. </li>
+    <li><a href="https://www.gutenberg.org/ebooks/1513" target="_blank">Romeo and Juliet by William Shakespeare</a> by William Shakespeare. Technically, I didn't link to this above, but I did allude to it a couple of times. Either way, I'll take any chance I can to share the fact that Project Gutenberg has a great selection of public domain works available to read on the web or with your e-reader. The above link will get you the whole play. 
+    </li>
+    <li>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1753333" target="_blank">The Dictionary Is Not a Fortress: Definitional Fallacies and a Corpus-Based Approach to Plain Meaning</a> 
+      by Stephen C. Mouritsen. This paper discusses the limitations of relying solely on dictionaries for determining the meaning of statutory terms in legal interpretation. The author argues that dictionaries are not infallible and can be subject to definitional fallacies. Instead, the author proposes a corpus-based approach to determining the ordinary meaning of statutory terms, concluding that Corpus Linguistics has the potential to provide a more objective and empirical approach to statutory interpretation. As you might imagine the devil is in the details, and though many have taken up the charge of legal corpus linguistics others have questioned its application, hence, my next reference.
+    </li>
+    <li>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3567408" target="_blank">Legal Corpus Linguistics and the Half-Empirical Attitude</a> by Anya Bernstein. Its proponents argue that corpus linguistics provides empirical grounding to claims about ordinary language. However, the paper argues that legal corpus linguistics falls short in delivering on this promise because it ignores the relevant legal and institutional contexts in which legal language is produced and interpreted. The author refers to this approach as a "half-empirical attitude" because it treats normative claims as empirical findings. The paper suggests that legal corpus linguistics could be useful to legal theory if it embraces a more comprehensive empirical attitude.
+    </li>
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+    </li>
     <!--<li><a href="">text</a></li>-->
   </ul>
   <!-- Preview projects -->

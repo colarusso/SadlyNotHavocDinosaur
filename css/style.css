@@ -11,6 +11,12 @@ body {
 	line-height: 22px;
 }
 
+blockquote {
+	border-left: 8px solid #999999;
+	padding-left: 15px;
+	margin-left: 15px;
+}
+
 .title_bar{
 	padding: 25px 15px 20px 15px;
 	border-bottom: 1px solid #787878;
