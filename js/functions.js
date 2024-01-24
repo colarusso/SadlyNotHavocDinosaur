@@ -132,6 +132,17 @@ function collapse_setup() {
     document.getElementById('expand_setup').style.display='block';
 }
 
-//document.addEventListener('DOMContentLoaded', function () {
-//    load_previews();
-//});
+document.addEventListener('DOMContentLoaded', function () {
+
+    var msg = `David's lab is hosting a <a href="https://suffolklitlab.org/LITCon/2024/" target="_blank">hybrid event @ Suffolk Law</a> on April 8th focusing on practical AI in law. Join us!`
+    document.getElementById('msg_bar').innerHTML = msg;
+    document.getElementById('msg_bar').style.display='block';
+
+    if (!window.location.hash) { 
+        try {
+            collapse_setup();            
+        } catch (error) {}
+    }
+    
+    //load_previews();
+});

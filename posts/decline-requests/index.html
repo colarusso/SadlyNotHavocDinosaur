@@ -29,8 +29,8 @@
 
   <!-- JS & style -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="js/functions.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-24">
+  <script src="js/functions.js?v=2024-01-24"></script>
   <script src="js/spin.js"></script>
 
   <script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
@@ -46,6 +46,9 @@
 
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
 
 <!-- Title and search -->
 <div class="title_bar">
@@ -125,7 +128,7 @@
 
   <p>And we can keep doing this for as many new inputs as we like.</p>
 
-  <p>\[y = {{1} \over {1 + e^{-(B_0 + B_1·x + B_2·x_2 + B_3·x_3 + B_4·x_4 . . . + B_n·x_n)}}}\]<p>
+  <p>\[y = {{1} \over {1 + e^{-(B_0 + B_1·x + B_2·x_2 + B_3·x_3 + B_4·x_4 + . . . + B_n·x_n)}}}\]<p>
 
   <p>
     In this way, we can account for things like temperature and windspeed when predicting whether or not class will be canceled. Of course, we get the values of <i>B<sub>0</sub></i> through <i>B<sub>n</sub></i> by fiddling with those values until our graph "fits." It's just like yesterday except there are now more values (dimensions) to fiddle with. We put in values for <i>x<sub></sub></i> through <i>x<sub>n</sub></i> and get out a value for <i>y</i> which we are reading as our prediction for whether school will close.
@@ -374,9 +377,6 @@ For the above email or email thread, draft a brief professional reply politely d
 </div>
 
 <script>
-  if (!window.location.hash) { 
-    collapse_setup();
-  }
 
   /*new GreenAudioPlayer('.gap-example');
   const audio_object = document.querySelector('.gap-example  audio');*/
