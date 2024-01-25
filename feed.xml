@@ -8,6 +8,15 @@
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
   <item>
+    <title>You Can't Be Neutral on a Moving Train: Define a selected word, phrase, idiom, or initialism given the context of the webpage on which it is found</title>
+    <link>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</link>
+    <description>If I had a motto, it might be "context matters." Except, I'm resistant to picking a singular guiding principle because, well... context matters. 😉 Earlier in the week, we wrote a template to provide definitions for words we highlighted in the browser, but we found when kicking the tires that sometimes this feel down when dealing with terms of art or initialisms claimed by competing collections of words. What was lacking in these instances was context. So, today we'll add context from the active page to the prompt template. Before we get there, let's talk context more broadly. </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png" type="image/png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</guid>
+    <pubDate>Thur, 25 Jan 2024 05:30:00 GMT</pubDate>
+  </item>
+
+  <item>
     <title>I'm Sorry, Dave Can't Do That: Use the text of an email to draft a polite reply declining any request(s)</title>
     <link>https://sadlynothavocdinosaur.com/posts/decline-requests</link>
     <description>With apologies to Kubrick and Clarke, at least I can say I held out two full days before alluding to a killer AI. That's also how long I resisted sharing a use case in which we use an LLM to help write something. There's a great deal to be said about authorship in the age of ChatGPT, and perhaps we'll explore this more in future posts. For the moment, however, let me provide a framing I find useful. It starts by recognizing that context matters and that writing itself is not one task. The production of written work involves the application of multiple overlapping tasks. Consider the traditional roles found in a newsroom (e.g., editors in chief, assignment editors, writers, fact checkers, copy editors, and the like). When delegating any of these tasks, to a human or otherwise, it is important to have in mind what role(s) we are delegating and why. Putting one's name to a document means different things in different contexts. Just ask the paralegal who writes all their partner's "first drafts." For instructors worried about the use of AI by their students, I suggest they name the role(s) an assignment is looking to assess. This allows the instructor and student to properly evaluate whether or not the use of this or that tool is acceptable. If handwriting is among the matters being assessed, a word processor is out. Copy editing? This may or may not exclude the use of spell check. What about grammar check? If, however, there is no instructor, and the question is left to us alone, we have to be honest with ourselves about the job at hand.   </description>
@@ -16,7 +25,6 @@
     <pubDate>Wed, 24 Jan 2024 12:00:00 GMT</pubDate>
   </item>
 
-
   <item>
     <title>A Rose by Any Other Name: Define a selected word, phrase, idiom, or initialism on a webpage with AI</title>
     <link>https://sadlynothavocdinosaur.com/posts/define-words</link>
@@ -24,8 +32,7 @@
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_square.png" type="image/png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/define-words</guid>
     <pubDate>Tue, 23 Jan 2024 06:40:00 GMT</pubDate>
-  </item>
-  
+  </item> 
 
   <item>
     <title>Using AI to Distill and Question Texts | Summarize and question the contents of a webpage from within the browser</title>
