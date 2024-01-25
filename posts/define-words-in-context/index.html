@@ -5,10 +5,10 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>A Rose by Any Other Name: Define a selected word, phrase, idiom, or initialism on a webpage</title>
+  <title>You Can't Be Neutral on a Moving Train: Define a selected word, phrase, idiom, or initialism given the context of the webpage on which it is found</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content='A Rose by Any Other Name: Define a selected word, phrase, idiom, or initialism on a webpage'/>
+	<meta property="og:title" content="You Can't Be Neutral on a Moving Train: Define a selected word, phrase, idiom, or initialism given the context of the webpage on which it is found"/>
 	<meta property="og:description" content="TK "/>
 	<meta property="og:image" content="images/50-days/dictionary_train_square.png"/>
 
@@ -29,14 +29,16 @@
 
   <!-- JS & style -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-24e">
-  <script src="js/functions.js?v=2024-01-24e"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-24f">
+  <script src="js/functions.js?v=2024-01-24f"></script>
   <script src="js/spin.js"></script>
 
   <link rel="stylesheet" href="css/prism.css" data-noprefix="">
   <script type="text/javascript" src="js/prism.js"></script>
 
-  <!--<link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
   <script src="js/green-audio-player.js"></script>-->
   
   <!-- RSS -->
@@ -44,6 +46,9 @@
 
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
 
 <!-- Title and search -->
 <div class="title_bar">
@@ -88,9 +93,9 @@
         </span>
       </div>
     </div>-->
-    <a href="images/50-days/dictionary_train.png"><img src="images/50-days/dictionary_train.png" ALT="Image of a distillery, the floor, however, is covered in books." class="list_img_file"/></a>
+    <a href="images/50-days/dictionary_train.png"><img src="images/50-days/dictionary_train.png" ALT="Image of a person reading a dictionary on a moving train." class="list_img_file"/></a>
     <div class="caption">
-      A dictionary, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      A dictionary on a moving train, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
@@ -99,38 +104,50 @@
   </p>
   <p><i>This is <b>the 4th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
-    If I had a moto, it might be "context matters." Earlier in the week, we wrote a template to provide definitions for words we highlighted in the browser, but oWhat's in a name, or a definition for that matter? Quite a lot actually. Consider the field of  asserting his constitutional right to a lawyer or was he asking for a "lawyer dog?"  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium, eros sed consectetur porttitor, felis ligula sagittis mi, a bibendum elit risus at arcu. Mauris ut libero eu nulla interdum accumsan a et sem. Proin feugiat enim metus, vitae varius felis facilisis eu. Praesent maximus sit amet urna lobortis porta. Quisque enim tellus, maximus sed euismod volutpat, tempus eget velit. Proin non tortor eu orci ornare pharetra. Pellentesque id pharetra libero, ut congue leo. Praesent felis felis, facilisis id velit eu, suscipit ultrices velit. Mauris lacinia cursus mi, ac imperdiet nulla pretium quis. Curabitur ante mauris, euismod vitae volutpat a, sollicitudin quis nulla. Proin tincidunt, ante et egestas interdum, nibh lacus tristique urna, ac pulvinar justo libero in orci. 
+    If I had a motto, it might be "context matters." Except, I'm resistant to picking a singular guiding principle because, well... context matters. 😉 <a href="posts/define-words" traget="_blank">Earlier in the week</a>, we wrote a template to provide definitions for words we highlighted in the browser, but we found when <a href="posts/define-words/#tires" traget="_blank">kicking the tires</a> that sometimes this feel down when dealing with terms of art or initialisms claimed by competing collections of words. What was lacking in these instances was context. So, today we'll add context from the active page to the prompt template. Before we get there, let's talk context more broadly. 
   </p>
   <p>
-    In felis metus, sagittis ut libero ac, cursus maximus elit. Nunc vel nisl enim. Aliquam id malesuada neque. Duis malesuada lacus quam, in congue ante euismod nec. Aliquam erat volutpat. Suspendisse potenti. Pellentesque gravida mi massa, sed lacinia tortor congue ut. Nunc consectetur urna sodales enim malesuada, quis rhoncus est gravida. Praesent augue ante, varius et lectus at, auctor molestie metus. Integer pellentesque libero ornare erat sodales, nec consequat tortor vulputate. Praesent nec magna faucibus, volutpat ipsum ac, accumsan massa. Mauris tincidunt purus ac lorem tempus lobortis. Integer iaculis id diam vel lacinia. In hac habitasse platea dictumst. 
+    This week my social media feeds have focused on two things: AI and unions. The precipitating events for this are: (1) the <a href="posts/summarize-and-question" traget="_blank">launch</a> of this series on Monday; and (2) the fact that my wife is <a href="https://linktr.ee/ntaresources" traget="_blank">on strike</a>. We're all likely to see these two topics near each other more and more for one simple reason. Despite what you may have heard, the real answer to people's AI fears isn't copyright. It's antitrust and labor law. We saw <a href="https://apnews.com/article/hollywood-ai-strike-wga-artificial-intelligence-39ab72582c3a15f77510c9c30a45ffc8" traget="_blank">a preview</a> of this with last year's writers' strike. I believe training AI <a href="https://www.techdirt.com/2023/11/03/wherein-the-copia-institute-tells-the-copyright-office-theres-no-place-for-copyright-law-in-ai-training/" traget="_blank">shouldn't</a> be a matter for copyright, and the liability for infringing outputs should probably fall <a href="https://www.techdirt.com/2024/01/05/copyright-liability-on-llms-should-mostly-fall-on-the-prompter-not-the-service/" traget="_blank">mostly</a> on the prompter. Whether or not five justices agree with me is another matter. Either way, AI art doesn't copy human artists the way you think it does & that <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" traget="_blank">queasy feeling</a> it gives you isn't about copyright. 
   </p>
-  <div class="featured_img">
-    <a href="images/50-days/text_distillery.png"><img src="images/50-days/text_distillery.png" ALT="Image of a distillery, the floor, however, is covered in books." class="list_img_file"/></a>
+  <p>
+    Image-generating models like Dall-E and Stable Diffusion do NOT contain copies of the art they were trained on. To see why consider: (1) models like Stable Diffusion and Dall-E were trained on billions of image-description pairs; (2) the trained models, the software capable of producing AI art have sizes on the order of half a dozen gigabytes. This means there is only something like 17 bits available per image. For reference, this sentence alone contains 192 bits if encoded in the popular ASCII character set. If one could store a high-resolution image in 17 bits, a cell phone with 32GB of storage could store 15 billion photos. That's 5 photos every second for 100 years. Whatever is stored in that model, it is not a database of images. There is simply not enough space. Consequently, the images produced by the model are not collages stitched together from existing images. They are something much much weirder. 
+  </p>
+  <p>
+    To many it seems self-evident that all AI art is composed of copies. Additionally, something strikes them as unfair and so they reason that there must be an existing prohibition against such an arrangement. Understandably, they assume such a prohibition must lie with copyright. However, the absence of any actual copies within the models suggests things may be more complicated. It is important to properly identify the root of such objections lest we make bad law or policy based on mistaken understandings. If one's objection is based on something other than copying, they are well served by properly identifying the true source. Otherwise, they risk fighting the wrong battle. 
+  </p>
+  <p>
+    Understanding what these AI tools are doing is of the utmost importance if we are to wield them well. Which, as you may have guessed, is an excellent transition to our micro-lesson, followed immediately by prompt work.
+  </p>
+  <h3><a name="nets" href="posts/define-words-in-context/#nets" class="anchor" alt="deep link to this section"></a>Artificial Neural Nets</h3>
+  <p>
+    <a href="posts/decline-requests/">Yesterday</a>, we saw how if we squint, a <a href="posts/define-words/#logistic">logistic regression</a> looks a lot like an artificial neuron. Today we ask, what happens when you connect a bunch of these neurons together like so? 
+  </p>
+    <div class="featured_img_center">
+    <a href="images/50-days/neural_net.png"><img src="images/50-days/neural_net.png" ALT="Our artificl neurons connected together." class="list_img_file"/></a>
     <div class="caption">
-      Text Distillery, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      To be clear, our nodes only approximate logistic regressions, hence the tildes. 
     </div>
   </div>
   <p>
-    Donec in purus nulla. Aliquam finibus lectus ac faucibus convallis. In auctor, massa et lobortis euismod, urna erat pharetra odio, a interdum risus eros posuere enim. Etiam mattis mollis est, vitae blandit ante dapibus nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc viverra sit amet ante quis vulputate. Aenean bibendum molestie scelerisque. Proin a consequat eros. Nunc tincidunt semper est ac vulputate. Duis sollicitudin nisl ac ornare tincidunt. Suspendisse facilisis dictum arcu sit amet mollis. Sed et ipsum lobortis, ullamcorper tortor non, laoreet dolor. Nullam id pulvinar lacus, id mollis nisl. Integer gravida sapien eget accumsan euismod. 
+    It's well beyond the scope of this series to explain how it is we train these networks, adjust all those weights to get the right answers, but given what we've learned this week, you should be able to see how they work once trained. You feed in some inputs (<i>x</i> through <i>x<sub>n</sub></i>) and at the other end you can read out answers. In the above example, the network will output three numbers. These represent three different possible answers (A, B, and C). We know these answers will show up as numbers between 0 and 1, and if we've trained things properly, the right answer will be the one with the highest value. That is if we get the answers A=0.2, B=0.7, and C=0.1, we can assume there's a 70% chance the answer is B, a 20% chance the answer is A, and a 10% chance the answer is C. The number of outputs, inputs, as well as the number of nodes in the layer between is arbitrary. In practice, folks play around with different numbers to get the best results. If you make an input for every pixel in an image and confine the output to one. You can train a neural next to tell you if something is or isn't a cat by providing a lot of pictures labeled cat or not. Here's <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">a great video</a> that explains the operation of neural nets from a slightly different (more mathy) perspective. 
   </p>
   <p>
-    Nullam posuere vestibulum leo tristique dignissim. Vivamus velit velit, commodo ut nisl id, vulputate aliquet turpis. Praesent placerat sapien id eleifend placerat. Nunc quam ligula, dignissim sed elementum at, gravida ac sapien. In sed ligula vitae nisi venenatis egestas. Quisque vel orci vel dui elementum fringilla vitae ut elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis quis laoreet magna, a varius justo. Vivamus aliquet purus tellus, a venenatis velit aliquam vitae. Quisque lacinia eu risus pellentesque feugiat. 
+    We really have come a long way from predicting snow days. As I keep noting, predicting words can't be that far off. Until then, <b>let's build something!</b>
   </p>
-
   <!-- END INTRO -->
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/define-words/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/define-words-in-context/#template">The Prompt Pattern (Template)</a>.
   </p>
   <h3>Up Next</h3>
   <ul>
-    <li><a href="posts/define-words/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/define-words-in-context/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/define-words/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/define-words/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/define-words-in-context/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/define-words-in-context/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/define-words/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/define-words/#tires">Kick the Tires</a></li>
-    <li><a href="posts/define-words/#references">TL;DR References</a></li>
+    <li><a href="posts/define-words-in-context/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/define-words-in-context/#tires">Kick the Tires</a></li>
+    <li><a href="posts/define-words-in-context/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -143,7 +160,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/define-words/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/define-words-in-context/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -163,7 +180,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/define-words/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/define-words-in-context/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -176,7 +193,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/define-words/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/define-words-in-context/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -213,7 +230,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/define-words/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/define-words-in-context/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
  
@@ -225,7 +242,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/define-words/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/define-words-in-context/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -235,10 +252,10 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our second predefined variable, <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be combining two variables we've worked with before, <code>{{innerText}}</code> and <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in your active browser tab when you open the extension. This prompt pattern is pretty straight forward. Highlight a word or words; run the template, and get a definition. Where the definition comes from, less so. <a href="posts/summarize-and-question">Yesterday</a>, we expressed great skepticism for prompts that sought to generate replies longer than themselves. What's different here? Maybe nothing. Maybe the definitions of words are so tightly constrained as to mitigate the appearance of <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a>, or more likely, we don't expect to use these definitions as part of a court opinion and can tolerate a little noise. See above. As was true yesterday, we'll be in a better position to answer questions after we've had a chance to <a href="posts/define-words/#tires">kick the tires</a>. 
+    The <code>{{innerText}}</code> variable will be replaced by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">innerText</a> of your current page (roughly speaking the hard-coded text of a page) while the <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab at the time you open the extension. We use the template just like Tuesday's, highlight a word or words; run the template, and get a definition. What's different here is that we ask for a definition that considers the context of the page you are on. As you will no doubt see when you kick the tires, this improves performance over Tuesday's template. 
   </p>
   <p>Here's the template text.</p>
   <!-- 
@@ -249,7 +266,9 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>Define the following word/phrase: {{highlighted}}
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{innerText}}
+
+Use the information above to explain who/what the following word/phrase is, i.e., provide a description/definition for the word(s) as used above: {{highlighted}}
 
 </code></pre>
   </section>
@@ -260,10 +279,10 @@
     #########################
     #########################
   -->
-  <p>And here are the template's parameters:</p>Alternatively
+  <p>And here are the template's parameters:</p>
   <ul>
-      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models">OpenAI's list of models</a>. <a href="posts/summarize-and-question">Yesterday</a>, we used gpt-3.5-turbo-16k because we needed a big context window, here, not so much. </li>  
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen  "Prompt," in which case the extension would return the text of the completed template. </li>
+      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models">OpenAI's list of models</a>. We're back to using gpt-3.5-turbo-16k because we want to be able to read a whole webpage. </li>  
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. To help the reply stay in the mainstream, I chose the least "creative" option—0.</li>  
       <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
@@ -271,7 +290,7 @@
       <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
       <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but sometimes when running a chain of prompts, it can be useful to hide a button.</li>
   </ul>
-  <h3><a name="working" href="posts/define-words/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+  <h3><a name="working" href="posts/define-words-in-context/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
   <p>
     To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -295,9 +314,9 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/define-words/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/define-words-in-context/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
-    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. Some of these may seem a little familiar, but bear with me. 
   </p>
   <ul>
     <li>
@@ -313,18 +332,19 @@
         <li>clandestine</li>
         <li>commensurate</li>
       </ul>
+      I love how some of the words, for me at least, returned answers like, "Based on the context provided, the word 'abet' is a fancy word that is highlighted as part of a prompt to test the template's ability to provide definitions." So true, but also, not exactly what I was looking for. Can you edit the template to get something better? 
     </li>
     <li>
-      <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the above template. Now try "A rose by any other name." Now try "LIT," and yes we were aware of this meaning when we named <a href="https://suffolklitlab.org/" target="_blank">the Lab</a>.
+      <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the above template. Try "A rose by any other name," and "You Can't Be Neutral on a Moving Train."  Now, try "LIT," unlike last time, at least for me, I no longer get the vernacular usage but rather an explanation that this stands for the <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a>,, nice segue into initialisms. 
     </li>
     <li>
-      <b>Alphabet Soup.</b> Head on over to this list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> and see how well it does when you select just a set of initials. I found this exercise particularly entertaining. Who knew there could be so many different meanings of apparently random strings of letters? Some of these are just too tough for the template. That being said, you might be able to improve your results if you add some context to the prompt template (e.g., something about these being acronyms used by the DOJ). See what I did there?
+      <b>Alphabet Soup.</b> If you head back over to the list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> things should go a lot better than last time. Of course, the answers are literlly on the page. So, maybe this isn't the best test. 
     </li>
     <li>
       <b>You're the expert.</b> Find a website dealing published by a community to which you belong, and see how the template does with terms of art and slang from that community. 
     </li>
     <li>
-      <b>Worthy of Note</b>. As mentioned above the term "note" when applied to student schoalrship is a term of art. I strongly susspect that if you highlight the word "note" and run this template, you won't get that meaning of the word. 🤔 Maybe we'll have to revisit this prompt some other day and correct that. 😉
+      <b>Worthy of Note</b>. On Tuesday, when attempting to define the term "note," a term of art for a common form of legal scholars authored by law students, we suggested we might need to revisit and correct the fact that the template couldn't get this right. As we observed in "Alphabet Soup," it's not fair to use the template on a page where the definition is provided. So, I suggest you open this law journal contents page and select the header for the "Notes" section. My hope is that you'll be pleasantly surprised. Despite the lack of a definition, I got the following reply, "In the context of the BYU Law Review, 'Notes' refers to a section of the journal that features shorter articles written by law students. These articles typically analyze a specific legal issue or topic in a concise manner and provide insights or arguments on the subject. Notes are often written by law students as part of their coursework or as a way to contribute to legal scholarship." 
     </li>
   </ul>
   <!-- 
@@ -335,30 +355,28 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="references" href="posts/define-words/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/define-words-in-context/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
   </p>
   <ul>
-    <li><a href="https://www.gutenberg.org/ebooks/1513" target="_blank">Romeo and Juliet by William Shakespeare</a> by William Shakespeare. Technically, I didn't link to this above, but I did allude to it a couple of times. Either way, I'll take any chance I can to share the fact that Project Gutenberg has a great selection of public domain works available to read on the web or with your e-reader. The above link will get you the whole play. 
+    <li><a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> by Ted Chiang.
+      This article explores the potential risks and consequences of artificial intelligence (A.I.) in relation to capitalism. Chiang suggests that A.I. can be seen as a management-consulting firm, similar to McKinsey & Company, which concentrates wealth and disempowers workers. He argues that A.I. currently assists capital at the expense of labor, and questions whether there is a way for A.I. to assist workers instead of management. Chiang also discusses the need for economic policies to distribute the benefits of technology appropriately, as well as the importance of critical self-examination by those building world-shaking technologies. He concludes by emphasizing the need to question the assumption that more technology is always better and to engage in the hard work of building a better world. 
     </li>
     <li>
-      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1753333" target="_blank">The Dictionary Is Not a Fortress: Definitional Fallacies and a Corpus-Based Approach to Plain Meaning</a> 
-      by Stephen C. Mouritsen. This paper discusses the limitations of relying solely on dictionaries for determining the meaning of statutory terms in legal interpretation. The author argues that dictionaries are not infallible and can be subject to definitional fallacies. Instead, the author proposes a corpus-based approach to determining the ordinary meaning of statutory terms, concluding that Corpus Linguistics has the potential to provide a more objective and empirical approach to statutory interpretation. As you might imagine the devil is in the details, and though many have taken up the charge of legal corpus linguistics others have questioned its application, hence, my next reference.
+      <a href="https://www.techdirt.com/2024/01/05/copyright-liability-on-llms-should-mostly-fall-on-the-prompter-not-the-service/" target="_blank">Wherein The Copia Institute Tells The Copyright Office There's No Place For Copyright Law In AI Training </a> by  Cathy Gellis. 
+      This article outlines a comment filed by the Copia Institute with the US Copyright Office, arguing that copyright law should not apply to AI training. The comment states that copyright law should not interfere with AI training because it would impede the public's right to consume works. They argue that AI training is an extension of the public's right to use tools, including software tools, to help them consume works. The comment also notes that AI training is not the same as copying or distributing copyrighted works, as it involves the analysis and processing of information rather than the creation of new works. They conclude that copyright law should not have a role in AI training and that AI training should be considered fair use or exempt from copyright altogether. 
     </li>
     <li>
-      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3567408" target="_blank">Legal Corpus Linguistics and the Half-Empirical Attitude</a> by Anya Bernstein. Its proponents argue that corpus linguistics provides empirical grounding to claims about ordinary language. However, the paper argues that legal corpus linguistics falls short in delivering on this promise because it ignores the relevant legal and institutional contexts in which legal language is produced and interpreted. The author refers to this approach as a "half-empirical attitude" because it treats normative claims as empirical findings. The paper suggests that legal corpus linguistics could be useful to legal theory if it embraces a more comprehensive empirical attitude.
-    </li>
-    <li>
-      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+      <a href="https://www.techdirt.com/2023/11/03/wherein-the-copia-institute-tells-the-copyright-office-theres-no-place-for-copyright-law-in-ai-training/" target="_blank">Copyright Liability On LLMs Should Mostly Fall On The Prompter, Not The Service </a> by  Ira Rothken. 
+      The use of large language models (LLMs) like ChatGPT has raised questions about the bounds of fair use and the responsibilities of AI developers and users in relation to copyright law. In this article Rothken proposes the "Training and Output" (TAO) Doctrine as a way to address these issues. The TAO Doctrine suggests that if an AI LLM engine is trained using copyrighted works and the outputs generated are based on user prompts, the responsibility for any potential copyright infringement should lie with the user, not the AI system. This approach recognizes the dual-use nature of AI technologies and emphasizes the importance of user intent and inputs in determining the nature of the output and any downstream usage. The TAO Doctrine aims to strike a balance between fostering innovation and respecting copyright laws. 
+
     </li>
     <!--<li><a href="">text</a></li>-->
   </ul>
   <!-- Preview projects -->
   <div id="previews"></div>
-  
-
-  
+    
   </div>
   <!-- END PAGE CONTENT -->
   <div class="footer">
@@ -373,16 +391,17 @@
 </div>
 
 <script>
-  if (!window.location.hash) { 
-    collapse_setup();
-  }
 
   /*new GreenAudioPlayer('.gap-example');
-  const audio_object = document.querySelector('.gap-example  audio');*/
+  const audio_object = document.querySelector('.gap-example  audio');
+  
+  try {
+		MathJax.typeset();		
+	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/define-words/prompt_template.txt');
-    //exported = await loadFile('posts/define-words/interactions.html');
+    prompts = await loadFile('posts/define-words-in-context/prompt_template.txt');
+    //exported = await loadFile('posts/define-words-in-context/interactions.html');
   })()
 </script>
 
@@ -390,10 +409,9 @@
 Publication checklist:
 
 - Metadata title, description, and image: X
-- Updated anchor links e.g., "posts/define-words/": X
+- Updated anchor links e.g., "posts/define-words-in-context/": X
 - Updated prompt_template.txt file in folder: X
 - Metadata publication date: ? 
 -->
 
 </BODY></HTML>
-
