@@ -117,7 +117,7 @@ function load_previews() {
     html += previews_arr[0][Math.floor(Math.random() * (previews_arr[0].length))]
     html += previews_arr[1][Math.floor(Math.random() * (previews_arr[1].length))]
     html += `\n<div class="button_row"><a href="projects" class="button">See all projects</a></div>`;
-    //document.getElementById('previews').innerHTML = html ;
+    document.getElementById('previews').innerHTML = html ;
 }
 
 function expand_setup() {
@@ -132,11 +132,19 @@ function collapse_setup() {
     document.getElementById('expand_setup').style.display='block';
 }
 
+var msg = `David's lab is hosting a <a href="https://suffolklitlab.org/LITCon/2024/" target="_blank">hybrid event at Suffolk Law</a> on April 8th on practical AI in law. Join us!`
+
+function close_msg() {
+    document.getElementById('msg_bar').style.display='none';
+    localStorage.setItem('msg',msg)
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    var msg = `David's lab is hosting a <a href="https://suffolklitlab.org/LITCon/2024/" target="_blank">hybrid event @ Suffolk Law</a> on April 8th focusing on practical AI in law. Join us!`
-    document.getElementById('msg_bar').innerHTML = msg;
-    document.getElementById('msg_bar').style.display='block';
+    if (localStorage.msg != msg) {
+        document.getElementById('msg_bar').innerHTML = `<a href="javascript:close_msg();" style="text-decoration:none;color:#6c6b6b"><span class="ex">X</span></a>`+ msg;
+        document.getElementById('msg_bar').style.display='block';    
+    }
 
     if (!window.location.hash) { 
         try {
@@ -144,5 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {}
     }
     
-    //load_previews();
+    //try {
+    //    load_previews();        
+    //} catch (error) {}
 });
