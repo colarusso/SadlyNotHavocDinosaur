@@ -35,8 +35,8 @@
     <title>You Can't Be Neutral on a Moving Train: Define a selected word, phrase, idiom, or initialism given the context of the webpage on which it is found</title>
     <link>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</link>
     <description>If I had a motto, it might be "context matters." Except, I'm resistant to picking a singular guiding principle because, well... context matters. 😉 Earlier in the week, we wrote a template to provide definitions for words we highlighted in the browser, but we found when kicking the tires that sometimes this feel down when dealing with terms of art or initialisms claimed by competing collections of words. What was lacking in these instances was context. So, today we'll add context from the active page to the prompt template. Before we get there, let's talk context more broadly. </description>
-    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png"/>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_train_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_train_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</guid>
     <pubDate>Thu, 25 Jan 2024 05:30:00 GMT</pubDate>
   </item>
