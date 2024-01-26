@@ -7,6 +7,27 @@
   <language>en-us</language>
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
+  <!--
+  <item>
+    <title></title>
+    <link>https://sadlynothavocdinosaur.com/posts//</link>
+    <description></description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/_square.png" type="image/png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts//</guid>
+    <pubDate>Thur, 25 Jan 2024 05:30:00 GMT</pubDate>
+  </item>
+  -->
+
+  <item>
+    <title>Flip a Poem; Roll an "App": Turn the outcome of a coin flip into a poem and package this as an "app"</title>
+    <link>https://sadlynothavocdinosaur.com/posts/coinflip-poem/</link>
+    <description>This week we've used LLMs to talk with texts, reply to emails, and figure out unfamiliar phraseologywith input provided by the browser. In future posts, we'll tackle more complex prompt patterns, but we'll also take advantage of LIT Prompt's virtual dice and export functionality to make some really interesting interactions you can share or save for later. Alas, before we run, we must walk, and before we walk, we must crawl. To get our bearings, today's prompt finds us flipping a virtual coin, writing a poem about the flip's outcome, and packaging the whole thing up as a "web app." By way of foreshadowing, LIT Prompts comes preloaded with a virtual coin, not to mention 4, 6, 8, 10, and 20-sided dice. 🤔 I wonder what could be coming? </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/coinflip_square.png" type="image/png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/coinflip-poem/</guid>
+    <pubDate>Fri, 26 Jan 2024 04:00:00 GMT</pubDate>
+  </item>
+
+
   <item>
     <title>You Can't Be Neutral on a Moving Train: Define a selected word, phrase, idiom, or initialism given the context of the webpage on which it is found</title>
     <link>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</link>
