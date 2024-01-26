@@ -14,7 +14,7 @@
     <description></description>
     <media:thumbnail url="" width="" height=""/>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/_square.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/_square.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts//</guid>
     <pubDate>Thur, 25 Jan 2024 05:30:00 GMT</pubDate>
   </item>
@@ -25,7 +25,7 @@
     <link>https://sadlynothavocdinosaur.com/posts/coinflip-poem/</link>
     <description>This week we've used LLMs to talk with texts, reply to emails, and figure out unfamiliar phraseologywith input provided by the browser. In future posts, we'll tackle more complex prompt patterns, but we'll also take advantage of LIT Prompt's virtual dice and export functionality to make some really interesting interactions you can share or save for later. Alas, before we run, we must walk, and before we walk, we must crawl. To get our bearings, today's prompt finds us flipping a virtual coin, writing a poem about the flip's outcome, and packaging the whole thing up as a "web app." By way of foreshadowing, LIT Prompts comes preloaded with a virtual coin, not to mention 4, 6, 8, 10, and 20-sided dice. 🤔 I wonder what could be coming? </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/coinflip_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/coinflip_square.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/coinflip_square.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts/coinflip-poem/</guid>
     <pubDate>Fri, 26 Jan 2024 04:00:00 GMT</pubDate>
   </item>
@@ -36,7 +36,7 @@
     <link>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</link>
     <description>If I had a motto, it might be "context matters." Except, I'm resistant to picking a singular guiding principle because, well... context matters. 😉 Earlier in the week, we wrote a template to provide definitions for words we highlighted in the browser, but we found when kicking the tires that sometimes this feel down when dealing with terms of art or initialisms claimed by competing collections of words. What was lacking in these instances was context. So, today we'll add context from the active page to the prompt template. Before we get there, let's talk context more broadly. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts/define-words-in-context/</guid>
     <pubDate>Thu, 25 Jan 2024 05:30:00 GMT</pubDate>
   </item>
@@ -46,7 +46,7 @@
     <link>https://sadlynothavocdinosaur.com/posts/decline-requests</link>
     <description>With apologies to Kubrick and Clarke, at least I can say I held out two full days before alluding to a killer AI. That's also how long I resisted sharing a use case in which we use an LLM to help write something. There's a great deal to be said about authorship in the age of ChatGPT, and perhaps we'll explore this more in future posts. For the moment, however, let me provide a framing I find useful. It starts by recognizing that context matters and that writing itself is not one task. The production of written work involves the application of multiple overlapping tasks. Consider the traditional roles found in a newsroom (e.g., editors in chief, assignment editors, writers, fact checkers, copy editors, and the like). When delegating any of these tasks, to a human or otherwise, it is important to have in mind what role(s) we are delegating and why. Putting one's name to a document means different things in different contexts. Just ask the paralegal who writes all their partner's "first drafts." For instructors worried about the use of AI by their students, I suggest they name the role(s) an assignment is looking to assess. This allows the instructor and student to properly evaluate whether or not the use of this or that tool is acceptable. If handwriting is among the matters being assessed, a word processor is out. Copy editing? This may or may not exclude the use of spell check. What about grammar check? If, however, there is no instructor, and the question is left to us alone, we have to be honest with ourselves about the job at hand.   </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_shrug_square.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts/decline-requests</guid>
     <pubDate>Wed, 24 Jan 2024 12:00:00 GMT</pubDate>
   </item>
@@ -56,7 +56,7 @@
     <link>https://sadlynothavocdinosaur.com/posts/define-words</link>
     <description>I Google the definitions of words with surprising frequency, mostly as part of my writing process. As a dyslexic, it's mostly a backstop for spellcheck. After it has reassured me that I'm only using real words, I tend to use text-to-speech to read what I've written. If a word sounds off, I look it up to make sure it's really the word I intended. It's also good for double checking homophones (e.g., I thought I spelled "discrete", but this seems to be "discreet"). After this idiosyncratic use, I find myself using search to discover the meanings of opaque anacronyms and initialisms, usually when I wonder off into some unfamiliar part of cyberspace. What does this person mean when they say "SOP?" Is that business speak? After wading through alphabet soup, the next most common hunt for meaning I find myself on is that of an old looking to understand the kiddos. How cringe? And I have to say, search has worked for me, but sometimes it takes some high-level Google-fu to track down what I'm looking for. What if I could just select a word or phrase, click a button, and get a definition be it word, idiom, or initialism? Well, I'm happy to say today's prompt template does just that.  </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_square.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/dictionary_square.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts/define-words</guid>
     <pubDate>Tue, 23 Jan 2024 06:40:00 GMT</pubDate>
   </item> 
@@ -66,7 +66,7 @@
     <link>https://sadlynothavocdinosaur.com/posts/summarize-and-question</link>
     <description>I've started seeing variations on the following, "Sure, I played with ChatGPT when it came out, but I don't really get what the big deal is. You can't trust what it tells you, and it's a pretty mediocre writer." These are valid criticisms, but if you stop there, it's clear you've only experienced a narrow set of what these tools can do. When I speak of "these tools" I'm referring to a class of tools properly known as Large Language Models (LLMs). Most folks' first encountered these tools under the guise of a chat bot, but they are NOT general purpose thinking machines. LLMs are sentence completion engines. Their replies aren't based on any knowledge of the world other than that contained in the co-occurrence of words in their training data. In a very real way, an LLM is "spicy autocomplete." Like machine learning (the previous generation of tech to wear the AI moniker), LLMs are prediction machines. Give them a "prompt" and they predict the most likely set of words given their training data. Prompts are what we call the text on which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up. "Four score and seven..." might return "years ago our fathers brought forth..." because the Gettysburg Address was in the training data, and outside of quoting it, when else do people talk like that? If you hear someone say "Four score and seven..." what would you guess their next words would be? </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/text_distillery.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/text_distillery.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/text_distillery.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts/summarize-and-question</guid>
     <pubDate>Mon, 22 Jan 2024 12:00:00 GMT</pubDate>
   </item>
@@ -76,7 +76,7 @@
     <link>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts</link>
     <description>Every weekday for the next 10 weeks, I'll update this page with new prompt patterns and invite folks to play with them inside LIT Prompts. We'll be plugging into the technology that runs tools like ChatGPT, giving you a level of control that most people don't see. You won't have to do any "coding," but we will think like coders. I'm still suspicious of the term prompt engineering, esp. when used as a job title. The idea that an entire job could be built around "talking" to an AI seems a bit too loosey goosey. So, we'll try to introduce some rigor. We'll aim to think about workflows and systems where writing prompts is just part of a larger endeavor. You'll be supported by the fact that LIT Prompts lets you produce reusable interconnecting prompt templates. This will let us build upon what we learn and improve our practice over time. We'll explore the promise and perils of this new technology while you build custom interactions/workflows. Plus, I'm pretty sure we'll have fun along the way.</description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/lets_build.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/lets_build.png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/lets_build.png"/></media:thumbnail>
     <guid>https://sadlynothavocdinosaur.com/posts/50-days-of-lit-prompts/</guid>
     <pubDate>Thu, 19 Jan 2024 17:00:00 GMT</pubDate>
   </item>
