@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>Flip a Poem; Roll an "App": Turn the outcome of a coin flip into a poem and package this as an "app"</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
+	<meta property="og:title" content='Flip a Poem; Roll an "App": Turn the outcome of a coin flip into a poem and package this as an "app"'/>
+	<meta property="og:description" content="This week we've used LLMs to talk with texts, reply to emails, and figure out unfamiliar phraseologywith input provided by the browser. In future posts, we'll tackle more complex prompt patterns, but we'll also take advantage of LIT Prompt's virtual dice and export functionality to make some really interesting interactions you can share or save for later. Alas, before we run, we must walk, and before we walk, we must crawl. To get our bearings, today's prompt finds us flipping a virtual coin, writing a poem about the flip's outcome, and packaging the whole thing up as a &lt;web app.&lt; By way of foreshadowing, LIT Prompts comes preloaded with a virtual coin, not to mention 4, 6, 8, 10, and 20-sided dice. 🤔 I wonder what could be coming?  "/>
+	<meta property="og:image" content="images/50-days/talking_book_square.png"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-24f">
+  <script src="js/functions.js?v=2024-01-24f"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>  
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+  
+  <div id="page">
+  <!-- 
+    =================================================
+    
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">I Turned my scholarly papers into chat bots so people don't have to read them to engage with their ideas 🤞</h1>
+  <div class="post_title_02">Turn scholarly papers into chat bots so people don't have to read every word</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/talking_book_square.png"><img src="images/50-days/talking_book_square.png" ALT="Watercolor of a 'poet' fliping a coin." class="list_img_file"/></a>
+    <div class="caption">
+      Heads or Tails?, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 5th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+	<p>
+    <a href="ai/papers/">Chat with my work</a>.
+    This week we've used LLMs to <a href="posts/summarize-and-question">talk with</a> texts, <a href="posts/decline-requests">reply</a> to emails, and <a href="posts/define-words-in-context">figure out</a> unfamiliar phraseology with input provided by the browser. In future posts, we'll tackle more complex prompt patterns, but we'll also take advantage of LIT Prompt's virtual dice and export functionality to make some really interesting interactions you can share or save for later. Alas, before we run, we must walk, and before we walk, we must crawl. To get our bearings, today's prompt finds us flipping a virtual coin, writing a poem about the flip's outcome, and packaging the whole thing up as a "web app." By way of foreshadowing, LIT Prompts comes preloaded with a virtual coin and 4, 6, 8, 10, and 20-sided dice. 🤔 I wonder <a href="https://colarusso.github.io/dm/" target="_blank">what</a> could be coming? 
+  </p>
+
+  <!-- END INTRO -->
+  <p>
+    If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/coinflip-poem/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3>Up Next</h3>
+  <ul>
+    <li><a href="posts/coinflip-poem/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/coinflip-poem/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/coinflip-poem/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/coinflip-poem/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/coinflip-poem/#tires">Kick the Tires</a></li>
+    <li><a href="posts/coinflip-poem/#export">Export and Share </a></li>
+    <li><a href="posts/coinflip-poem/#references">TL;DR References</a></li>
+  </ul>
+  <p>
+    <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
+  </p>
+  <!-- 
+    =================================================
+    
+                   Setup LIT Prompts
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="setup" href="posts/coinflip-poem/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/coinflip-poem/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/coinflip-poem/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/coinflip-poem/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+ 
+  <!-- 
+    =================================================
+    
+                   Write Your Template
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="template" href="posts/coinflip-poem/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our third predefined variable, <code>{{coinFlip}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    The <code>{{coinFlip}}</code> variable returns either "heads" or "tails." This allows us to write prompts that will behave differently based on the outcome of the flip. To illustrate this point, the prompt below asks the LLM to write a prompt about the outcome. This is clearly a silly prompt, but consider, that we'll soon meet a collection of many-sided dice. Big things are coming! If nothing comes to mind, and you know someone who likes role-playing games ask them about the power of combining rules, randomness, and narratives. 
+  </p>
+  <p>Here's the template text.</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>I'm going to flip a coin. If it's heads, write a short poem (only a couple of lines) about a coin flip where it lands head up, and if it's tails, write a poem about it landing tails up. Be very clear about the result of the coin flip in the poem. 
+
+Coin flip: {{coinFlip}} 
+
+Now give me your response/poem: 
+
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>Alternatively
+  <ul>
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
+      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Today we're all about randomness. So, I went with a pretty "creative" setting—0.9.</li>  
+      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but sometimes when running a chain of prompts, it can be useful to hide a button.</li>
+  </ul>
+  <h3><a name="working" href="posts/coinflip-poem/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+  <p>
+    To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!-- 
+    =================================================
+    
+                    Kick the Tires
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="tires" href="posts/coinflip-poem/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. Some of these may seem a little familiar, but bear with me. 
+  </p>
+  <ul>
+    <li>
+      <b>Fancy words.</b> Here are some fancy words. See if the template can help with definitions.
+      <ul>
+        <li>abdicate</li>
+        <li>abet</li>
+        <li>antidisestablishmentarianism</li>
+        <li>beguile</li>
+        <li>benign</li>
+        <li>beseech</li>
+        <li>circuitous</li>
+        <li>clandestine</li>
+        <li>commensurate</li>
+      </ul>
+      I love how some of the words, for me at least, returned answers like, "Based on the context provided, the word 'abet' is a fancy word that is highlighted as part of a prompt to test the template's ability to provide definitions." So true, but also, not exactly what I was looking for. Can you edit the template to get something better? 
+    </li>
+    <li>
+      <b>Kick the tires.</b> Let's get self-referential. Highlight the title of this section, "Kick the Tires," and run the above template. Try "A rose by any other name," and "You Can't Be Neutral on a Moving Train."  Now, try "LIT," unlike last time, at least for me, I no longer get the vernacular usage but rather an explanation that this stands for the <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a>,, nice segue into initialisms. 
+    </li>
+    <li>
+      <b>Alphabet Soup.</b> If you head back over to the list of <a href="https://www.justice.gov/nsd-ovt/us-government-acronym-list" target="_blank">U.S. Government Acronyms</a> things should go a lot better than last time. Of course, the answers are literlly on the page. So, maybe this isn't the best test. 
+    </li>
+    <li>
+      <b>You're the expert.</b> Find a website dealing published by a community to which you belong, and see how the template does with terms of art and slang from that community. 
+    </li>
+    <li>
+      <b>Worthy of Note</b>. On Tuesday, when attempting to define the term "note," a term of art for a common form of legal scholars authored by law students, we suggested we might need to revisit and correct the fact that the template couldn't get this right. As we observed in "Alphabet Soup," it's not fair to use the template on a page where the definition is provided. So, I suggest you open this law journal contents page and select the header for the "Notes" section. My hope is that you'll be pleasantly surprised. Despite the lack of a definition, I got the following reply, "In the context of the BYU Law Review, 'Notes' refers to a section of the journal that features shorter articles written by law students. These articles typically analyze a specific legal issue or topic in a concise manner and provide insights or arguments on the subject. Notes are often written by law students as part of their coursework or as a way to contribute to legal scholarship." 
+    </li>
+  </ul>
+  <!-- 
+    =================================================
+    
+                     Export & Share
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="export" href="posts/coinflip-poem/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+
+  <p>
+    After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/export_html.png"><img src="images/50-days/export_html.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>
+    If you want to see what an exported file looks like without having to make one yourself. You can use the buttons below. <i>View export in browser</i> will open the file in your browser, and <i>Download export</i> will download a file. In either case the following custom header will be inserted into your file. It will NOT include an API key. So, you'll have to enter one when asked if you want to see things work. <i>This information is saved in your browser. If you've provided it before, you won't be asked again. It is not shared with me. To remove this information for this site (and only this site, not individual files), you can follow the instructions found on my <a href="privacy">privacy page</a>.</i> Remember, when you export your own file, whether or not it contains and API key depends on if you have one defined at the time of output. 
+  </p>
+
+  <p>Custom header:</p>
+    <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>Chat with some of my scholarly works&lt;/h2>
+&lt;p>
+&lt;a href="https://mastodon.social/@Colarusso" target="_blank">&lt;img src="https://sadlynothavocdinosaur.com/images/colarusso.jpg" style="border-radius: 50%;float:left;width:50px;margin:3px 15px 5px 0;" alt="Headshot of the author, Colarusso."/>&lt;/a>
+As a &lt;a href="https://www.suffolk.edu/academics/faculty/d/c/dcolarusso" target="_blank">Practitioner-in-Residence&lt;/a>, I'm not expected to publish scholarly works in the same way as my doctrinal colleagues. This is one reason the &lt;a href="https://sadlynothavocdinosaur.com/projects/">projects&lt;/a> section of this site has so many entries. However, occasionally, I do something that looks like legal scholarship. To make these easier to engage with, I've turned some into "chat bots." I walk through how I did this &lt;a href="https://sadlynothavocdinosaur.com/posts/papers2bots">here&lt;/a>.
+&lt;/p>
+&lt;p>Keep in mind, these are based on the text of my preprints, and the tech I'm using can "&lt;a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinate&lt;/a>." You should treat their output as you would any secondary source. If you see anything that piques your interest, check the primary source to confirm it. You can find the full papers, as well as lists of my co-authors, at &lt;a href="https://scholar.google.com/citations?user=ovuch2YAAAAJ&hl=en" target="_blank">my Google Scholar listing&lt;/a>.
+&lt;/p>
+&lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>
+    Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
+  </p>
+  <div class="button_row">
+    <a href="posts/coinflip-poem/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
+  </div>
+  <!-- 
+    =================================================
+    
+                       References
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="references" href="posts/coinflip-poem/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
+  </p>
+  <ul>
+    <li><a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> by Ted Chiang.
+      This article explores the potential risks and consequences of artificial intelligence (A.I.) in relation to capitalism. Chiang suggests that A.I. can be seen as a management-consulting firm, similar to McKinsey & Company, which concentrates wealth and disempowers workers. He argues that A.I. currently assists capital at the expense of labor, and questions whether there is a way for A.I. to assist workers instead of management. Chiang also discusses the need for economic policies to distribute the benefits of technology appropriately, as well as the importance of critical self-examination by those building world-shaking technologies. He concludes by emphasizing the need to question the assumption that more technology is always better and to engage in the hard work of building a better world. 
+    </li>
+    <li>
+      <a href="https://www.techdirt.com/2024/01/05/copyright-liability-on-llms-should-mostly-fall-on-the-prompter-not-the-service/" target="_blank">Wherein The Copia Institute Tells The Copyright Office There's No Place For Copyright Law In AI Training </a> by  Cathy Gellis. 
+      This article outlines a comment filed by the Copia Institute with the US Copyright Office, arguing that copyright law should not apply to AI training. The comment states that copyright law should not interfere with AI training because it would impede the public's right to consume works. They argue that AI training is an extension of the public's right to use tools, including software tools, to help them consume works. The comment also notes that AI training is not the same as copying or distributing copyrighted works, as it involves the analysis and processing of information rather than the creation of new works. They conclude that copyright law should not have a role in AI training and that AI training should be considered fair use or exempt from copyright altogether. 
+    </li>
+    <li>
+      <a href="https://www.techdirt.com/2023/11/03/wherein-the-copia-institute-tells-the-copyright-office-theres-no-place-for-copyright-law-in-ai-training/" target="_blank">Copyright Liability On LLMs Should Mostly Fall On The Prompter, Not The Service </a> by  Ira Rothken. 
+      The use of large language models (LLMs) like ChatGPT has raised questions about the bounds of fair use and the responsibilities of AI developers and users in relation to copyright law. In this article Rothken proposes the "Training and Output" (TAO) Doctrine as a way to address these issues. The TAO Doctrine suggests that if an AI LLM engine is trained using copyrighted works and the outputs generated are based on user prompts, the responsibility for any potential copyright infringement should lie with the user, not the AI system. This approach recognizes the dual-use nature of AI technologies and emphasizes the importance of user intent and inputs in determining the nature of the output and any downstream usage. The TAO Doctrine aims to strike a balance between fostering innovation and respecting copyright laws. 
+
+    </li>
+    <!--<li><a href="">text</a></li>-->
+  </ul>
+  
+
+  <!-- Preview projects -->
+  <div id="previews"></div>
+  
+
+  
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a> 
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+		MathJax.typeset();		
+	} catch (error) {}*/
+  
+  (async () => {
+    prompts = await loadFile('posts/coinflip-poem/prompt_template.txt');
+    exported = await loadFile('posts/coinflip-poem/interactions.html');
+  })()
+</script>
+
+<!--
+Publication checklist:
+
+- Metadata title, description, and image: X
+- Updated anchor links e.g., "posts/coinflip-poem/": X
+- Updated prompt_template.txt file in folder: X
+- Metadata publication date: ? 
+-->
+
+</BODY></HTML>
+
