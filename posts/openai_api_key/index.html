@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>So you need an API key?</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
+	<meta property="og:title" content="So you need an API key?"/>
+	<meta property="og:description" content="This page walks you through how to get an OpenAI API key. "/>
+	<meta property="og:image" content="images/50-days/talking_book_square.png"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-24f">
+  <script src="js/functions.js?v=2024-01-24f"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>  
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+  
+  <div id="page">
+  <!-- 
+    =================================================
+    
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title">So you need an API key?</h1>
+  <!-- 
+    =================================================
+    
+                   Setup LIT Prompts
+
+    =================================================
+  --> 
+
+    <p>
+      This post walks through how to generate an API key for an OpenAI account. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. When you create a new OpenAI account, you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <p>After solving a puzzle to prove you're human, you will be provided with your API key. If for some reason, you are also looking for an "API Base," this is probably it: <code>https://api.openai.com/v1/chat/completions</code> </p>
+        <p>
+      <span style="background:yellow;">If you receive an error when trying use your key, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file with OpenAI.</span>
+    </p>
+
+
+  <!-- Preview projects -->
+  <div id="previews"></div>
+  
+
+  
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a> 
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+		MathJax.typeset();		
+	} catch (error) {}*/
+  
+  (async () => {
+    prompts = await loadFile('posts/papers2bots/prompt_template.txt');
+    exported = await loadFile('posts/papers2bots/interactions.html');
+  })()
+</script>
+
+<!--
+Publication checklist:
+
+- Metadata title, description, and image: X
+- Updated anchor links e.g., "posts/papers2bots/": X
+- Updated prompt_template.txt file in folder: X
+- Metadata publication date: ? 
+-->
+
+</BODY></HTML>
+
