@@ -110,7 +110,7 @@
     Do you yearn for something more than a book? And yet still love books? How about a book you can query, and it will answer away to your heart's content? How about a book that will create its own content, on demand, or allow you to rewrite it? A book that will tell you why it is (sometimes) wrong? That is what I have tried to build with my latest work.
   </blockquote>
   <p>
-    This is how Tyler Cowen <a href="https://marginalrevolution.com/marginalrevolution/2023/10/goat-who-is-the-greatest-economist-of-all-time-and-why-does-it-matter.html" target="_blank">introduced</a> his "generative book" project <a href="https://goatgreatesteconomistofalltime.ai/en" target="_blank">GOAT: Who is the Greatest Economist of all Time and Why Does it Matter?</a> Though this isn't exactly what I'm aiming for with my paper bots, the spirit is the same. They're both explorations of what it means to engage with the help of a <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language model</a> (LLM).
+    This is how Tyler Cowen <a href="https://marginalrevolution.com/marginalrevolution/2023/10/goat-who-is-the-greatest-economist-of-all-time-and-why-does-it-matter.html" target="_blank">introduced</a> his "generative book" project <a href="https://goatgreatesteconomistofalltime.ai/en" target="_blank">GOAT: Who is the Greatest Economist of all Time and Why Does it Matter?</a> Though this isn't exactly what I'm aiming for with my paper bots, the spirit is the same. They're both explorations of what it means to engage with a text given the help of a <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language model</a> (LLM).
   </p>
   <p> 
     I can think of at least three blog posts I wrote in the early 2000's that have been read by more people than any journal article I've written, more than any article I'm likely to write. Is there a way to make my scholarship more accessible? Is there a way to let folks engage with the ideas of a paper without reading it first? Could such engagement lead them to want to read it? Could someone who has read something benefit by more literally conversing with a text? 
@@ -137,7 +137,7 @@
       </div>  
     </div>
     <p>
-      The above image should look familiar, it's last week's neural net with a few more inputs and outputs. Also, the "logistic regressions" have been replaced by circles with outputs shown on their faces. The network has been trained in the following way. If you input a particular word by changing the corresponding value to 1, the outputs should arrange themselves to tell you how likely a word is to be next to your input word. Remember, a large value is more likely. You're playing a prediction game. You're trying to predict what a adjacent word will be a given some "random" word. Above, we can see that "it" is likely to show up next to "let" and "go", while "be" will probably find itself next to "I'll" and "back". From this, I doubt our training data is representative of all English usage. It seems oddly influenced by movie dialogue.
+      The above image should look familiar, it's last week's neural net with a few more inputs and outputs. Also, the "logistic regressions" have been replaced by circles with outputs shown on their faces. The network has been trained in the following way. If you input a particular word by changing the corresponding value to 1, the outputs should arrange themselves to tell you how likely a word is to be next to your input word. Remember, a large value is more likely. You're playing a prediction game. You're trying to predict what a adjacent word will be a given some "random" word. Above, we can see that "it" is likely to show up next to "let" and "go", while "be" will probably find itself next to "I'll" and "back". From this, I doubt our training data is representative of all English usage. It seems oddly influenced by movie dialogue. ;)
     </p>
     <p>
       To turn a word into an embedding all we have to do is take the values from the first nodes. For example, "it" would be [0.2, 0.3, 0.8], and "be" would be [0.1, 0.5, 0.2] in our example above. Every word will have a slightly different set of numbers coming out of these nodes. In word2vec it is common to have 300 such nodes, hence the 300-number long list above.</p>
@@ -150,7 +150,7 @@
   
   <!-- END INTRO -->
   <p>
-    If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/papers2bots/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/papers2bots/#template">The Prompt Pattern (Template)</a>.
   </p>
   <h3>Up Next</h3>
   <ul>
@@ -273,7 +273,7 @@
     We use the Post-run Behavior parameter to govern what happens after a template is run. If you use Post-run Behavior to send one template's output to another template, the first template's output can be read by the second template via the <code>{{passThrough}}</code> variable. To turn my papers into chatbots, I set up a template that summarizes and questions the content of <code>{{passThrough}}</code>. Then I create templates for each of my papers that sent their contents to the first template. That is:
     <ol>
       <li>I created a template that summarizes and questions the content of the <code>{{passThrough}}</code> variable when passed to an LLM, like last week's but with <code>{{passThrough}}</code> instead of <code>{{innerText}}</code>.</li>
-      <li>Then I created templates containing the text of the papers I wanted to turn into a chatbots, setting their Output Type to Prompt, Post-Run Behavior to the name of the above template (e.g., "Summarize and question paper"), and checked the "Hide Button" checkbox.</li>
+      <li>Then I created templates containing the text of the papers I wanted to turn into a chatbots, setting their Output Type to Prompt, Post-Run Behavior to the name of the above template (i.e., "Summarize & question paper"), and checked the "Hide Button" checkbox.</li>
     </ol>
     <p>
       
@@ -308,13 +308,13 @@ Provide a short easy to understand 150 word summary of the above scholarly text.
   <p>And here are the first template's parameters:</p>
   <ul>
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. This is the first time we're using <code>gpt-4-turbo-preview</code>. The choice was made mostly because of its very large context window. However, it also performs much better on summarization tasks than the currently available alternatives.</li>  
+      <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. This is the first time we're using <code>gpt-4-turbo-preview</code>. The choice was made mostly because of its very large context window. However, it also performs much better on summarization tasks than the currently available alternatives. Keep in mind, it's also expensive.</li>  
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
       <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
       <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
       <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want not only a summary of our text but the potential for a chat. So, "CHAT" it is.</li>  
-      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here, for the first time, we've checked the option. This is because the template shouldn't be triggered by the user directly. Rather, it need to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here, for the first time, we've checked the option. This is because the template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>
   </ul>
 
   <p>The subsequent templates all look like variations on the following. Download the <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')">prompts file</a> to see them in their entirety.</p>
