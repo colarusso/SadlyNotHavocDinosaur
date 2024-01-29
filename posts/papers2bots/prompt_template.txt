@@ -1,6 +1,6 @@
 {
   "Summarize & question paper": {
-    "prompt": "{{passThrough}} \n\n-------\n  \nProvide a short easy to understand 150 word summary of the above scholarly text. Present it and any subsequent answers using plain language, making it understandable for a general audiance. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! \n",
+    "prompt": "{{passThrough}} \n\n-------\n  \nProvide a short easy to understand 150 word summary of the above scholarly text. Present it and any subsequent answers using plain language, making it understandable for a general audience. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! \n",
     "model": "gpt-4-turbo-preview",
     "temperature": 0,
     "max_tokens": 250,
