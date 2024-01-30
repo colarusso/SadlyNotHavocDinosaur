@@ -113,7 +113,7 @@
     Of course, before we get to that, we'll take a detour of our own. This detour, however, is not driven by SEO. Rather, it is driven by a desire to help us understand the "AI" tools we are using. You can skim over or skip the following micro-lesson. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
   </p>
    
-  <h3><a name="word2vec" href="posts/_template/#word2vec" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Word2vec (Part 2)</h3>
+  <h3><a name="word2vec" href="posts/recipe/#word2vec" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Word2vec (Part 2)</h3>
    <p>
     <a href="posts/papers2bots">Yesterday</a>, we explained how a neural network could be used to turn words into numbers. Today we'll talk about why those numbers are special. Remember, individual words can be encoded as strings of numbers like this: [0.25,0.5,...0.75]. One way to think about these numbers is to consider each one as a dimension. So, we can imagine a set of three numbers as specifying a point in space. Since each word has their own set of numbers, each word occupies some particular point in this space. And here's the BFD! Because of how we arrived at our numbers it turns out that similar words end up being close to each other in this space. Words with similar meanings are literally grouped together in this space. The thing is that we don't give just three numbers to each word. As we saw yesterday, we give something like 300. That means we have locations for each of our words in some 300-diminsional space. Don't think about it too hard except to consider that there are a lot of directions one can follow in such a space. And here's the fun discovery that makes word2vec so powerful. You can use those directions to do math on words.    
   </p>
@@ -133,18 +133,18 @@
   
   <!-- END INTRO -->
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/_template/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/recipe/#template">The Prompt Pattern (Template)</a>.
   </p>
   <h3>Up Next</h3>
   <ul>
-    <li><a href="posts/_template/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/recipe/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/_template/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/_template/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/recipe/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/recipe/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/_template/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/_template/#tires">Kick the Tires</a></li>
-    <li><a href="posts/_template/#references">TL;DR References</a></li>
+    <li><a href="posts/recipe/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/recipe/#tires">Kick the Tires</a></li>
+    <li><a href="posts/recipe/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -157,7 +157,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/_template/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/recipe/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -177,7 +177,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/_template/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/recipe/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -190,7 +190,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/_template/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/recipe/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -227,7 +227,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/_template/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/recipe/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
  
@@ -239,7 +239,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/_template/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/recipe/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -293,7 +293,7 @@ Find the recipe and perpetration instructions in the above text and reformat the
       <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but sometimes when running a chain of prompts, it can be useful to hide a button.</li>
   </ul>
 
-  <h3><a name="working" href="posts/_template/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <h3><a name="working" href="posts/recipe/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
     To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -306,7 +306,7 @@ Find the recipe and perpetration instructions in the above text and reformat the
   </p>
 
   <div class="button_row">
-    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'promptrecipe.txt')" class="button" style="width:220px;">Download prompts file</a>
   </div>
   <!-- 
     =================================================
@@ -316,7 +316,7 @@ Find the recipe and perpetration instructions in the above text and reformat the
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/_template/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/recipe/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. Some of these may seem a little familiar, but bear with me. 
   </p>
@@ -333,7 +333,7 @@ Find the recipe and perpetration instructions in the above text and reformat the
     =================================================
   --> 
   <hr>
-  <h2><a name="references" href="posts/_template/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/recipe/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
   </p>
@@ -384,8 +384,8 @@ Find the recipe and perpetration instructions in the above text and reformat the
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/_template/prompt_template.txt');
-    //exported = await loadFile('posts/_template/interactions.html');
+    prompts = await loadFile('posts/recipe/promptrecipe.txt');
+    //exported = await loadFile('posts/recipe/interactions.html');
   })()
 </script>
 
@@ -393,8 +393,8 @@ Find the recipe and perpetration instructions in the above text and reformat the
 Publication checklist:
 
 - Metadata title, description, and image: X
-- Updated anchor links e.g., "posts/_template/": X
-- Updated prompt_template.txt file in folder: X
+- Updated anchor links e.g., "posts/recipe/": X
+- Updated promptrecipe.txt file in folder: X
 - Metadata publication date: ? 
 -->
 
