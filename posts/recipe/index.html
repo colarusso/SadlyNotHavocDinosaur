@@ -115,7 +115,7 @@
    
   <h3><a name="word2vec" href="posts/recipe/#word2vec" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Word2vec (Part 2)</h3>
    <p>
-    <a href="posts/papers2bots">Yesterday</a>, we explained how a neural network could be used to turn words into numbers. Today we'll talk about why those numbers are special. Remember, individual words can be encoded as strings of numbers like this: [0.25,0.5,...0.75]. One way to think about these numbers is to consider each one as a dimension. So, we can imagine a set of three numbers as specifying a point in space. Since each word has their own set of numbers, each word occupies some particular point in this space. And here's the BFD! Because of how we arrived at our numbers it turns out that similar words end up being close to each other in this space. Words with similar meanings are literally grouped together in this space. The thing is that we don't give just three numbers to each word. As we saw yesterday, we give something like 300. That means we have locations for each of our words in some 300-diminsional space. Don't think about it too hard except to consider that there are a lot of directions one can follow in such a space. And here's the fun discovery that makes word2vec so powerful. You can use those directions to do math on words.    
+    <a href="posts/papers2bots/#word2vec">Yesterday</a>, we explained how a neural network could be used to turn words into numbers. Today we'll talk about why those numbers are special. Remember, individual words can be encoded as strings of numbers like this: [0.25,0.5,...0.75]. One way to think about these numbers is to consider each one as a dimension. So, we can imagine a set of three numbers as specifying a point in space. Since each word has their own set of numbers, each word occupies some particular point in this space. And here's the BFD! Because of how we arrived at our numbers it turns out that similar words end up being close to each other in this space. Words with similar meanings are literally grouped together in this space. The thing is that we don't give just three numbers to each word. As we saw yesterday, we give something like 300. That means we have locations for each of our words in some 300-diminsional space. Don't think about it too hard except to consider that there are a lot of directions one can follow in such a space. And here's the fun discovery that makes word2vec so powerful. You can use those directions to do math on words.    
   </p>
 
     <div class="featured_img_center">
@@ -306,7 +306,7 @@ Find the recipe and perpetration instructions in the above text and reformat the
   </p>
 
   <div class="button_row">
-    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'promptrecipe.txt')" class="button" style="width:220px;">Download prompts file</a>
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
   </div>
   <!-- 
     =================================================
