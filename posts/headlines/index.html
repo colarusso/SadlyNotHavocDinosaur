@@ -5,12 +5,12 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Give Me the Recipe, Not an SEO-Motivated Short Essay</title>
+  <title>XXXX</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content="Give Me the Recipe, Not an SEO-Motivated Short Essay"/>
-	<meta property="og:description" content=" It has been observed that the rise of search engine optimization (SEO) has lead online publishers to bury recipes and other useful nuggets of information below a pile of what looks to be lengthy essays. The idea being that such keyword-rich long-form articles will rises to the top of search results, driving traffic and ad revenue. The problem with this is that you and I dear reader are forced to sift through a mountain of prose to find what we're really looking for—the recipe. Today, we'll use an LLM and the LIT Prompts browser extension to find the proverbial needle in the haystack. We'll get the extension to return the recipe and only the recipe.  "/>
-	<meta property="og:image" content="images/50-days/pie_crust.png"/>
+	<meta property="og:title" content="XXXX"/>
+	<meta property="og:description" content="XXXX "/>
+	<meta property="og:image" content="images/50-days/talking_book_square.png"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
@@ -73,8 +73,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Give Me the Recipe, Not an SEO-Motivated Short Essay</h1>
-  <div class="post_title_02">For an online "recipe page," return just the recipe absent extraneous verbiage</div>
+  <h1 class="post_title_01">Follow This One Trick to Write Great Headlines</h1>
+  <div class="post_title_02">Produce a collection of possible <strike>clickbait</strike> compelling headlines based on the text of an article</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -93,58 +93,56 @@
         </span>
       </div>
     </div>-->
-    <a href="images/50-days/pie_crust.png"><img src="images/50-days/pie_crust.png" ALT="Pictures of the ingredients for making a pie crust, alongside steps in th baking process" class="list_img_file"/></a>
+    <a href="images/50-days/robot_pitch.png"><img src="images/50-days/robot_pitch.png" ALT="XXXX" class="list_img_file"/></a>
     <div class="caption">
-      <a href="https://mastodon.social/@Colarusso/111631401267969286" target="_blank" class="captionlnk">Never Fail Pie Crust</a> by Colarusso
+      XXXX, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This is <b>the 7th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+  <p><i>This is <b>the XXXXth</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
-    It has been <a href="https://www.wired.com/story/how-to-find-good-recipes-online/" target="_blank">observed</a> that the rise of search engine optimization (<a href="https://en.wikipedia.org/wiki/Search_engine_optimization" target="_blank">SEO</a>) has pushed publishers to bury recipes and other useful nuggets of information below a pile of keyword-laden prose. The hope being that these will rise to the top of search results, driving traffic and ad revenue. The problem with this is that you and I, dear reader, are forced to sift through a mountain of prose to find what we're really looking for—the recipe.      
+    To be clear the above title is a joke. This week's prompts have been all about summarizing and extrating data from texts.  
   </p>
   <p>
-    Today, we'll use an LLM and the LIT Prompts browser extension to find the proverbial needle in the haystack. No need to scroll. Hit a button. See the recipe. 
-  </p>
-  <p>
-    Of course, before we get to that, we'll take a detour of our own. This detour, however, is not driven by SEO. Rather, it is driven by a desire to help understand the "AI" tools we are using. Of course, you can skim over or <a href="posts/recipe/#upnext">skip</a> the following micro-lesson. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
+    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or skip this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
   </p>
    
-  <h3><a name="word2vec" href="posts/recipe/#word2vec" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Word2vec (Part 2)</h3>
+  <h3><a name="micro" href="posts/POSTSLUG/#micro" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Man Bites Dog</h3>
    <p>
-    <a href="posts/papers2bots/#word2vec">Yesterday</a>, we explained how a neural network could be used to turn words into numbers. Today we'll talk about why those numbers are special. Remember, individual words can be encoded as strings of numbers like this: [0.25,0.5,...0.75]. One way to think about these numbers is to consider each one as a dimension. So, we can imagine a set of three numbers as specifying a point in space. Since each word has their own set of numbers, each word occupies some particular point in this space. And here's the BFD! Because of how we arrived at our numbers it turns out that similar words end up being close to each other in this space. Words with similar meanings are literally grouped together in this space. The thing is that we don't give just three numbers to each word. As we saw yesterday, we give something like 300. That means we have locations for each of our words in some 300-diminsional space. Don't think about it too hard except to consider that there are a lot of directions one can follow in such a space. And here's the fun discovery that makes word2vec so powerful. You can use those directions to do math on words.    
+    XXXX thinking about headlines and the order of words. 
   </p>
 
     <div class="featured_img_center">
-      <a href="images/50-days/nd_directions.png"><img src="images/50-days/nd_directions.png" ALT="Semantic space of word2vec" class="list_img_file"/></a>
+      <a href="images/50-days/XXXX.png"><img src="images/50-days/XXXX.png" ALT="XXXX" class="list_img_file"/></a>
       <div class="caption">
-        Semantic space of word2vec, <a href="https://web.archive.org/web/20181230221033/https://www.tensorflow.org/tutorials/representation/word2vec" target="_blank" class="captionlnk">TensorFLow tutorial</a>
+        XXXX
       </div>  
     </div>
     <p>
-      If you take the location of "King" in this space and find the difference between it and the location of "Queen," it turns out this approximates the direction of the difference between "Man" and "Woman." So, you can take a value for King, subtract Man, add Woman, and end up very close to Queen. The same is true for other concepts (e.g., verb tenses and country capitals). <b>Word2vec let's us do math on words!!!!</b> Again, this is a very high-level introduction. For more details, you should check out the  <a href="https://arxiv.org/abs/1301.3781" target="_blank">first</a> and  <a href="https://arxiv.org/abs/1310.4546" target="_blank">second</a> word2vec papers. 
+      XXXX
     </p>
     <p>
-      Now you may be thinking back to our first post, in which we talked about how AI can encode the biases found in its training data. Any guess what you get for Doctor - Man + Woman? You probably hope it comes close to Doctor again, but chances are, based on the training data used, it probably comes up closer to Nurse. This is an example of encoded bias like that cited in the <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">Stochastic Parrots</a> paper. So, yes, it's exceedingly cool that we can do math on words, but we have to worry a good deal about how we sourced our training data and how we use this new superpower. That being said, <b>let's build something!</b>
+      <b>Let's build something!</b>
     </p>
   
   <!-- END INTRO -->
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/recipe/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/recipe/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3>Up Next</h3>
   <ul>
-    <li><a href="posts/recipe/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/POSTSLUG/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/recipe/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/recipe/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/POSTSLUG/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/POSTSLUG/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/recipe/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/recipe/#tires">Kick the Tires</a></li>
-    <li><a href="posts/recipe/#references">TL;DR References</a></li>
+    <li><a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/POSTSLUG/#tires">Kick the Tires</a></li>
+    <li><a href="posts/POSTSLUG/#export">Export and Share </a></li>
+    <li><a href="posts/POSTSLUG/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -157,7 +155,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/recipe/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/POSTSLUG/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -177,7 +175,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/recipe/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/POSTSLUG/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -190,7 +188,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/recipe/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/POSTSLUG/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -227,10 +225,9 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/recipe/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/POSTSLUG/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
- 
   <!-- 
     =================================================
     
@@ -239,7 +236,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/recipe/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -249,14 +246,14 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using the predefined variable <code>{{innerText}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our XXXX predefined variable, <code>{{XXXX}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
   <p>
-    When the template is run, the <code>{{innerText}}</code> variable will be replaced by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">innerText</a> of your current page (roughly speaking the hard-coded text of a page). Below you can see that this variable is immediately followed by an instruction to extract and share the recipe. This is relatively straight forward. However, today we will be trying a new output destination. Instead of simply sharing the recipe on the screen, we'll be placing it into our scratch pad. The scratch pad is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. By placing the recipe in the scratch pad, you make sure that it will be accessible even after you close the extension's popup. Of course, if you run this template again, you will overwrite the recipe. 
+    XXXX
   </p>
   </p>
   <p>Here's the template's title.</p>
-  <p><code>Just the recipe</code></p>
+  <p><code>XXXX</code></p>
   <p>Here's the template's text.</p>
   <!-- 
     #########################
@@ -266,12 +263,8 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{innerText}}
-
-----
-
-Find the recipe and perpetration instructions in the above text and reformat them for ease of reading. That is, return just the recipe and instructions for preparation absent any extraneous verbiage.     
-
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX 
+      
 </code></pre>
   </section>
   <!-- 
@@ -284,16 +277,16 @@ Find the recipe and perpetration instructions in the above text and reformat the
   <p>And here are the first template's parameters:</p>
   <ul>
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. </li>  
+      <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. This is the first time we're using <code>gpt-4-turbo-preview</code>. The choice was made mostly because of its very large context window. However, it also performs much better on summarization tasks than the currently available alternatives. Keep in mind, it's also expensive.</li>  
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
-      <li><b>Max Tokens:</b> <code>500</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-      <li><b>Output To:</b> <code>Screen + replace scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're passing the output to the screen and the scratch pad.</li>  
-      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. Here we're happy just to get our recipe. So, "FULL STOP" it is.</li>  
-      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but sometimes when running a chain of prompts, it can be useful to hide a button.</li>
+      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want not only a summary of our text but the potential for a chat. So, "CHAT" it is.</li>  
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
   </ul>
 
-  <h3><a name="working" href="posts/recipe/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
     To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -316,15 +309,64 @@ Find the recipe and perpetration instructions in the above text and reformat the
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/recipe/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/POSTSLUG/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
-    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.  
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
   </p>
   <ul>
     <li>
-      <b>Finding a Haystack.</b> A lot of recipe websites do just list recipes. So, if you're looking for a place to go recipe prospecting, I suggest searching for something (e.g., "recipe for X"). Afterall, SEO is how we got here. 
+      <b>XXXX</b> XXXX
     </li>
 </ul>
+  <!-- 
+    =================================================
+    
+                     Export & Share
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="export" href="posts/POSTSLUG/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+
+  <p>
+    After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/export_html.png"><img src="images/50-days/export_html.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>
+    If you want to see what an exported file looks like without having to make one yourself. You can use the buttons below. <i>View export in browser</i> will open the file in your browser, and <i>Download export</i> will download a file. In either case the following custom header will be inserted into your file. It will NOT include an API key. So, you'll have to enter one when asked if you want to see things work. <i>This information is saved in your browser. If you've provided it before, you won't be asked again. It is not shared with me. To remove this information for this site (and only this site, not individual files), you can follow the instructions found on my <a href="privacy">privacy page</a>.</i> Remember, when you export your own file, whether or not it contains and API key depends on if you have one defined at the time of output. 
+  </p>
+
+  <p>Custom header:</p>
+    <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX
+&lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>
+    Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
+  </p>
+  <div class="button_row">
+    <a href="posts/POSTSLUG/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
+  </div>
   <!-- 
     =================================================
     
@@ -333,24 +375,16 @@ Find the recipe and perpetration instructions in the above text and reformat the
     =================================================
   --> 
   <hr>
-  <h2><a name="references" href="posts/recipe/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/POSTSLUG/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
   </p>
   <ul>
-    <li>
-      <a href="https://arxiv.org/abs/1301.3781" target="_blank">Efficient Estimation of Word Representations in Vector Space</a> by Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. This is the paper that introduced word2vec to the world. It's a technical paper. If that scares you, consider looping back and looking at it after we finish this week's micro-lessons. It might make more sense given that perspective as we'll spend the next several posts unpacking what word2vec does and why it matters.
+    <li><a href="XXXX" target="_blank">XXXX</a> by XXXX. XXXX
     </li>
-    <li>
-      <a href="https://arxiv.org/abs/1310.4546" target="_blank">Distributed Representations of Words and Phrases and their Compositionality</a> by 
-      Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean. This is the second word2vec paper, and it is here you can find a discussion of the country-capital directionality we noted above.
-    </li>
-    <li>
-      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
-    </li>
+
     <!--<li><a href="">text</a></li>-->
   </ul>
-
   
   <!-- 
   =================================================
@@ -384,19 +418,10 @@ Find the recipe and perpetration instructions in the above text and reformat the
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/recipe/prompt_template.txt');
-    //exported = await loadFile('posts/recipe/interactions.html');
+    prompts = await loadFile('posts/POSTSLUG/prompt_template.txt');
+    exported = await loadFile('posts/POSTSLUG/interactions.html');
   })()
 </script>
-
-<!--
-Publication checklist:
-
-- Metadata title, description, and image: X
-- Updated anchor links e.g., "posts/recipe/": X
-- Updated promptrecipe.txt file in folder: X
-- Metadata publication date: ? 
--->
 
 </BODY></HTML>
 

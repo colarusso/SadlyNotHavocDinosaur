@@ -4,7 +4,7 @@
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <title>Prompt Interactions with Scratch Pad</title>
-<script src="../../js/encryption.js?v=2024-01-24f"></script>
+<script src="../../js/encryption.js?v=2024-01-30"></script>
 
 <script>
 
@@ -724,7 +724,7 @@ function choose_prompt(choice) {
     }
 
     if (abandon_prompt == 0) {
-      // Place scrtach pad text into template
+      // Place scratch pad text into template
       llm_prompt = llm_prompt.replace(/{{scratch}}/g, localStorage.getItem('scratch_pad'));
       try {
         console.log("Attempting to parse Scratch Pad for JSON...")
@@ -1265,7 +1265,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
   var open_scratch = document.getElementById('open_scratch');
   document.getElementById('open_scratch').addEventListener('click', function() {
-      if (confirm('This will replace the current scrtach pad contents with the file you upload. Choose "OK" to continue or "Cancel" to keep things as they are.') == true) {
+      if (confirm('This will replace the current scratch pad contents with the file you upload. Choose "OK" to continue or "Cancel" to keep things as they are.') == true) {
           document.getElementById('fileInput').click(); // Trigger file input
       }
   });

@@ -29,8 +29,8 @@
 
   <!-- JS & style -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-24f">
-  <script src="js/functions.js?v=2024-01-24f"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
   <script src="js/spin.js"></script>
 
   <link rel="stylesheet" href="css/prism.css" data-noprefix="">
@@ -107,10 +107,10 @@
     XXXX
   </p>
   <p>
-    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or skip this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
+    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or <a href="posts/recipe/#upnext">skip</a> this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
   </p>
    
-  <h3><a name="micro" href="posts/_template/#micro" class="anchor" alt="deep link to this section"></a>Micro-Lesson: XXXX</h3>
+  <h3><a name="micro" href="posts/POSTSLUG/#micro" class="anchor" alt="deep link to this section"></a>Micro-Lesson: XXXX</h3>
    <p>
     XXXX
   </p>
@@ -130,19 +130,19 @@
   
   <!-- END INTRO -->
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/_template/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3>Up Next</h3>
+  <h3><a name="upnext" href="posts/recipe/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/_template/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/POSTSLUG/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/_template/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/_template/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/POSTSLUG/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/POSTSLUG/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/_template/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/_template/#tires">Kick the Tires</a></li>
-    <li><a href="posts/_template/#export">Export and Share </a></li>
-    <li><a href="posts/_template/#references">TL;DR References</a></li>
+    <li><a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/POSTSLUG/#tires">Kick the Tires</a></li>
+    <li><a href="posts/POSTSLUG/#export">Export and Share </a></li>
+    <li><a href="posts/POSTSLUG/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -155,7 +155,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/_template/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/POSTSLUG/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -175,7 +175,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/_template/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/POSTSLUG/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -188,7 +188,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/_template/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/POSTSLUG/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -225,10 +225,9 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/_template/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/POSTSLUG/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
- 
   <!-- 
     =================================================
     
@@ -237,7 +236,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/_template/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -284,10 +283,10 @@
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
       <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
       <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want not only a summary of our text but the potential for a chat. So, "CHAT" it is.</li>  
-      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here, for the first time, we've checked the option. This is because the template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
   </ul>
 
-  <h3><a name="working" href="posts/_template/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
     To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -310,9 +309,9 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/_template/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/POSTSLUG/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
-    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. Some of these may seem a little familiar, but bear with me. 
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
   </p>
   <ul>
     <li>
@@ -327,7 +326,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="export" href="posts/_template/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+  <h2><a name="export" href="posts/POSTSLUG/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
 
   <p>
     After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
@@ -365,7 +364,7 @@
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
   <div class="button_row">
-    <a href="posts/_template/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="posts/POSTSLUG/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
   <!-- 
@@ -376,12 +375,14 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="references" href="posts/_template/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/POSTSLUG/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
   </p>
   <ul>
-    <li><a href="XXXX" target="_blank">XXXX</a> by XXXX. XXXX
+    <li>
+      <a href="XXXX" target="_blank">XXXX</a> by XXXX. XXXX 
+      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
     </li>
 
     <!--<li><a href="">text</a></li>-->
@@ -419,19 +420,10 @@
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/_template/prompt_template.txt');
-    exported = await loadFile('posts/_template/interactions.html');
+    prompts = await loadFile('posts/POSTSLUG/prompt_template.txt');
+    exported = await loadFile('posts/POSTSLUG/interactions.html');
   })()
 </script>
-
-<!--
-Publication checklist:
-
-- Metadata title, description, and image: X
-- Updated anchor links e.g., "posts/_template/": X
-- Updated prompt_template.txt file in folder: X
-- Metadata publication date: ? 
--->
 
 </BODY></HTML>
 

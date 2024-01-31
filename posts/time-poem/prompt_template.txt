@@ -1,0 +1,13 @@
+{
+  "time2poem": {
+    "prompt": "Write a two-line rhyming poem about it being {{hours}}:{{minutes2d}} {{ampm}} in {{Month}} on a {{DayOfWeek}}.\n\n",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.9,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
