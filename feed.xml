@@ -12,18 +12,27 @@
     <title></title>
     <link>https://sadlynothavocdinosaur.com/posts//</link>
     <description></description>
-    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/_square.png"/>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts//</guid>
     <pubDate>Thu, 25 Jan 2024 05:30:00 GMT</pubDate>
   </item>
   -->
 
   <item>
+    <title>Follow This One Trick to Write Great Headlines: Produce a collection of possible compelling headlines based on the text of an article</title>
+    <link>https://sadlynothavocdinosaur.com/posts/headlines/</link>
+    <description>To be clear, the above title is a joke. It's also clickbait. ;) There isn't one trick to writing a great headline partly because folks can't agree on what makes a great headline. Is a great headline one that grabs attention at all cost (unsavory publishers) or one that properly sets expectations (mild-mannered readers)? Either way, I'll show you how to us an LLM to produce headlines based on a text, and then I'll suggest ways you can tune it better fit your needs. I'll even show you how to export your workflow to make a headline generation tool. Remember, with great power comes great responsibility. </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_pitch.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_pitch.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/headlines/</guid>
+    <pubDate>Thu, 1 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
     <title>Add Email Asks to My To-Do List: Find the "asks" in an email; produce a bulleted  list of same; add these to a to-do list; save to a file</title>
     <link>https://sadlynothavocdinosaur.com/posts/email-to-do/</link>
-    <description>
-    </description>
+    <description>I'm a big fan of lists. If there's one productivity hack worth its salt, it's the list. Create a list of discrete tasks, and check them off as you go. It's simple and it works, and although people joke about their inboxes serving as to-do lists, let's face the fact that a lot of email authors don't always put their asks front and center. Given LLMs' facility with words, I think there's something we can do about that. Last week we introduced a template to help answer emails. Today, we'll ask our LLM to figure out what an email is asking of us, produce a set of action items, and add these to a to-do list. We'll also show you how save your scratch pad to a file. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/email_to_do_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/email_to_do_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/email-to-do/</guid>

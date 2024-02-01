@@ -1,0 +1,13 @@
+{
+  "Generate headlines": {
+    "prompt": "You are the editor for an online publication. You're about to read a new post to your site. Once you've finished reading it, you will be asked to provide a list of possible titles/headlines to use when publishing it. \n\nHere's the text of the post\n\n---- \n\n{{scratch}}\n\n----\n\nFor the untitled text above, provide a list of several compelling (clickable) titles/headlines that might do well to generate attention and clicks: \n\n",
+    "model": "gpt-3.5-turbo-16k",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
