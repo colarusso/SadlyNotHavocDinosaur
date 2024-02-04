@@ -5,10 +5,10 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>What if Members of Speaking Professions Could Log Time in Simulators Like Pilots? Craft simple training simulations with an "AI actors"</title>
+  <title>What if Members of Speaking Professions Could Log Time in Simulators Like Pilots? Craft simple training simulations with "AI actors"</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content='What if Members of Speaking Professions Could Log Time in Simulators Like Pilots? Craft simple training simulations with an "AI actors"'/>
+	<meta property="og:title" content='What if Members of Speaking Professions Could Log Time in Simulators Like Pilots? Craft simple training simulations with "AI actors"'/>
 	<meta property="og:description" content="XXXX "/>
 	<meta property="og:image" content="images/50-days/talking_book_square.png"/>
 
@@ -74,7 +74,7 @@
     =================================================
   -->
   <h1 class="post_title_01">What if Members of Speaking Professions Could Log Time in Simulators Like Pilots?</h1>
-  <div class="post_title_02">Craft simple training simulations with an "AI actors"</div>
+  <div class="post_title_02">Craft simple training simulations with "AI actors"</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -105,19 +105,24 @@
   </p>
   <p><i>This is <b>the 11th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
   <p>
-    You can run a simulation and interact with my "AI-actor" <a href="ai/client-meeting-sim/">here</a>. I prepaid for some "AI" time. So, chat while the getting is good. Otherwise, let's take a moment to talk about how we got here. After that, I'll show you everything you need to create your own simulation .
+    Run a simulation based on my experience as a public defender <a href="ai/client-meeting-sim/">here</a>. I prepaid for some "AI" time. So, chat while the getting is good. Otherwise, let's take a moment to talk about how we got here. After that, I'll show you how to create your own simulation.
+  </p>
+  <p>
+    As an <a href="https://www.suffolk.edu/academics/faculty/d/c/dcolarusso" target="_blank">experiential educator</a>, I firmly believe experience is an excellent teacher. The question I often have to answer is how best to help students gain experience. Some of my favorite experiences as a law student centered around simulations, practicing direct and cross-examination with actors, negotiating on the behalf of non-existent clients. When it's impractical, unethical, or dangerous to learn by doing in the real world, we fall back on simulations. When robust simulations are out of reach, we focus on practicing smaller parts of the experience. Sometimes, breaking things down into smaller tasks like this is by choice, it's a way to hone individual skills, but sometimes there really is no substitute for putting it all together. My favorite simulations were those where a professional or student actor was hired to play a role, but as you can imagine such simulations are hard to pull off. Mostly, they exist as capstone projects (e.g., a moot court exercise where you try a case at the end of the semester). 
   </p>
 	<p>
-    XXXX
+    <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) offer us the ability to create simple easy-to-implement simulations. I really like simulations as a use case for LLMs because it's a domain where it doesn't matter if they <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinate</a>, and to the extent they  <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">regurgitate societal biases</a> they present openings to unpack such biases and how they will affect our practice. 
   </p>
-
-  <p>FWIW, the question of how to craft <i>complex</i> simulations will be addressed in future posts.</p>
 
   <p>
-    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or <a href="posts/posts/simple-training-sims/#upnext">skip</a> this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
+    Although we're calling this a simple simulation, it is the most complicated prompt in our series to date. So, there's more meat to the <a href="posts/simple-training-sims/#template">Prompt Pattern section</a> than usual. FWIW, the question of how to craft complex simulations will be addressed in future posts, and even if you haven't read our <a href="posts/50-days-of-lit-prompts">earlier posts</a>, you should be able to follow along here. 
+  </p>
+
+  <p>
+    As we've noted before our ability to wield LLMs productively is aided if we understand how the tools we're using actually work. Which is to say, this is where we pause to share a micro-lesson. You can skim over or <a href="posts/simple-training-sims/#upnext">skip</a> this if you like. However, if you make it through all of these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
   </p>
    
-  <h3><a name="attention" href="posts/posts/simple-training-sims/#attention" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Attention Is All You Need</h3>
+  <h3><a name="attention" href="posts/simple-training-sims/#attention" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Attention Is All You Need</h3>
    <p>
     XXXX
   </p>
@@ -134,22 +139,22 @@
     <p>
       <b>Let's build something!</b>
     </p>
-  
+    <p>
+      We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/simple-training-sims/#template">The Prompt Pattern (Template)</a>.
+    </p>
+    
   <!-- END INTRO -->
-  <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/posts/simple-training-sims/#template">The Prompt Pattern (Template)</a>.
-  </p>
-  <h3><a name="upnext" href="posts/posts/simple-training-sims/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/simple-training-sims/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/posts/simple-training-sims/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/simple-training-sims/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/posts/simple-training-sims/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/posts/simple-training-sims/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/simple-training-sims/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/simple-training-sims/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/posts/simple-training-sims/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/posts/simple-training-sims/#tires">Kick the Tires</a></li>
-    <li><a href="posts/posts/simple-training-sims/#export">Export and Share </a></li>
-    <li><a href="posts/posts/simple-training-sims/#references">TL;DR References</a></li>
+    <li><a href="posts/simple-training-sims/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/simple-training-sims/#tires">Kick the Tires</a></li>
+    <li><a href="posts/simple-training-sims/#export">Export and Share </a></li>
+    <li><a href="posts/simple-training-sims/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -162,7 +167,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/posts/simple-training-sims/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/simple-training-sims/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -182,7 +187,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/posts/simple-training-sims/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/simple-training-sims/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -195,7 +200,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/posts/simple-training-sims/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/simple-training-sims/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -232,7 +237,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/posts/simple-training-sims/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/simple-training-sims/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
   <!-- 
@@ -243,7 +248,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/posts/simple-training-sims/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/simple-training-sims/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -253,16 +258,16 @@
   </div>
 
   <p>
-    LLMs are sentence completion engines. Their replies aren't based on any knowledge other than what words are likely to follow given their training data. So, we work to constrain those replies by packing a lot of information into our prompts. The more context we provide, the more we limit the set of likely next words. Sometimes we've worked to make sure the LLM's reply is almost entirely grounded in the prompt (e.g., our prompts aimed at summarizing texts), but here we need a little more wiggle room. Luckily, we don't have to worry too much about the LLM going off script because we're involved in an improv exercise. If it "makes things up," that's not a problem. We're happy to roll with it. <a href="https://en.wikipedia.org/wiki/Yes,_and..." target="_blank">Yes, and...</a>
+    LLMs are sentence completion engines. Their replies aren't based on any knowledge other than what words are likely to follow given their training data. So, we work to constrain those replies by packing a lot of information into our prompts. The more context we provide, the more we limit the set of likely next words. Sometimes we've worked to make sure the LLM's reply is almost entirely grounded in the prompt (e.g., our prompts aimed at <a href="posts/papers2bots">summarizing texts</a> and <a href="posts/recipe">extracting data</a>), but here we need a little more wiggle room. Luckily, we don't have to worry too much about the LLM going off script because we're involved in an improv exercise. If it "makes things up," that's not a problem. We're happy to roll with it. <a href="https://en.wikipedia.org/wiki/Yes,_and..." target="_blank">Yes, and...</a>
   </p>
   <p>
-    To allow for a dialog we'll be setting the Post-run Behavior to "Chat" and providing a robust set of instructions up front to set the stage. In the template below you'll see that I've made a instruction sandwich. I start by explaining the role the LLM will play and what it will be expected to do based on some context (line 1). I then provide that context and repeat the expectations along with specific instructions (line 19). I structure the context into three sections: (1) BACKGROUND; (2) DIRECTION; and (3) THE CONVERSATION SO FAR. And I frame the entire endeavor as an exercise in acting, telling the LLM that it is an actor playing a role and couching my instructions in the language of a director. Keep in mind, the LLM doesn't understand these instructions in the way a person would, rather it responds to the framing in a manner consistent with its training data. Presumably, it has seen a lot of scripts and acting notes. Our language is a way to leverage those aspects of its training. That is, it's probable that text following a framing like this will resemble what we're looking for. 
+    To allow for a dialog we'll be setting the Post-run Behavior to "Chat" and providing a robust set of instructions up front to set the stage. In the template below you'll see that I've made a instruction sandwich. I start by explaining the role the LLM will play and what it will be expected to do based on some context (line 1). I then provide that context and repeat the expectations along with specific instructions (line 19). I structure the context into three sections: (1) BACKGROUND; (2) DIRECTION; and (3) THE CONVERSATION SO FAR. I frame the entire endeavor as an exercise in acting, telling the LLM that it is an actor playing a role and couching my instructions in the language of a director. Keep in mind, the LLM doesn't understand these instructions in the way a person would, rather it responds to the framing in a manner consistent with its training data. Presumably, it has seen a lot of scripts and acting notes. Our language is a way to leverage those aspects of its training. That is, it's probable that text following a framing like this will resemble what we're looking for. 
   </p>
   <p>
-    When crafting a template, LIT Prompts makes use of a mix of natural language and placeholders. You can use double curly brackets to encase predefined variables and "questions" for your users. If the text between the brackets matches the name of a predefined variables, that section of text will be replaced with its content. If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. We'll use this below to capture the user's first interaction with our "AI Actor." By incorporating this user reply into our initial prompt we're able to control the "actors" first line ("Are you my attorney?") and make sure that it falls within our instruction sandwich. 
+    When crafting a template, LIT Prompts makes use of a mix of natural language and placeholders. You can use double curly brackets to encase predefined variables and "questions" for your users. If the text between the brackets matches the name of a predefined variables, that section of text will be replaced with its content. If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. We'll use this below to capture the user's first interaction with our "AI actor." By incorporating this user reply into our initial prompt we're able to control the "actors" first line ("Are you my attorney?") and make sure that it falls within our instruction sandwich. 
   </p>
   <p>
-    I invite you to swap in your own motivations and scenarios. In principle you should be able to create any number of simulated characters. Eventually, however, you'll hit a limit to what you can simulate. If you have designs on creating a simulated set of events, not just a conversation, I'm afraid you'll have to wait for some of our more advanced prompt patters. ;)
+    I invite you to swap in your own motivations and scenarios. In principle you should be able to create any number of simulated characters. Eventually, however, you'll hit a limit to what you can simulate. If you have designs on creating a simulated set of events, not just a conversation, I'm afraid you'll have to wait for some of our more advanced prompt patterns. ;)
   </p>
   <p>
     Here's a simple template based on my experience as a public defender. It's important to note that the attorney's goal during this interaction is rather constrained. They don't want to get into the facts of the case. Rather, they want to make sure they get the information they need to make a good bail argument. Roughly speaking this means being able to answer the question, "Why should the judge believe this person will show up for their next court date?" Consequently, they really want to learn about things like community ties. 
@@ -270,6 +275,7 @@
 
   <p>Here's the template's title.</p>
   <p><code>Start Simulation</code></p>
+  <p>Remember, this is the name on the button. I've choosen "Start Simulation" because I'm going to <a href="posts/simple-training-sims/#export">export</a> this to its own webpage/webapp.</p>
   <!-- 
     #########################
     #########################
@@ -309,7 +315,7 @@ Think about how your character would respond and craft an appropriate reply. Don
   <p>And here are the first template's parameters:</p>
   <ul>
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. You could proably improve the verisimilitude of your actor by using a newer model, like <code>gpt-4-turbo-preview</code>, but as of this writing, this will be slower, and more expensive. </li>  
+      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. You could probably improve the verisimilitude of your actor by using a newer model, like <code>gpt-4-turbo-preview</code>, but as of this writing, this will be slower, and more expensive. </li>  
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. I went with the reasonably "creative" 0.7.</li>  
       <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
@@ -318,7 +324,7 @@ Think about how your character would respond and craft an appropriate reply. Don
       <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
   </ul>
 
-  <h3><a name="working" href="posts/posts/simple-training-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <h3><a name="working" href="posts/simple-training-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
     To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -341,13 +347,13 @@ Think about how your character would respond and craft an appropriate reply. Don
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/posts/simple-training-sims/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/simple-training-sims/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
   </p>
   <ul>
     <li>
-      <b>Staying On Script</b> Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>. As noted above, eventually, you'll hit a limit to what you can simulate, but we will return to simulations in a future post.
+      <b>Staying On Script</b>. Provide your "actor" with a rough script of how the conversation should unfold (e.g., add a new section explaining that first they should start with some goal and later shift to another after some change in the conversation). Crafting a prompt that will produce fidelity to such a plan can be hard. You'll likely want to use more advanced models and provide a lot of context. On that front, the current model can read around 16,000 tokens (maybe 8,000 words). If you need more than that consider changing the model to something with a larger context window. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI model list</a>. As noted above, eventually, you'll hit a limit to what you can simulate, but we will return to simulations in a future post.
     </li>
 </ul>
   <!-- 
@@ -358,7 +364,7 @@ Think about how your character would respond and craft an appropriate reply. Don
     =================================================
   --> 
   <hr>
-  <h2><a name="export" href="posts/posts/simple-training-sims/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+  <h2><a name="export" href="posts/simple-training-sims/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
 
   <p>
     After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
@@ -409,7 +415,7 @@ Think about how your character would respond and craft an appropriate reply. Don
   </p>
 
   <div class="button_row">
-    <a href="posts/posts/simple-training-sims/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="posts/simple-training-sims/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
   <!-- 
@@ -420,15 +426,18 @@ Think about how your character would respond and craft an appropriate reply. Don
     =================================================
   --> 
   <hr>
-  <h2><a name="references" href="posts/posts/simple-training-sims/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/simple-training-sims/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
   </p>
   <ul>
     <li>
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+    </li>
+    <li>
       <a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need</a> 
       by Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 
-      The paper "Attention Is All You Need" proposes a new network architecture called the Transformer, which is based solely on attention mechanisms and does not use recurrent or convolutional neural networks. The authors show that the Transformer model outperforms existing models in terms of translation quality, parallelizability, and training time. They achieve a BLEU score of 28.4 on the WMT 2014 English-to-German translation task and a BLEU score of 41.8 on the WMT 2014 English-to-French translation task, setting a new state-of-the-art score. The Transformer model also generalizes well to other tasks, such as English constituency parsing. The paper provides experimental results and comparisons with existing models, demonstrating the effectiveness of the proposed architecture. 
+      The paper "Attention Is All You Need" proposes a new network architecture called the Transformer, which is based solely on attention mechanisms and does not use recurrent or convolutional neural networks. The authors show that the Transformer model outperforms existing models in terms of translation quality, parallelizability, and training time. The paper provides experimental results and comparisons with existing models, demonstrating the effectiveness of the proposed architecture. 
       <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
     </li>
 
@@ -467,8 +476,8 @@ Think about how your character would respond and craft an appropriate reply. Don
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/posts/simple-training-sims/prompt_template.txt');
-    exported = await loadFile('posts/posts/simple-training-sims/interactions.html');
+    prompts = await loadFile('posts/simple-training-sims/prompt_template.txt');
+    exported = await loadFile('posts/simple-training-sims/interactions.html');
   })()
 </script>
 
