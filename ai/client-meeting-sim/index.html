@@ -587,22 +587,22 @@ document.addEventListener('DOMContentLoaded', function () {
       
   let m_pos;
   function resize(e){
-    if (window.innerWidth>=458) {
-      const dx = m_pos - e.x;
-      m_pos = e.x;
-      panel_width = parseInt(getComputedStyle(panel, '').width)
-      if (panel_width<180) {
-        panel_width = 181;
-      } else if ((window.innerWidth-panel_width)< 90) {
-        panel_width = window.innerWidth - 91;
-      }
-      panel.style.width = (panel_width + dx) + "px";
-      panel_l.style.right = (panel_width + dx) + "px";
-      localStorage.panel_w = (panel_width + dx);  
-    } else {
-      panel.style.width = "100%"
-      panel_l.style.right = "100%"
-    }
+    //if (window.innerWidth>=458) {
+    //  const dx = m_pos - e.x;
+    //  m_pos = e.x;
+    //  panel_width = parseInt(getComputedStyle(panel, '').width)
+    //  if (panel_width<180) {
+    //    panel_width = 181;
+    //  } else if ((window.innerWidth-panel_width)< 90) {
+    //    panel_width = window.innerWidth - 91;
+    //  }
+    //  panel.style.width = (panel_width + dx) + "px";
+    //  panel_l.style.right = (panel_width + dx) + "px";
+    //  localStorage.panel_w = (panel_width + dx);  
+    //} else {
+    //  panel.style.width = "100%"
+    //  panel_l.style.right = "100%"
+    //}
   }
 
   if (window.innerWidth>=458) {
