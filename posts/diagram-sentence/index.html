@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>Taming Texts or: How To Turn Unstructured Prose Into Structured Data - Diagram selected sentence, output JSON</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
+	<meta property="og:title" content="Taming Texts or: How To Turn Unstructured Prose Into Structured Data - Diagram selected sentence, output JSON"/>
+	<meta property="og:description" content="XXXX "/>
+	<meta property="og:image" content="images/50-days/robo_teacher_square.png"/>
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>  
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+  
+  <div id="page">
+  <!-- 
+    =================================================
+    
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Taming Texts or: How To Turn Unstructured Prose Into Structured Data</h1>
+  <div class="post_title_02">Diagram selected sentence, output JSON</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/robo_teacher.png"><img src="images/50-days/robo_teacher.png" ALT="XXXX" class="list_img_file"/></a>
+    <div class="caption">
+      See Spot run, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>. Looks like our robot instructor isn't the best at diagraming sentences. Hopefully, their text-based counterpart fairs better. 
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 12th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+	<p>
+    A good deal of social science, and empirical legal work for that matter, relies on the parsing of large texts. Say you want to explore how often a court sides with the "government" over "industry," and more to the point, when and how much money is involved in such cases. Unless someone else has done the work, there isn't a spreadsheet you can consult. Someone will have to read through all of that court's cases and figure out who was who, who won, and how much money was involved. You might be able to make some progress with something like regular expressions, but unless the text is very regular in its presentation, you'll miss things. Regular expressions let you search for well-defined patterns in text. Instead of saying, "find 867-5309," you can say, "find me all three-digit numbers adjacent to a dash followed by a four-digit number. (i.e., find the phone numbers in this text, not just a single phone number)." The problem is, what if the there's a phone number of the form 555.5555? That darn pretentious period can break everything. So, a more robust method is often called for. The point being, it can be useful to transform prose into something like a spreadsheet, what is sometimes called structured data. Such data is easy for computers to consume. That is, it's easy to sort, count, and connect. 
+  </p>
+  <p>
+    To illustrate how one might go about having an LLM turn prose into structured data, I settled upon diagraming sentences. Hopefully, the reasons why will become clear once you see the prompt template. So, <b>let's build something!</b>
+  </p>
+  
+  <!-- END INTRO -->
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/diagram-sentence/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/diagram-sentence/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/diagram-sentence/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/diagram-sentence/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/diagram-sentence/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/diagram-sentence/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/diagram-sentence/#tires">Kick the Tires</a></li>
+  </ul>
+  <p>
+    <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
+  </p>
+  <!-- 
+    =================================================
+    
+                   Setup LIT Prompts
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="setup" href="posts/diagram-sentence/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/diagram-sentence/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/diagram-sentence/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/diagram-sentence/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+  <!-- 
+    =================================================
+    
+                   Write Your Template
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="template" href="posts/diagram-sentence/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll make use of our old friend <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. Our goal is to take in this selected text and return a sentence diagram of sorts. Like yesterday's template, this one is a good deal more complex than what we saw in weeks one and two. It is an exercise in data extraction and labeling. However, this template is here mostly to show off the JSON parameter (I'm not sure how much I really trust it as a sentence diagraming tool). By setting the JSON parameter to Yes, we are asking the LLM to construct output in JSON. Consequently, the LLM should produce well-structured JSON output. If you haven't seen JSON before, you might want to read up on it here:  <a href="https://en.wikipedia.org/wiki/JSON" target="">https://en.wikipedia.org/wiki/JSON</a>. The prompt below does an okay job of telling you what to expect. As we discussed above, the ability to make nice machine-readable output—structured data—can be very useful. For us, this will prove helpful when working with some of our more complex interactions. FWIW, I had ChatGPT create the specifications below.
+  </p>
+  </p>
+  <p>Here's the template's title.</p>
+  <p><code>"Diagram" selected sentence</code></p>
+  <p>Here's the template's text.</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+<pre class="language-xxx" style="white-space:pre-wrap;"><code>Below I will provide you with a string of text. Your job is to produce a JSON representation of its sentence structure. 
+
+1. Representation and JSON Structure:
+
+The JSON representation of sentence structure consists of the following key-value pairs:
+
+a) "subject": This key represents the subject of the sentence and contains an object describing the subject. The subject object can include properties such as "type" (to specify the type of subject, e.g., noun or pronoun) and "value" (to store the actual subject word or phrase).
+
+b) "predicate": This key represents the predicate of the sentence and contains an object describing the predicate. The predicate object can include properties such as "type" (to specify the type of predicate, e.g., verb or verb phrase) and "value" (to store the actual predicate word or phrase).
+
+c) "object": This key represents the object of the sentence and contains an object describing the object. The object can include properties such as "type" (to specify the type of object, e.g., noun or pronoun) and "value" (to store the actual object word or phrase).
+
+d) "complement": This key represents the complement of the sentence and contains an object describing the complement. The complement object can include properties such as "type" (to specify the type of complement, e.g., adjective or noun phrase) and "value" (to store the actual complement word or phrase).
+
+e) "modifiers": This key represents any modifiers or additional information associated with the sentence. It contains an array of objects, where each object describes a specific modifier. Each modifier object can include properties such as "type" (to specify the type of modifier, e.g., adverbial or prepositional phrase) and "value" (to store the actual modifier word or phrase).
+
+2. Example JSON Structure:
+
+{
+  "subject": {
+    "type": "noun",
+    "value": "cat"
+  },
+  "predicate": {
+    "type": "verb",
+    "value": "jumped"
+  },
+  "object": {
+    "type": "noun",
+    "value": "fence"
+  },
+  "complement": {
+    "type": "adjective",
+    "value": "high"
+  },
+  "modifiers": [
+    {
+      "type": "adverbial",
+      "value": "quickly"
+    },
+    {
+      "type": "prepositional phrase",
+      "value": "over the wall"
+    }
+  ]
+}
+
+In this example, the JSON structure represents a sentence where the subject is "cat," the predicate is "jumped," the object is "fence," the complement is "high," and there are two modifiers: "quickly" (an adverbial modifier) and "over the wall" (a prepositional phrase modifier). 
+
+3. Conclusion:
+The JSON representation of sentence structure provides a standardized way to describe sentence elements such as subject, predicate, object, complement, and modifiers. It allows for the structured representation of sentence components, making it easier to process and analyze sentence structures programmatically.
+
+Now that I've given you these specifications, your job is to make such an object for the following text string:
+
+{{highlighted}}
+
+Now provide your JSON object: 
+  
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the first template's parameters:</p>
+  <ul>
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. </li>  
+      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
+      <li><b>Max Tokens:</b> <code>300</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="">https://en.wikipedia.org/wiki/JSON</a></li>  
+      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. Here we're happy just to get our recipe. So, "FULL STOP" it is.</li>  
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
+  </ul>
+
+
+  <h3><a name="working" href="posts/diagram-sentence/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <p>
+    To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!-- 
+    =================================================
+    
+                    Kick the Tires
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="tires" href="posts/diagram-sentence/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
+  </p>
+  <ul>
+    <li>
+      <b>Find some worksheets</b>. The real point of today's prompt is to get you thinking about how to extract structured data from texts and how you might be able to leverage JSON output, but if you really want to see how well the template is at diagraming sentences, find <a href="https://www.yourdictionary.com/articles/diagram-sentences-worksheets" target="_blank">some worksheets</a>, and see how it does. 
+    </li>
+  </ul> 
+  <!-- 
+  =================================================
+  
+                  Preview projects
+
+  =================================================
+  --> 
+  <div id="previews"></div>
+  
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a> 
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+		MathJax.typeset();		
+	} catch (error) {}*/
+  
+  (async () => {
+    prompts = await loadFile('posts/diagram-sentence/prompt_template.txt');
+    //exported = await loadFile('posts/diagram-sentence/interactions.html');
+  })()
+</script>
+
+</BODY></HTML>
+
