@@ -276,7 +276,7 @@
     #########################
     #########################
   -->
-  <p>And here are the first template's parameters:</p>
+  <p>And here are the template's parameters:</p>
   <ul>
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
       <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. This is the first time we're using <code>gpt-4-turbo-preview</code>. The choice was made mostly because of its very large context window. However, it also performs much better on summarization tasks than the currently available alternatives. Keep in mind, it's also expensive.</li>  
