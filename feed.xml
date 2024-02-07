@@ -12,12 +12,22 @@
     <title></title>
     <link>https://sadlynothavocdinosaur.com/posts//</link>
     <description></description>
-    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/.png"/>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/hello_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/hello_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts//</guid>
     <pubDate>Thu, 25 Jan 2024 05:30:00 GMT</pubDate>
   </item>
   -->
+
+  <item>
+    <title>The Dream of Universal Translation: Translate text into English then translate your reply into the original language</title>
+    <link>https://sadlynothavocdinosaur.com/posts/translate-selected/</link>
+    <description>The variety of human language has long been cast as an impediment to communication rather than a laboratory of descriptive experiments, each providing a unique vantage point on the human condition. In fairness, however, absent translation, the insights gained from such experiments would remain inaccessible to all but a fraction of humanity. The fear that insights from the speakers of one language will crowd out those of others is a chief concern of those who look critically on the training of Large Language Models (LLMs). Given too much weight in an LLM's training, the ideas obsessed over by the speakers of one language threaten to dominate those less commonly expressed. However, given sentence completion machines (LLMs) are trained on texts which surely included many sets of translations, they also offer the promise of translation, the promise of understanding. </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/translate-selected/</guid>
+    <pubDate>Thu, 25 Jan 2024 05:30:00 GMT</pubDate>
+  </item>
 
   <item>
     <title>Taming Texts or: How To Turn Unstructured Prose Into Structured Data - Diagram selected sentence, output JSON</title>
