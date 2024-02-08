@@ -11,13 +11,34 @@
   <item>
     <title></title>
     <link>https://sadlynothavocdinosaur.com/posts//</link>
-    <description></description>
-    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/hello_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/hello_square.png"/>
+    <description>
+    </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts//</guid>
-    <pubDate>Thu, 25 Jan 2024 05:30:00 GMT</pubDate>
+    <pubDate>Thu, 25 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>This Day in History: Generate fun "facts" for this day in history</title>
+    <link>https://sadlynothavocdinosaur.com/posts/this-day-in-history/</link>
+    <description>As you know, we can seed a prompt with today's date to interesting effect, but whereas last week we used the date to produce poetry, this week we're looking to learn some fun "facts." I've placed "facts" in scare quotes because as we know, large language models (LLMs) are prone to hallucinations. Below I'll share a prompt that asks an LLM to share a significant historical event from this day in history. I like to imagine using this template is a little like playing the game Bluff the Listener, a regular segment on the radio show Wait, Wait, Don't Tell Me.... Here's how it's introduced every week, "Our panelists read three stories about something new in the world of [that week's topic], only one of which is true." A caller contestant must guess the true story to win. So, dear reader, when reading your daily fun "fact," it might be "fun" to follow it up with a Google search. Today, however, things are looking pretty good. Here's an output I got for February 9th. I apologize for asking the template to format the output as a social media post. 😬 </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/beatles.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/beatles.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/this-day-in-history/</guid>
+    <pubDate>Fri, 9 Feb 2024 00:00:00 GMT</pubDate>
   </item>
   -->
+
+  <item>
+    <title>Old-School Automation: Complete a "form letter" without engaging an LLM</title>
+    <link>https://sadlynothavocdinosaur.com/posts/form-letters/</link>
+    <description>It's worth taking at least one day to explore the use of the LIT Prompts extension minus the use of an LLM. As it turns out, in making a browser extension that produces templatized reusable LLM prompts, I first had to create a tool capable of making standard fill-in-the-blank templates. We can use both predefined variables and user inputs, meaning these templates can get pretty sophisticated. Today we'll construct a simple form letter. The letter will fill in today's date and ask for a recipient and sender. You should rework the body of the letter to serve your needs. For what it's worth, when I use the extension to produce text without engaging an LLM, it's usually for a bit of boilerplate, like a paragraph about how someone can get see my calendar and book a time. My hope is that in working through the form letter, similar ideas will come to mind. So, let's build something! </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/movable_type_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/movable_type_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/form-letters/</guid>
+    <pubDate>Thu, 8 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
 
   <item>
     <title>The Dream of Universal Translation: Translate text into English then translate your reply into the original language</title>

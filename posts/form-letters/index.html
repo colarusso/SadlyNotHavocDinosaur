@@ -5,11 +5,11 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>XXXX</title>
+  <title>Old-School Automation: Complete a "form letter" without engaging an LLM</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content="XXXX"/>
-	<meta property="og:description" content="XXXX "/>
+	<meta property="og:title" content="Old-School Automation: Complete a 'form letter' without engaging an LLM"/>
+	<meta property="og:description" content="It's worth taking at least one day to explore the use of the LIT Prompts extension minus the use of an LLM. As it turns out, in making a browser extension that produces templatized reusable LLM prompts, I first had to create a tool capable of making standard fill-in-the-blank templates. We can use both predefined variables and user inputs, meaning these templates can get pretty sophisticated. Today we'll construct a simple form letter. The letter will fill in today's date and ask for a recipient and sender. You should rework the body of the letter to serve your needs. For what it's worth, when I use the extension to produce text without engaging an LLM, it's usually for a bit of boilerplate, like a paragraph about how someone can get see my calendar and book a time. My hope is that in working through the form letter, similar ideas will come to mind. So, let's build something! "/>
 	<meta property="og:image" content="images/50-days/movable_type_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -97,7 +97,7 @@
     </div>-->
     <a href="images/50-days/movable_type.png"><img src="images/50-days/movable_type.png" ALT="XXXX" class="list_img_file"/></a>
     <div class="caption">
-      XXXX, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      <a href="https://www.flickr.com/photos/matt_moonlight/9173909588/in/photostream" target="_blank" class="captionlnk">Movable type</a> by Matt Moonlight (<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" class="captionlnk">CC BY-SA</a>)
     </div>
   </div>
   <p class="post_p">
@@ -106,45 +106,22 @@
   </p>
   <p><i>This is <b>the 14th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
-    XXXX
+    It's worth taking at least one day to explore the use of the LIT Prompts extension minus the use of an LLM. As it turns out, in making a browser extension that produces templatized reusable LLM prompts, I first had to create a tool capable of making standard fill-in-the-blank templates. We can use both predefined variables and user inputs, meaning these templates can get pretty sophisticated. Today we'll construct a simple form letter. The letter will fill in today's date and ask for a recipient and sender. You should rework the body of the letter to serve your needs. For what it's worth, when I use the extension to produce text without engaging an LLM, it's usually for a bit of boilerplate, like a paragraph about how someone can get see my calendar and book a time. My hope is that in working through the form letter, similar ideas will come to mind. So, <b>let's build something!</b>
   </p>
-  <p>
-    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or <a href="posts/POSTSLUG/#upnext">skip</a> this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
-  </p>
-   
-  <h3><a name="micro" href="posts/POSTSLUG/#micro" class="anchor" alt="deep link to this section"></a>Micro-Lesson: XXXX</h3>
-   <p>
-    XXXX
-  </p>
-
-    <div class="featured_img_center">
-      <a href="images/50-days/XXXX.png"><img src="images/50-days/XXXX.png" ALT="XXXX" class="list_img_file"/></a>
-      <div class="caption">
-        XXXX
-      </div>  
-    </div>
-    <p>
-      XXXX
-    </p>
-    <p>
-      <b>Let's build something!</b>
-    </p>
   
   <!-- END INTRO -->
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/form-letters/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/POSTSLUG/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/form-letters/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/POSTSLUG/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/form-letters/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/POSTSLUG/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/POSTSLUG/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/form-letters/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/form-letters/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/POSTSLUG/#tires">Kick the Tires</a></li>
-    <li><a href="posts/POSTSLUG/#export">Export and Share </a></li>
-    <li><a href="posts/POSTSLUG/#references">TL;DR References</a></li>
+    <li><a href="posts/form-letters/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/form-letters/#tires">Kick the Tires</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -157,7 +134,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/POSTSLUG/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/form-letters/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -177,7 +154,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/POSTSLUG/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/form-letters/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -190,7 +167,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/POSTSLUG/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/form-letters/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -227,7 +204,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/POSTSLUG/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/form-letters/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
   <!-- 
@@ -238,7 +215,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/form-letters/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -248,14 +225,34 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our XXXX predefined variable, <code>{{XXXX}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using a selection of our date variables along with user inputs.  Remember, if the text between our brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. FWIW, here's the full list of date and time variables:
+    <ul>
+      <li>Day of week (0-6): <code>{{dayOfWeek}}</code></li>
+      <li>Day of week (English): <code>{{DayOfWeek}}</code></li>
+      <li>Month (1-12): <code>{{month}}</code></li>
+      <li>Month (01-12): <code>{{month2d}}</code></li>
+      <li>Month (English): <code>{{Month}}</code></li>
+      <li>Day of Month (0-31): <code>{{day}}</code></li>
+      <li>Day of Month (01-31): <code>{{day2d}}</code></li>
+      <li>Year: <code>{{year}}</code></li>
+      <li>Hour (1-12): <code>{{hours}}</code></li>
+      <li>Hour (01-12): <code>{{hours2d}}</code></li>
+      <li>Hour (0-23): <code>{{hours24}}</code></li>
+      <li>Hour (00-23): <code>{{hours242d}}</code></li>
+      <li>AM or PM: <code>{{ampm}}</code></li>
+      <li>Minute (0-59): <code>{{minutes}}</code></li>
+      <li>Minute (00-59): <code>{{minutes2d}}</code></li>
+      <li>Second (0-59): <code>{{seconds}}</code></li>
+      <li>Second (00-59): <code>{{seconds2d}}</code></li>
+    </ul>
   </p>
+
   <p>
-    XXXX
+    Below you'll see that we use <code>{{What is your name?}}</code> twice (on lines 5 and 8), but the user is only presented with "What's your name?" once. The default behavior is not to repeat user prompts (i.e., we don't like to ask for the same input more than once). You can override this by adding an asterisk before the closing brackets like this <code>{{What is your name?*}}</code>.  
   </p>
   </p>
   <p>Here's the template's title.</p>
-  <p><code>XXXX</code></p>
+  <p><code>Generic form letter (no LLM)</code></p>
   <p>Here's the template's text.</p>
   <!-- 
     #########################
@@ -265,8 +262,14 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX 
-      
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{DayOfWeek}}, {{Month}} {{day}}, {{year}} 
+
+{{Who is this letter addressed to?}}:
+
+[This is where you ({{What's your name?}}) should put the text of your boilerplate letter.] 
+
+Sincerely, 
+{{What's your name?}} 
 </code></pre>
   </section>
   <!-- 
@@ -278,17 +281,17 @@
   -->
   <p>And here are the template's parameters:</p>
   <ul>
-      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. This is the first time we're using <code>gpt-4-turbo-preview</code>. The choice was made mostly because of its very large context window. However, it also performs much better on summarization tasks than the currently available alternatives. Keep in mind, it's also expensive.</li>  
-      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
-      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
-      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
-      <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want not only a summary of our text but the potential for a chat. So, "CHAT" it is.</li>  
-      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
+    <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
+    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No." Note: you can use JSON with Output Type set to Prompt, more on that will following in future posts.</li>  
+    <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we'll send the output to the screen and the clipboard so you can paste it right into a reply.</li>  
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
+    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
   </ul>
 
-  <h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <h3><a name="working" href="posts/form-letters/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
     To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -311,35 +314,14 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/POSTSLUG/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/form-letters/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
   </p>
   <ul>
     <li>
-      <b>XXXX</b> XXXX
+      <b>Make it Your Own</b>. Edit the heck out of that template. Since this isn't being sent to an LLM, what you see is what you get. Again, when I use the extension to produce text without engaging an LLM, it's usually for a bit of boilerplate, like a paragraph about how someone can get see my calendar and book a time. It's a good place to put links and other info you can't quite bring yourself to memorize. 
     </li>
-  </ul>
-  <!-- 
-    =================================================
-    
-                       References
-
-    =================================================
-  --> 
-  <hr>
-  <h2><a name="references" href="posts/POSTSLUG/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
-  <p>
-    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
-    <!-- ICYMI, if you didn't click through above, you might want to give this a look now. -->
-  </p>
-  <ul>
-    <li>
-      <a href="XXXX" target="_blank">XXXX</a> by XXXX. XXXX 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-    <!--<li><a href="">text</a></li>-->
   </ul>
   
   <!-- 
@@ -374,8 +356,8 @@
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/POSTSLUG/prompt_template.txt');
-    //exported = await loadFile('posts/POSTSLUG/interactions.html');
+    prompts = await loadFile('posts/form-letters/prompt_template.txt');
+    //exported = await loadFile('posts/form-letters/interactions.html');
   })()
 </script>
 
