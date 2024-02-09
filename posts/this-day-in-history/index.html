@@ -130,7 +130,7 @@
     #TheBeatles #EdSullivanShow #Beatlemania #MusicHistory #CulturalMilestone #IconicPerformance #BritishInvasion #PopCulture
     </blockquote>
     <p>
-      For the record, the LLM is correct. On this day in history <a href="https://en.wikipedia.org/wiki/The_Beatles_on_The_Ed_Sullivan_Show" target="_blank">the Beatles performed on the The Ed Sullivan Show</a>. With this in mind, <b>let's build something!</b>
+      For the record, the LLM is correct. On this day in history <a href="https://en.wikipedia.org/wiki/The_Beatles_on_The_Ed_Sullivan_Show" target="_blank">the Beatles performed on The Ed Sullivan Show</a>. With this in mind, <b>let's build something!</b>
     </p>
   
   <!-- END INTRO -->
@@ -249,10 +249,7 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our few new variables:  <code>{{hours}}</code>, <code>{{minutes2d}}</code>, <code>{{ampm}}</code>,  <code>{{Month}}</code>, and <code>{{DayOfWeek}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
-  </p>
-  <p>
-    FWIW, these come from a collection of date and time variables. Here's the full list:
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our few new variables:  <code>{{Month}}</code> and <code>{{day}}</code>. FWIW, these come from a collection of date and time variables. Here's the full list:
     <ul>
       <li>Day of week (0-6): <code>{{dayOfWeek}}</code></li>
       <li>Day of week (English): <code>{{DayOfWeek}}</code></li>
@@ -273,9 +270,8 @@
       <li>Second (00-59): <code>{{seconds2d}}</code></li>
     </ul>
   </p>
-
   <p>
-    XXXX
+    Once we hve the date, the rest of the template is pretty straight forward. 
   </p>
   </p>
   <p>Here's the template's title.</p>
@@ -303,12 +299,12 @@
   <p>And here are the template's parameters:</p>
   <ul>
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. This is the first time we're using <code>gpt-4-turbo-preview</code>. The choice was made mostly because of its very large context window. However, it also performs much better on summarization tasks than the currently available alternatives. Keep in mind, it's also expensive.</li>  
-      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
-      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
+      <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. I went with the reasonably "creative" 0.7.</li>  
+      <li><b>Max Tokens:</b> <code>300</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
-      <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want not only a summary of our text but the potential for a chat. So, "CHAT" it is.</li>  
+      <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we'll send the output to the screen and the clipboard.</li>  
+      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
       <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
   </ul>
 
@@ -341,7 +337,10 @@
   </p>
   <ul>
     <li>
-      <b>XXXX</b> XXXX
+      <b>Tone</b>. Try editing the template to change the format and tone of the output, see if you can get fewer emoji. 
+    </li>
+    <li>
+      <b>Location, location, location</b>. See if you can get the answers to pull from histories other than the US and Europe. 
     </li>
   </ul>
   
