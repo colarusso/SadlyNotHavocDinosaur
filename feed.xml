@@ -18,7 +18,54 @@
     <guid>https://sadlynothavocdinosaur.com/posts//</guid>
     <pubDate>Thu, 25 Feb 2024 00:00:00 GMT</pubDate>
   </item>
-  -->
+
+
+
+  <item>
+    <title>2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment</title>
+    <link>https://sadlynothavocdinosaur.com/posts/answer-questions-with-context/</link>
+    <description>
+    </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_03_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_03_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/answer-questions-with-context/</guid>
+    <pubDate>Fri, 16 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>A Hawk from a Handsaw: Have an AI "guess" the right answers for multiple choice and true or false questions</title>
+    <link>https://sadlynothavocdinosaur.com/posts/answer-questions/</link>
+    <description>
+    </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_02_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_02_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/answer-questions/</guid>
+    <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>True or False? Use AI to draft true or false questions based on a reading assignment</title>
+    <link>https://sadlynothavocdinosaur.com/posts/create-true-false-questions/</link>
+    <description>
+    </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/true_false_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/true_false_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/create-true-false-questions/</guid>
+    <pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>All of the Above: Use AI to draft multipe choice questions based on a reading assignment</title>
+    <link>https://sadlynothavocdinosaur.com/posts/create-multiple-choice-questions/</link>
+    <description>
+    </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_01_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_01_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/create-multiple-choice-questions/</guid>
+    <pubDate>Tue, 13 Feb 2024 00:00:00 GMT</pubDate>
+  </item>
+
+  --> 
 
   <item>
     <title>If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives! A law school instructor shows you how to get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!</title>
