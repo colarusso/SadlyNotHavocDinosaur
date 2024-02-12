@@ -5,11 +5,11 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>XXXX</title>
+  <title>If a 3L Can Automate Their Peers, I Can Too, and for Free To Boot—Robo Socrates Lives! A law school instructor explains how you can get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content="XXXX"/>
-	<meta property="og:description" content="XXXX "/>
+	<meta property="og:title" content="If a 3L Can Automate Their Peers, I Can Too, and for Free To Boot—Robo Socrates Lives! A law school instructor explains how you can get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!"/>
+	<meta property="og:description" content="Last week I couldn't escape the story of Bradley Neal, a 3L who has built a gen AI tool that creates case briefs and answers questions about cases. I love the story, and I love the tool. So much so I spent the weekend recreating most of its functionality. Like Mr. Neal's tool, mine can create case briefs, explain cases in plain language, and directly answer questions about a case. These are common tasks for law students, but I didn't stop there. I also created a bot capable of acting like a law school professor, a bot that will grill you using the Socratic method. That's right, it's an on-call simulator. I call the suite of tools The Paper Chase 2.0. You can see the results here, or build and customize your own version for FREE by following the instructions below. "/>
 	<meta property="og:image" content="images/50-days/socrates_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">If a 3L Can “Automate” Their Peers, I Can Too, and for Free To Boot—Socrates Lives!</h1>
-  <div class="post_title_02">A law school instructor explains how to get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialoug</div>
+  <h1 class="post_title_01">If a 3L Can Automate Their Peers, I Can Too, and for Free To Boot—Robo Socrates Lives!</h1>
+  <div class="post_title_02">A law school instructor explains how you can get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -97,7 +97,7 @@
     </div>-->
     <a href="images/50-days/socrates.png"><img src="images/50-days/socrates.png" ALT="An over-the-top robot Socrates shouting." class="list_img_file"/></a>
     <div class="caption">
-      Robot Socrates Camping It Up, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>. This image is just so wonderfully over-the-top, pure camp. I mean, Robot Socrates only has three fingers! 
+      Robo Socrates Camping It Up, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>. This image is just so wonderfully over-the-top, pure camp. I mean, Robot Socrates only has three fingers! 
     </div>
   </div>
   <p class="post_p">
@@ -106,57 +106,105 @@
   </p>
   <p><i>This is <b>the 16th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 	<p>
-    Last week I couldn't escape the story of Bradley Neal, a 3L who has built a gen AI tool to create case briefs and answer questions about cases on the spot. I love the story, and I love the tool. So much so I spent the weekend recreating most of its functionality. Like Bradley's tool, mine can create case briefs, explain cases so a 5yo can understand then, and directly answer questions about a case.  These are exactly the tasks my colleuges ask their students to perform, but I didn't stop there. I also created a bot capable of acting like a law school professor, a bot that will grill you using the Socratic method. That's right, an on-call simulator. You can see the results here, or build your own version for free by following the instructions below. I susspect some of my colueges will be a bit perterrubed when they hear about these tools, until of course they read through all of this post. ;) 
+    Last week I couldn't escape the story of Bradley Neal, a 3L who has built a gen AI tool that creates case briefs and answers questions about cases. I love <a href="https://www.lawnext.com/2024/02/law-students-gen-ai-product-lexplug-makes-briefing-cases-a-breeze.html?utm_source=pocket_saves" target="_blank">the story</a>, and I love the tool. So much so I spent the weekend recreating most of its functionality. Like Mr. Neal's tool, mine can create case briefs, explain cases in plain language, and directly answer questions about a case. These are common tasks for law students, but I didn't stop there. I also created a bot capable of acting like a law school professor, a bot that will grill you using the Socratic method. That's right, it's an on-call <a href="/posts/simple-training-sims">simulator</a>. I call the suite of tools <a href="/ai/paper-chase-2.0">The Paper Chase 2.0</a>. You can see the results <a href="/ai/paper-chase-2.0">here</a>, or build and customize your own version for FREE by following the <a href="posts/socrates-lives/#build">instructions below</a>. 
+  </p>
+  <p>
+    I suspect some of my colleagues will be a bit perturbed when they hear about these tools. Maybe we can spark another round of "should we ban laptops in the classroom?" It's a conversation that comes up every few years. It always reminds me a bit of Plato's objection to writing. He feared that people would become dependent on writing and wouldn't memorize things anymore. He wasn't wrong, but I kind of like not having to memorize everything. Now lest you get the wrong idea, I took my law school notes on paper and once delivered a soliloquy from memory during a faculty meeting to prove a point. To preview a metaphor you'll see again, the genie is out of the bottle. I'm interested here in figuring out how best to live with this reality. 
   </p>
   <p>  
-    Effectivly, Bradly has created 21st centery SparkNotes (CliffsNotes for the olds). So first, I would caution any law students out there to be careful using these tools for the same reason I might caution against relying too heavily on notes they didn't write themselves. When a teacher asks you to create a case brief or any distilation of ideas actually, the product isn't what matters most. It's the journey that's important. So, the reason I love Bradley's story isn't the fact that others can now access his AI-generated case briefs. It's the fact that he had to build the tool. Likelwise, I love the tool because it's exactly they type of thing I think more law students shoule be making. But above all, I love that we live in a time where you dear reader could be making these tools. Heck, if you finish reading this page, you'll have all the technical know how you need. Of course, technical know how isn't really the issue, and that's the thing. I joke with my students that you never learn something as well as when you teach it. Then I ask them to imagine how well they'll learn something if they have to teach it to a computer. These tools can be used to great pedogogical purpose if we remember one very important thing.  
+    Effectively, Mr. Neal has created 21st century <a href="https://en.wikipedia.org/wiki/CliffsNotes" target="_blank">CliffsNotes</a>. I would caution any law students out there to be careful using these tools for the same reason I might caution against relying too heavily on notes they didn't write themselves. When a teacher asks you to create a case brief, or any distillation of ideas for that matter, the product isn't what's really important. It's the journey that matters. So, the reason I love Mr. Neal's story is not the fact that others can now access his AI-generated case briefs. It's the fact that he built the tool. How cool that experience must have been. Likewise, I love the tool because it's exactly the type of thing I think more law students should be making. Above all, I love that we live at a time where you dear reader could be making tools just like this. Heck, if you finish reading this post, you'll have all the technical know-how you need. Of course, technical know-how isn't really the point either. I joke with my students that you never learn something as well as when you teach it. Then I ask them to imagine how well they'll learn something if they have to teach it to a computer. These tools can be used to great pedagogical purpose if we remember one very important thing. Case briefs or the answers to questions in seminar are to some extent <a href="https://en.wikipedia.org/wiki/MacGuffin" target="_blank">MacGuffins</a>, something needed to drive the plot but not important in themselves. They are a means to an end. Their value comes from their status as artifacts of understanding. Absent that understanding, they are empty words. 
   </p>
   <blockquote>
     If there is any lesson that we should take from stories about genies granting wishes, it's that the desire to get something without effort is the real problem. Think about the story of "The Sorcerer's Apprentice," in which the apprentice casts a spell to make broomsticks carry water but is unable to make them stop. The lesson of that story is not that magic is impossible to control: at the end of the story, the sorcerer comes back and immediately fixes the mess the apprentice made. The lesson is that you can't get out of doing the hard work. The apprentice wanted to avoid his chores, and looking for a shortcut was what got him into trouble.
   </blockquote> 
   <p style="text-align:right;padding-right: 25px;">
-    - <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Ted Chiang</a> on ai as genie 
+    - Ted Chiang, <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> 
   </p>
   <p>
-    For any non-lawyer readers, some context. In US law schools, it's customary to have students read the opnions of courts to learn the law, a method pinoered by XX at Harvard. It's expected that students will read these cases and produce case briefs based on their reading. A case brief has x main parts:  
+    I taught high school physics and astronomy for six years before going to law school. So, I know very well the dangers and promise of cognitive prosthetics. I saw students randomly punch keys on a calculator, never moving beyond the assumption that all I wanted was an answer. Some never understood why I asked them to show their work. However, I also saw students take flight, soaring over the drudgery of common arithmetic, to genuinely explore a world of interconnected relationships described by functions and physical laws. They understood the importance of showing their work because they knew it wasn't only about the answers. I'm a dyslexic attorney, and I firmly believe this profession would have been closed to me had I been born a generation earlier, before spell check and text-to-speech. Cognitive prosthetics increase access. Yes, technological tools can undercut learning, but only if we ignore the lesson of The Sorcerer's Apprentice, only if we use them as "shortcuts." Here, I use "shortcuts" interchangeably with "cheats," and I distinguish both from efficiencies. The first two achieve speed by skipping over necessary steps whereas the latter is best described by the cliché, "work smarter, not harder." The problem is that if one is confused about the MacGuffin's value, it is unlikely they will be able to distinguish between the two. And so, some adopt a paternalistic view and assert that we must protect people from themselves, not by educating them about the difference, but by barring them access to that which they might misuse.   
+  </p>
+  <p>
+    I understand this impulse. It's a lot of work combating the havoc these tools can unleash. Maybe it's just easier if we avoid it all together. <a href="https://en.wikipedia.org/wiki/Brandolini%27s_law" target="_blank">Brandolini's Law</a> is often cited in relation to Gen AI. It states, "The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it." The fear is that perhaps this asymmetry will grow with Gen AI-fueled BS. Again, I am reminded of Plato and his objection to writing. I'm also reminded of the <a href="https://unlocked.microsoft.com/ai-anthology/ada-palmer/" target="_blank">printing press</a>. A lot of blood was shed in the wake of that disruptive technology. When the means of publishing were democratized, literacy spread along with ideas, dangerous ideas. For educators, however, I don't think prohibition is an appropriate answer, and that's because it seems too much like a shortcut. We must do the hard work, and we have to convince our students that it is in their interest to do the hard work as well. 
+  </p>
+  <p>
+    I imagine three students: 
   </p>
   <ul>
-    <li>Facts:</li>
-    <li>Facts:</li>
-    <li>Facts:</li>
-    <li>Facts:</li>
+    <li>the first goes through law school never using a tool like Mr. Neal's;</li>
+    <li>the second discovers and makes use of Mr. Neal's tool; and </li>
+    <li>the third, inspired by Mr. Neal's tool (and maybe this post), builds their own. </li>
   </ul>
-  
+  <p>I think we can agree that the third student will learn more than the second, and I'm confident there's good reason to think they will be better off than the first student as well. Here are at least two points in favor of this argument.
+  </p>
+  <ol>
+    <li>In the process of creating and refining their tool, they will have to develop a more robust understanding of what it is to brief a case.</li>
+    <li>They will be in the position when faced with tools like Mr. Neal's in the future to critically evaluate their efficacy. They'll know better than student number one when to call BS.</li>
+  </ol>
+  <p>
+    This is where I point out that our discussion of these tools can't remain academic. At some point, our students will find themselves working in a world with them. A part of <a href="https://www.nonprofittechy.com/2024/01/30/some-quick-thoughts-about-integrating-ai-with-law-school-clinical-practice/" target="_blank">our job</a> must be helping our students gain the wisdom needed to wield them wisely. 
+  </p>
 
+  <h3><a name="briefs" href="posts/socrates-lives/#briefs" class="anchor" alt="deep link to this section"></a>Notes on Case Briefs, Gunners &amp; The Socratic Method</h3>
 
-    <div class="featured_img_center">
-      <a href="images/50-days/XXXX.png"><img src="images/50-days/XXXX.png" ALT="XXXX" class="list_img_file"/></a>
-      <div class="caption">
-        XXXX
-      </div>  
+  <div class="list_vid">
+    <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/qx22TyCge7w" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen  style="border-radius: 5px;border: 1px solid #a5a5a5;"></iframe>
+    <div class="caption">
+      The first scene of The Paper Chase (1973).
     </div>
-    <p>
-      XXXX
-    </p>
-    <p>
-      <b>Let's build something!</b>
-    </p>
-  
+  </div>
+
+  <p>
+    For any non-lawyer readers, some context. In US law schools, it's customary to have students read the opinions of courts to learn the law. It's often expected that students will produce short summaries of these cases called case briefs as part of their study. The specifics can differ, but a case brief usually has four main parts:   
+  </p>
+  <ul>
+    <li>Facts: Case name, parties involved, factual background, procedural history, and the judgment.</li>
+    <li>Issues: The legal questions or disputes at the heart of the case.</li>
+    <li>Holding: The court's legal decision or rule applied in the case.</li>
+    <li>Rationale: The reasoning behind the court's decision.</li>
+  </ul>
+
+  <p>
+    No one ever really asks to see your case briefs, but you will be questioned about the cases during class. Traditionally, this questioning involved the <a href="https://en.wikipedia.org/wiki/Socratic_method" target="_blank">Socratic method</a>. If you're unfamiliar with the Socratic method, it can be seen throughout the 1973 film the Paper Chase. Today, most law school instructors, however, engage in class discussions that only resemble this method. Ideally, a teacher's questions are an invitation for you to consider and integrate new ideas into your understanding of the world. The questioner is your guide, each question subtly guiding you to take a step this way or that into what for you remains unknown. Cynically, questions act as a motivation for everyone to do the reading. Either way, the hope is that they drive you to do the hard work of figuring out what it all means. 
+  </p>
+  <p>
+    Sometimes teachers will cold call students and others will rely on volunteers. A gunner is a pejorative term used to describe overly eager students who aim to out gun and out shine their peers. Consequently, they always have an answer. Mr Neal called his Q&amp;A tool Gunnerbot.
+  </p>
+
+
+  <h3><a name="free" href="posts/socrates-lives/#free" class="anchor" alt="deep link to this section"></a>Notes on the meaning of FREE</h3>
+  <p>
+    In the subhead above, I claimed that I would show you how to build your own AI tools for free. So, it's worth explaining what I meant by that. I meant that depending on what resources you have available to you it may be possible to build your own version of <a href="/ai/paper-chase-2.0">Paper Chase 2.0</a> without incurring any new costs aside from those associated with running your computer. We'll be building our tools with the LIT Prompts extension which is free to download and use. However, it will require you to make use of a <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Model</a> (LLM). If you're computer is of the right make and model, you can <a href="https://github.com/SuffolkLITLab/prompts#using-lm-studio-with-lit-prompts" target="_blank">run LM Studio locally</a> and make use of an open source LLM for free. If you're new to OpenAI, you can make use a small set of free credits given to you when you create a new account. In practice, however, it's probably easiest to pay for your LLM. It is, however, possible to avoid doing so. 
+  </p>
+  <p>
+    The fact that you could build these tools for free, or very little money, raises some interesting questions about the future of products like Mr. Neal's. What is the right price for such a tool? What is it customers are paying for? It might also present some interesting implications for the delivery of legal services, but we'll leave that discussion for another time. 
+  </p>
+
+  <h3><a name="disclaimer" href="posts/socrates-lives/#disclaimer" class="anchor" alt="deep link to this section"></a>Disclaimer</h3>
+  <p>
+    I cobbled these tools together over the weekend. Consequently, I have not subjected them to rigorous testing. Before using them, you should examine the text of their <a href="posts/socrates-lives/#template">prompt templates</a>. Also, it's worth noting for those who haven't read the other posts in this series, a major point of these posts is to encourage experimentation with imperfect tools. LLMs <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinate</a>, and those hallucinations reflect the <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">biases</a> found in their training data. What I'm saying is, DON'T RELY ON THE OUTPUT OF THESE TOOLS!
+  </p>
+  <p>
+    <i>You should treat an LLM's output like you would any secondary source. When it really matters, you need to track down and check the primary sources. That's why my two main use cases for summarization templates are skimming and refreshing my recollection of something I have already read.</i>
+  </p>
+  <p>With that out of the way...</p>
+
+  <h3><a name="build" href="posts/socrates-lives/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+
   <!-- END INTRO -->
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/socrates-lives/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/POSTSLUG/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/socrates-lives/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/POSTSLUG/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/socrates-lives/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/POSTSLUG/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/POSTSLUG/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/socrates-lives/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/socrates-lives/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/POSTSLUG/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/POSTSLUG/#tires">Kick the Tires</a></li>
-    <li><a href="posts/POSTSLUG/#export">Export and Share </a></li>
-    <li><a href="posts/POSTSLUG/#references">TL;DR References</a></li>
+    <li><a href="posts/socrates-lives/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/socrates-lives/#tires">Kick the Tires</a></li>
+    <li><a href="posts/socrates-lives/#export">Export and Share </a></li>
+    <li><a href="posts/socrates-lives/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -169,7 +217,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/POSTSLUG/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/socrates-lives/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -189,7 +237,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/POSTSLUG/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/socrates-lives/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -202,7 +250,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/POSTSLUG/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/socrates-lives/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -239,7 +287,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/POSTSLUG/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/socrates-lives/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
   <!-- 
@@ -250,7 +298,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/socrates-lives/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -259,34 +307,28 @@
     </div>
   </div>
 
-  <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our XXXX predefined variable, <code>{{XXXX}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
-  </p>
-  <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. Like yesterday, this prompt pattern is pretty straight forward. Highlight the text of an email, and run the template. The LLM will generate a draft reply declining any request(s) and place it in your clipboard. To accomplish this last part be sure to set output to "Screen + clipboard."
-  </p>
-  <p>
-    The <code>{{innerText}}</code> variable will be replaced by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">innerText</a> of your current page (roughly speaking the hard-coded text of a page) while the <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab at the time you open the extension. We use the template just like Tuesday's, highlight a word or words; run the template, and get a definition. What's different here is that we ask for a definition that considers the context of the page you are on. As you will no doubt see when you kick the tires, this improves performance over Tuesday's template. 
-  </p>
-  <p>
-    The <code>{{scratch}}</code> variable contains the text in your Scratch Pad. Remember, the scratch pad is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. That being said, we're actually introducing two templates today. The first will produce a list of action items and append them to your Scratch Pad, and the second will save the content of your Scratch Pad to a file. 
-  </p>
-  <p> 
-    To run the first template, highlight the text of an email, and run. The LLM will generate a draft to do list and place it at the end of your Sctrach Pad. To accomplish this last part be sure to set output to "Screen + append to scratch pad."
-  </p>
-  <p> 
-    Remember, you are potentially highlighting sensitive or otherwise private data. So, you need to think carefully about the particulars of your situation. For example, if you're <a href="https://github.com/SuffolkLITLab/prompts#using-lm-studio-with-lit-prompts" target="_blank">running LM Studio locally</a> then there isn't much to consider as the information won't leave your computer. However, if you're using some other API provider, you will be sending them the contents of anything you select. One thing you have going in your favor is that as an API user you may be subject to special terms that better protect your privacy. For example, as of this writing, users of OpenAI's API were subject to a different set of terms than users of ChatGPT. Namely, they are subject to the <a href="https://openai.com/policies/business-terms" target="_blank">Business Terms</a> which importantly preclude the use of your data for training purposes. This is important because if your data is being used to train an LLM it may one day come out the other end. 
-  </p>
-  <p>
-    When crafting a template, LIT Prompts makes use of a mix of natural language and placeholders. You can use double curly brackets to encase predefined variables and "questions" for your users. If the text between the brackets matches the name of a predefined variables, that section of text will be replaced with its content. If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. We'll use this below to capture the user's first interaction with our "AI actor." By incorporating this user reply into our initial prompt we're able to control the "actors" first line ("Are you my attorney?") and make sure that it falls within our instruction sandwich. 
-  </p>
+  <p>I was able to put these tools together over the weekend because they're mostly a rehash of prior work. If you're looking for more context, I suggest you check out the following two posts: (1) <a href="posts/summarize-and-question">Using AI to Distill and Question Texts</a>; and (2) <a href="posts/simple-training-sims">What if Members of Talking Professions Could Log Time in Simulators Like Pilots?</a> 
 
   <p>
-    XXXX
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using the <code>{{scratch}}</code> variable. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
+  <p>
+    The <code>{{scratch}}</code> variable contains the text in your Scratch Pad which is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. That being said, we're actually introducing four templates today. They all work on the assumption that you have place the text of a legal opinion in the Scratch Pad.
   </p>
-  <p>Here's the template's title.</p>
-  <p><code>XXXX</code></p>
+  <p> 
+    The first two templates, will summarize the opinion, creating case briefs. They will also stay open for chat, allowing you to ask follow up questions. The second template makes use of the <a href="https://keyhole.co/social-media-glossary/eli5/" target="_blank">ELI5</a> (Explain like I'm 5) format to produce a plain language version of the case brief. <i>Play the gunner</i>, jumps right to a Q&amp;A, and <i>Play the prof</i> launces an simulated law prof who will engage you in a Socratic dialogue. 
+  </p>
+
+  <ul>
+    <li><a href="posts/socrates-lives/#template01">Brief case & answer questions</a></li>
+    <li><a href="posts/socrates-lives/#template02">ELI5 case brief & answer questions</a></li>
+    <li><a href="posts/socrates-lives/#template03">Play the gunner (answer questions)</a></li>
+    <li><a href="posts/socrates-lives/#template04">Play the prof (Socrates lives!)</a></li>
+  </ul>
+
+  <p>FWIW, I've used OpenAI's <code>gpt-3.5-turbo-16k</code> to power the below templates. Neal has said that he's using <code>gpt-4</code> though I'm not sure exactly what variant. Also, the description of case briefs found below was drafted with the aid of ChatGPT.</p>
+
+  <h3><a name="template01" href="posts/socrates-lives/#template01" class="anchor" alt="deep link to this section"></a>Brief case & answer questions</h3>
   <p>Here's the template's text.</p>
   <!-- 
     #########################
@@ -296,7 +338,68 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>In a moment I will give you the text of a legal opinion, also know as a case. I will ask you to pull out the important bits and use them to write a Case Brief. Keep the following in mind when writing your brief. 
+
+---
+
+Guide to Writing a Case Brief for Law School
+
+1. Purpose of a Case Brief: Case briefs are essential study tools in law school, aiding in the analysis and recall of complex legal materials. They serve as a concise summary after thoroughly reading, dissecting, and understanding a case. Primarily for personal use, they also act as quick references for class discussions and exam preparations.
+
+2. Audience: Primarily, you are the audience for your case briefs. Professors value the process but typically won't review your briefs. In professional practice, the focus is on effective legal representation rather than the briefing process itself.
+
+3. Essential Elements: Your brief should include the following core components for it to be effective:
+
+    Facts: Case name, parties involved, factual background, procedural history, and the judgment.
+    Issues: The legal questions or disputes at the heart of the case.
+    Holding: The court's legal decision or rule applied in the case.
+    Rationale: The reasoning behind the court's decision.
+
+4. Optional Elements: Depending on the case, consider adding:
+
+    Dicta: Important but non-decisive commentary.
+    Dissent: Valuable opposing opinions.
+    Party’s Arguments: Each side's main arguments.
+    Comments: Personal insights or notes.
+
+5. Organization Tips: You might find it helpful to further break down the Facts into:
+
+    Specific case facts
+    Procedural history
+    Judgment outcome
+
+Remember, the Holding differs from the Judgment as it reflects the legal principle, whereas the Judgment is the case's final decision.
+
+6. Relevance and Brevity: Focus on including relevant information that aids memory and understanding:
+
+    Include crucial facts, especially those pivotal to the case's outcome.
+    Highlight the main legal issue(s) and the court's final ruling.
+    Summarize the rationale, focusing on key reasoning and factors influencing the decision.
+
+7. Length: Aim for your briefs to be concise, ideally one page, to facilitate easy review and reference.
+
+--- 
+
+Okay, now here is the text of the case. 
+
+{{scratch}}
+
+---
+
+When you write your brief, be sure that it includes the following sections: 
+
+- Case Name: 
+- Court: 
+- Date Published: 
+- Citations: 
+- Parties: 
+- Facts:
+- Procedural History:
+- Issues:
+- Holding:
+- Rationale:
+
+If asked any follow-up questions, use the above text of the case, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, give me your case brief for the above case.       
       
 </code></pre>
   </section>
@@ -311,32 +414,275 @@
   <ul>
 
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>            
     
-      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
-      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. We're using gpt-3.5-turbo-16k because of it's largish context window. </li>  
+      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. We're using gpt-3.5-turbo-16k because of its largish context window. </li>  
       
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
-      <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text a little be a "creative."</li>  
-      <li><b>Temperature:</b> <code>0.9</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Today we're all about being creative. So, I went with a pretty "creative" setting—0.9.</li>  
-                  
-      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+
+      <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-      <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="">https://en.wikipedia.org/wiki/JSON</a></li>  
-      
+
       <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
       
-      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
       <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>  
-      <li><b>Post-run Behavior:</b> <code>SAVE TO FILE</code>. Like the choice of output, we can decide what to do after a template runs. Here we will save the output to a file. This will trigger your browser's download feature.</li>  
     
       <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
-      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>
 
     </ul>
 
-  <h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+
+
+    <h3><a name="template02" href="posts/socrates-lives/#template02" class="anchor" alt="deep link to this section"></a>ELI5 case brief & answer questions</h3>
+    <p>Here's the template's text.</p>
+    <!-- 
+      #########################
+      #########################
+      #####   start code   ####
+      #########################
+      #########################
+    -->
+    <section class="line-numbers">
+      <pre class="language-xxx" style="white-space:pre-wrap;"><code>In a moment I will give you the text of a legal opinion, also know as a case. I will ask you to pull out the important bits and use them to write a Case Brief. Keep the following in mind when writing your brief. 
+
+---
+
+Guide to Writing a Case Brief for Law School
+
+1. Purpose of a Case Brief: Case briefs are essential study tools in law school, aiding in the analysis and recall of complex legal materials. They serve as a concise summary after thoroughly reading, dissecting, and understanding a case. Primarily for personal use, they also act as quick references for class discussions and exam preparations.
+
+2. Audience: Primarily, you are the audience for your case briefs. Professors value the process but typically won't review your briefs. In professional practice, the focus is on effective legal representation rather than the briefing process itself.
+
+3. Essential Elements: Your brief should include the following core components for it to be effective:
+
+    Facts: Case name, parties involved, factual background, procedural history, and the judgment.
+    Issues: The legal questions or disputes at the heart of the case.
+    Holding: The court's legal decision or rule applied in the case.
+    Rationale: The reasoning behind the court's decision.
+
+4. Optional Elements: Depending on the case, consider adding:
+
+    Dicta: Important but non-decisive commentary.
+    Dissent: Valuable opposing opinions.
+    Party’s Arguments: Each side's main arguments.
+    Comments: Personal insights or notes.
+
+5. Organization Tips: You might find it helpful to further break down the Facts into:
+
+    Specific case facts
+    Procedural history
+    Judgment outcome
+
+Remember, the Holding differs from the Judgment as it reflects the legal principle, whereas the Judgment is the case's final decision.
+
+6. Relevance and Brevity: Focus on including relevant information that aids memory and understanding:
+
+    Include crucial facts, especially those pivotal to the case's outcome.
+    Highlight the main legal issue(s) and the court's final ruling.
+    Summarize the rationale, focusing on key reasoning and factors influencing the decision.
+
+7. Length: Aim for your briefs to be concise, ideally one page, to facilitate easy review and reference.
+
+--- 
+
+Okay, now here is the text of the case. 
+
+{{scratch}}
+
+---
+
+
+When you write your brief, be sure that it includes the following sections: 
+
+- Case Name: 
+- Court: 
+- Date Published: 
+- Citations: 
+- Parties: 
+- Facts:
+- Procedural History:
+- Issues:
+- Holding:
+- Rationale:
+
+If asked any follow-up questions, use the above text of the case, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, give me your case brief for the above case, but explain it to me in very simple terms such that anyone could understand it. Avoid all legalize and big words, shoot for a sixth grade reading level. As they might say on Reddit, ELI5. Continue to answer in the ELI5 format for any follow-up questions.  
+
+</code></pre>
+    </section>
+    <!-- 
+      #########################
+      #########################
+      #####    end code    ####
+      #########################
+      #########################
+    -->
+    <p>And here are the template's parameters:</p>
+    <ul>
+  
+        <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+  
+        <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. We're using gpt-3.5-turbo-16k because of its largish context window. </li>  
+        
+        <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
+                    
+        <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+        
+        <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+        
+        <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      
+        <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>  
+      
+        <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
+    
+      </ul>
+  
+  
+
+      
+
+  <h3><a name="template03" href="posts/socrates-lives/#template03" class="anchor" alt="deep link to this section"></a>Play the gunner (answer questions)</h3>
+  <p>Here's the template's text.</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are a law school student who is "on call" for the following case. That is, you are expected to read this case carefully and to be ready to answer questions about it in a thoughtful and intelligent manner. In a moment I will give you the text of the case. After that I will ask you questions about the case. Use the text of the case, and ONLY the above text, to answer them. If you can't find an answer in the case, politely decline to answer, explaining that you couldn't find the information in the case. You can, however, finish a thought you started if asked to continue, but don't write anything that isn't supported by the text of the case. And keep all of your replies short! Here's the case:
+
+{{scratch}}
+
+---
+
+Now that you've read the case, answer the following questions. Remember, keep your replies short. 
+
+{{Okay, I've read the case. What do you want to know?}} 
+      
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+
+      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. We're using gpt-3.5-turbo-16k because of its largish context window. </li>  
+      
+      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
+                  
+      <li><b>Max Tokens:</b> <code>500</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      
+      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+      
+      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      
+      <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>  
+    
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
+
+    </ul>
+
+
+
+    <h3><a name="template04" href="posts/socrates-lives/#template04" class="anchor" alt="deep link to this section"></a>Play the prof (Socrates lives!)</h3>
+
+    <p>Here's the template's text.</p>
+    <!-- 
+      #########################
+      #########################
+      #####   start code   ####
+      #########################
+      #########################
+    -->
+    <section class="line-numbers">
+      <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are an actor playing of a law school professor conducting a Socratic dialogue. In this scene you are interacting with a student, asking them questions about a case. In a moment I will show you the case so you can prepare your questions. Your job is to stay in character and act out your part. You are aiming for a realistic performance. To help you get into character, here is some background information.
+
+BACKGROUND
+
+You're character is very similar in demeanor to Professor Charles W. Kingsfield Jr. in the Paper Chase. You are hard but fair, and see your role in class as that of Socrates. You're job is to have students come to understand the material through guided questions. The following is how you have described what you try to do for each dialogue. 
+
+Preparation
+
+    - Choose a Case: Select a legal case that presents complex issues.
+    - Identify Issues: Pinpoint the main legal issues and principles in the case.
+    - Develop Questions: Create a sequence of questions ranging from broad to specific to guide the discussion.
+
+Conducting the Dialogue
+
+    - Start Broad: Initiate with questions that summarize the case and identify issues.
+    - Probe Deeper: Continue with questions that analyze arguments, evaluate reasoning, and apply principles.
+    - Encourage Participation: Foster an inclusive atmosphere for all students to contribute.
+    - Guide Discussion: Facilitate the dialogue, connecting ideas and challenging assumptions.
+    - Clarify and Summarize: Regularly clarify points and summarize key takeaways.
+
+Deepening Understanding
+
+    - Reflect on Discussion: Encourage students to consider the broader implications and applications.
+    - Integrate Perspectives: Where relevant, bring in ethical, historical, or societal contexts.
+    - Provide Feedback: Offer constructive feedback on students' analyses.
+
+Concluding the Dialogue
+
+    - Wrap-Up: Summarize the discussion's main insights and their relevance.
+    - Connect Themes: Link the dialogue to overarching course themes.
+
+Here's the text of the case you will be asking students about.
+
+THE CASE
+
+{{scratch}}
+
+DIRECTION
+
+Be sure to keep your questions and responses short. You "speak in sentences not paragraphs." Short and conversational, no speechifying!
+
+THE CONVERSATION SO FAR
+
+You are jumping into the scene in progress. You already opened the discussion by calling on a student and asking them, "Please describe the facts of the case." They responded with "{{Please describe the facts of the case.}}"
+
+Think about how your character would respond and craft an appropriate reply. Remember, you are a law professor conducting a Socratic dialogue. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply (e.g., do NOT preface the text with the name of the speaker). What do you say?
+        
+  </code></pre>
+    </section>
+    <!-- 
+      #########################
+      #########################
+      #####    end code    ####
+      #########################
+      #########################
+    -->
+    <p>And here are the template's parameters:</p>
+    <ul>
+  
+        <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+
+        <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. We're using gpt-3.5-turbo-16k because of its largish context window. </li>  
+        
+        <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li>  
+                    
+        <li><b>Max Tokens:</b> <code>500</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+        
+        <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+        
+        <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we're content just to have it go to the screen.</li>  
+      
+        <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>  
+      
+        <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>
+    
+      </ul>
+  
+  
+  <h3><a name="working" href="posts/socrates-lives/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
     To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -345,7 +691,7 @@
     <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
   </div>
   <p>
-    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+    You can download a prompts file (the above templates and their parameters) suitable for upload by clicking this button:
   </p>
 
   <div class="button_row">
@@ -359,13 +705,16 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="tires" href="posts/POSTSLUG/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <h2><a name="tires" href="posts/socrates-lives/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
   </p>
   <ul>
     <li>
-      <b>XXXX</b> XXXX
+      <b>Déjà vu</b>. The first three templates above are basically the Summarize and question template from week one. So, I strongly suggest you reisit the <a href="posts/summarize-and-question/#tires" target="_blank">suggestions found there</a>.
+    </li>
+    <li>
+      <b>Give me more</b>. Consider playing with more advanced models. These will produce better results and allow for larger inputs. The current model can read around 16,000 tokens (maybe 8,000 words). You can do better. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. Keep in mind, however, more advanced models are oftem more expensive models. ;) 
     </li>
 </ul>
   <!-- 
@@ -376,14 +725,14 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="export" href="posts/POSTSLUG/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+  <h2><a name="export" href="posts/socrates-lives/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
 
   <p>
-    After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
+    After you've made the templates your own and have them behaving the way you like, you can export and share them with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Scratch Page &amp; Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
   </p>
 
   <div class="featured_img_center" style="max-width:900px;">
-    <a href="images/50-days/export_html.png"><img src="images/50-days/export_html.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    <a href="images/50-days/export_html_w_scratch.png"><img src="images/50-days/export_html_w_scratch.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
   </div>
 
   <p>
@@ -399,7 +748,16 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>The Paper Chase 2.0&lt;/h2>
+&lt;p>
+  Place the text of a court opinion to the left, then choose one of the options below. If you want to create a case brief, you can select either the first or second option. The second option, ELI5 (Explain it like I'm 5), will attempt to make the brief more accessible. If you have questions about the case, you can use any of the first three options. The third, "Play the gunner," will jump right to a Q&A. To test your own understanding, choose "Play the prof (Socrates lives!)" This will launch a simulated law prof who will engage you in a Socratic dialogue.
+&lt;/p>
+&lt;p>
+  To keep costs down, this tool is using OpenAI's &lt;i>gpt-3.5-turbo-16k&lt;/i>. This limits the size of your case texts to something like half a dozen pages. FWIW, here's a case that fits in the context window: &lt;a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&q=HAWKINS%20v.%20McGEE&type=o&order_by=score%20desc&stat_Precedential=on" target="_blank">Hawkins v. McGee&lt;/a>. If you want a larger input size or "better" briefs, consider making your own version of this tool and choosing a different model. Here's a &lt;a href="https://sadlynothavocdinosaur.com//posts/socrates-lives/">How To&lt;/a> you can follow.   
+&lt;/p>
+&lt;p>
+  If you're in the middle of a chat below, and you want to restart, just refresh this page. Your text to the left will be saved. &lt;a href="https://sadlynothavocdinosaur.com//posts/socrates-lives/#disclaimer">DISCLAIMER&lt;/a>
+&lt;/p>
 &lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
 </code></pre>
   </section>
@@ -414,7 +772,7 @@
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
   <div class="button_row">
-    <a href="posts/POSTSLUG/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="posts/socrates-lives/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
   <!-- 
@@ -425,21 +783,33 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="references" href="posts/POSTSLUG/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/socrates-lives/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
     <!-- ICYMI, if you didn't click through above, you might want to give this a look now. -->
   </p>
   <ul>
+
+    <li><a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> by Ted Chiang.
+      This article explores the potential risks and consequences of artificial intelligence (A.I.) in relation to capitalism. Chiang suggests that A.I. can be seen as a management-consulting firm, similar to McKinsey & Company, which concentrates wealth and disempowers workers. He argues that A.I. currently assists capital at the expense of labor, and questions whether there is a way for A.I. to assist workers instead of management. Chiang also discusses the need for economic policies to distribute the benefits of technology appropriately, as well as the importance of critical self-examination by those building world-shaking technologies. He concludes by emphasizing the need to question the assumption that more technology is always better and to engage in the hard work of building a better world. <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+    </li>
     <li>
-      <a href="XXXX" target="_blank">XXXX</a> by XXXX. XXXX 
+      <a href="https://unlocked.microsoft.com/ai-anthology/ada-palmer/" target="_blank">We are an information revolution species</a> by Ada Palmer.  
+      Palmer discusses the ongoing information revolution and the impact of AI on society. She emphasizes that information revolutions have been a normal part of human life for centuries, and AI is just the latest iteration of this trend. Palmer argues that AI has the potential to democratize the power to create media, such as video games and movies, and enable more people to express themselves artistically. She acknowledges that AI may threaten certain livelihoods, but believes that thoughtful transitions and safety nets can help mitigate these challenges. Palmer also addresses concerns about fake news and propaganda, noting that society has always learned to combat the dangers of new media. She concludes by emphasizing the importance of policy and planning to ensure that the rollout of AI is beneficial for all.
+      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+    </li>
+    <li>
+      <a href="https://www.nonprofittechy.com/2024/01/30/some-quick-thoughts-about-integrating-ai-with-law-school-clinical-practice/" target="_blank">Some quick thoughts about integrating AI with law school clinical practice</a> by Quinten Steenhuis.  
+      I co-direct the LIT Lab with Quinten and really apprechiate his take on the use of AI in law school clinics. He believes that law school clinics should be using generative AI tools, but acknowledges that it requires careful thought and planning. Steenhuis suggests several safe uses for AI in clinical education, such as solving the blank page problem, brainstorming, extracting information, classifying, editing, translating, and simplifying. He also addresses concerns about teaching generative AI, including the risk of automation bias and perpetuating biases. Steenhuis emphasizes the importance of teaching students how to critically evaluate AI output and suggests integrating AI lessons into existing curriculum. He concludes by stating that generative AI has practical uses and ignoring it in clinical practice will put law students at a disadvantage.
+      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+    </li>
+    <li>
+      <a href="https://en.wikipedia.org/wiki/The_Paper_Chase_(film)" target="_blank">The Paper Chase (1973 Film)</a> Directed by 	James Bridges.  
+      "The Paper Chase" is a 1973 American comedy-drama. It is based on John Jay Osborn Jr.'s 1971 novel of the same name. The film follows James Hart, a first-year law student at Harvard Law School, as he navigates his studies and his complicated relationship with Professor Charles Kingsfield, a demanding contract law instructor. John Houseman won an Academy Award for his performance as Professor Kingsfield. The film received positive reviews for its portrayal of the intense and competitive environment of law school. It was followed by a television series that ran for four seasons, continuing the story of James Hart's law school journey. 
       <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
     </li>
     <li>
       <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
-    </li>
-    <li><a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> by Ted Chiang.
-      This article explores the potential risks and consequences of artificial intelligence (A.I.) in relation to capitalism. Chiang suggests that A.I. can be seen as a management-consulting firm, similar to McKinsey & Company, which concentrates wealth and disempowers workers. He argues that A.I. currently assists capital at the expense of labor, and questions whether there is a way for A.I. to assist workers instead of management. Chiang also discusses the need for economic policies to distribute the benefits of technology appropriately, as well as the importance of critical self-examination by those building world-shaking technologies. He concludes by emphasizing the need to question the assumption that more technology is always better and to engage in the hard work of building a better world. <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
     </li>
 
     <!--<li><a href="">text</a></li>-->
@@ -477,8 +847,8 @@
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/POSTSLUG/prompt_template.txt');
-    exported = await loadFile('posts/POSTSLUG/interactions.html');
+    prompts = await loadFile('posts/socrates-lives/prompt_template.txt');
+    exported = await loadFile('posts/socrates-lives/interactions.html');
   })()
 </script>
 

@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>Prompt Interactions with Scratch Pad</title>
+<script>
+
+localStorage.setItem('templates',JSON.stringify({"Brief case & answer questions":{"prompt":"In a moment I will give you the text of a legal opinion, also know as a case. I will ask you to pull out the important bits and use them to write a Case Brief. Keep the following in mind when writing your brief. \n\n---\n\nGuide to Writing a Case Brief for Law School\n\n1. Purpose of a Case Brief: Case briefs are essential study tools in law school, aiding in the analysis and recall of complex legal materials. They serve as a concise summary after thoroughly reading, dissecting, and understanding a case. Primarily for personal use, they also act as quick references for class discussions and exam preparations.\n\n2. Audience: Primarily, you are the audience for your case briefs. Professors value the process but typically won't review your briefs. In professional practice, the focus is on effective legal representation rather than the briefing process itself.\n\n3. Essential Elements: Your brief should include the following core components for it to be effective:\n\n    Facts: Case name, parties involved, factual background, procedural history, and the judgment.\n    Issues: The legal questions or disputes at the heart of the case.\n    Holding: The court's legal decision or rule applied in the case.\n    Rationale: The reasoning behind the court's decision.\n\n4. Optional Elements: Depending on the case, consider adding:\n\n    Dicta: Important but non-decisive commentary.\n    Dissent: Valuable opposing opinions.\n    Party’s Arguments: Each side's main arguments.\n    Comments: Personal insights or notes.\n\n5. Organization Tips: You might find it helpful to further break down the Facts into:\n\n    Specific case facts\n    Procedural history\n    Judgment outcome\n\nRemember, the Holding differs from the Judgment as it reflects the legal principle, whereas the Judgment is the case's final decision.\n\n6. Relevance and Brevity: Focus on including relevant information that aids memory and understanding:\n\n    Include crucial facts, especially those pivotal to the case's outcome.\n    Highlight the main legal issue(s) and the court's final ruling.\n    Summarize the rationale, focusing on key reasoning and factors influencing the decision.\n\n7. Length: Aim for your briefs to be concise, ideally one page, to facilitate easy review and reference.\n\n--- \n\nOkay, now here is the text of the case. \n\n{{scratch}}\n\n---\n\nWhen you write your brief, be sure that it includes the following sections: \n\n- Case Name: \n- Court: \n- Date Published: \n- Citations: \n- Parties: \n- Facts:\n- Procedural History:\n- Issues:\n- Holding:\n- Rationale:\n\nIf asked any follow-up questions, use the above text of the case, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, give me your case brief for the above case.\n\n","model":"gpt-3.5-turbo-16k","temperature":0,"max_tokens":1000,"output":1,"json_mode":0,"output_to":0,"behavior":"chat","hide_button":false},"ELI5 case brief & answer questions":{"prompt":"In a moment I will give you the text of a legal opinion, also know as a case. I will ask you to pull out the important bits and use them to write a Case Brief. Keep the following in mind when writing your brief. \n\n---\n\nGuide to Writing a Case Brief for Law School\n\n1. Purpose of a Case Brief: Case briefs are essential study tools in law school, aiding in the analysis and recall of complex legal materials. They serve as a concise summary after thoroughly reading, dissecting, and understanding a case. Primarily for personal use, they also act as quick references for class discussions and exam preparations.\n\n2. Audience: Primarily, you are the audience for your case briefs. Professors value the process but typically won't review your briefs. In professional practice, the focus is on effective legal representation rather than the briefing process itself.\n\n3. Essential Elements: Your brief should include the following core components for it to be effective:\n\n    Facts: Case name, parties involved, factual background, procedural history, and the judgment.\n    Issues: The legal questions or disputes at the heart of the case.\n    Holding: The court's legal decision or rule applied in the case.\n    Rationale: The reasoning behind the court's decision.\n\n4. Optional Elements: Depending on the case, consider adding:\n\n    Dicta: Important but non-decisive commentary.\n    Dissent: Valuable opposing opinions.\n    Party’s Arguments: Each side's main arguments.\n    Comments: Personal insights or notes.\n\n5. Organization Tips: You might find it helpful to further break down the Facts into:\n\n    Specific case facts\n    Procedural history\n    Judgment outcome\n\nRemember, the Holding differs from the Judgment as it reflects the legal principle, whereas the Judgment is the case's final decision.\n\n6. Relevance and Brevity: Focus on including relevant information that aids memory and understanding:\n\n    Include crucial facts, especially those pivotal to the case's outcome.\n    Highlight the main legal issue(s) and the court's final ruling.\n    Summarize the rationale, focusing on key reasoning and factors influencing the decision.\n\n7. Length: Aim for your briefs to be concise, ideally one page, to facilitate easy review and reference.\n\n--- \n\nOkay, now here is the text of the case. \n\n{{scratch}}\n\n---\n\n\nWhen you write your brief, be sure that it includes the following sections: \n\n- Case Name: \n- Court: \n- Date Published: \n- Citations: \n- Parties: \n- Facts:\n- Procedural History:\n- Issues:\n- Holding:\n- Rationale:\n\nIf asked any follow-up questions, use the above text of the case, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, give me your case brief for the above case, but explain it to me in very simple terms such that anyone could understand it. Avoid all legalize and big words, shoot for a sixth grade reading level. As they might say on Reddit, ELI5. Continue to answer in the ELI5 format for any follow-up questions.  \n\n","model":"gpt-3.5-turbo-16k","temperature":0,"max_tokens":1000,"output":1,"json_mode":0,"output_to":0,"behavior":"chat","hide_button":false},"Play the gunner (answer questions)":{"prompt":"You are a law school student who is \"on call\" for the following case. That is, you are expected to read this case carefully and to be ready to answer questions about it in a thoughtful and intelligent manner. In a moment I will give you the text of the case. After that I will ask you questions about the case. Use the text of the case, and ONLY the above text, to answer them. If you can't find an answer in the case, politely decline to answer, explaining that you couldn't find the information in the case. You can, however, finish a thought you started if asked to continue, but don't write anything that isn't supported by the text of the case. And keep all of your replies short! Here's the case:\n\n{{scratch}}\n\n---\n\nNow that you've read the case, answer the following questions. Remember, keep your replies short. \n\n{{Okay, I've read the case. What do you want to know?}}","model":"gpt-3.5-turbo-16k","temperature":0,"max_tokens":500,"output":1,"json_mode":0,"output_to":0,"behavior":"chat","hide_button":false},"Play the prof (Socrates lives!)":{"prompt":"You are an actor playing of a law school professor conducting a Socratic dialogue. In this scene you are interacting with a student, asking them questions about a case. In a moment I will show you the case so you can prepare your questions. Your job is to stay in character and act out your part. You are aiming for a realistic performance. To help you get into character, here is some background information.\n\nBACKGROUND\n\nYou're character is very similar in demeanor to Professor Charles W. Kingsfield Jr. in the Paper Chase. You are hard but fair, and see your role in class as that of Socrates. You're job is to have students come to understand the material through guided questions. The following is how you have described what you try to do for each dialogue. \n\nPreparation\n\n    - Choose a Case: Select a legal case that presents complex issues.\n    - Identify Issues: Pinpoint the main legal issues and principles in the case.\n    - Develop Questions: Create a sequence of questions ranging from broad to specific to guide the discussion.\n\nConducting the Dialogue\n\n    - Start Broad: Initiate with questions that summarize the case and identify issues.\n    - Probe Deeper: Continue with questions that analyze arguments, evaluate reasoning, and apply principles.\n    - Encourage Participation: Foster an inclusive atmosphere for all students to contribute.\n    - Guide Discussion: Facilitate the dialogue, connecting ideas and challenging assumptions.\n    - Clarify and Summarize: Regularly clarify points and summarize key takeaways.\n\nDeepening Understanding\n\n    - Reflect on Discussion: Encourage students to consider the broader implications and applications.\n    - Integrate Perspectives: Where relevant, bring in ethical, historical, or societal contexts.\n    - Provide Feedback: Offer constructive feedback on students' analyses.\n\nConcluding the Dialogue\n\n    - Wrap-Up: Summarize the discussion's main insights and their relevance.\n    - Connect Themes: Link the dialogue to overarching course themes.\n\nHere's the text of the case you will be asking students about.\n\nTHE CASE\n\n{{scratch}}\n\nDIRECTION\n\nBe sure to keep your questions and responses short. You \"speak in sentences not paragraphs.\" Short and conversational, no speechifying!\n\nTHE CONVERSATION SO FAR\n\nYou are jumping into the scene in progress. You already opened the discussion by calling on a student and asking them, \"Please describe the facts of the case.\" They responded with \"{{Please describe the facts of the case.}}\"\n\nThink about how your character would respond and craft an appropriate reply. Remember, you are a law professor conducting a Socratic dialogue. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply (e.g., do NOT preface the text with the name of the speaker). What do you say?\n\n","model":"gpt-3.5-turbo-16k","temperature":0.7,"max_tokens":500,"output":1,"json_mode":0,"output_to":0,"behavior":"chat","hide_button":false}}));
+
+//fgnass.github.com/spin.js#v1.2.7
+!function(e,t,n){function o(e,n){var r=t.createElement(e||"div"),i;for(i in n)r[i]=n[i];return r}function u(e){for(var t=1,n=arguments.length;t<n;t++)e.appendChild(arguments[t]);return e}function f(e,t,n,r){var o=["opacity",t,~~(e*100),n,r].join("-"),u=.01+n/r*100,f=Math.max(1-(1-e)/t*(100-u),e),l=s.substring(0,s.indexOf("Animation")).toLowerCase(),c=l&&"-"+l+"-"||"";return i[o]||(a.insertRule("@"+c+"keyframes "+o+"{"+"0%{opacity:"+f+"}"+u+"%{opacity:"+e+"}"+(u+.01)+"%{opacity:1}"+(u+t)%100+"%{opacity:"+e+"}"+"100%{opacity:"+f+"}"+"}",a.cssRules.length),i[o]=1),o}function l(e,t){var i=e.style,s,o;if(i[t]!==n)return t;t=t.charAt(0).toUpperCase()+t.slice(1);for(o=0;o<r.length;o++){s=r[o]+t;if(i[s]!==n)return s}}function c(e,t){for(var n in t)e.style[l(e,n)||n]=t[n];return e}function h(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var i in r)e[i]===n&&(e[i]=r[i])}return e}function p(e){var t={x:e.offsetLeft,y:e.offsetTop};while(e=e.offsetParent)t.x+=e.offsetLeft,t.y+=e.offsetTop;return t}var r=["webkit","Moz","ms","O"],i={},s,a=function(){var e=o("style",{type:"text/css"});return u(t.getElementsByTagName("head")[0],e),e.sheet||e.styleSheet}(),d={lines:12,length:7,width:5,radius:10,rotate:0,corners:1,color:"#000",speed:1,trail:100,opacity:.25,fps:20,zIndex:2e9,className:"spinner",top:"auto",left:"auto",position:"relative"},v=function m(e){if(!this.spin)return new m(e);this.opts=h(e||{},m.defaults,d)};v.defaults={},h(v.prototype,{spin:function(e){this.stop();var t=this,n=t.opts,r=t.el=c(o(0,{className:n.className}),{position:n.position,width:0,zIndex:n.zIndex}),i=n.radius+n.length+n.width,u,a;e&&(e.insertBefore(r,e.firstChild||null),a=p(e),u=p(r),c(r,{left:(n.left=="auto"?a.x-u.x+(e.offsetWidth>>1):parseInt(n.left,10)+i)+"px",top:(n.top=="auto"?a.y-u.y+(e.offsetHeight>>1):parseInt(n.top,10)+i)+"px"})),r.setAttribute("aria-role","progressbar"),t.lines(r,t.opts);if(!s){var f=0,l=n.fps,h=l/n.speed,d=(1-n.opacity)/(h*n.trail/100),v=h/n.lines;(function m(){f++;for(var e=n.lines;e;e--){var i=Math.max(1-(f+e*v)%h*d,n.opacity);t.opacity(r,n.lines-e,i,n)}t.timeout=t.el&&setTimeout(m,~~(1e3/l))})()}return t},stop:function(){var e=this.el;return e&&(clearTimeout(this.timeout),e.parentNode&&e.parentNode.removeChild(e),this.el=n),this},lines:function(e,t){function i(e,r){return c(o(),{position:"absolute",width:t.length+t.width+"px",height:t.width+"px",background:e,boxShadow:r,transformOrigin:"left",transform:"rotate("+~~(360/t.lines*n+t.rotate)+"deg) translate("+t.radius+"px"+",0)",borderRadius:(t.corners*t.width>>1)+"px"})}var n=0,r;for(;n<t.lines;n++)r=c(o(),{position:"absolute",top:1+~(t.width/2)+"px",transform:t.hwaccel?"translate3d(0,0,0)":"",opacity:t.opacity,animation:s&&f(t.opacity,t.trail,n,t.lines)+" "+1/t.speed+"s linear infinite"}),t.shadow&&u(r,c(i("#000","0 0 4px #000"),{top:"2px"})),u(e,u(r,i(t.color,"0 0 1px rgba(0,0,0,.1)")));return e},opacity:function(e,t,n){t<e.childNodes.length&&(e.childNodes[t].style.opacity=n)}}),function(){function e(e,t){return o("<"+e+' xmlns="urn:schemas-microsoft.com:vml" class="spin-vml">',t)}var t=c(o("group"),{behavior:"url(#default#VML)"});!l(t,"transform")&&t.adj?(a.addRule(".spin-vml","behavior:url(#default#VML)"),v.prototype.lines=function(t,n){function s(){return c(e("group",{coordsize:i+" "+i,coordorigin:-r+" "+ -r}),{width:i,height:i})}function l(t,i,o){u(a,u(c(s(),{rotation:360/n.lines*t+"deg",left:~~i}),u(c(e("roundrect",{arcsize:n.corners}),{width:r,height:n.width,left:n.radius,top:-n.width>>1,filter:o}),e("fill",{color:n.color,opacity:n.opacity}),e("stroke",{opacity:0}))))}var r=n.length+n.width,i=2*r,o=-(n.width+n.length)*2+"px",a=c(s(),{position:"absolute",top:o,left:o}),f;if(n.shadow)for(f=1;f<=n.lines;f++)l(f,-2,"progid:DXImageTransform.Microsoft.Blur(pixelradius=2,makeshadow=1,shadowopacity=.3)");for(f=1;f<=n.lines;f++)l(f);return u(t,a)},v.prototype.opacity=function(e,t,n,r){var i=e.firstChild;r=r.shadow&&r.lines||0,i&&t+r<i.childNodes.length&&(i=i.childNodes[t+r],i=i&&i.firstChild,i=i&&i.firstChild,i&&(i.opacity=n))}):s=l(t,"animation")}(),typeof define=="function"&&define.amd?define(function(){return v}):e.Spinner=v}(window,document);
+
+function copy_to_clipboard(text) {
+    // Create a temporary textarea element to store the result
+    var tempTextArea = document.createElement('textarea');
+    tempTextArea.value = text;
+  
+    // Append the textarea to the document
+    document.body.appendChild(tempTextArea);
+  
+    // Select the text within the textarea
+    tempTextArea.select();
+  
+    // Copy the selected text to the clipboard
+    document.execCommand('copy');
+  
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
+  
+}
+  
+function saveTextAsFile(tosave,name) {
+    // Handle vendor prefixes.
+    window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+  
+    // tosave = ID of textarea to save
+    // name = name to save file as, including file extension     
+    // grab the content of the form field and place it into a variable
+    var textToWrite = tosave //document.getElementById(tosave).value;
+    //  create a new Blob (html5 magic) that conatins the data from your form feild
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+        
+    // Specify the name of the file to be saved
+    var fileNameToSaveAs = name;
+        
+    // Optionally allow the user to choose a file name by providing 
+    // an imput field in the HTML and using the collected data here
+    // var fileNameToSaveAs = txtFileName.text;
+  
+    // create a link for our script to 'click'
+    var downloadLink = document.createElement("a");
+    // supply the name of the file (from the var above).
+    // you could create the name here but using a var
+    // allows more flexability later.
+    downloadLink.download = fileNameToSaveAs;
+    // provide text for the link. This will be hidden so you
+    // can actually use anything you want.
+    downloadLink.innerHTML = "My Hidden Link";
+        
+    // allow our code to work in webkit & Gecko based browsers
+    // without the need for a if / else block.
+    window.URL = window.URL || window.webkitURL;
+            
+    // Create the link Object.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    // when link is clicked call a function to remove it from
+    // the DOM in case user wants to save a second file.
+    downloadLink.onclick = destroyClickedElement;
+    // make sure the link is hidden.
+    downloadLink.style.display = "none";
+    // add the link to the DOM
+    document.body.appendChild(downloadLink);
+        
+    // click the new link
+    downloadLink.click();
+}
+  
+function destroyClickedElement(event) {
+    // remove the link from the DOM
+    document.body.removeChild(event.target);
+}
+
+function loadFile(filePath) {
+    return fetch(filePath)
+    .then(response => response.text())
+    .then(data => {
+        return data
+    })
+};
+
+const default_prompts = {
+    "Quick start advice": {
+      "prompt": "[# This template has an Output Type = Prompt and a Output To = Screen only. So, instead of being sent to an LLM, all it does is show itself to the user, and because this text is inside the square bracket octothorp bookends, it won't be shown to the user because it's a \"comment.\" #]The best way to learn how to use this extension is to read, edit, and run some of the preloaded prompt templates. You can start down this road by clicking the \"Templates & Settings\" button at the bottom of this window.",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Summarize & question this page": {
+      "prompt": "{{innerText}} [# FYI, the innerText variable will be replaced with the text from the current active browser tab, and because the Post-run Behavior is set to CHAT, you will be able to continue engaging with this text after the first reply. #]\n  \nProvide a short 150 word summary of the above text. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! \n",
+      "model": "gpt-3.5-turbo-16k",
+      "temperature": 0,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "chat",
+      "hide_button": false
+    },
+    "Politely decline an email (selected text)": {
+      "prompt": "{{highlighted}} [# FYI, the highlighted variable will be replaced with any text you have highlighted/selected when you click the extension's popup, and because Output To is set to Screen + clipboard, the LLMs output will be ready to paste in an email after the interaction runs. #]\n\nThe above is an email. Draft a brief and professional reply politely declining its request. \n",
+      "model": "gpt-3.5-turbo-16k",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 1,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Define selected word/phrase": {
+      "prompt": "Define the following word/phrase: {{highlighted}}[# Here we've set the Output To equal to Screen + append to scratch pad which means that the LLM's output will be appended to the contents of your Scratch Pad, which can be accessed from the Popup by clicking the \"Scratch Pad\" button. #]\n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 2,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Save Scratch Pad to file": {
+      "prompt": "{{scratch}} [# The scratch variable will be replaced with the content of your Scratch Pad, which can be accessed from the Popup by clicking the \"Scratch Pad\" button. Since we have set the Output Type to Prompt, this prompt will not be sent to an LLM, but having set Post-run Behavior to SAVE TO FILE, it will trigger your browser's save to file action. #]",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "file",
+      "hide_button": false
+    },
+    "Summarize & question Scratch Pad": {
+      "prompt": "{{scratch}} [# This template is just the \"Summarize & question this page\" template with the scratch variable in the place of innerText. Why? Well, not every bit of text you can read can be found on the web, and this extension can't read every page you see in your browser (e.g., PDFs). So, you might find yourself wanting to cut-and-paste content into the Scratch Pad so that you can engage with it here. #]\n  \nProvide a short 150 word summary of the above text. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short!\n",
+      "model": "gpt-3.5-turbo-16k",
+      "temperature": 0,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "chat",
+      "hide_button": false
+    },
+    "\"Diagram\" selected sentence": {
+      "prompt": "[# This template is here mostly to show off the JSON parameter (I'm not sure how much I really trust it). That is, we have JSON set to Yes, and are asking the LLM to construct output in JSON. Consequently, the LLM should produce well-structured JSON output. If you haven't seen JSON before, you might want to read up on it here: https://en.wikipedia.org/wiki/JSON. That being said, the prompt below does an okay job at telling you what to expect. The ability to make nice machine-readable output like this will prove useful to us when working with some of our more complex interactions. FWIW, I had ChatGPT create the specifications below. #]Below I will provide you with a string of text. Your job is to produce a JSON representation of its sentence structure. \n\n1. Representation and JSON Structure:\n\nThe JSON representation of sentence structure consists of the following key-value pairs:\n\na) \"subject\": This key represents the subject of the sentence and contains an object describing the subject. The subject object can include properties such as \"type\" (to specify the type of subject, e.g., noun or pronoun) and \"value\" (to store the actual subject word or phrase).\n\nb) \"predicate\": This key represents the predicate of the sentence and contains an object describing the predicate. The predicate object can include properties such as \"type\" (to specify the type of predicate, e.g., verb or verb phrase) and \"value\" (to store the actual predicate word or phrase).\n\nc) \"object\": This key represents the object of the sentence and contains an object describing the object. The object object can include properties such as \"type\" (to specify the type of object, e.g., noun or pronoun) and \"value\" (to store the actual object word or phrase).\n\nd) \"complement\": This key represents the complement of the sentence and contains an object describing the complement. The complement object can include properties such as \"type\" (to specify the type of complement, e.g., adjective or noun phrase) and \"value\" (to store the actual complement word or phrase).\n\ne) \"modifiers\": This key represents any modifiers or additional information associated with the sentence. It contains an array of objects, where each object describes a specific modifier. Each modifier object can include properties such as \"type\" (to specify the type of modifier, e.g., adverbial or prepositional phrase) and \"value\" (to store the actual modifier word or phrase).\n\n2. Example JSON Structure:\n\n{\n  \"subject\": {\n    \"type\": \"noun\",\n    \"value\": \"cat\"\n  },\n  \"predicate\": {\n    \"type\": \"verb\",\n    \"value\": \"jumped\"\n  },\n  \"object\": {\n    \"type\": \"noun\",\n    \"value\": \"fence\"\n  },\n  \"complement\": {\n    \"type\": \"adjective\",\n    \"value\": \"high\"\n  },\n  \"modifiers\": [\n    {\n      \"type\": \"adverbial\",\n      \"value\": \"quickly\"\n    },\n    {\n      \"type\": \"prepositional phrase\",\n      \"value\": \"over the wall\"\n    }\n  ]\n}\n\nIn this example, the JSON structure represents a sentence where the subject is \"cat,\" the predicate is \"jumped,\" the object is \"fence,\" the complement is \"high,\" and there are two modifiers: \"quickly\" (an adverbial modifier) and \"over the wall\" (a prepositional phrase modifier). \n\n3. Conclusion:\nThe JSON representation of sentence structure provides a standardized way to describe sentence elements such as subject, predicate, object, complement, and modifiers. It allows for the structured representation of sentence components, making it easier to process and analyze sentence structures programmatically.\n\nNow that I've given you these specifications, your job is to make such an object for the following text string:\n\n{{highlighted}}\n\nNow provide your JSON object: \n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0,
+      "max_tokens": 300,
+      "output": 1,
+      "json_mode": 1,
+      "output_to": 0,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Translate & reply in original language": {
+      "prompt": "[# This template's \"big trick\" is that the Post-run Behavior is set to \"display translation and prompt,\" which is the name of another template. This means that after this prompt is run through an LLM, it will trigger \"display translation and prompt,\" and pass to it this template's output. Because the Output To is set to Hidden, however, the user will not see this structured data. #]You are helping translate text into English. Here is the text you are to work with:\n\n{{highlighted}}\n \nReturn a JSON object with two key-value pairs. The first key is called `language`, and its value is the language of the above text. The second key is called `translation`, and its value is the above text translated into English. \n\nNow return the object: \n\n",
+      "model": "gpt-3.5-turbo-16k",
+      "temperature": 0,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 1,
+      "output_to": 4,
+      "behavior": "display translation and prompt",
+      "hide_button": false
+    },
+    "display translation and prompt": {
+      "prompt": "Translate the following text into {{passThrough[\"language\"]}}. Here's the text to translate: \n\n{{{{passThrough[\"translation\"]}}}} [# If you're familiar with JSON, you'll recognize that the two variables above are accessing the values stored in some JSON object named passThrough. Namely, the value for \"language\" and \"translation.\" In this way we can very cleanly slice up the output from the prior template. Because the Hide Button checkbox is checked, the user will not see a button for \"display translation and prompt.\" That of course is okay, because it is being triggered by \"Translate & reply in original language.\" #]\n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 1,
+      "behavior": "stop",
+      "hide_button": true
+    },
+    "Coin flip to poem": {
+      "prompt": "I'm going to flip a coin. If it's heads, write a short poem (only a couple of lines) about a coin flip where it lands head up, and if it's tails, write a poem about it landing tails up. Be very clear about the result of the coin flip in the poem. \n\nCoin flip: {{coinFlip}} [# The value of {{coinFlip}} is random, or as \"random.\" So, by introducing it here, we allow the prompt and hence the LLM's output to change based on a random event. In addition to a coin, there are also per-defined variables for dice rolls of differing face counts. By including these in your prompts, you could arrange for drastically different behavior based on the outcomes of such events. Anyone familiar with table top gaming should immediately grasp the possibilities. #]\n\nNow give me your response/poem: \n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.9,
+      "max_tokens": 163,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Shorten selected text": {
+      "prompt": "You're a helpful editor and you're going to help trim some text. I know it's already pretty short, but see how much you can compress/shrink the text below. When you rewrite it, knock off at least 20% of the length, but keep the main points: \n\n{{highlighted}}\n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 1,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Expand selected (short) text": {
+      "prompt": "[# This template is the first in a chain of templates that can either end or loop back on itself. It works by getting the LLM to generate some dialog and send that along with text the user has highlighted to another template. That template takes an action and feeds into another template, and so on and so on. Note: we're using gpt-3.5-turbo-1106 as a model here and in some of the subsequent templates in this chain. When this model is retired it will break things and require updating. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You will ask them some questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer will start by reading what they have so far. \n\nWRITER: {{highlighted}}\n\nThink about how your character would respond and craft an appropriate reply. You will provide the text of this reply along with one other piece of information as a JSON object. The object will have two key-value pairs. The first key-value pair's key is \"transcript\" and the value is that of the transcript above, starting with \"WRITER:\" and followed by the text of their copy. Be sure to escape an quotation marks. The second key-value pair has a key called \"reply\" and its value is the response you crafted above (i.e., it is the text of your character's reply to the above, your first question for the writer). Include only the text of your reply (e.g., do NOT preface the text with the name of the speaker).\n",
+      "model": "gpt-3.5-turbo-1106",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 1,
+      "output_to": 4,
+      "behavior": "Role Play 1",
+      "hide_button": false
+    },
+    "Role Play 1": {
+      "prompt": "{{passThrough[\"transcript\"]}}\nYOU: {{passThrough[\"reply\"]}}\nWRITER: {{{{passThrough[\"reply\"]}}*}} [# Here we've encased {{passThrough[\"reply\"]}} inside a set of curly brackets. Imagine {{passThrough[\"reply\"]}} has the value \"What made you think that?\" Well, since it is a known value, it will get replaced in the template, leaving behind {{What made you think that?}}. However, this is not a known value. So the user will be asked \"What made you think that?\" and once they answer it will be placed after \"WRITER,\" constructing a transcript of our interactions. Why the asterisk? It's a way to force user input. Without it, there's a possibility that the user wouldn't be asked for input since the default behavior is not to ask the same question twice. Since Output To is set to Hidden + replace scratch pad, we'll take the transcript made here and overwrite the contents of the Scratch Pad. And since Post-Run Behavior is set to \"Role Play 2\" that template will be triggered. #]\n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 7,
+      "behavior": "Role Play 2",
+      "hide_button": true
+    },
+    "Role Play 2": {
+      "prompt": "[# This template looks very much like the first in our chain, except it pulls from the Scratch Pad and feeds into \"Role Play 3.\" #] You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asks them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. \n\n{{scratch}}\n\nThink about how your character would respond and craft an appropriate reply. You will provide the text of this reply along with one other piece of information as a JSON object. The object will have two key-value pairs. The first key-value pair's key is \"transcript\" and the value is that of the transcript above, starting with \"WRITER:\" the text of their copy and the subsequent questions and answers. Be sure to escape an quotation marks. And DO NOT repeat yourself (i.e., ask new questions). The second key-value pair has a key called \"reply\" and its value is the response you crafted above (i.e., it is the text of your character's reply to the above, your question for the writer). Make sure it's a question. Include only the text of your reply (e.g., do NOT preface the text with the name of the speaker). \n",
+      "model": "gpt-3.5-turbo-1106",
+      "temperature": 0.7,
+      "max_tokens": 2000,
+      "output": 1,
+      "json_mode": 1,
+      "output_to": 4,
+      "behavior": "Role Play 3",
+      "hide_button": true
+    },
+    "Role Play 3": {
+      "prompt": "YOU: {{passThrough[\"reply\"]}}\nWRITER: {{{{passThrough[\"reply\"]}}*}} [# Here unlike \"Role Play 1\" we append to, rather than overwrite, the Scratch Pad, meaning we just add to the transcript before passing things on to \"Role Play 4.\" Again we place an asterisk before the closing curly brackets to force user input. #]\n",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 6,
+      "behavior": "Role Play 4",
+      "hide_button": true
+    },
+    "Role Play 4": {
+      "prompt": "[# This looks a lot like \"Role Play 2,\" but since it uses the Post-run Behavior DYNAMIC, it can trigger different templates based on the contents of the transcript (i.e., it will either loop back to \"Role Play 2\" or move us along to \"Role Play 5. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asks them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. \n\n{{scratch}}\n\nYou will provide a JSON object in response to the above with a key named `next`. In your role as a writing assistant, consider if there is enough material in the above transcript to pad the original copy by 20%. You probably need at least three or four rounds of Q&A. However, if the replies are light on content, you may need more. If you have enough material to add 20% in length to the original copy, set the value of `next` to \"Role Play 5\".  Otherwise, if you feel you need more, the value of `next` should be \"Role Play 2\". \n",
+      "model": "gpt-3.5-turbo-1106",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 1,
+      "output_to": 4,
+      "behavior": "pass",
+      "hide_button": true
+    },
+    "Role Play 5": {
+      "prompt": "[# Having collected more context from the user, we're now ready to produce some new text and copy that to the clipboard (Output To = Screen + clipboard). #]You are a helpful writing assistant. You've just had a conversation with a writer about some copy they're working on, and your task is to take what you learned from that conversation and rewrite the original copy such that its about 20% longer. Here's the text of your conversation. The writer began by reading the copy they have so far.\n\n{{scratch}}\n\nUse what you learned above to rewrite the original copy, adding details learned above. Do your best to keep the writer's voice and style while adding relevant details from your conversation to that first entry. Do NOT embellish! Do NOT make things up! Keep your additions firmly based on the content of your conversation, and don't make your copy too long! You goal is simply to flesh out the original text (i.e., the writer's first utterance above), adding about 20% in length. That being said, provide your new longer copy below.\n",
+      "model": "gpt-3.5-turbo-16k",
+      "temperature": 0.7,
+      "max_tokens": 1000,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 1,
+      "behavior": "stop",
+      "hide_button": true
+    },
+    "BS with a \"bot\"": {
+      "prompt": "{{Yes?}} [# {{Yes?}} isn't a predefined variable. So, the user will be presented with a text input, and since Post-run Behavior is set to CHAT, this ends up being a plain old chat with an LLM. #]\n",
+      "model": "gpt-3.5-turbo-16k",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 1,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "chat",
+      "hide_button": false
+    },
+    "Generic form letter (no LLM)": {
+      "prompt": "{{DayOfWeek}}, {{Month}} {{day}}, {{year}} [# These are all predefined variables, and since Output Type is set to Prompt, this will just echo out the text of this template with variables replaced. #]\n\n{{Who is this letter addressed to?}}:\n\n[This is where you ({{What's your name?}}) should put the text of your boilerplate letter.] \n\nSincerely, \n{{What's your name?}} [# Note: The user is only presented with \"What's your name?\" once because the default behavior is not to repeat user prompts. If you added an asterisk before the closing brackets, however, it would force user input. #]",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 1,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Variables \"random outcomes\" and \"time\"": {
+      "prompt": "When building your prompts, consider using some of these preloaded variables. \n\nRandom Outcomes: \n\n- Coin Flip: {{coinFlip}}\n- D4 (1-4): {{d4}} \n- D6 (1-6): {{d6}}\n- D8 (1-8): {{d8}}\n- D% (0-9): {{d%}}\n- D20 (1-20): {{d20}}\n\nBrowser Date and Time:\n\n- Day of week (0-6): {{dayOfWeek}}\n- Day of week (English): {{DayOfWeek}}\n- Month (1-12): {{month}}\n- Month (01-12): {{month2d}}\n- Month (English): {{Month}}\n- Day of Month (0-31): {{day}}\n- Day of Month (01-31): {{day2d}}\n- Year: {{year}}\n- Hour (1-12): {{hours}}\n- Hour (01-12): {{hours2d}}\n- Hour (0-23): {{hours24}}\n- Hour (00-23): {{hours242d}}\n- AM or PM: {{ampm}}\n- Minute (0-59): {{minutes}}\n- Minute (00-59): {{minutes2d}}\n- Second (0-59): {{seconds}}\n- Second (00-59): {{seconds2d}}\n- All together: \n\nIt is {{hours}}:{{minutes2d}}:{{seconds2d}} {{ampm}} on {{DayOfWeek}}, {{Month}} {{day}}, {{year}}",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "stop",
+      "hide_button": false
+    },
+    "Variables \"from this page\"": {
+      "prompt": "When building your prompts, consider using text from the current webpage, be it selected/highlighted text or the whole page. For example...\n\nPage Data: \n\n- Highlighted words: {{nSelectedWords}}\n- Highlighted text: {{highlighted}}\n- Page words: {{nWordsOnPage}}\n- innerText of page: {{innerText}}",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "max_tokens": 250,
+      "output": 0,
+      "json_mode": 0,
+      "output_to": 0,
+      "behavior": "stop",
+      "hide_button": false
+    }
+  }
+  
+  localStorage.setItem('default_templates', JSON.stringify(default_prompts));
+  
+  if (localStorage.templates) {
+      templates = JSON.parse(localStorage.templates)
+  } else {
+      localStorage.setItem('templates', JSON.stringify(default_prompts));
+      templates = JSON.parse(JSON.stringify(default_prompts))
+  }
+//
+// Load defaults
+//
+
+if (localStorage.api_key) {
+  api_key = localStorage.api_key
+} else {
+  api_key = ""
+  localStorage.setItem('api_key',api_key)
+}
+
+if (localStorage.api_base) {
+  api_base = localStorage.api_base
+} else {
+  api_base = "https://api.openai.com/v1/chat/completions"
+  localStorage.setItem('api_base',api_base)
+}
+
+var bodyText = "";
+var selectedText = "";
+var question_arry = {};
+var last_question = "";
+var output_type = "";
+var llm_prompt = "";
+var llm_messages = [];
+var LLM_text_collection = "";
+var model = "";
+var template = "";
+var temperature = 0;
+var max_tokens = 0;
+var json_mode = 0;
+var output_to = 0;
+var behavior = "";
+var passThrough = "";
+var bubble = 0;
+var calls = 0;
+
+popup_CSS = `* {
+  box-sizing: border-box;
+}
+
+input:focus, textarea {
+  outline: none;
+}
+
+body {
+  /*--
+  font-family: georgia, 'times new roman', times, serif; issues with accents like ă
+  --*/
+  font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  box-sizing: border-box;
+}
+
+#scratch_pad {
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  padding:20px;
+  border:0px solid #ccc;
+  resize: none;
+  overflow-y: auto;
+}
+
+.text_wrap{
+  float:left;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+.input_text {
+  float:right;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0px 5px 15px 0;
+  max-width:100%;
+  margin-left:20%;
+  background:#eee;
+  border-radius:8px;
+  padding:15px;
+}
+
+.output_text {
+  float:left;
+  background:#425dd4;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  border-radius:8px;
+  margin: 0px 0 15px 0;
+  max-width:100%;
+  margin-right:20%;
+  padding:15px;
+}
+
+code {
+  background:#2c3e8e;
+}
+
+.code_wrapper {
+  padding:3px;
+  margin: 0px;
+  width:100%;
+  overflow-x: auto;
+  background:#2c3e8e;
+}
+
+.msg_text {
+  float:left;
+  font-family: Verdana, Geneva, sans-serif;
+  font-variant: small-caps;
+  width:100%;
+  text-align: center;
+  font-size: 14px;
+  color:#7d7878;
+  margin:0 0 15px 0;
+}`
+
+//
+// General functions
+//
+
+function start_spinner(target_id) {
+  var opts = {
+    lines: 13, // The number of lines to draw
+    length: 7, // The length of each line
+    width: 4, // The line thickness
+    radius: 10, // The radius of the inner circle
+    corners: 1, // Corner roundness (0..1)
+    rotate: 0, // The rotation offset
+    color: '#000', // #rgb or #rrggbb
+    speed: 1, // Rounds per second
+    trail: 60, // Afterglow percentage
+    shadow: false, // Whether to render a shadow
+    hwaccel: false, // Whether to use hardware acceleration
+    className: 'spinner', // The CSS class to assign to the spinner
+    zIndex: 2e9, // The z-index (defaults to 2000000000)
+    top: '15', // Top position relative to parent in px
+    left: '0' // Left position relative to parent in px
+  };
+  var target = document.getElementById(target_id);
+  var spinner = new Spinner(opts).spin(target);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  var myButton = document.getElementById('send');
+  myButton.addEventListener('click', function() {
+    submit_text();
+  });  
+
+  var myChatAns = document.getElementById('chat_user_input');
+  myChatAns.addEventListener('keydown', submitChatOnEnter);  
+
+  var myChatButton = document.getElementById('chat_send');
+  myChatButton.addEventListener('click', function() {
+    submit_chat_text();
+  });    
+
+  var myContinueButton = document.getElementById('continueButton');
+  myContinueButton.addEventListener('click', function() {
+    submit_continue();
+  });    
+
+  var toPromptButton = document.getElementById('toPrompt');
+  toPromptButton.addEventListener('click', function() {
+    choose_prompt();
+  });
+
+  var credentialsButton = document.getElementById('credentialsButton');
+  credentialsButton.addEventListener('click', function() {
+    saveAPICred();
+  });
+
+  document.getElementById("api_base").addEventListener("keydown", saveOnEnter);
+  document.getElementById("api_key").addEventListener("keydown", saveOnEnter);
+
+  var mySettings = document.getElementById('config');
+  mySettings.addEventListener('click', function() {
+    window.open("options.html", 'options').focus();
+  });
+
+  var myScratch = document.getElementById('scratch');
+  myScratch.addEventListener('click', function() {
+    window.open("scratch.html", 'scratch').focus();
+  });
+
+  var myAbout = document.getElementById('about');
+  myAbout.addEventListener('click', function() {
+    window.open("https://github.com/SuffolkLITLab/prompts", '_projectPage').focus();
+  });
+
+  var myFeedback = document.getElementById('feedback');
+  myFeedback.addEventListener('click', function() {
+    window.open("https://github.com/SuffolkLITLab/prompts/issues", '_logIssues').focus();
+  });
+
+  var save_transcript = document.getElementById('save_transcript');
+  save_transcript.addEventListener('click', function() {
+      const d = new Date();
+      const day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const month_list = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      saved_on =  day_list[d.getDay()] + ", " + month_list[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+
+      transcript_html = "<html>\n<head>\n<title>Transcript: "+ saved_on +"</title><style>\n"+popup_CSS+"\n</style>\n</head>\n<body>\n";
+      transcript_html += document.getElementById('transcript').innerHTML;
+      transcript_html += "<div class='msg_text'>Saved "+saved_on+" at " + (d.getHours() % 12 || 12) + ":" + ('0' + d.getMinutes()).slice(-2) + " " + (d.getHours() >= 12 ? 'pm' : 'am') + "</div>"
+      transcript_html += "\n</body>\n</html>";
+      saveTextAsFile(transcript_html,"transcript_"+d.getFullYear()+"-"+('0'  + d.getMonth()).slice(-2)+"-"+('0'  + d.getDate()).slice(-2)+"T"+('0'  + d.getHours()).slice(-2)+('0' + d.getMinutes()).slice(-2)+('0'  + d.getSeconds()).slice(-2)+".html")
+  });
+
+  document.getElementById("restartButton").addEventListener("click", function() {
+    location.reload();
+  });
+
+  if (!localStorage.scratch_pad) {
+    localStorage.setItem('scratch_pad',"")
+  } else {
+     document.getElementById('scratch_pad').value = localStorage.scratch_pad
+  }  
+
+  var BORDER_SIZE = 8;
+      
+  let m_pos;
+  function resize(e){
+    if (window.innerWidth>=458) {
+      const dx = m_pos - e.x;
+      m_pos = e.x;
+      panel_width = parseInt(getComputedStyle(panel, '').width)
+      if (panel_width<180) {
+        panel_width = 181;
+      } else if ((window.innerWidth-panel_width)< 90) {
+        panel_width = window.innerWidth - 91;
+      }
+      panel.style.width = (panel_width + dx) + "px";
+      panel_l.style.right = (panel_width + dx) + "px";
+      localStorage.panel_w = (panel_width + dx);  
+    } else {
+      panel.style.width = "100%"
+      panel_l.style.right = "100%"
+    }
+  }
+
+  if (window.innerWidth>=458) {
+    panel_width = localStorage.panel_w
+    if ((panel_width=="100%") & (window.getComputedStyle(document.getElementById("inline_scratch"), null).display =="none")) {
+      document.getElementById("main_wrapper").style.width = "100%"
+      document.getElementById("inline_scratch").style.right = "100%"  
+    } else if (panel_width>(window.innerWidth-80)) {
+      document.getElementById("main_wrapper").style.width =  "50%"
+      document.getElementById("inline_scratch").style.right = "50%"
+    } else if (panel_width>0) {
+      document.getElementById("main_wrapper").style.width = localStorage.panel_w + "px";
+      document.getElementById("inline_scratch").style.right = (parseInt(localStorage.panel_w)) + "px";
+    } else {
+      if (window.getComputedStyle(document.getElementById("inline_scratch"), null).display =="none") {
+        document.getElementById("main_wrapper").style.width = "100%"
+        document.getElementById("inline_scratch").style.right = "100%"    
+      } else {
+        panel_width = 450;
+        localStorage.panel_w = panel_width
+        document.getElementById("main_wrapper").style.width = localStorage.panel_w + "px";
+        document.getElementById("inline_scratch").style.right = (parseInt(localStorage.panel_w)) + "px";  
+      }
+    }
+  } else {
+    document.getElementById("main_wrapper").style.width = "100%"
+    document.getElementById("inline_scratch").style.right = "100%"
+    localStorage.panel_w = "100%"
+  }
+
+  var panel = document.getElementById("main_wrapper");
+  panel.addEventListener("mousedown", function(e){
+    if (e.offsetX < BORDER_SIZE) {
+      m_pos = e.x;
+      document.addEventListener("mousemove", resize, false);
+    }
+  }, false);
+  
+  var panel_l = document.getElementById("inline_scratch");
+  document.addEventListener("mouseup", function(){
+      document.removeEventListener("mousemove", resize, false);
+  }, false);
+
+  // Save text to localStorage on change
+  document.getElementById('scratch_pad').addEventListener('input', function() {
+    localStorage.setItem('scratch_pad', this.value);
+    current_text = this.value;
+  });
+
+});
+
+//
+// Construct, submit, and handel prompts
+//
+
+function choose_prompt(choice) {
+
+  calls+=1;
+  console.log("Choosing template: "+choice)
+  console.log("Runs w/o interaction: "+calls)
+
+  if (calls>=20) {
+    if (confirm(`Are you in a loop? You've made 20 prompt calls without human interaction. Choose "OK" to continue or "Cancel" to stop here.`) == true) {
+      calls = 0;
+    } else {
+      insert_restart();
+    }
+  }
+
+  if (calls<20) {
+
+    output_type = templates[choice]["output"]
+    template = templates[choice]["prompt"];
+    model = templates[choice]["model"];
+    max_tokens = templates[choice]["max_tokens"]; // How long the answer should be 
+    temperature = templates[choice]["temperature"]; // How free-ranging the reply is 0-1 
+    json_mode = templates[choice]["json_mode"];
+    output_to = templates[choice]["output_to"];
+    behavior = templates[choice]["behavior"];
+
+    llm_prompt = template
+
+    // remove comments
+    llm_prompt = llm_prompt.replace(/\[\#[\s\S]*?\#\]/g, "");
+
+    if (llm_prompt){
+      abandon_prompt = 0;
+      // Place selected text into template
+      if (selectedText=="" && template.match(/{{highlighted}}/g)) {
+        console.log("Unable to find highlighted/selected text for this page.");
+        if (confirm('Unable to find highlighted/selected text for this page. Choose "OK" to continue with an empty value or "Cancel" to stop this template.') == true) {
+          llm_prompt = llm_prompt.replace(/{{highlighted}}/g, ""); 
+          llm_prompt = llm_prompt.replace(/{{nSelectedWords}}/g, 0); 
+        } else {
+          abandon_prompt = 1;
+        }
+      } else {
+        if (selectedText.length>0) {
+          llm_prompt = llm_prompt.replace(/{{highlighted}}/g, selectedText.replace(/({|})/g, "\\$1")); 
+          try {
+            llm_prompt = llm_prompt.replace(/{{nSelectedWords}}/g, selectedText.match(/\b(\w+)\b/g).length);             
+          } catch (error) {
+            llm_prompt = llm_prompt.replace(/{{nSelectedWords}}/g, "unknown");    
+          }
+        } else {
+          llm_prompt = llm_prompt.replace(/{{highlighted}}/g, ""); 
+
+          llm_prompt = llm_prompt.replace(/{{nSelectedWords}}/g, 0); 
+        }
+      }
+
+      if (abandon_prompt == 0) {
+        // Place page text into template
+        if (bodyText=="" && template.match(/{{innerText}}/g)) {
+          console.log("Unable to parse innerText for this page.");
+          if (confirm('Unable to parse innerText for this page. Choose "OK" to continue with an empty value or "Cancel" to stop this prompt.') == true) {
+            llm_prompt = llm_prompt.replace(/{{innerText}}/g, "");
+            llm_prompt = llm_prompt.replace(/{{nWordsOnPage}}/g, 0);
+          } else {
+            abandon_prompt = 1;
+          }
+        } else {
+          if (bodyText.length>0) {
+            llm_prompt = llm_prompt.replace(/{{innerText}}/g, bodyText.replace(/({|})/g, "\\$1"));
+            try {
+              llm_prompt = llm_prompt.replace(/{{nWordsOnPage}}/g, bodyText.match(/\b(\w+)\b/g).length);              
+            } catch (error) {
+              llm_prompt = llm_prompt.replace(/{{nWordsOnPage}}/g, "unknown");       
+            }
+          } else {
+            llm_prompt = llm_prompt.replace(/{{innerText}}/g, "");
+            llm_prompt = llm_prompt.replace(/{{nWordsOnPage}}/g, 0);
+          }
+        }
+      }
+
+    } else {
+      alert(`Can't read prompt. `)
+      abandon_prompt = 1;
+
+    }
+
+    if (abandon_prompt == 0) {
+      // Place scrtach pad text into template
+      llm_prompt = llm_prompt.replace(/{{scratch}}/g, localStorage.getItem('scratch_pad'));
+      try {
+        console.log("Attempting to parse Scratch Pad for JSON...")
+        scratch = JSON.parse(localStorage.getItem('scratch_pad').trim());
+      } catch (error) {
+        console.log("Scratch Pad isn't JSON.")
+      }
+      var scratchjson = llm_prompt.match(/{{scratch\["[a-zA-Z_-]+"\]}}/g);
+      // Loop through each variable and present it as a question
+      if (scratchjson) {
+        console.log("Checking scratch...");
+        for (item of scratchjson) {
+            key = [...item.matchAll(/{{scratch\["([a-zA-Z_]+)"\]}}/g)][0][1];
+            console.log(" - scratch[\""+key+"\"]="+scratch[key]);
+            llm_prompt = llm_prompt.replace("{{scratch[\""+key+"\"]}}", scratch[key]);  
+        }
+      }
+      
+
+      llm_prompt = llm_prompt.replace(/{{passThrough}}/g, passThrough);
+      var passThroughjson = llm_prompt.match(/{{passThrough\["[a-zA-Z_-]+"\]}}/g);
+      // Loop through each variable and present it as a question
+      if (passThroughjson) {
+        console.log("Checking passThrough...");
+        for (item of passThroughjson) {
+            key = [...item.matchAll(/{{passThrough\["([a-zA-Z_]+)"\]}}/g)][0][1];
+            console.log(" - passThrough[\""+key+"\"]="+passThrough[key]);
+            llm_prompt = llm_prompt.replace("{{passThrough[\""+key+"\"]}}", passThrough[key]);  
+        }
+      }
+
+      // ------------------------------------------------------
+      // Add predefined variables to the the template
+      // ------------------------------------------------------
+    
+      // Coin
+      flip = Math.floor(Math.random() * 2)
+      flip_out = ["heads","tails"]
+      llm_prompt = llm_prompt.replace(/{{coinFlip}}/g,flip_out[flip]);
+      // Dice 
+      roll = Math.floor(Math.random() * 4) + 1
+      llm_prompt = llm_prompt.replace(/{{d4}}/g,roll);
+      roll = Math.floor(Math.random() * 6) + 1
+      llm_prompt = llm_prompt.replace(/{{d6}}/g,roll);
+      roll = Math.floor(Math.random() * 8) + 1
+      llm_prompt = llm_prompt.replace(/{{d8}}/g,roll);
+      roll = Math.floor(Math.random() * 10)
+      llm_prompt = llm_prompt.replace(/{{d%}}/g,roll);
+      roll = Math.floor(Math.random() * 12) + 1
+      llm_prompt = llm_prompt.replace(/{{d12}}/g,roll);
+      roll = Math.floor(Math.random() * 20) + 1
+      llm_prompt = llm_prompt.replace(/{{d20}}/g,roll);
+
+      // Dates 
+      const d = new Date();
+      const day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      llm_prompt = llm_prompt.replace(/{{dayOfWeek}}/g, d.getDay()); // number
+      llm_prompt = llm_prompt.replace(/{{DayOfWeek}}/g, day_list[d.getDay()]); // english
+      const month_list = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      llm_prompt = llm_prompt.replace(/{{month}}/g, d.getMonth()); // number
+      llm_prompt = llm_prompt.replace(/{{month2d}}/g, ('0'  + d.getMonth()).slice(-2)); // number
+      llm_prompt = llm_prompt.replace(/{{Month}}/g, month_list[d.getMonth()]); // english
+      llm_prompt = llm_prompt.replace(/{{day}}/g, d.getDate()); // day of month
+      llm_prompt = llm_prompt.replace(/{{day2d}}/g, ('0'  + d.getDate()).slice(-2)); // day of month
+      llm_prompt = llm_prompt.replace(/{{year}}/g, d.getFullYear()); // YEAR
+      llm_prompt = llm_prompt.replace(/{{hours24}}/g, d.getHours()); // hours (out of 24)
+      llm_prompt = llm_prompt.replace(/{{hours242d}}/g, ('0'  + d.getHours()).slice(-2)); // hours (out of 24)
+      llm_prompt = llm_prompt.replace(/{{hours}}/g, (d.getHours() % 12 || 12)); // hours (out of 12)
+      llm_prompt = llm_prompt.replace(/{{hours2d}}/g, ('0'  + (d.getHours() % 12 || 12)).slice(-2)); // hours (out of 12)
+      llm_prompt = llm_prompt.replace(/{{ampm}}/g, d.getHours() >= 12 ? 'pm' : 'am');
+      llm_prompt = llm_prompt.replace(/{{minutes}}/g, d.getMinutes());
+      llm_prompt = llm_prompt.replace(/{{minutes2d}}/g, ('0'  + d.getMinutes()).slice(-2));
+      llm_prompt = llm_prompt.replace(/{{seconds}}/g, d.getSeconds());
+      llm_prompt = llm_prompt.replace(/{{seconds2d}}/g, ('0'  + d.getSeconds()).slice(-2));
+
+      if (llm_prompt.trim()=="") {
+        alert(`Error: Empty prompt. `)
+        abandon_prompt = 1;
+      } else {
+        build_prompt();
+      }
+      
+    }
+  }
+
+}
+
+function scroll2Q(id) {
+  document.getElementById('save_transcript').style.display='block';
+
+  if (bubble>0) {
+    var top = document.getElementById(id).offsetTop; //Getting Y of target element
+    console.log("Jump to Y for ("+id+"): "+top);
+    //adapted from https://github.com/Yappli/smooth-scroll
+    moving_frequency = 0.75
+    var getScrollTopDocumentAtBegin = document.getElementById('inner_wrapper').scrollTop + document.body.scrollTop;
+    console.log("Y:",top,getScrollTopDocumentAtBegin)
+    var hop_count = Math.round((top - getScrollTopDocumentAtBegin)/moving_frequency)
+    var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+    for(var i = 1; i <= hop_count; i++)
+        {
+          (function()
+            {
+              var hop_top_position = gap*i;
+                setTimeout(function(){  document.getElementById('inner_wrapper').scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+              })();
+        }
+  }
+}
+
+function build_prompt() {
+  console.log("Building prompt...");
+  LLM_text_collection = "";
+      
+  // Make a list of all other variables (i.e. text of the form {{variable}}). 
+  var questions = llm_prompt.match(/{{[^}]+}}/g)
+
+  console.log("Questions:",questions)
+  document.getElementById('button_list').style.display='none';
+  document.getElementById('transcript').style.display='block';
+
+  // Loop through each variable and present it as a question
+  if (questions) {
+    for (question of questions) {
+      last_question = question;
+      if ((!question_arry[question]) || (question_arry[question].match(/\*}}$/))) {
+        question_ = question.replace(/\*}}$/,"}}")
+        question_ = question_.replace(/{|}/g,"");
+        if (document.getElementById('thinking_box').style.display=="block") {
+          setTimeout(() => {
+            document.getElementById('thinking_box').style.display='none';
+            document.getElementById('text_input').style.display='block';
+            document.getElementById('user_input').focus();
+            bubble+=1;
+            document.getElementById('output_window').innerHTML += "<div class='text_wrap' id='text_"+bubble+"'><div class='output_text'>"+question_+"</div></div>";
+            scroll2Q("text_"+bubble);
+            document.getElementById("user_input").addEventListener("keydown", submitOnEnter);
+          }, 300);        
+        } else {
+          document.getElementById('thinking_box').style.display='none';
+          document.getElementById('text_input').style.display='block';
+          document.getElementById('user_input').focus();
+          bubble+=1;
+          document.getElementById('output_window').innerHTML += "<div class='text_wrap' id='text_"+bubble+"'><div class='output_text'>"+question_+"</div></div>";
+          scroll2Q("text_"+bubble);
+          document.getElementById("user_input").addEventListener("keydown", submitOnEnter);
+        }
+        break
+      } else {
+        llm_prompt = llm_prompt.replaceAll(last_question,question_arry[last_question]);
+        build_prompt(0);
+        break
+      }
+    }
+  } else {
+
+    document.getElementById('thinking_box').style.display='block';
+
+    // Count the words in the prompt
+    words = llm_prompt.match(/\b(\w+)\b/g).length;
+    token_est = Math.round(words*1.75)
+
+    console.log("Words in prompt: "+words+" (~"+token_est+" tokens)\nMODEL: "+model+"\nPROMPT:\n\n"+llm_prompt)
+
+    if (output_type==1) {
+      console.log("Mode: Calling LLM")
+      openai_call(llm_prompt)
+    } else {
+      console.log("Mode: Prompt only")
+      after_build(llm_prompt)
+    }
+    
+  }
+}
+
+function submit_text() {
+  
+  answer =  document.getElementById('user_input').value;
+  if (answer.length>0) {
+    console.log("Sending text...")
+    calls=0;
+    document.getElementById('text_input').style.display='none'
+    document.getElementById('thinking_box').style.display='block';
+    bubble+=1;
+    document.getElementById('output_window').innerHTML += "<div class='text_wrap' id='text_"+bubble+"'><div class='input_text'>"+answer+"</div></div>";
+    scroll2Q("text_"+bubble);
+    llm_prompt = llm_prompt.replaceAll(last_question, answer);
+    question_arry[last_question] = answer;
+    console.log("Q: "+question_+"\nA: "+answer);
+    document.getElementById('user_input').value = "";
+    build_prompt(0);  
+  } else {
+    alert("You cannot leave this input blank.");
+    document.getElementById('user_input').focus();
+  }
+}
+
+function saveAPICred() {
+  localStorage.setItem("api_base",document.getElementById('api_base').value)
+  localStorage.setItem("api_key",document.getElementById('api_key').value)
+  document.getElementById('credentials').style.display='none';
+  document.getElementById('output_window').innerHTML += "<div class='msg_text'>credentials saved</div>";
+  insert_restart();
+}
+
+function saveOnEnter(event) {
+  if (event.which === 13) {
+      if (!event.repeat) {
+        saveAPICred()
+      }
+      event.preventDefault(); // Prevents the addition of a new line in the text field
+  }
+}
+
+function submitOnEnter(event) {
+  if (event.which === 13) {
+      if (!event.repeat) {
+        submit_text();
+      }
+      event.preventDefault(); // Prevents the addition of a new line in the text field
+  }
+}
+
+function submit_chat_text() {
+  answer =  document.getElementById('chat_user_input').value;
+  if (answer.length>0) {
+    console.log("Sending text...")
+    calls=0;
+    document.getElementById('chat_text_input').style.display='none'
+    document.getElementById('thinking_box').style.display='block';
+    bubble+=1;
+    document.getElementById('output_window').innerHTML += "<div class='text_wrap' id='text_"+bubble+"'><div class='input_text'>"+answer+"</div></div>";
+    scroll2Q("text_"+bubble);
+    document.getElementById('chat_user_input').value = "";
+    openai_call(answer)  
+  } else {
+    alert("You cannot leave this input blank.");
+    document.getElementById('user_input').focus();
+  }
+}
+
+function submitChatOnEnter(event) {
+  if (event.which === 13) {
+      if (!event.repeat) {
+        submit_chat_text();
+      }
+      event.preventDefault(); // Prevents the addition of a new line in the text field
+  }
+}
+
+function submit_continue() {
+  console.log("Sending continue request...")
+  calls=0;
+  document.getElementById('continue_gen').style.display='none';
+  document.getElementById('thinking_box').style.display='block';
+  openai_call("You got cutoff. Pickup where you left off and continue.")  
+}
+
+async function openai_call(prompt_text) {
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", api_base);
+
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.setRequestHeader("Authorization", "Bearer "+api_key);
+
+  xhr.onreadystatechange = function () {
+     if (xhr.readyState === 4) {
+      try {
+        console.log(xhr.responseText);
+        LLM_text = JSON.parse(xhr.responseText)["choices"][0]["message"]["content"];
+        llm_messages.push({"role": "assistant", "content": LLM_text})
+        after_build(LLM_text, JSON.parse(xhr.responseText)["choices"][0]["finish_reason"]);
+      } catch (error) {
+        llm_messages.pop();
+        try {
+          if (JSON.parse(xhr.responseText)["error"]["code"]=="context_length_exceeded") {
+            est_token_limit = [...JSON.parse(xhr.responseText)["error"]["message"].matchAll(/\d+/g)]
+            keep_n = Math.floor((est_token_limit[0] - max_tokens)/2);
+            if (llm_messages.length==0) {
+              console.log("ERROR: The prompt and its expected reply exceeds the token limit for this model.");
+              LLM_text = "ERROR: The prompt and its expected reply exceeds the token limit for this model."
+              output_to=0;
+              behavior="stop"
+              after_build(LLM_text)
+
+            } else {
+              console.log("ERROR: Over the course of this chat, you have reached the token limit for this model.");
+              LLM_text = "ERROR: Over the course of this chat, you have reached the token limit for this model."
+              output_to=0;
+              behavior="stop"
+              after_build(LLM_text)
+
+            }
+          } else if ((output_type==1) & (json_mode==1) & (JSON.parse(xhr.responseText)["error"]["message"].includes("response_format"))) {
+            console.log("Removing json flag, trying again...")
+            json_mode = 2;
+            openai_call(prompt_text);
+          } else {
+            LLM_text = `There was an ERROR calling the LLM. Make sure you are using a valid endpoint and API Key. The credentials may have expired, or the model used by this tools' author my have been retired.`
+            output_to=0;
+            behavior="stop"
+            //LLM_text += "\n"+error            
+            after_build(LLM_text);
+            document.getElementById('restartButton').style.display='none';
+            document.getElementById('credentials').style.display='block';
+            document.getElementById('api_base').value = localStorage.api_base || "https://api.openai.com/v1/chat/completions";
+            document.getElementById('api_key').value = localStorage.api_key || "";
+            document.getElementById('api_key').focus();
+          }            
+        } catch (error) {
+          LLM_text = `There was an ERROR calling the LLM. Make sure you are using a valid endpoint and API Key. The credentials may have expired, or the model used by this tools' author my have been retired.`
+          output_to=0;
+          behavior="stop"
+          //LLM_text += "\n"+error            
+          after_build(LLM_text)
+          document.getElementById('restartButton').style.display='none';
+          document.getElementById('credentials').style.display='block';
+          document.getElementById('api_base').value = localStorage.api_base || "https://api.openai.com/v1/chat/completions";
+          document.getElementById('api_key').value = localStorage.api_key || "";
+          document.getElementById('api_key').focus();
+      }
+      }
+    }};
+
+    if (behavior!="chat") { 
+      llm_messages = []  
+    }
+
+    llm_messages.push({"role": "user", "content": prompt_text})
+    var data = {
+              "model": model, 
+              "messages": llm_messages,
+              "temperature": temperature,
+              "max_tokens": max_tokens
+            };
+
+  if (json_mode==1) {
+    console.log("Attempting JSON mode");
+    data["response_format"]={ "type": "json_object" }  
+  }
+
+  console.log(data);
+
+  return xhr.send(JSON.stringify(data));    
+  
+}
+
+
+function accountForHTML(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function insert_restart(){
+  document.getElementById('restartButton').style.display='block';
+  document.getElementById("restartButton").focus(); 
+}
+
+function after_build(LLM_text,finish_reason="stop") {
+  
+  LLM_text_collection += LLM_text;
+
+  // add line breaks for screen output
+  LLM_text_formatted = accountForHTML(LLM_text);
+  LLM_text_formatted = LLM_text_formatted.replaceAll(/```([^`]*)```\n?/g, "<pre class='code_wrapper'><code>$1</code></pre>");
+  LLM_text_formatted = LLM_text_formatted.replaceAll(/`([^`]*)`/g, "<code>$1</code>");
+  document.getElementById('thinking_box').style.display='none';
+
+  // If not hidden
+  if (output_to<4) {
+    bubble+=1;
+    document.getElementById('output_window').innerHTML += "<div class='text_wrap' id='text_"+bubble+"'><div class='output_text' style='white-space: pre-wrap;'>"+LLM_text_formatted+"</div></div>";
+    scroll2Q("text_"+bubble);
+  }
+
+  // Check on json formatting
+  if (json_mode>=1) {
+    console.log("Attempting to parse JSON...")
+    try {
+      passThrough = JSON.parse(LLM_text_collection.trim());
+      LLM_text_collection = JSON.stringify(passThrough, null, 2);        
+    } catch (error) {
+      alert("Warning: Output isn't JSON. Leaving as is! This may cause issues.")
+      passThrough = LLM_text_collection;     
+    }
+  } else {
+    passThrough = LLM_text_collection;
+  }
+
+  // Output location
+  if (output_to==1) {
+    document.getElementById('output_window').innerHTML += "<div class='msg_text'>above output copied to clipboard</div>";
+    copy_to_clipboard(LLM_text_collection);
+  } else if (output_to==2) {
+    document.getElementById('scratch_pad').value += LLM_text_collection;
+    document.getElementById('output_window').innerHTML += "<div class='msg_text'>above output appended to scratch pad</div>";
+    localStorage.setItem('scratch_pad', localStorage.getItem('scratch_pad')+LLM_text); // used LLM_text, not LLM_text_collection because will have already been appended
+  } else if (output_to==3) {
+    document.getElementById('scratch_pad').value = LLM_text_collection;
+    document.getElementById('output_window').innerHTML += "<div class='msg_text'>above output replaced scratch pad</div>";
+    localStorage.setItem('scratch_pad', LLM_text_collection);
+  } else if (output_to==5) {
+    //document.getElementById('output_window').innerHTML += "<div class='msg_text'>above output copied to clipboard</div>";
+    copy_to_clipboard(LLM_text_collection);
+  } else if (output_to==6) {
+    document.getElementById('scratch_pad').value += LLM_text_collection;
+    //document.getElementById('output_window').innerHTML += "<div class='msg_text'>above output appended to scratch pad</div>";
+    localStorage.setItem('scratch_pad', localStorage.getItem('scratch_pad')+LLM_text); // used LLM_text, not LLM_text_collection because will have already been appended
+  } else if (output_to==7) {
+    document.getElementById('scratch_pad').value = LLM_text_collection;
+    //document.getElementById('output_window').innerHTML += "<div class='msg_text'>above output replaced scratch pad</div>";
+    localStorage.setItem('scratch_pad', LLM_text_collection);
+  } 
+  
+  // Behavior
+
+  if (finish_reason=="length"){
+    document.getElementById('continue_gen').style.display='block';
+    calls=0;
+    scroll2Q("text_"+bubble); 
+
+  } else if (behavior=="stop") {
+    // End
+    //document.getElementById('output_window').innerHTML += "<div class='msg_text'>end</div>";
+    calls=0;
+    insert_restart();
+    scroll2Q("text_"+bubble); 
+
+  } else if (behavior=="chat") {
+    // Continue chat
+    //document.getElementById('output_window').innerHTML += "<div class='msg_text'>engage with the above</div>";
+    document.getElementById('chat_text_input').style.display='block';
+    document.getElementById('chat_user_input').focus();
+    calls=0;
+    scroll2Q("text_"+bubble); 
+
+  } else if (behavior=="file") {
+    // Save to file
+    document.getElementById('output_window').innerHTML += "<div class='msg_text'>triggered save to file</div>";
+    calls=0;
+    insert_restart();
+    scroll2Q("text_"+bubble); 
+    saveTextAsFile(LLM_text_collection,"output.txt")
+
+  } else if (behavior=="pass") {
+    // passThrough
+    if (passThrough["next"]){
+      try {
+        choose_prompt(passThrough["next"])        
+      } catch (error) {
+        alert('No matching prompt found for "'+passThrough["next"]+'." Defaulting to FULL STOP')
+        //document.getElementById('output_window').innerHTML += "<div class='msg_text'>end</div>";          
+        calls=0;
+        insert_restart();
+        scroll2Q("text_"+bubble); 
+      }
+    } else {
+      alert('No value found for passThrough["next"] defaulting to FULL STOP')
+      //document.getElementById('output_window').innerHTML += "<div class='msg_text'>end</div>";
+      calls=0;
+      insert_restart();
+      scroll2Q("text_"+bubble); 
+    }
+
+  } else {
+    // Run another prompt
+    choose_prompt(behavior)
+
+  }
+
+}
+
+// Get the selected text
+function getSelection() {
+  const focusedElement = document.activeElement;
+
+  if (focusedElement) {
+    if (focusedElement.tagName.toLowerCase() === 'textarea' || focusedElement.tagName.toLowerCase() === 'input') {
+      if (typeof focusedElement.selectionStart === 'number' && typeof focusedElement.selectionEnd === 'number') {
+        selectedText = focusedElement.value.substring(focusedElement.selectionStart, focusedElement.selectionEnd);
+      } else if (focusedElement.selectionStart === undefined) {
+        // For input elements in some browsers like Firefox
+        const selection = focusedElement.value.substring(
+          focusedElement.selectionStart, focusedElement.selectionEnd
+        );
+        if (selection) {
+          selectedText = selection;
+        }
+      }
+    }
+  }
+  let body_text = document.getElementById('scratch_pad').value;
+
+  console.log(selectedText,body_text)
+
+  return [selectedText,body_text]
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  templates = JSON.parse(localStorage.templates)
+  const buttonList = document.getElementById('button_list');
+
+  //templates.forEach(function(item, index) {
+  for (const [key, value] of Object.entries(templates)) {
+
+    if (templates[key]["hide_button"]==false) {
+      // Create button element
+      const button = document.createElement('button');
+      button.textContent = key; // Set button text
+      button.id = `template_`+key.replace(/[^a-zA-Z]/g,"_"); // Set button id
+      button.dataset.choice = key; // Set data-choice attribute
+      button.style.width = '100%'; // Set styles
+      button.style.marginBottom = '5px';
+
+      // Add event listener to button
+      button.addEventListener('mousedown', function() {
+        text_arry = getSelection(); selectedText = text_arry[0]; bodyText = text_arry[1];
+      });
+      button.addEventListener('click', function() {
+        choose_prompt(this.dataset.choice); // 'this' refers to the button clicked
+      });
+
+      // Append button to button list in DOM
+      buttonList.appendChild(button);
+    }
+
+  };
+
+  start_spinner('thinking');
+
+});
+
+window.onbeforeunload = function () {
+  document.getElementById('inner_wrapper').scrollTo(0, 0);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+        
+  var open_scratch = document.getElementById('open_scratch');
+  document.getElementById('open_scratch').addEventListener('click', function() {
+      if (confirm('This will replace the current scrtach pad contents with the file you upload. Choose "OK" to continue or "Cancel" to keep things as they are.') == true) {
+          document.getElementById('fileInput').click(); // Trigger file input
+      }
+  });
+  document.getElementById('fileInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (!file) {
+          return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          const contents = e.target.result;
+          try {
+              document.getElementById('scratch_pad').value = contents
+              localStorage.setItem('scratch_pad', contents);
+              //const json = JSON.parse(contents);
+              //updatePromptsFromJson(json); // Function to update prompts
+          } catch (error) {
+              console.error("Error reading file: ", error);
+              // Handle errors (invalid file, etc.)
+          }
+      };
+      reader.readAsText(file);
+  });
+
+  var save_scratch = document.getElementById('save_scratch');
+  save_scratch.addEventListener('click', function() {
+      saveTextAsFile(document.getElementById('scratch_pad').value,"scratch_pad.txt")
+  });
+
+});
+</script>
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	input:focus, textarea {
+		outline: none;
+	}
+	
+	body {
+		font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+		box-sizing: border-box;
+	}
+
+	.file_menu {
+		border-bottom: 1px solid #eee;
+		padding-left: 5px;
+	}
+
+	a.files {
+		font-size: 14px;
+		line-height: 25px;
+		text-decoration: none;
+		color: darkblue;
+	}
+
+	.scratch_frame{
+		position: absolute;
+		top:25px;
+		bottom:5px;
+		left:0px;
+		right:0px;
+	}
+
+	#scratch_pad {
+		box-sizing: border-box;
+		width:100%;
+		height:100%;
+		padding:20px;
+		border:0px solid #ccc;
+		resize: none;
+		overflow-y: auto;
+	}
+
+	.text_wrap{
+		float:left;
+		width:100%;
+		margin:0;
+		padding:0;
+	}
+
+	.input_text {
+		float:right;
+		font-size: 15px;
+		line-height: 20px;
+		margin: 0px 5px 15px 0;
+		max-width:100%;
+		margin-left:20%;
+		background:#eee;
+		border-radius:8px;
+		padding:15px;
+	}
+
+	.output_text {
+		float:left;
+		background:#425dd4;
+		font-size: 15px;
+		line-height: 20px;
+		color: white;
+		border-radius:8px;
+		margin: 0px 0 15px 0;
+		max-width:100%;
+		margin-right:20%;
+		padding:15px;
+	}
+
+	code {
+		background:#2c3e8e;
+	}
+
+	.code_wrapper {
+		padding:3px;
+		margin: 0px;
+		width:100%;
+		overflow-x: auto;
+		background:#2c3e8e;
+	}
+
+	.msg_text {
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-variant: small-caps;
+		width:100%;
+		text-align: center;
+		font-size: 14px;
+		color:#7d7878;
+		margin:0 0 15px 0;
+	}
+
+	/* -- the below is needed for interactions -- */
+
+	#button_list {
+		min-height:150px;
+		margin-bottom: 3px;
+	}
+
+	#thinking_box{
+		float:left;
+		width:100%;
+		display:none;
+	}
+
+	#thinking {
+		width:43px;
+		height:75px;
+		margin:0 auto;
+	}
+
+	#user_input{
+		width:100%;
+		height:50px;
+	}
+
+	#chat_user_input{
+		width:100%;
+		height:50px;
+	}
+
+	#continue_gen {
+		float:left;
+		width:100%;
+		margin: 0px 0 10px 0;
+	}
+
+	#continueButton{
+		width:100%;
+	}
+
+	#credentials {
+		float:left;
+		width:100%;
+		margin: 0px 0 10px 0;
+	}
+
+	#credentials_table{
+		width:100%;
+		margin: 0 0 5px 0;
+	}
+
+	#credentialsButton{
+		width:100%;
+	}
+
+	#restartButton{
+		display:none;
+		width:100%;
+		margin: 0 0 10px 0;
+	}
+
+	#save_transcript{
+		display:none;
+		float:left;
+		font-family: Verdana, Geneva, sans-serif;
+		font-variant: small-caps;
+		width:100%;
+		text-align: center;
+		font-size: 14px;
+		color:#7d7878;
+		margin:0 0 15px 0;
+	}
+
+	/*-- The below differes between export and non --*/
+
+	.custom_header{
+		margin: 0 0 10px 0;
+	}
+
+	#inline_scratch {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 346px;
+		overflow: hidden;
+	}
+
+	#main_wrapper{
+		position: absolute;
+		padding: 0 0px 0 18px;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		width:39%;
+		overflow-y: auto;
+	}
+	
+	#main_wrapper::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 8px;
+		background: #ccc;
+		cursor: ew-resize;
+		display: inline-block;
+	}
+
+	#inner_wrapper{
+		height:100%;
+		width:100%;
+		overflow-y: scroll;
+		padding: 0 10px 0 0;
+	}
+
+	.footer {
+		display:none;
+	}
+
+	@media only screen and (max-width: 450px) {
+		
+		#inline_scratch {
+			position: absolute;
+			top: 0px;
+			height: 50vh;
+			width: 100%;
+			left: 0px;
+			right: 0px;
+			overflow-y: auto;
+			border-bottom: solid 1px #7d7878;
+		}
+		
+		#main_wrapper{
+			position: absolute;
+			padding: 0 10px 0 10px;
+			top: 50vh;
+			width: 100%;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			overflow-y: auto;
+		}
+
+		#main_wrapper::after {
+			display:none;
+		}
+
+		#inner_wrapper{
+			position: relative;
+			height:100%;
+			width:100%;
+			overflow-y: scroll;
+			padding: 0;
+		}
+	
+	}
+</style>
+</head>
+<body>
+  <div id="inline_scratch">
+    <div class="file_menu">
+      <a href="#" id="open_scratch" class="files">Open</a>  
+      <input type="file" id="fileInput" style="display: none;"/>
+      <a href="#" id="save_scratch" class="files">Save</a>   
+    </div>
+    <div class="scratch_frame">
+      <textarea id="scratch_pad" placeholder="This space holds text for use with the prompt interactions found to the right."></textarea>
+    </div>
+  </div> 
+  <div id="main_wrapper">
+    <div id="inner_wrapper">
+      <!--
+        START CUSTOM CONTENT
+      -->
+      <div class="custom_header"><h2>The Paper Chase 2.0</h2>
+<p>
+  Place the text of a court opinion to the left, then choose one of the options below. If you want to create a case brief, you can select either the first or second option. The second option, ELI5 (Explain it like I'm 5), will attempt to make the brief more accessible. If you have questions about the case, you can use any of the first three options. The third, "Play the gunner," will jump right to a Q&A. To test your own understanding, choose "Play the prof (Socrates lives!)" This will launch a simulated law prof who will engage you in a Socratic dialogue.
+</p>
+<p>
+  To keep costs down, this tool is using OpenAI's <i>gpt-3.5-turbo-16k</i>. This limits the size of your case texts to something like half a dozen pages. FWIW, here's a case that fits in the context window: <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&q=HAWKINS%20v.%20McGEE&type=o&order_by=score%20desc&stat_Precedential=on" target="_blank">Hawkins v. McGee</a>. If you want a larger input size or "better" briefs, consider making your own version of this tool and choosing a different model. Here's a <a href="https://sadlynothavocdinosaur.com//posts/socrates-lives/">How To</a> you can follow.   
+</p>
+<p>
+  If you're in the middle of a chat below, and you want to restart, just refresh this page. Your text to the left will be saved. <a href="https://sadlynothavocdinosaur.com//posts/socrates-lives/#disclaimer">DISCLAIMER</a>
+</p>
+<hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></div>
+      <!--
+        END CUSTOM CONTENT
+      -->
+      <div id="button_list"></div>
+      <div id="transcript" style="display:none;">
+        <div id="output_window"></div>
+      </div>
+      <div id="thinking_box">
+        <div id="thinking"></div>
+      </div>
+      <div id="text_input" style="display:none;">
+        <textarea id="user_input"></textarea>
+        <button id="send" style="width:100%;margin:5px 0 10px 0;">Send</button>
+      </div>
+      <div id="chat_text_input" style="display:none;">
+        <textarea id="chat_user_input"></textarea>
+        <button id="chat_send" style="width:100%;margin:5px 0 10px 0;">Send</button>
+      </div>
+      <div id="continue_gen" style="display:none;">
+        <button id='continueButton'>Continue text generation</button>
+      </div>
+      <a href="#" id="save_transcript">save transcript</a>
+      <button id="restartButton">Restart</button>
+      <div id="credentials" style="display:none;">
+        <table id="credentials_table">
+          <tr><td>API&nbsp;Base:&nbsp;</td><td width="100%"><input id="api_base" style="width:100%"></td></tr>
+          <tr><td>API&nbsp;Key:&nbsp;</td><td width="100%"><input id="api_key" style="width:100%"></td></tr>
+        </table>        
+        <button id='credentialsButton'>Update/Save Credentials</button>
+      </div>
+      <div id="choices" style="display:none;">
+        <select id="toPrompt" style="width:100%;margin:5px 0 8px 0;text-align:center;">
+          <option value="">Pass output to prompt (choose one)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <button id="config">Templates &amp; Settings</button>
+    <button id="scratch">Scratch Pad</button>
+    <span style="float:right">
+      <button id="about">About</button>
+      <button id="feedback">Feedback</button>
+    </span>
+  </div>
+</body>
+</html>
