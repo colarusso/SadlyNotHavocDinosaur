@@ -21,7 +21,7 @@
   -->
 
   <item>
-    <title>If a 3L Can Automate Their Peers, I Can Too, and for Free To Boot—Robo Socrates Lives! A law school instructor explains how you can get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!</title>
+    <title>If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives! A law school instructor shows you how to get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!</title>
     <link>https://sadlynothavocdinosaur.com/posts/socrates-lives/</link>
     <description>Last week I couldn't escape the story of Bradley Neal, a 3L who has built a gen AI tool that creates case briefs and answers questions about cases. I love the story, and I love the tool. So much so I spent the weekend recreating most of its functionality. Like Mr. Neal's tool, mine can create case briefs, explain cases in plain language, and directly answer questions about a case. These are common tasks for law students, but I didn't stop there. I also created a bot capable of acting like a law school professor, a bot that will grill you using the Socratic method. That's right, it's an on-call simulator. I call the suite of tools The Paper Chase 2.0. You can see the results here, or build and customize your own version for FREE by following the instructions below.  </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/socrates_square.png" type="image/png"/>
