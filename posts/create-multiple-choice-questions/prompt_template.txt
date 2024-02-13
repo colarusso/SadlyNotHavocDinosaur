@@ -1,0 +1,13 @@
+{
+  "Draft multiple choice reading comprehension questions": {
+    "prompt": "{{scratch}}\n\nFor the above reading assignment produce five multiple-choice questions aimed at gauging whether or not someone did the reading. Focus on important points and indicate the correct answer below each question. \n\n",
+    "model": "gpt-3.5-turbo-16k",
+    "temperature": 0,
+    "max_tokens": 1000,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
