@@ -113,45 +113,43 @@
   </p>
   <blockquote>
       1. What was the main issue in the case of Hawkins v. McGee?</br>
-      a) Whether the defendant breached a warranty in performing a surgical operation</br>
-      b) Whether the plaintiff suffered pain and suffering as a result of the operation</br>
-      c) Whether the defendant was negligent in performing the operation</br>
-      d) Whether the plaintiff's hand was in worse condition after the operation</br></br>
-
-      Correct answer: a) Whether the defendant breached a warranty in performing a surgical operation</br></br>
-
-      2. What was the alleged warranty made by the defendant in Hawkins v. McGee?</br>
-      a) The plaintiff would be able to go back to work within a few days after the operation</br>
-      b) The plaintiff's hand would be 100% perfect or good after the operation</br>
-      c) The operation would be completed in three or four days</br>
-      d) The defendant would improve the condition of the plaintiff's hand</br></br>
-
-      Correct answer: b) The plaintiff's hand would be 100% perfect or good after the operation</br></br>
-
-      3. What was the measure of damages in Hawkins v. McGee?</br>
+      a) The duration of the hospital stay</br>
+      b) The pain and suffering endured by the plaintiff</br>
+      c) The guarantee made by the doctor to make the plaintiff's hand "a hundred per cent perfect hand"</br>
+      d) The doctor's refusal to perform a further operation</br>
+      Answer: c) The guarantee made by the doctor to make the plaintiff's hand "a hundred per cent perfect hand"</br></br>
+      
+      2. What was the measure of damages as determined by the court in the case of Hawkins v. McGee?</br>
       a) The plaintiff's pain and suffering</br>
-      b) The difference in value between a perfect or good hand and the plaintiff's hand in its present condition</br>
-      c) Any change for the worse in the condition of the plaintiff's hand resulting from the operation
-      d) The cost of a further operation to correct the plaintiff's disability</br></br>
-
-      Correct answer: b) The difference in value between a perfect or good hand and the plaintiff's hand in its present condition</br></br>
-
-      4. What was the court's ruling on the defendant's motions for a nonsuit and a directed verdict?</br>
-      a) The motions were granted, and the plaintiff's case was dismissed</br>
-      b) The motions were denied, and the case proceeded to trial</br>
-      c) The motions were granted, but the plaintiff was allowed to amend the complaint</br>
-      d) The motions were denied, but the court ordered a new trial</br></br>
-
-      Correct answer: b) The motions were denied, and the case proceeded to trial</br></br>
-
-      5. What was the court's ruling on the defendant's motion to set aside the verdict?</br>
-      a) The motion was granted, and a new trial was ordered</br>
-      b) The motion was denied, and the verdict was upheld</br>
-      c) The motion was granted, but the plaintiff was allowed to remit damages</br>
-      d) The motion was denied, but the court found the damages awarded were excessive</br></br>
-
-      Correct answer: d) The motion was denied, but the court found the damages awarded were excessive
+      b) The difference between the value of a perfect hand and the value of the plaintiff's hand in its current condition</br>
+      c) The cost of a further operation</br>
+      d) The change for the worse in the condition of the plaintiff's hand resulting from the operation</br>
+      Answer: b) The difference between the value of a perfect hand and the value of the plaintiff's hand in its current condition</br></br>
+      
+      3. What was the court's response to the defendant's argument that no reasonable man would understand his words as a contractual agreement?</br>
+      a) The court agreed with the defendant</br>
+      b) The court disagreed, stating that the defendant's words could be taken at face value</br>
+      c) The court stated that the defendant's words were merely an expression of strong language</br>
+      d) The court stated that the defendant's words were merely an expression of his belief and expectation</br>
+      Answer: b) The court disagreed, stating that the defendant's words could be taken at face value</br></br>
+      
+      4. What was the court's decision regarding the defendant's requests for instructions?</br>
+      a) The court agreed with all of the defendant's requests</br>
+      b) The court disagreed with all of the defendant's requests</br>
+      c) The court agreed with some of the defendant's requests and disagreed with others</br>
+      d) The court did not consider the defendant's requests</br>
+      Answer: b) The court disagreed with all of the defendant's requests</br></br>
+      
+      5. What was the final decision of the court in the case of Hawkins v. McGee?</br>
+      a) The court ruled in favor of the plaintiff</br>
+      b) The court ruled in favor of the defendant</br>
+      c) The court ordered a new trial</br>
+      d) The court set aside the verdict</br>
+      Answer: c) The court ordered a new trial</br>
     </blockquote>
+
+    <p>It's wroth noting that the quality of these questions is very closely tied to the model used. My first attempts maded use of <code>gpt-3.5-turbo-16k</code>, but I found issues with 2 out of the 5 questions. <code>gpt-4</code> produced the above questions and though slower and more expensive, it does do a better job.</p>
+
   <h3><a name="build" href="posts/socrates-lives/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
 
   <!-- END INTRO -->
@@ -306,7 +304,7 @@ For the above reading assignment produce five multiple-choice questions aimed at
 
       <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
     
-      <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. We're using gpt-3.5-turbo-16k because of its largish context window. </li>  
+      <li><b>Model:</b> <code>gpt-4</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
       
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
                   
