@@ -24,8 +24,7 @@
   <item>
     <title>2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment</title>
     <link>https://sadlynothavocdinosaur.com/posts/answer-questions-with-context/</link>
-    <description>
-    </description>
+    <description> Yesterday, inspired by GPT-4 passing the bar exam, we tried getting an LLM to some reading questions about Hawkins v. McGee. The LLMs didn't do so hot, only getting 40-47% of the questions right. So, what was missing? Remember, way back in the first post where we said, "If you want an LLM, or the man on the street, to summarize a text, have them read it first." Well, it turns out, if you want an LLM to answer questions about a text you should have them read it first. 😜 Yesterday's template was divorced from context. For example, one of the questions was "What was the court's decision regarding the defendant's requests for instructions?" In isolation, there's no way of knowing what decision the question is asking about. So, today we'll be including that context by making the text part of our prompt. For the record, using gpt-3.5-trubo-16k and the template below I was able to get 4 out of 5 on Tuesday's questions, and 8 out of 10 on Wednesday's questions. That's a solid 80%. When I switched the model to gpt-4, it scored 5/5 and 9/10 respectively. That's 93%! Just to remind you, yesterday's template got 40% and 47%. I think there's something to be said for context.</description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_03_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_03_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/answer-questions-with-context/</guid>
@@ -35,27 +34,24 @@
   <item>
     <title>A Hawk from a Handsaw: Have an AI "guess" the right answers for multiple choice and true or false questions</title>
     <link>https://sadlynothavocdinosaur.com/posts/answer-questions/</link>
-    <description>
-    </description>
+    <description>You may have heard that GPT-4 passed the bar exam, and though I think this fact tells us more about the bar exam than GPT-4, it's worth thinking about how it does this. As we've noted, large language models (LLMs) are sentence completion machines. They guess the next word based on what they've seen in their training data. They can answer questions because their training data contains questions and answers. They can "answer" questions not in their training data because there are patters to how folks answer questions, patters it has "learned." Of course, if a question-answer pair was in its training data, that doesn't hurt, and with these models being trained on broad swaths of the internet, they very well might be in there. Today and tomorrow, we're going to do a little experiment. It turns there was an ulterior motive behind Tuesday and Wednesday's posts. Yes, there is a method to my madness. Those posts contain a set of questions and answers we can feed into today's template. Today we are seeing if we can get an LLM to correctly answer those questions. Spoiler alert: today won't go so well. Double spoiler alert: tomorrow will go better. Homework assignment: see if you can guess how we'll make that happen. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_02_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_bubble_sheet_02_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/answer-questions/</guid>
     <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
   </item>
 
+  --> 
+
   <item>
     <title>True or False? Use AI to draft true or false questions based on a reading assignment</title>
     <link>https://sadlynothavocdinosaur.com/posts/create-true-false-questions/</link>
-    <description>
-    </description>
+    <description>When counting to 50, even a super-short post which replaces "multiple choice" with "true or false" counts as a post; true or false? The answer is TRUE! This week started with a barn-burner in which I wrestled with how best educators should work to address a changing world, and yesterday I showed off how you can use LLMs as a time-saver when creating multiple choice questions. Today, we're taking on true or false questions. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/true_false_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/true_false_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/create-true-false-questions/</guid>
     <pubDate>Wed, 14 Feb 2024 00:00:00 GMT</pubDate>
   </item>
-
-
-  --> 
 
   <item>
     <title>All of the Above: Use AI to draft multiple choice questions based on a reading assignment</title>

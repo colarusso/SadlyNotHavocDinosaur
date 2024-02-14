@@ -109,7 +109,7 @@
     I began my professional career as a high school teacher, and I'm a big fan of <a href="https://en.wikipedia.org/wiki/Formative_assessment" target="_blank">formative assessment</a>. So, when I returned to the classroom as a student for law school, I found its nearly exclusive reliance on <a href="https://en.wikipedia.org/wiki/Summative_assessment" target="_blank">summative assessments</a> not only frustrating but perplexing. Such an inballance goes against nearly everything I learned during my Master's in Education. Now, I don't think a prompt template that makes reading questions based on the text of a reading assignment is by any means a magic fix, but I am <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">intrigued</a> by the idea that we can use technology to help improve instruction by making it easier for teachers to provide more formative assessments. Obviously, I'm a fan of <a href="posts/simple-training-sims">simulations</a> in part because of the promise they offer in this arena. But it's important not to overlook the "classics." Today's template lets one create a set of multiple-choice questions based on the text of a reading assignment. 
   </p>
   <p>
-    Below you'll find the output of today's template, five multiple choice questions based on the text of <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&amp;q=HAWKINS%20v.%20McGEE&amp;type=o&amp;order_by=score%20desc&amp;stat_Precedential=on" target="_blank">Hawkins v. McGee</a>, a focus of yesterday's template. Give them a look, or jump to the <a href="posts/socrates-lives/#build">instructions below</a>. 
+    Below you'll find the output of today's template, five multiple choice questions based on the text of <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&amp;q=HAWKINS%20v.%20McGEE&amp;type=o&amp;order_by=score%20desc&amp;stat_Precedential=on" target="_blank">Hawkins v. McGee</a>, a focus of <a href="posts/socrates-lives">yesterday's template</a>. Give them a look, or jump to the <a href="posts/socrates-lives/#build">instructions below</a>. 
   </p>
   <blockquote>
       1. What was the main issue in the case of Hawkins v. McGee?</br>
@@ -148,7 +148,7 @@
       Answer: c) The court ordered a new trial</br>
     </blockquote>
 
-    <p>It's worth noting that the quality of these questions is very closely tied to the model used. My first attempts made use of  <code>gpt-3.5-turbo-16k</code>, but I found issues with 2 out of the 5 questions. <code>gpt-4</code> produced the above questions and though slower and more expensive, it does do a better job. If you've been with us from <a href="posts/summarize-and-question">the start</a>, I don't need to tell you that you this, but an LLM's output should always start, not end the discussion. You need to check them as you would any secondary source. The idea here, beyond getting you to <a href="posts/50-days-of-lit-prompts">think</a> about the promise and limits of LLMs, is to provide you with a tool that can make it easier to conduct formative assessments. Get a draft, go from there.</p>
+    <p>It's worth noting that the quality of these questions is very closely tied to the model used. My first attempts made use of  <code>gpt-3.5-turbo-16k</code>, but I found issues with 2 out of the 5 questions. <code>gpt-4</code> produced the above questions and though slower and more expensive, it does do a better job. If you've been with us from <a href="posts/summarize-and-question">the start</a>, I don't need to tell you this, but an LLM's output should always start, not end the discussion. You need to check them as you would any secondary source. The idea here, beyond getting you to <a href="posts/50-days-of-lit-prompts">think</a> about the promise and limits of LLMs, is to provide you with a tool that can make it easier to conduct formative assessments. Get a draft, go from there.</p>
 
   <h3><a name="build" href="posts/socrates-lives/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
 
@@ -271,10 +271,10 @@
   <p>
     When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using the <code>{{scratch}}</code> variable. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
-   <p>
+  <p>
     The <code>{{scratch}}</code> variable contains the text in your Scratch Pad. Remember, the Scratch Pad is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. Your Scratch Pad is just a place where you can hold a bunch of text. The idea here is that you'll cut and paste the text of your reading into the Scratch Pad and run the template. 
   </p>
-  </p>
+  
   <p>Here's the template's title.</p>
   <p><code>Draft multiple choice reading comprehension questions</code></p>
   <p>Here's the template's text.</p>
@@ -302,7 +302,7 @@ For the above reading assignment produce five multiple-choice questions aimed at
   <p>And here are the template's parameters:</p>
   <ul>
 
-      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chose "Prompt," in which case the extension would return the text of the completed template. </li>
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
     
       <li><b>Model:</b> <code>gpt-4</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
       
@@ -322,7 +322,7 @@ For the above reading assignment produce five multiple-choice questions aimed at
 
   <h3><a name="working" href="posts/create-multiple-choice-questions/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
   <p>
-    To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+    To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
 
   <div class="featured_img_center" style="max-width:900px;">
@@ -413,7 +413,7 @@ For the above reading assignment produce five multiple-choice questions aimed at
   
   (async () => {
     prompts = await loadFile('posts/create-multiple-choice-questions/prompt_template.txt');
-    exported = await loadFile('posts/create-multiple-choice-questions/interactions.html');
+    //exported = await loadFile('posts/create-multiple-choice-questions/interactions.html');
   })()
 </script>
 
