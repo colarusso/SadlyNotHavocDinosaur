@@ -108,7 +108,7 @@
 	<p>
     <a href="posts/answer-questions">Yesterday</a>, inspired by <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">GPT-4 passing the bar exam</a>, we tried getting an LLM to some reading questions about <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&amp;q=HAWKINS%20v.%20McGEE&amp;type=o&amp;order_by=score%20desc&amp;stat_Precedential=on" target="_blank">Hawkins v. McGee</a>. The LLMs didn't do so hot, only getting 40-47% of the questions right. So, what was missing? Remember, way back in the first post where we said, "If you want an LLM, or the man on the street, to summarize a text, have them read it first." Well, it turns out, if you want an LLM to answer questions about a text you should have them read it first. 😜
   </p>
-  <p>Yesterday's template was divorced from context. For example, one of the questions was "What was the court's decision regarding the defendant's requests for instructions?" In isolation, there's no way of knowing what decision the question is asking about. So, today we'll be including that context by making the text part of our prompt. For the record, using <code>gpt-3.5-trubo-16k</code> and the template below I was able to get 4 out of 5 on <a href="posts/create-multiple-choice-questions">Tuesday's questions</a>, and 8 out of 10 on <a href="posts/create-true-false-questions">Wednesday's questions</a>. That's a solid 80%. When I switched the model to <code>gpt-4</code>, it scored 5/5 and 9/10 respectively. That's 93%! Just to remind you, yesterday's template got 40% and 47%. I think there's something to be said for context. Knowing this, <b>let's build something!</b></p>
+  <p><a href="posts/answer-questions/#template">Yesterday's template</a> was divorced from context. For example, one of the questions was "What was the court's decision regarding the defendant's requests for instructions?" In isolation, there's no way of knowing what decision the question is asking about. So, today we'll be including that context by making the text part of our prompt. For the record, using <code>gpt-3.5-trubo-16k</code> and the template below I was able to get 4 out of 5 on <a href="posts/create-multiple-choice-questions">Tuesday's questions</a>, and 8 out of 10 on <a href="posts/create-true-false-questions">Wednesday's questions</a>. That's a solid 80%. When I switched the model to <code>gpt-4</code>, it scored 5/5 and 9/10 respectively. That's 93%! Just to remind you, yesterday's template got 40% and 47%. I think there's something to be said for context. Knowing this, <b>let's build something!</b></p>
   
   <!-- END INTRO -->
   <p>
@@ -334,6 +334,14 @@ Now, provide the correct answer:
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
     <!-- ICYMI, if you didn't click through above, you might want to give this a look now. -->
   </p>
+
+  <div class="list_img">
+    <a href="images/50-days/gpt_mbe.png"><img src="images/50-days/gpt_mbe.png" ALT="Figure 1 from GPT-4 Passes the Bar Exam showing the performance over various LLMs on the multi-state bar exam." class="list_img_file"/></a>
+    <div class="caption">
+      Figure 1 from <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank" class="captionlnk">GPT-4 Passes the Bar Exam</a> showing the performance over various LLMs on the multi-state bar exam. <a href="images/50-days/gpt_mbe.png" class="captionlnk">Click to enlarge</a>.
+    </div>
+  </div>
+
   <ul>
 
     <li>
