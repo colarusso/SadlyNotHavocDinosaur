@@ -8,9 +8,9 @@
   <title>2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content="2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment"/>
-	<meta property="og:description" content="XXXX "/>
-	<meta property="og:image" content="images/50-days/robot_bubble_sheet_03_square.png"/>
+  <meta property="og:title" content="2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment"/>
+  <meta property="og:description" content="XXXX "/>
+  <meta property="og:image" content="images/50-days/robot_bubble_sheet_03_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
 
@@ -24,14 +24,14 @@
   </script>
 
   <!-- Metadata for mobile -->
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="apple-mobile-web-app-capable" content="no" />
   <link rel="apple-touch-icon" href="images/comic.png"/>
 
   <!-- JS & style -->
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
   <script src="js/functions.js?v=2024-01-30"></script>
   <script src="js/spin.js"></script>
 
@@ -105,10 +105,14 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 20th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
-	<p>
-    <a href="posts/answer-questions">Yesterday</a>, inspired by <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">GPT-4 passing the bar exam</a>, we tried getting an LLM to some reading questions about <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&amp;q=HAWKINS%20v.%20McGEE&amp;type=o&amp;order_by=score%20desc&amp;stat_Precedential=on" target="_blank">Hawkins v. McGee</a>. The LLMs didn't do so hot, only getting 40-47% of the questions right. So, what was missing? Remember, way back in the first post where we said, "If you want an LLM, or the man on the street, to summarize a text, have them read it first." Well, it turns out, if you want an LLM to answer questions about a text you should have them read it first. 😜
+  <p>
+    <a href="posts/answer-questions">Yesterday</a>, inspired by <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">GPT-4 passing the bar exam</a>, we tried getting an LLM to answer some reading questions about <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&amp;q=HAWKINS%20v.%20McGEE&amp;type=o&amp;order_by=score%20desc&amp;stat_Precedential=on" target="_blank">Hawkins v. McGee</a>. The LLMs didn't do so hot, only getting 40-47% of the questions right. So, what was missing? Remember, way back in the <a href="posts/summarize-and-question">first post</a> where we said, "If you want an LLM, or the man on the street, to summarize a text, have them read it first." Well, it turns out, if you want an LLM to answer questions about a text you should have them read it first. 😜
   </p>
-  <p><a href="posts/answer-questions/#template">Yesterday's template</a> was divorced from context. For example, one of the questions was "What was the court's decision regarding the defendant's requests for instructions?" In isolation, there's no way of knowing what decision the question is asking about. So, today we'll be including that context by making the text part of our prompt. For the record, using <code>gpt-3.5-trubo-16k</code> and the template below I was able to get 4 out of 5 on <a href="posts/create-multiple-choice-questions">Tuesday's questions</a>, and 8 out of 10 on <a href="posts/create-true-false-questions">Wednesday's questions</a>. That's a solid 80%. When I switched the model to <code>gpt-4</code>, it scored 5/5 and 9/10 respectively. That's 93%! Just to remind you, yesterday's template got 40% and 47%. To be entierly clear, our <code>gpt-4</code> isn't quite the same GPT-4 used in the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">MBE paper</a>. The moniker "GPT-4" has pointed to differnt specific models over time. Also, I counted an answer as "correct" when it agreed with the GPT-generated answer provided in the prior posts. As <a href="posts/create-true-false-questions">I noted</a>, I wouldn't take these answers as gospel. It did, however, seem reasonable here to measure the LLMs' performance against the answers drafted by an LLM. That is, we are measuring how well the LLMs did on a test written by LLMs. Regardless, I think we've established there's something to be said for context. Knowing this, <b>let's build something!</b></p>
+  <p>
+    <a href="posts/answer-questions/#template">Yesterday's template</a> was divorced from context. For example, one of the questions was "What was the court's decision regarding the defendant's requests for instructions?" In isolation, there's no way of knowing what decision the question is asking about. So, today we'll be including that context by making the case text part of our prompt. For the record, using <code>gpt-3.5-trubo-16k</code> and the template below I was able to get 4 out of 5 on <a href="posts/create-multiple-choice-questions">Tuesday's questions</a>, and 8 out of 10 on <a href="posts/create-true-false-questions">Wednesday's questions</a>. That's a solid 80%. When I switched the model to <code>gpt-4</code>, it scored 5/5 and 9/10 respectively. That's 93%! Just to remind you, yesterday's template got 40% and 47%.
+  </p>
+  <p> 
+    To be entierly clear, our <code>gpt-4</code> isn't quite the same GPT-4 used in the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">MBE paper</a>. The "GPT-4" moniker has pointed to differnt models over time. Also, I counted an answer as "correct" when it agreed with the GPT-generated answer provided in the prior posts. As <a href="posts/create-true-false-questions">I noted</a>, I wouldn't take these answers as gospel. It did, however, seem reasonable here to measure the LLMs' performance against the answers drafted by an LLM. That is, we are measuring how well the LLMs did on a test written by LLMs. Regardless, I think we've established there's something to be said for context. Knowing this, <b>let's build something!</b></p>
   
   <!-- END INTRO -->
   <p>

@@ -8,9 +8,9 @@
   <title>A Hawk from a Handsaw: Have an AI "guess" the right answers for multiple choice and true or false questions</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-	<meta property="og:title" content="A Hawk from a Handsaw: Have an AI &quot;guess&quot; the right answers for multiple choice and true or false questions"/>
-	<meta property="og:description" content="You may have heard that GPT-4 passed the bar exam, and though I think this fact tells us more about the bar exam than GPT-4, it's worth thinking about how it does this. As we've noted, large language models (LLMs) are sentence completion machines. They guess the next word based on what they've seen in their training data. They can answer questions because their training data contains questions and answers. They can &quot;answer&quot; questions not in their training data because there are patterns to how folks answer questions, patterns it has &quot;learned.&quot; Of course, if a question-answer pair was in its training data, that doesn't hurt, and with these models being trained on broad swaths of the internet, they very well might be in there. Today and tomorrow, we're going to do a little experiment. It turns there was an ulterior motive behind Tuesday and Wednesday's posts. Yes, there is a method to my madness. Those posts contain a set of questions and answers we can feed into today's template. Today we are seeing if we can get an LLM to correctly answer those questions. Spoiler alert: today won't go so well. Double spoiler alert: tomorrow will go better. Homework assignment: see if you can guess how we'll make that happen.  "/>
-	<meta property="og:image" content="images/50-days/robot_bubble_sheet_02_square.png"/>
+  <meta property="og:title" content="A Hawk from a Handsaw: Have an AI &quot;guess&quot; the right answers for multiple choice and true or false questions"/>
+  <meta property="og:description" content="You may have heard that GPT-4 passed the bar exam, and though I think this fact tells us more about the bar exam than GPT-4, it's worth thinking about how it does this. As we've noted, large language models (LLMs) are sentence completion machines. They guess the next word based on what they've seen in their training data. They can answer questions because their training data contains questions and answers. They can &quot;answer&quot; questions not in their training data because there are patterns to how folks answer questions, patterns it has &quot;learned.&quot; Of course, if a question-answer pair was in its training data, that doesn't hurt, and with these models being trained on broad swaths of the internet, they very well might be in there. Today and tomorrow, we're going to do a little experiment. It turns there was an ulterior motive behind Tuesday and Wednesday's posts. Yes, there is a method to my madness. Those posts contain a set of questions and answers we can feed into today's template. Today we are seeing if we can get an LLM to correctly answer those questions. Spoiler alert: today won't go so well. Double spoiler alert: tomorrow will go better. Homework assignment: see if you can guess how we'll make that happen.  "/>
+  <meta property="og:image" content="images/50-days/robot_bubble_sheet_02_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
 
@@ -24,14 +24,14 @@
   </script>
 
   <!-- Metadata for mobile -->
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="apple-mobile-web-app-capable" content="no" />
   <link rel="apple-touch-icon" href="images/comic.png"/>
 
   <!-- JS & style -->
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
   <script src="js/functions.js?v=2024-01-30"></script>
   <script src="js/spin.js"></script>
 
@@ -105,11 +105,14 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 19th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
-	<p>
+  <p>
     You may have heard that GPT-4 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">passed the bar exam</a>, and though I think this fact tells us more about the bar exam than GPT-4, it's worth thinking about how it does this. As we've <a href="posts/summarize-and-question">noted</a>, <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs) are sentence completion machines. They guess the next word based on what they've seen in their training data. They can answer questions because their training data contains questions and answers. They can "answer" questions not in their training data because there are patterns to how folks answer questions, patterns it has "learned." Of course, if a question-answer pair was in its training data, that doesn't hurt, and with these models being trained on broad swaths of the internet, they very well might be <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">in there</a>. Today and tomorrow, we're going to do a little experiment. It turns out there was an ulterior motive behind Tuesday and Wednesday's posts. Yes, there is a method to my madness. Those posts contain a set of questions and answers we can feed into today's template. Today we are seeing if we can get an LLM to correctly answer those questions. Spoiler alert: today won't go so well. Double spoiler alert: tomorrow will go better. Homework assignment: see if you can guess how we'll make that happen. 
   </p>
    <p>
-    When turning today's template on <a href="posts/create-multiple-choice-questions">Tuesday's questions</a>, I found that it got 2 out of 5 correct. On <a href="posts/create-true-false-questions">Wednesday's questions</a> it did worse, getting 4 out of 10 right. All together, that's a 40%. Those scores are based on using <code>gpt-4</code> which didn't prove any better than <code>gpt-3.5-trubo</code> which scored 2/5 and 5/10 respectively. That's 47%. I think it's safe to say they're both shooting in the dark. So, given <code>gpt-4</code> is a good deal more expensive, I'd stick with 3.5 for now. To be entierly clear, our <code>gpt-4</code> isn't quite the same GPT-4 used in the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">MBE paper</a>. The moniker "GPT-4" has pointed to differnt specific models over time. Also, I counted an answer as "correct" when it agreed with the GPT-generated answer provided in the prior posts. As <a href="posts/create-true-false-questions">I noted</a>, I wouldn't take these answers as gospel. It did, however, seem reasonable here to measure the LLMs' performance against the answers drafted by an LLM. That is, we are measuring how well the LLMs did on a test written by LLMs. That being said...
+    When turning today's template on <a href="posts/create-multiple-choice-questions">Tuesday's questions</a>, I found that it got 2 out of 5 correct. On <a href="posts/create-true-false-questions">Wednesday's questions</a> it did worse, getting 4 out of 10 right. All together, that's a 40%. Those scores are based on using <code>gpt-4</code> which didn't prove any better than <code>gpt-3.5-trubo</code> which scored 2/5 and 5/10 respectively. That's 47%. I think it's safe to say they're both shooting in the dark. So, given <code>gpt-4</code> is a good deal more expensive, I'd stick with 3.5 for now.
+   </p>
+   <p>
+    To be entierly clear, our <code>gpt-4</code> isn't quite the same GPT-4 used in the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233" target="_blank">MBE paper</a>. The "GPT-4" moniker has pointed to differnt models over time. Also, I counted an answer as "correct" when it agreed with the GPT-generated answer provided in the prior posts. As <a href="posts/create-true-false-questions">I noted</a>, I wouldn't take these answers as gospel. It did, however, seem reasonable here to measure the LLMs' performance against the answers drafted by an LLM. That is, we are measuring how well the LLMs did on a test written by LLMs. That being said...
   </p>
 
   <h3><a name="build" href="posts/answer-questions/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
