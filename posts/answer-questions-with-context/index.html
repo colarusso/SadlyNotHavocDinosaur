@@ -9,7 +9,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
   <meta property="og:title" content="2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment"/>
-  <meta property="og:description" content="XXXX "/>
+  <meta property="og:description" content=" Yesterday, inspired by GPT-4 passing the bar exam, we tried getting an LLM to answer some reading questions about Hawkins v. McGee. The LLMs didn't do so hot, only getting 40-47% of the questions right. So, what was missing? Remember, way back in the first post where we said, &quot;If you want an LLM, or the man on the street, to summarize a text, have them read it first.&quot; Well, it turns out, if you want an LLM to answer questions about a text you should have them read it first. 😜 Yesterday's template was divorced from context. For example, one of the questions was &quot;What was the court's decision regarding the defendant's requests for instructions?&quot; In isolation, there's no way of knowing what decision the question is asking about. So, today we'll be including that context by making the case text part of our prompt. For the record, using gpt-3.5-trubo-16k and the template below I was able to get 4 out of 5 on Tuesday's questions, and 8 out of 10 on Wednesday's questions. That's a solid 80%. When I switched the model to gpt-4, it scored 5/5 and 9/10 respectively. That's 93%! Just to remind you, yesterday's template got 40% and 47%.  "/>
   <meta property="og:image" content="images/50-days/robot_bubble_sheet_03_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
