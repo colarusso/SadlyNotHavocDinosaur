@@ -146,10 +146,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('msg_bar').style.display='block';    
     }
 
-    if (!window.location.hash) { 
-        try {
-            collapse_setup();            
-        } catch (error) {}
+    if (!window.location.hash) {
+        if (window.location.hash!="#setup") & (window.location.hash!="#install") & (window.location.hash!="#point") {
+            try {
+                collapse_setup();            
+            } catch (error) {}    
+        }
     }
     
     //try {
