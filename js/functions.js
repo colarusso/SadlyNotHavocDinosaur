@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!window.location.hash) {
-        if (window.location.hash!="#setup") & (window.location.hash!="#install") & (window.location.hash!="#point") {
+        if ((window.location.hash!="#setup") & (window.location.hash!="#install") & (window.location.hash!="#point")) {
             try {
                 collapse_setup();            
             } catch (error) {}    

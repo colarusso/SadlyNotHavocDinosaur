@@ -98,7 +98,7 @@
 For exported files:
 Add the following to the head before the declared js with the right relative address
 
-<script src="../../js/encryption.js?v=2024-02-16"></script>
+<script src="../../js/encryption.js?v=2024-02-16b"></script>
 
 Then, add edit the declared js to read like follows
 
