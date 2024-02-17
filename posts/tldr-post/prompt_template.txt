@@ -1,0 +1,13 @@
+{
+  "Blurb for social media": {
+    "prompt": "{{innerText}}\n\nWrite a super short blurb, only a sentence or two, for the above article to accompany a link on social media. Fit it into the size of a Tweet. Add one or three appropriate hashtags. But seriously, keep it short!\n\n",
+    "model": "gpt-3.5-turbo-16k",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "chat",
+    "hide_button": false
+  }
+}
