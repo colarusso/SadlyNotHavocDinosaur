@@ -5,12 +5,12 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Flip a Poem; Roll an "App": Turn the outcome of a coin flip into a poem and package this as an "app"</title>
+  <title>Build A Mini RPG: Generate the outcome of a scene for a role-playing game based on a single sentence</title>
   <meta property="og:type" content="website"/>
-  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
-  <meta property="og:title" content='Flip a Poem; Roll an "App": Turn the outcome of a coin flip into a poem and package this as an "app"'/>
-  <meta property="og:description" content="This week we've used LLMs to talk with texts, reply to emails, and figure out unfamiliar phraseologywith input provided by the browser. In future posts, we'll tackle more complex prompt patterns, but we'll also take advantage of LIT Prompt's virtual dice and export functionality to make some really interesting interactions you can share or save for later. Alas, before we run, we must walk, and before we walk, we must crawl. To get our bearings, today's prompt finds us flipping a virtual coin, writing a poem about the flip's outcome, and packaging the whole thing up as a &lt;web app.&lt; By way of foreshadowing, LIT Prompts comes preloaded with a virtual coin, not to mention 4, 6, 8, 10, and 20-sided dice. 🤔 I wonder what could be coming?  "/>
-  <meta property="og:image" content="images/50-days/coinflip_square.png"/>
+  <meta property="og:publish_date" content="2024-02-19T00:00:00-0500"/>
+  <meta property="og:title" content="Build A Mini RPG: Generate the outcome of a scene for a role-playing game based on a single sentence"/>
+  <meta property="og:description" content=" "/>
+  <meta property="og:image" content="images/50-days/dragons_and_desk_jobs_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
 
@@ -31,8 +31,8 @@
 
   <!-- JS & style -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-02-16c">
-  <script src="js/functions.js?v=2024-02-16c"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
   <script src="js/spin.js"></script>
 
   <link rel="stylesheet" href="css/prism.css" data-noprefix="">
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Flip a Poem; Roll an "App"</i></h1>
-  <div class="post_title_02">Turn the outcome of a coin flip into a poem and package this as an "app"</div>
+  <h1 class="post_title_01">Build A Mini RPG</h1>
+  <div class="post_title_02">Generate the outcome of a scene for a role-playing game based on a single sentence</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -95,33 +95,56 @@
         </span>
       </div>
     </div>-->
-    <a href="images/50-days/coinflip.png"><img src="images/50-days/coinflip.png" ALT="Watercolor of a 'poet' fliping a coin." class="list_img_file"/></a>
+    <a href="images/50-days/dragons_and_desk_jobs.png"><img src="images/50-days/dragons_and_desk_jobs.png" ALT="A dragon seated at a desk wearing a suit under the title 'Dragons and Desk Jobs'" class="list_img_file"/></a>
     <div class="caption">
-      Heads or Tails?, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      XXXX, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This is <b>the 5th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
-  <p>
-    This week we've used LLMs to <a href="posts/summarize-and-question">talk with</a> texts, <a href="posts/decline-requests">reply</a> to emails, and <a href="posts/define-words-in-context">figure out</a> unfamiliar phraseology with input provided by the browser. In future posts, we'll tackle more complex prompt patterns, but we'll also take advantage of LIT Prompt's virtual dice and export functionality to make some really interesting interactions you can share or save for later. Alas, before we run, we must walk, and before we walk, we must crawl. To get our bearings, today's prompt finds us flipping a virtual coin, writing a poem about the flip's outcome, and packaging the whole thing up as a "web app." By way of foreshadowing, LIT Prompts comes preloaded with a virtual coin and 4, 6, 8, 10, and 20-sided dice. 🤔 I wonder <a href="https://colarusso.github.io/dm/" target="_blank">what</a> could be coming? 
+  <p><i>This is <b>the XXXXth</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+	<p>
+    XXXX
   </p>
 
-  <!-- END INTRO -->
+  <!-- Micro Lesson -->
   <p>
-    If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/coinflip-poem/#template">The Prompt Pattern (Template)</a>.
+    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or <a href="posts/mini-rpg/#upnext">skip</a> this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
+  </p> 
+  <h3><a name="micro" href="posts/mini-rpg/#micro" class="anchor" alt="deep link to this section"></a>Micro-Lesson: XXXX</h3>
+  <p>
+    XXXX
   </p>
-  <h3><a name="upnext" href="posts/email-to-do/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <div class="featured_img_center">
+    <a href="images/50-days/XXXX.png"><img src="images/50-days/XXXX.png" ALT="XXXX" class="list_img_file"/></a>
+    <div class="caption">
+      XXXX
+    </div>  
+  </div>
+  <p>
+    XXXX
+  </p>
+  <!-- END Micro Lesson -->
+  
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/socrates-lives/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/mini-rpg/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/mini-rpg/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/coinflip-poem/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/mini-rpg/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/coinflip-poem/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/coinflip-poem/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/mini-rpg/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/mini-rpg/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/coinflip-poem/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/coinflip-poem/#export">Export and Share </a></li>
+    <li><a href="posts/mini-rpg/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/mini-rpg/#tires">Kick the Tires</a></li>
+    <li><a href="posts/mini-rpg/#export">Export and Share </a></li>
+    <li><a href="posts/mini-rpg/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -134,7 +157,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="setup" href="posts/coinflip-poem/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/mini-rpg/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -154,7 +177,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/coinflip-poem/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/mini-rpg/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -167,7 +190,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/coinflip-poem/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/mini-rpg/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
     </p>
@@ -204,10 +227,10 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/coinflip-poem/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/mini-rpg/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
- 
+
   <!-- 
     =================================================
     
@@ -216,7 +239,7 @@
     =================================================
   --> 
   <hr>
-  <h2><a name="template" href="posts/coinflip-poem/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/mini-rpg/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -226,12 +249,20 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our third predefined variable, <code>{{coinFlip}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d20}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
+
   <p>
-    The <code>{{coinFlip}}</code> variable returns either "heads" or "tails." This allows us to write prompts that will behave differently based on the outcome of the flip. To illustrate this point, the prompt below asks the LLM to write a prompt about the outcome. This is clearly a silly prompt, but consider, that we'll soon meet a collection of many-sided dice. Big things are coming! If nothing comes to mind, and you know someone who likes role-playing games ask them about the power of combining rules, randomness, and narratives. 
+   Random stuff 
   </p>
-  <p>Here's the template text.</p>
+
+  <p>
+    If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+
+  <p>Here's the template's title.</p>
+  <p><code>Play One Beat of Dragons & Desk Jobs</code></p>
+  <p>Here's the template's text.</p>  
   <!-- 
     #########################
     #########################
@@ -240,12 +271,56 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>I'm going to flip a coin. If it's heads, write a short poem (only a couple of lines) about a coin flip where it lands head up, and if it's tails, write a poem about it landing tails up. Be very clear about the result of the coin flip in the poem. 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are the game master for a table-top role-playing game. You are playing with one other player. They will inhabit the role of the protagonist, making decisions for how they move through the world. You will craft a story around their decisions, providing texture and playing the parts of all the other characters. First, I'm going to give you some context so you understand the narrative expectations. 
 
-Coin flip: {{coinFlip}} 
+========
 
-Now give me your response/poem: 
+Setting and Genera: 
 
+- Your story telling should adhere to the following genera expectations: magical realism 
+- Your story will start at the following place: the desk of our protagonist where they work in an office run by dragons
+- Your story is set at the following time: present day
+
+========
+
+The Protagonist:
+
+Earlier you asked the other player to fill in a character sheet for the protagonist. Here are their answers. Use them to help you shape the story.
+
+- name: Alex
+- additional notes: Alex is a normal human, and their gender is never revealed. When describing them always use they/them pronouns. 
+
+========
+
+The protagonist is seated at their desk.
+
+The player who is playing the protagonist chooses to do the following:
+
+{{What do you want to do?*}}
+
+========
+
+To determine if they are successful, start by assessing the likelihood of succeed for the above action. That is figure out how hard it will be for them to succeed in doing what they want to. Label this difficulty with one of the following labels: 
+
+- Easy
+- Medium
+- Hard
+
+Now we're going to role a 20-sided dice to see if they are successful. Okay, the dice roll was {{d20}}.
+
+If the difficulty was Easy, the roll ({{d20}}) has to be greater than or equal to 1 for them to succeed. 
+
+If the difficulty was Medium, the roll ({{d20}}) has to be greater than or equal to 7 for them to succeed. 
+
+If the difficulty was Medium, the roll ({{d20}}) has to be greater than or equal to 17 for them to succeed. 
+
+If they succeed you are to return a selection of prose continuing the story. Format your reply in JSON with the following key-value pairs:
+
+1. "difficulty" where the value is the label you applied above.
+2. "difficulty_cutoff" where the value is the numeric cutoff for the specified difficulty. 
+3. "roll" where the value is the outcome of the above dice roll.
+4. "success" where the value is 1 if roll is greater than or equal to the difficulty_cutoff. 
+5. "narrative" where the value is the prose you produce describing what happened. 
 </code></pre>
   </section>
   <!-- 
@@ -257,16 +332,14 @@ Now give me your response/poem:
   -->
   <p>And here are the template's parameters:</p>
   <ul>
-      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-      <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
-      <li><b>Temperature:</b> <code>0.9</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Today we're all about randomness. So, I went with a pretty "creative" setting—0.9.</li>  
-      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
-      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>  
-      <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
-      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but sometimes when running a chain of prompts, it can be useful to hide a button.</li>
-  </ul>
-  <h3><a name="working" href="posts/coinflip-poem/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+<h3><a name="working" href="posts/mini-rpg/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
   <p>
     To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -274,7 +347,6 @@ Now give me your response/poem:
   <div class="featured_img_center" style="max-width:900px;">
     <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
   </div>
-
   <p>
     You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
   </p>
@@ -285,17 +357,33 @@ Now give me your response/poem:
   <!-- 
     =================================================
     
+                    Kick the Tires
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="tires" href="posts/mini-rpg/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs. 
+  </p>
+  <ul>
+    <li>
+      <b>XXXX</b> XXXX
+    </li>
+  </ul>
+    <!-- 
+    =================================================
+    
                      Export & Share
 
     =================================================
   --> 
   <hr>
-  <h2><a name="export" href="posts/coinflip-poem/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+  <h2><a name="export" href="posts/mini-rpg/#export" class="anchor" alt="deep link to this section"></a>Export and Share</h2>
 
   <p>
     After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
   </p>
-
   <div class="featured_img_center" style="max-width:900px;">
     <a href="images/50-days/export_html.png"><img src="images/50-days/export_html.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
   </div>
@@ -313,9 +401,9 @@ Now give me your response/poem:
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>Flip a Coin&lt;/h2>
-&lt;p>Click the button below to turn a virtual coin flip into a poem. Why you ask? Because a poem telling you the outcome of a coin toss is more fun than a straight "head" or "tails."&lt;/p> 
-&lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></code></pre>
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX
+&lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
+</code></pre>
   </section>
   <!-- 
     #########################
@@ -328,16 +416,39 @@ Now give me your response/poem:
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
   <div class="button_row">
-    <a href="posts/coinflip-poem/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="posts/mini-rpg/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
+  <!-- 
+    =================================================
+    
+                       References
 
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="references" href="posts/mini-rpg/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
+    <!-- ICYMI, if you didn't click through above, you might want to give this a look now. -->
+  </p>
+  <ul>
+    <li>
+      <a href="XXXX" target="_blank">XXXX</a> by XXXX. XXXX 
+      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+    </li>
+
+    <!--<li><a href="">text</a></li>-->
+  </ul>
   
+  <!-- 
+  =================================================
+  
+                  Preview projects
 
-  <!-- Preview projects -->
+  =================================================
+  --> 
   <div id="previews"></div>
-  
-
   
   </div>
   <!-- END PAGE CONTENT -->
@@ -353,28 +464,17 @@ Now give me your response/poem:
 </div>
 
 <script>
-
   /*new GreenAudioPlayer('.gap-example');
   const audio_object = document.querySelector('.gap-example  audio');
 
   try {
-		MathJax.typeset();		
+    MathJax.typeset();		
 	} catch (error) {}*/
   
   (async () => {
-    prompts = await loadFile('posts/coinflip-poem/prompt_template.txt');
-    exported = await loadFile('posts/coinflip-poem/interactions.html');
+    prompts = await loadFile('posts/mini-rpg/prompt_template.txt');
+    exported = await loadFile('posts/mini-rpg/interactions.html');
   })()
 </script>
 
-<!--
-Publication checklist:
-
-- Metadata title, description, and image: X
-- Updated anchor links e.g., "posts/coinflip-poem/": X
-- Updated prompt_template.txt file in folder: X
-- Metadata publication date: ? 
--->
-
 </BODY></HTML>
-

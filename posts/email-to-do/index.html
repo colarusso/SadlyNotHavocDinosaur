@@ -313,7 +313,7 @@ Action Items:
       <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
       <li><b>Max Tokens:</b> <code>500</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
       <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-      <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we'll append our output to the Scratch Pad. Since we're appending (adding to) the pad, not replacing it, we can run this template multiple times without worrying about overwriting our to-do list.</li>  
+      <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we'll append our output to the Scratch Pad. Since we're appending (adding to) the pad, not replacing it, we can run this template multiple times without worrying about overwriting our to-do list.</li>  
       <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>  
       <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window.</li>
   </ul>
@@ -347,7 +347,7 @@ Action Items:
     <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
     <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard, a file... Here, we don't need to see the contents of the prompt. So, I've chosen "Hidden."</li>   
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we don't need to see the contents of the prompt. So, I've chosen "Hidden."</li>   
     <li><b>Post-run Behavior:</b> <code>SAVE TO FILE</code>. Like the choice of output, we can decide what to do after a template runs. Here we save the content to a file. This will trigger your browser's download feature.</li>  
     <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window.</li>
   </ul>
