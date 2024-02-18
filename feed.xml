@@ -7,16 +7,60 @@
   <language>en-us</language>
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
-  <!--
+  <!-- ONDECK
+
   <item>
-    <title></title>
-    <link>https://sadlynothavocdinosaur.com/posts//</link>
+    <title>Your Own Personal Anger Translator: Translate angry comments into thoughtful replies in context</title>
+    <link>https://sadlynothavocdinosaur.com/posts/anger-translator/</link>
+    <description>lorum ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/luther-obama_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/luther-obama_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/anger-translator/</guid>
+    <pubDate>Fri, 23 Feb 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>Is This Good?: Extract sentement from social media posts and structure as JSON</title>
+    <link>https://sadlynothavocdinosaur.com/posts/is-this-good/</link>
+    <description>lorum ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/sentiments_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/sentiments_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/is-this-good/</guid>
+    <pubDate>Thu, 22 Feb 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>Bias Bingo: Read a webpage and flag any logical falacies</title>
+    <link>https://sadlynothavocdinosaur.com/posts/bias-bingo/</link>
+    <description>lorum ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/bingo_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/bingo_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/bias-bingo/</guid>
+    <pubDate>Wed, 21 Feb 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>TL;DR: Blurb a webpage for social media</title>
+    <link>https://sadlynothavocdinosaur.com/posts/tldr-post/</link>
     <description>
+    lorum ipsum
     </description>
-    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/_square.png" type="image/png"/>
-    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/_square.png"/>
-    <guid>https://sadlynothavocdinosaur.com/posts//</guid>
-    <pubDate>Thu, 25 Feb 2024 00:00:00 GMT</pubDate>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_social_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_social_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/tldr-post/</guid>
+    <pubDate>Tue, 20 Feb 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>Build A Mini RPG: Generate the outcome of a scene for a role-playing game</title>
+    <link>https://sadlynothavocdinosaur.com/posts/mini-rpg/</link>
+    <description>
+    lorum ipsum
+    </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/mini-rpg/</guid>
+    <pubDate>Mon, 19 Feb 2024 05:00:00 GMT</pubDate>
   </item>
 
   --> 
