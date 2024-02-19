@@ -3,7 +3,27 @@
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<title>Prompt Interactions</title>
+
+<!-- Page-specific metadata -->
+<title>Dragons and Desk Jobs: A Mini RPG</title>
+<meta property="og:type" content="website"/>
+<meta property="og:publish_date" content="2024-01-12T00:00:00-0500"/>
+<meta property="og:title" content="Dragons and Desk Jobs: A Mini RPG"/>
+<meta property="og:description" content=" "/>
+<meta property="og:image" content="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs_square.png"/>
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="1024" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ST9X6H808L');
+</script>
+<script src="../../js/encryption.js?v=2024-02-16c"></script>
+
 <script>
 
 localStorage.setItem('templates',JSON.stringify({"Play One Beat of Dragons & Desk Jobs":{"prompt":"You are the game master for a table-top role-playing game. You are playing with one other player. They will inhabit the role of the protagonist, making decisions for how they move through the world. You will craft a story around their decisions, providing texture and playing the parts of all the other characters. First, I'm going to give you some context so you understand the narrative expectations. \n\n========\n\nSetting and Genera: \n\n- Your story telling should adhere to the following genera expectations: magical realism \n- Your story will start at the following place: the desk of our protagonist where they work in an office run by dragons\n- Your story is set at the following time: present day\n\n========\n\nThe Protagonist:\n\nEarlier you asked the other player to fill in a character sheet for the protagonist. Here are their answers. Use them to help you shape the story.\n\n- name: Alex\n- additional notes: Alex is a normal human, and their gender is never revealed. When describing them always use they/them pronouns. \n\n========\n\nThe protagonist is seated at their desk.\n\nThe player who is playing the protagonist chooses to do the following:\n\n{{What do you want to do?}}\n\n========\n\nTo determine if they are successful, start by assessing the likelihood of succeed for the above action. That is figure out how hard it will be for them to succeed in doing what they want to. Label this difficulty with one of the following labels: \n\n- Easy\n- Medium\n- Hard\n\nNow we're going to role a 20-sided dice to see if they are successful. Okay, the dice roll was {{d20}}.\n\nIf the difficulty was Easy, the roll ({{d20}}) has to be greater than or equal to 1 for them to succeed. \n\nIf the difficulty was Medium, the roll ({{d20}}) has to be greater than or equal to 7 for them to succeed. \n\nIf the difficulty was Medium, the roll ({{d20}}) has to be greater than or equal to 17 for them to succeed. \n\nIf they succeed you are to return a selection of prose continuing the story. Format your reply in JSON with the following key-value pairs:\n\n1. \"difficulty\" where the value is the label you applied above.\n2. \"difficulty_cutoff\" where the value is the numeric cutoff for the specified difficulty. \n3. \"roll\" where the value is the outcome of the above dice roll.\n4. \"success\" where the value is 1 if roll is greater than or equal to the difficulty_cutoff. \n5. \"narrative\" where the value is the prose you produce describing what happened. \n","model":"gpt-3.5-turbo-16k","temperature":0.7,"max_tokens":1000,"output":1,"json_mode":1,"output_to":0,"behavior":"stop","hide_button":false}}));
@@ -345,6 +365,13 @@ if (localStorage.api_key) {
   localStorage.setItem('api_key',api_key)
 }
 
+// user decrypt
+if (localStorage.api_key=="") {
+    (async () => {
+        api_key = await decryptData("9fO3Bl3yJptJ3QCFiQ/VkU13BPLxfjJnFTwc+sZtcHBw5MwBVgf5K7nzlKWV5Dapm46TxW12KbWNvcGiU2+w2k9A3wKZkNSDkfg8y39eoJxPg9EoNoEUlC7lvlYmjns=","dragon_share")
+    })()
+}
+
 if (localStorage.api_base) {
   api_base = localStorage.api_base
 } else {
@@ -559,22 +586,22 @@ document.addEventListener('DOMContentLoaded', function () {
       
   let m_pos;
   function resize(e){
-    if (window.innerWidth>=458) {
-      const dx = m_pos - e.x;
-      m_pos = e.x;
-      panel_width = parseInt(getComputedStyle(panel, '').width)
-      if (panel_width<180) {
-        panel_width = 181;
-      } else if ((window.innerWidth-panel_width)< 90) {
-        panel_width = window.innerWidth - 91;
-      }
-      panel.style.width = (panel_width + dx) + "px";
-      panel_l.style.right = (panel_width + dx) + "px";
-      localStorage.panel_w = (panel_width + dx);  
-    } else {
-      panel.style.width = "100%"
-      panel_l.style.right = "100%"
-    }
+    //if (window.innerWidth>=458) {
+    //  const dx = m_pos - e.x;
+    //  m_pos = e.x;
+    //  panel_width = parseInt(getComputedStyle(panel, '').width)
+    //  if (panel_width<180) {
+    //    panel_width = 181;
+    //  } else if ((window.innerWidth-panel_width)< 90) {
+    //    panel_width = window.innerWidth - 91;
+    //  }
+    //  panel.style.width = (panel_width + dx) + "px";
+    //  panel_l.style.right = (panel_width + dx) + "px";
+    //  localStorage.panel_w = (panel_width + dx);  
+    //} else {
+    //  panel.style.width = "100%"
+    //  panel_l.style.right = "100%"
+    //}
   }
 
   if (window.innerWidth>=458) {
@@ -1486,18 +1513,20 @@ document.addEventListener('DOMContentLoaded', function() {
       <!--
         START CUSTOM CONTENT
       -->
-      <div class="custom_header"><img src="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs.png" width=100%>
-<h2>The Paper Chase 2.0</h2>
-<p>
-  Place the text of a court opinion to the left, then choose one of the options below. If you want to create a case brief, you can select either the first or second option. The second option, ELI5 (Explain it like I'm 5), will attempt to make the brief more accessible. If you have questions about the case, you can use any of the first three options. The third, "Play the gunner," will jump right to a Q&A. To test your own understanding, choose "Play the prof (Socrates lives!)" This will launch a simulated law prof who will engage you in a Socratic dialogue.
-</p>
-<p>
-  To keep costs down, this tool is using OpenAI's <i>gpt-3.5-turbo-16k</i>. This limits the size of your case texts to something like half a dozen pages. FWIW, here's a case that fits in the context window: <a href="https://www.courtlistener.com/opinion/3574015/hawkins-v-mcgee/?type=o&q=HAWKINS%20v.%20McGEE&type=o&order_by=score%20desc&stat_Precedential=on" target="_blank">Hawkins v. McGee</a>. If you want a larger input size or "better" briefs, consider making your own version of this tool and choosing a different model. Here's a <a href="https://sadlynothavocdinosaur.com//posts/socrates-lives/">How To</a> you can follow.   
-</p>
-<p>
-  If you're in the middle of a chat below, and you want to restart, just refresh this page. Your text to the left will be saved. <a href="https://sadlynothavocdinosaur.com//posts/socrates-lives/#disclaimer">DISCLAIMER</a>
-</p>
-<hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></div>
+      <div class="custom_header">
+        <img src="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs.png" width=100%>
+        <h2>Roll a D20</h2>
+        <p>This short scene is part of a larger set of examples. See <a href="https://sadlynothavocdinosaur.com/posts/rpg-quanta/" target="_blank">Narrative Quanta: LLMs as RPG Building Blocks. Generate the outcome of a scene for a role-playing game</a>.
+        <p>
+          Players of table-top role-playing games (RPGs) will recognize the following exchange as an <a href="https://colarusso.github.io/dm/more.html#abilitycheck" target="_blank">ability check</a>. At their simplest, they involve rolling a 20-sided dice (d20) and comparing the outcome with a difficulty class to see if a player is successful. Difficult tasks have high difficulty classes. So they require players to get higher rolls.  
+        </p>
+        <p>After expressing what you would like to do, you will be provided with the outcome of your roll. This includes the number you rolled as well as the difficulty class for the task at hand and the ultimate outcome. Try your hand at everything from "getting a cup of coffee" to "slaying a dragon."</p>
+        <p>
+          <i>Note: I prepaid for some LLM usage. Once that runs out, visitors will have to point to their own LLMs when prompted. Here's <a href="https://sadlynothavocdinosaur.com/posts/openai_api_key" target="_blank">what you need</a> to use OpenAI.</i>
+        </p>
+
+        <hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
+      </div>
       <!--
         END CUSTOM CONTENT
       -->

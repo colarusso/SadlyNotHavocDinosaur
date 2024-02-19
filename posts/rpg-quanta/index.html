@@ -5,11 +5,11 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Build A Mini RPG: Generate the outcome of a scene for a role-playing game</title>
+  <title>Narrative Quanta: LLMs as RPG Building Blocks: Generate the outcome of a scene for a role-playing game</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-02-19T00:00:00-0500"/>
-  <meta property="og:title" content="Build A Mini RPG: Generate the outcome of a scene for a role-playing game"/>
-  <meta property="og:description" content=" "/>
+  <meta property="og:title" content="Narrative Quanta: LLMs as RPG Building Blocks: Generate the outcome of a scene for a role-playing game"/>
+  <meta property="og:description" content=" Over the course of this series I've come to embrace training simulations as a promising use case for large language models (LLMs). Such use recasts many of an LLM's traditional weaknesses as strengths. A tendency to make things up is after all an asset when performing improv. When I introduced simple simulations, I promised we'd eventually get to more advanced ones. See What if Members of Talking Professions Could Log Time in Simulators Like Pilots? To date, we've simulated the first meeting between a public defender and their client as well as a law professor engaging a student in Socratic dialogue. These simulations were a bit shallow, however. For one thing, they presented an unending unchanging dialogue. One reader after starting the simulated client meeting observed, &quot;I can't figure out how to make it end.&quot; My suggestion was that they say goodbye to their client and &quot;exit,&quot; by which I meant, &quot;stop typing.&quot;  "/>
   <meta property="og:image" content="images/50-days/dragons_and_desk_jobs_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -75,7 +75,7 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Build A Mini RPG</h1>
+  <h1 class="post_title_01">Narrative Quanta: LLMs as RPG Building Blocks</h1>
   <div class="post_title_02">Generate the outcome of a scene for a role-playing game</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
@@ -104,16 +104,31 @@
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This is <b>the 21s</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
-
-  
+  <p><i>This is <b>the 21st</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
   <p>
-    If you want to jump right into playing a beat of <i>Dragons &amp; Desk Jobs</i>, <a href="ai/mini-rpg/">be my guest</a>.
+    If you want to jump right to playing a beat of <i>Dragons &amp; Desk Jobs</i>, <a href="ai/rpg-quanta/">be my guest</a>. I prepaid for some "AI" time. So, play while the getting is good. Otherwise, let's take a moment to talk about how we got here and where we're going. After that, I'll show you how to create your own such scene.
   </p>
   <p>
-    lorum ipsum
+    Over the course of this series I've come to embrace training simulations as a promising use case for <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs). Such use recasts many of an LLM's traditional weaknesses as strengths. A tendency to <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">make things up</a> is after all an asset when performing improv. When I introduced simple simulations, I promised we'd eventually get to more advanced ones. See <a href="posts/simple-training-sims">What if Members of Talking Professions Could Log Time in Simulators Like Pilots?</a> To date, we've simulated the <a href="ai/client-meeting-sim/">first meeting</a> between a public defender and their client as well as a law professor engaging a student in <a href="ai/paper-chase-2.0/">Socratic dialogue</a>. These simulations were a bit shallow, however. For one thing, they presented an unending unchanging dialogue. One reader after starting the simulated client meeting observed, "I can't figure out how to make it end." My suggestion was that they say goodbye to their client and "exit," by which I meant, "stop typing."
   </p>
-  <p>Input <code>Get some coffee</code></p>
+  <p>  
+    If we are to tackle more advanced simulations, we'll need a way to "change things up." There's only so much LLMs can do with a clever framing. Ideally, we could work with some atomic unit of storytelling, perhaps a narrative if-then statement of sorts. Something which could direct our narrative based on events as they unfold. For example, if this or that happens, our "AI actor" could be directed to change their motivations accordingly. When we <a href="posts/simple-training-sims">first met</a> an LLM simulation, I suggested readers provide their LLMs a script to follow. Our <a href="posts/socrates-lives">law prof's prompt</a> actually included something that looked like this, laying out a changing set of goals meant to shape a conversation. However, these were rather linear progressions, and if you tried your own variation, you likely realized how fragile the output behavior can be. Sometimes it works. Sometimes it doesn't. A robust simulation calls for more robust control. 
+  </p>
+  <p>
+    For inspiration I've turned to the world of role-playing games. At their core, games like <i>Dungeons & Dragons</i> are collaborative storytelling games. The rules help anchor the story and provide verisimilitude, largely by tying the outcome of events to random chance. Interestingly, instead of making anything possible, this injection of randomness often works to constrain possible outcomes. Let's explore an example. 
+   </p>
+   <p> 
+    You are playing a game called <i>Dragons and Desk Jobs</i>. Your character is a non-magical human living in a magical world. They work in an office uptown where their boss is a dragon. You make choices for your character, deciding what actions they should take, but you do not control what happens to your character. For this, there is a player called the game master. The game master acts out all the non-player characters (NPCs) while also serving as an all-powerful narrator. You can choose to get up from your desk to get a cup of coffee, but the game master decides if you can make it across the office. 
+  </p>
+  <p>
+    Simple actions are made without comment. However, when there is a question as to whether you can successfully complete a task, you may be asked to role a many-sided dice (20-sided dice are a favorite). First, the game master will assess the difficulty of the task on a scale of "very easy" to "nearly impossible."" The difficulty for the task at hand may be written down somewhere in the rules, if not, the game master will make their own assessment. Either way, each difficulty class will correspond to a number, with the harder classes having higher numbers. To succeed, your roll (plus any relevant modifiers) must be greater than or equal to the number associated with the task's difficulty. If your character is very strong you might add a modifier (some number) to rolls for any tasks involving physical strength. We'll, however, keep it simple. There are no modifiers in <i>Dragons and Desk Jobs</i>. Players of table-top role-playing games (RPGs) will recognize this exchange as an <a href="https://colarusso.github.io/dm/more.html#abilitycheck" target="_blank">ability check</a>.
+  </p>
+  <p>
+    In <i>Dragons and Desk Jobs</i> we'll roll a 20-sided dice to settle questions of success. Easy tasks have to meet or beat 1, medium task 7, and hard tasks 17.
+  </p>
+  <p>
+    Let's say you want to "<code>get some coffee</code>." To see if you succeed, you would role a dice and compare it's outcome to the appropriate difficulty class. If your roll was greater than this cutoff, the game master would inform you of your success by providing some colorful narration. Here I've use JSON to capture this all in a compact easy-to-read format. The <i>difficulty</i> key has a value stating how hard the task is. <i>difficulty_cutoff</i> reminds us of the cutoff for this difficulty class. <i>Roll</i> tells us what number came up when you rolled. <i>Success</i> tells us if this was greater than or equal to the cutoff, and <i>narrative</i> gives as the blow by blow.
+  </p>
   <section class="line-numbers">
     <pre class="language-javascript" style="white-space:pre-wrap;"><code>{
       "difficulty": "Easy",
@@ -123,25 +138,44 @@
       "narrative": "As Alex finishes up some paperwork, they feel a strong craving for a cup of coffee. They push back from their desk and make their way to the office kitchen. The smell of freshly brewed coffee permeates the air, drawing them closer. With a sigh of satisfaction, they pour themselves a steaming cup, enjoying the rich aroma and the warmth it brings to their hands. Energized and ready to face the tasks ahead, Alex returns to their desk, ready to tackle the challenges of the day."
     }</code></pre>
   </section>
+  <p>Now, let's imagine you have something more difficult in mind. When asked what you want to do, you respond, "<code>Jump over my desk, draw my sword and strike at the dragon seated at the front of the office.</code>"</p>
+  <section class="line-numbers">
+    <pre class="language-javascript" style="white-space:pre-wrap;"><code>{
+    "difficulty": "Hard",
+    "difficulty_cutoff": 17,
+    "roll": 11,
+    "success": 0,
+    "narrative": "As Alex jumps over their desk and draws their sword, the dragon at the front of the office quickly reacts. It raises its enormous wing, blocking the strike with ease. The dragon lets out a deep, rumbling growl, its eyes glaring down at Alex. 'Foolish human,' it snarls. 'You dare to challenge me?' Alex's strike has been parried, and they are now faced with the wrath of the powerful dragon."
+  }</code></pre>
+</section>
+
+  <p>
+    As you might have guessed, the above JSON is output from today's prompt template with the LLM serving as the game master. We could have asked the LLM to simply return the narrative based on it's internal assessment of the difficulty et al., but as it turns out the results aren't as consistent. By asking the LLM to provide the difficulty, cutoff, roll, and success state before providing the narrative, we are engaging in a technique called <a href="https://en.wikipedia.org/wiki/Prompt_engineering#Chain-of-thought" target="_blank">chain-of-thought</a>. Remember, LLMs are just sentence completion machines, striving for the next most plausible words. By having it output and build upon intermediate steps we seek to constrain the ultimate output such that it is more likely to follow rules we set out in the prompt. 
+  </p>
+  <p>
+    Also, the use of JSON plays an important role here. Not only are we setting things up so we can easily hand the output off to another template, as we did with the <a href="" target="_blank">translation templates</a>, but the use of JSON itself works to shape the nature of the output. Remember, LLMs are sentence completion machines, working to replicate the patterns seen in their training data. It's a safe bet that when JSON was part of that training data there was a good deal of attention paid to formatting and content. Consequently, the output for our <i>narrative</i> variable is more likely to be only what we asked for. Earlier LLM models had a tendency to include more than was strictly necessary. For example, if you asked it to provide a narration, it might respond with "Here's the narration..." followed by the narration. The use of JSON mitigates this behavior. FWIW, newer models don't show as much of this behavior, but as of this writing, it's still an issue.
+  </p>
+  <p>
+    In future posts, we'll take this atomic unit of narrative and build on it even more. For now, however, feel free to have fun questing for coffee. I prepaid for some "AI" time. So,  <a href="ai/rpg-quanta/">play</a> while the getting is good. Of course, you should really build your own simulation. Imagine the possibilities. 
+  </p>
 
 
   <!-- END INTRO -->
 
   <h3><a name="build" href="posts/socrates-lives/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/mini-rpg/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/rpg-quanta/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/mini-rpg/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/rpg-quanta/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/mini-rpg/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/rpg-quanta/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/mini-rpg/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/mini-rpg/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/rpg-quanta/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/rpg-quanta/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/mini-rpg/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/mini-rpg/#tires">Kick the Tires</a></li>
-    <li><a href="posts/mini-rpg/#export">Export and Share </a></li>
-    <li><a href="posts/mini-rpg/#references">TL;DR References</a></li>
+    <li><a href="posts/rpg-quanta/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/rpg-quanta/#tires">Kick the Tires</a></li>
+    <li><a href="posts/rpg-quanta/#export">Export and Share </a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -154,7 +188,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="setup" href="posts/mini-rpg/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/rpg-quanta/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -174,7 +208,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/mini-rpg/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/rpg-quanta/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -187,7 +221,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/mini-rpg/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/rpg-quanta/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
     </p>
@@ -224,7 +258,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/mini-rpg/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/rpg-quanta/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
 
@@ -236,7 +270,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/mini-rpg/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/rpg-quanta/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -246,11 +280,13 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d20}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d20}}</code> which is replaced by a random number between 1 and 20. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
   </p>
-
   <p>
-    If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    If the text within brackets is not the name of a predefined variable, like <code>{{What do you want to do?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What do you want to do?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    As with the majority of our prompt templates, the logic here is pretty easy to follow. It's just the process we described above where we rate the difficulty of a task and compare this to the roll of a dice. 
   </p>
 
   <p>Here's the template's title.</p>
@@ -332,7 +368,7 @@ If they succeed you are to return a selection of prose continuing the story. For
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-<h3><a name="working" href="posts/mini-rpg/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+<h3><a name="working" href="posts/rpg-quanta/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
   <p>
     To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -355,20 +391,17 @@ If they succeed you are to return a selection of prose continuing the story. For
     =================================================
   -->
   <hr>
-  <h2><a name="tires" href="posts/mini-rpg/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <h2><a name="tires" href="posts/rpg-quanta/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
   </p>
   <ul>
-  
     <li>
-      <b>XXX</b> XXXX
-    </li>
-    
+      <b>Make it Your Own</b>. Edit the template to produce scenes from a different genre or with different characters. 
+    </li>    
     <li>
-      <b>XXX</b> XXXX
-    </li>
-    
+      <b>What next?</b> Think about how we might build on what we've learned so far to take our simulations to the next level. How could you incorporate the output of a template like this one into another template, or a chain of templates? 
+    </li>    
   </ul>
     <!--
     =================================================
@@ -378,7 +411,7 @@ If they succeed you are to return a selection of prose continuing the story. For
     =================================================
   -->
   <hr>
-  <h2><a name="export" href="posts/mini-rpg/#export" class="anchor" alt="deep link to this section"></a>Export and Share</h2>
+  <h2><a name="export" href="posts/rpg-quanta/#export" class="anchor" alt="deep link to this section"></a>Export and Share</h2>
 
   <p>
     After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
@@ -400,7 +433,15 @@ If they succeed you are to return a selection of prose continuing the story. For
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;img src="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs.png" width=100%>
+&lt;h2>Roll a D20&lt;/h2>
+&lt;p>
+  This short scene is part of a larger set of examples. See &lt;a href="https://sadlynothavocdinosaur.com/posts/rpg-quanta/" target="_blank">Narrative Quanta: LLMs as RPG Building Blocks. Generate the outcome of a scene for a role-playing game&lt;/a>.
+&lt;p>
+  Players of table-top role-playing games (RPGs) will recognize the following exchange as an &lt;a href="https://colarusso.github.io/dm/more.html#abilitycheck" target="_blank">ability check&lt;/a>. At their simplest, they involve rolling a 20-sided dice (d20) and comparing the outcome with a difficulty class to see if a player is successful. Difficult tasks have high difficulty classes. So they require players to get higher rolls.  
+&lt;/p>
+&lt;p>
+  After expressing what you would like to do, you will be provided with the outcome of your roll. This includes the number you rolled as well as the difficulty class for the task at hand and the ultimate outcome. Try your hand at everything from "getting a cup of coffee" to "slaying a dragon."&lt;/p>
 &lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
 </code></pre>
   </section>
@@ -415,32 +456,9 @@ If they succeed you are to return a selection of prose continuing the story. For
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
   <div class="button_row">
-    <a href="posts/mini-rpg/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a>
+    <a href="posts/rpg-quanta/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a>
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
-  <!--
-    =================================================
-
-                       References
-
-    =================================================
-  -->
-  <hr>
-  <h2><a name="references" href="posts/mini-rpg/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
-  <p>
-    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
-  <ul> 
-    <li>
-      <a href="URL" target="_blank">Title</a> by Author. Description
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-    <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-  </ul>
 
   <!--
   =================================================
@@ -473,8 +491,8 @@ If they succeed you are to return a selection of prose continuing the story. For
 	} catch (error) {}*/
 
   (async () => {
-    prompts = await loadFile('posts/mini-rpg/prompt_template.txt');
-    exported = await loadFile('posts/mini-rpg/interactions.html');
+    prompts = await loadFile('posts/rpg-quanta/prompt_template.txt');
+    exported = await loadFile('posts/rpg-quanta/interactions.html');
   })()
 </script>
 

@@ -51,19 +51,18 @@
     <pubDate>Tue, 20 Feb 2024 05:00:00 GMT</pubDate>
   </item>
 
+  --> 
+
   <item>
-    <title>Build A Mini RPG: Generate the outcome of a scene for a role-playing game</title>
-    <link>https://sadlynothavocdinosaur.com/posts/mini-rpg/</link>
-    <description>
-    lorum ipsum
-    </description>
+    <title>Narrative Quanta: LLMs as RPG Building Blocks Generate the outcome of a scene for a role-playing game</title>
+    <link>https://sadlynothavocdinosaur.com/posts/rpg-quanta/</link>
+    <description> Over the course of this series I've come to embrace training simulations as a promising use case for large language models (LLMs). Such use recasts many of an LLM's traditional weaknesses as strengths. A tendency to make things up is after all an asset when performing improv. When I introduced simple simulations, I promised we'd eventually get to more advanced ones. See What if Members of Talking Professions Could Log Time in Simulators Like Pilots? To date, we've simulated the first meeting between a public defender and their client as well as a law professor engaging a student in Socratic dialogue. These simulations were a bit shallow, however. For one thing, they presented an unending unchanging dialogue. One reader after starting the simulated client meeting observed, "I can't figure out how to make it end." My suggestion was that they say goodbye to their client and "exit," by which I meant, "stop typing." </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/dragons_and_desk_jobs_square.png"/>
-    <guid>https://sadlynothavocdinosaur.com/posts/mini-rpg/</guid>
+    <guid>https://sadlynothavocdinosaur.com/posts/rpg-quanta/</guid>
     <pubDate>Mon, 19 Feb 2024 05:00:00 GMT</pubDate>
   </item>
 
-  --> 
 
   <item>
     <title>2.B, or Not 2.B? Have an AI answer multiple choice and true or false questions based on a reading assignment</title>
