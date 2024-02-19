@@ -40,11 +40,9 @@
   </item>
 
   <item>
-    <title>TL;DR: Blurb a webpage for social media</title>
+    <title>TL;DR LLM: Blurb a webpage for social media</title>
     <link>https://sadlynothavocdinosaur.com/posts/tldr-post/</link>
-    <description>
-    lorum ipsum
-    </description>
+    <description>Functionally, today's template, which creates a short summary of a webpage for sharing on social media, is a special-use adaptation of our very first prompt template. However, I would like to use this familiar task to explore two new ideas. First, the fact that you can create special-use versions of existing templates, and second, how one can use the CHAT behavior to do more than question content. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_social_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_social_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/tldr-post/</guid>
