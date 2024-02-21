@@ -29,17 +29,17 @@
     <pubDate>Thu, 22 Feb 2024 05:00:00 GMT</pubDate>
   </item>
 
+  --> 
+
   <item>
-    <title>Bias Bingo: Read a webpage and flag any logical falacies</title>
-    <link>https://sadlynothavocdinosaur.com/posts/bias-bingo/</link>
-    <description>lorum ipsum</description>
+    <title>Flag Logical Fallacies with a Browser Extension: Have AI read a webpage and flag logical falacies</title>
+    <link>https://sadlynothavocdinosaur.com/posts/flag-fallacies/</link>
+    <description>I'm not an AI doomer in the sense that I don't think much about p(doom)—the probability that AI will end humanity. I'm much more worried about megacorps exploiting AI for profit at the expense of the marginalized. Which is to say, I'm more concerned about the world of RoboCop than I am of the Terminator. I am, however, sympathetic to those who worry that AI-generated misinformation could supercharge the asymmetry at the center of Brandolini's Law, which states, "The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it." There's a lot to worry about in a world where the cost of BS production drops nearly to zero. So, I thought I'd explore what could be done for the side of the angles. Today's template that aims to spot and flag logical fallacies based on the text of a webpage—like an AI fact checker of sorts.</description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/bingo_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/bingo_square.png"/>
-    <guid>https://sadlynothavocdinosaur.com/posts/bias-bingo/</guid>
+    <guid>https://sadlynothavocdinosaur.com/posts/flag-fallacies/</guid>
     <pubDate>Wed, 21 Feb 2024 05:00:00 GMT</pubDate>
   </item>
-
-  --> 
 
   <item>
     <title>TL;DR LLM: Blurb a webpage for social media</title>
