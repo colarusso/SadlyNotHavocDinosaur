@@ -19,8 +19,12 @@
     <pubDate>Fri, 23 Feb 2024 05:00:00 GMT</pubDate>
   </item>
 
+
+
+  --> 
+
   <item>
-    <title>Is This Good?: Extract sentement from social media posts and structure as JSON</title>
+    <title>Is This Good?: Extract sentiment from social media posts, label each, and structure output as JSON</title>
     <link>https://sadlynothavocdinosaur.com/posts/is-this-good/</link>
     <description>lorum ipsum</description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/sentiments_square.png" type="image/png"/>
@@ -28,8 +32,6 @@
     <guid>https://sadlynothavocdinosaur.com/posts/is-this-good/</guid>
     <pubDate>Thu, 22 Feb 2024 05:00:00 GMT</pubDate>
   </item>
-
-  --> 
 
   <item>
     <title>Flag Logical Fallacies with a Browser Extension: Have AI read a webpage and flag logical falacies</title>

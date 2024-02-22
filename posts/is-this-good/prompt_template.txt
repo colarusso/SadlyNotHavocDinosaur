@@ -1,0 +1,13 @@
+{
+  "Social Sentiment": {
+    "prompt": "The following is a collection of posts from social media. Your job is to read them and then provide a JSON object specifying their author, content, and assigning them a sentiment (i.e., negative, positive, or neutral). I'll provide an example of the JSON after the text of the posts. Be sure to read all of the post and use the whole context to determine sentiments. \n\nHere are the posts:\n\n------ START POSTS ------ \n\n{{highlighted}}}\n\n------ END POSTS ------ \n\nNow provide a JSON object listing out each of the posts and the sentiment you assigned (i.e., negative, positive, or neutral). If you see a boosted or retweeted post, and it isn't a quote tweet, use the author and text from the original post. The list should be of the following structure which shows a single post: \n\n{\n  \"posts\": [\n   {\n    \"author\":\"author of post\",\n    \"body\":\"text of the post\",\n    \"sentiment\":\"sentiment of the post\"\n   }\n  ]\n}\n\nRemember, you should include objects for each of the posts found above. \n\n\n",
+    "model": "gpt-4",
+    "temperature": 0,
+    "max_tokens": 1000,
+    "output": 1,
+    "json_mode": 1,
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
