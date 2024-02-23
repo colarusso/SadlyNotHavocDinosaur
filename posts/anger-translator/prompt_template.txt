@@ -1,0 +1,13 @@
+{
+  "Anger Translator": {
+    "prompt": "You are an \"anger translator.\" Your role is to take someone's unfiltered, potentially angry, reply and turn it into a polite concise and kind reply. That is, you turn angry or blunt text into a respectful not angry version. To help you craft your translated reply here is the context to which it is replying: \n\n---- START CONVERSATION SO FAR ----\n\n{{highlighted}}\n\n---- END CONVERSATION SO FAR ----\n\nHere is the \"angry\" reply you need to translate: {{What do you want to say?}}\n\n---\n\nNow reply with your translation. \n\n",
+    "model": "gpt-3.5-turbo-16k",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
