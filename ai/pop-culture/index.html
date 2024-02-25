@@ -3,7 +3,27 @@
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<title>Prompt Interactions</title>
+
+<!-- Page-specific metadata -->
+<title>Pop Culture Reference Check | Sadly Not, Havoc Dinosaur</title>
+<meta property="og:type" content="website"/>
+<meta property="og:publish_date" content="2024-01-12T00:00:00-0500"/>
+<meta property="og:title" content="The Paper Chase 2.0 | Sadly Not, Havoc Dinosaur"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://sadlynothavocdinosaur.com/images/comic.png"/>
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="1024" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ST9X6H808L');
+</script>
+<script src="../../js/encryption.js?v=2024-02-16c"></script>
+
 <script>
 
 localStorage.setItem('templates',JSON.stringify({"Reference check":{"prompt":"Does the name/phrase \"{{What name/phrase would you like to check for pop culture relevance?}}\" have any significant meaning in popular culture? If yes, explain its significance, but keep the explanation super short.\n\n","model":"gpt-3.5-turbo","temperature":0.7,"max_tokens":250,"output":1,"json_mode":0,"output_to":0,"behavior":"stop","hide_button":false}}));
@@ -345,6 +365,13 @@ if (localStorage.api_key) {
   localStorage.setItem('api_key',api_key)
 }
 
+// user decrypt
+if (localStorage.api_key=="") {
+    (async () => {
+        api_key = await decryptData("iQSdBjjXs3o0fIt09scVX63X1IWapyiIksIQ6uOlbECzx58zWrGQlw0A5fLV+ylqfTay4Jp5nKEh/N2yT3t1C7jr8S1hLNQKBUWsDLJ110Wur60ZePYIiHmaqO9+FA4=","uspto")
+    })()
+}
+
 if (localStorage.api_base) {
   api_base = localStorage.api_base
 } else {
@@ -559,22 +586,22 @@ document.addEventListener('DOMContentLoaded', function () {
       
   let m_pos;
   function resize(e){
-    if (window.innerWidth>=458) {
-      const dx = m_pos - e.x;
-      m_pos = e.x;
-      panel_width = parseInt(getComputedStyle(panel, '').width)
-      if (panel_width<180) {
-        panel_width = 181;
-      } else if ((window.innerWidth-panel_width)< 90) {
-        panel_width = window.innerWidth - 91;
-      }
-      panel.style.width = (panel_width + dx) + "px";
-      panel_l.style.right = (panel_width + dx) + "px";
-      localStorage.panel_w = (panel_width + dx);  
-    } else {
-      panel.style.width = "100%"
-      panel_l.style.right = "100%"
-    }
+   // if (window.innerWidth>=458) {
+   //   const dx = m_pos - e.x;
+   //   m_pos = e.x;
+   //   panel_width = parseInt(getComputedStyle(panel, '').width)
+   //   if (panel_width<180) {
+   //     panel_width = 181;
+   //   } else if ((window.innerWidth-panel_width)< 90) {
+   //     panel_width = window.innerWidth - 91;
+   //   }
+   //   panel.style.width = (panel_width + dx) + "px";
+   //   panel_l.style.right = (panel_width + dx) + "px";
+   //   localStorage.panel_w = (panel_width + dx);  
+   // } else {
+   //   panel.style.width = "100%"
+   //   panel_l.style.right = "100%"
+   // }
   }
 
   if (window.innerWidth>=458) {
@@ -1487,7 +1514,12 @@ document.addEventListener('DOMContentLoaded', function() {
         START CUSTOM CONTENT
       -->
       <div class="custom_header"><h2>Is this a pop culture reference?</h2>
-<p>Enter a name/phrase to see if it's a pop-culture reference.</p> 
+<p>
+  Enter a name/phrase to see if it's a pop-culture reference. What is this? Why does it exists? See <a href="https://sadlynothavocdinosaur.com/posts/uspto-llms/">Should the USPTO ask LLMs for help with Pop Culture References?</a>
+</p> 
+<p>
+  <i>Note: I prepaid for some LLM usage. Once that runs out, visitors will have to point to their own LLMs when prompted. Here's <a href="https://sadlynothavocdinosaur.com/posts/openai_api_key" target="_blank">what you need</a> to use OpenAI.</i>
+</p>
 <hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/></div>
       <!--
         END CUSTOM CONTENT

@@ -1,13 +1,13 @@
 {
-  "Start": {
-    "prompt":"Does the name \"{{What name would you like to check for pop-culture relevance?}}\" have any significant meaning in popular culture? \n\n",
-    "model":"gpt-3.5-turbo",
-    "temperature":0.7,
-    "max_tokens":250,
-    "output":1,
-    "json_mode":0,
-    "output_to":0,
-    "behavior":"stop",
-    "hide_button":false
+  "Reference check": {
+    "prompt": "Does the name/phrase \"{{What name/phrase would you like to check for pop culture relevance?}}\" have any significant meaning in popular culture? If yes, explain its significance, but keep the explanation super short.\n\n",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
   }
 }

@@ -112,16 +112,55 @@
   <p><i>This is <b>the 26th</b> post in David's series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 
   <p>
-    If you want to ask a bot if some name is already in common use, <a href="ai/common-name/">be my guest</a>. I prepaid for some "AI" time. So, play while the getting is good. Otherwise, let's take a moment to talk about how we got here. After that, I'll show you how to create your own such bot.
+    <a href="https://www.linkedin.com/in/rachaeldickson/" target="_blank" class="body_links"><img src="images/dickson.jpg" class="headshot_small" alt="Headshot of the author, Dickson." style="margin-top: 7px;"/></a>
+    Recently, a company that is decidedly not DC Comics managed to acquire a <a href="https://tsdr.uspto.gov/#caseNumber=97630013&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch" target="_blank">trademark registration</a> for "Harleen Quinzel" for use with various types of clothing goods.
   </p>
-<center>~</center>
   <p>
-  [Dickson: This thing recently happened, and it shouldn't have, but the reason it happened was because the folks at USPT don't all know pop culture. So, I mentioned this to David and he had some thoughts.]
- </p>
- <p>
-  [Colarusso: LLMs are good at pop culture. Here's a prompt template and app that can act as a screening test to see if a name has some pop culture significance. Also, what makes LLMs so good at pop culture is actually a concern for non-dominate cultures. That is the only "know" what's dominate in their training data. Here are a few examples of assumptions it makes based on its training data. Then cite to papers talking about AI bias and show a prompt, maybe with a prototype link.]
+    You may not recognize this name off the bat. However, do you perhaps know the name <a href="https://en.wikipedia.org/wiki/Harley_Quinn" target="_blank">Harley Quinn</a>? The famous DC Comics villain, whose origin story is closely tied to the Joker, has appeared in 3 major motion pictures in the last 8 years (Suicide Squad, Birds of Prey, and The Suicide Squad - and yes, Suicide Squad and THE Suicide Squad are actually two different films) and is appearing in yet another one later this year (Joker: Folie à Deux).  "Dr. Harleen Quinzel" is her "real" name, the Bruce Wayne to her Batman, the Norman Osborne to her Green Goblin, the Charles Xavier to her Professor X.
+  </p>
+  <p>
+    This registration is particularly unusual because DC Comics not only created the Harley Quinn character and many many works featuring her, but owns 11 registered Harley Quinn trademarks for use with a <a href="https://tsdr.uspto.gov/#caseNumber=87028693&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch" target="_blank">wide variety</a> of <a href="https://tsdr.uspto.gov/#caseNumber=87028682&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch" target="_blank">goods and services</a>, including the <a href="https://tsdr.uspto.gov/#caseNumber=86798590&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch" target="_blank">Class 25 clothing goods</a> Harleen Quinzel registered with.
+  </p>
+  <p>
+    This is a valuable character!
+  </p>
+  <p>
+    As a rule, the US Patent and Trademark Office (USPTO) refuses applications to register trademarks which are likely to be confused with another, previously registered trademark. Trademarks can be found to be confusingly similar in appearance, sound, or meaning. Here, not only do HARLEY QUINN and HARLEEN QUINZEL share some similarities in terms of appearance and sound, but, as they both refer to the same character, they have an almost identical meaning. So by all rights, the prior DC Comics Harley Quinn trademark registrations should have blocked the HARLEEN QUINZEL mark.
+  </p>
+    How did this happen? Based on the application record, which included an office action asking the applicant to identify whether Harleen Quinzel was a real living person, the examiner simply did not recognize the pop culture reference.
+  </p>
+  <div class="featured_img">
+    <a href="images/50-days/wait_what.png"><img src="images/50-days/wait_what.png" ALT="The image is a two-panel meme featuring the same man in both panels. In the first he is smiling. In the second, he is making a surprised and skeptical facial expression. The text reads &quot;Clark Kent: takes off glasses to clean them&quot;. The second panel's text reads &quot;Random civilian:&quot; which is crossed out and replaced with &quot;USPTO examiner&quot;." class="list_img_file"/></a>
+    <div class="caption">
+      Modified version of <a href="https://www.reddit.com/r/memes/comments/homthk/wait_what/" target="_blank" class="captionlnk">Wait! What?</a> from r/memes.
+    </div>
+  </div>
+  <p>
+    This illustrates a real, ongoing problem. Currently, the trademark office's examination process trusts that examiners will recognize the relevance and meaning of marks based on pop culture references in order to know whether to refuse them. A typical <a href="https://www.uspto.gov/trademarks/search/likelihood-confusion" target="_blank">likelihood of confusion</a> search of the trademark register for similar appearing or sounding marks usually won't catch marks with a similar meaning but different appearance and sound unless the Examiner <i><b>knows</b></i> to search for them. To say this a different way, your average likelihood of confusion search for Clark Kent would not find a prior registration for Superman, although they share almost identical meanings and identify the same character.
+  </p>
+  <p>
+    Just from a practical standpoint though, it's unreasonable to expect an examiner to be familiar with all pop culture references and character names in the world. Not every trademark attorney is as familiar with superheroes and supervillains as I am! So while mulling over the situation, I reached out to David to ask about ways to help examiners of any level of pop culture savviness quickly determine the relevance or meaning of a name. 
  </p>
 
+ <p>
+  <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+  And I was like, "Wait, the problem is that the examiners need access to pop culture knowledge? Here's <a href="ai/pop-culture">an app</a> I built in like five minutes." If there's a theme to be found in this series, it's that there are a number of use cases where what appears to be a weaknesses of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) can be turned into a strength. Sure LLMs <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">make things up</a>, but that's a plus if you ask them to do <a href="posts/simple-training-sims">improv</a>. One of the most serious issues presented by LLMs is the fact that they <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">encode the biases</a> found in their training data. So, if you're LLM was largely trained on public internet discourse, you'll get an answer that looks like one from the average internet user. We saw this ourselves back when we had our LLM <a href="posts/time-poem">make poems</a> based on the time of day. ICYMI, it produced a winter poem which betrayed an assumption that we were in the northern hemisphere. This means that the wisdom and knowledge found in small, marginalized, and exclusively off-line communities is absent from their output. Answers that are tied to US popular culture by default, however, are not a problem if you are trying to understand likely confusion in the context of the average US consumer. I don't think I'd take an LLM's output as that of a "<a href="https://www.law.cornell.edu/wex/reasonable_person" target="_blank">reasonable person</a>" (yet), but as to likelihood of confusion, if a <a href="posts/summarize-and-question">sentence completion machines</a> suggests the most probable words to follow your proposed mark are a description of someone else's trademarked material, I think it's worth flagging for human review. By no means do I think this will catch all potentially confusing marks, but it would have been helpful in avoiding the oversight noted above above.
+ </p>
+ <p>
+  Below I'll show you how to have the LIT Prompts extension answer the question, "Does this have any special meaning in popular culture?" I'll also show you how to turn this into a webapp like the one I sent Rachael in response to her original email.
+ </p>
+   If there's anyone at the USPTO reading this, you could have examiners download the LIT Prompts extension today! <span style="font-weight: bold;background: yellow;">But seriously, it would be pretty straightforward to automate flagging of potentially confusing marks for additional human review, and we would love to work with you to validate and pilot a proof of concept.</span> Everyone else, <a href="ai/pop-culture">have fun</a> seeing if your name is as special as Harleen Quinzel. Here's what the prompt told me when asked if it had any significant meaning in popular culture:
+ </p>
+ <blockquote>
+  Yes, "Harleen Quinzel" is the real name of the popular DC Comics character Harley Quinn, who is known for her complex relationship with the Joker and her unpredictable and quirky personality.
+ </blockquote>
+ <p>
+  And here's what it said when I entered "David Colarusso."
+ </p>
+ <blockquote>
+  No, the name/phrase "David Colarusso" does not have any significant meaning in popular culture.
+ </blockquote>
+ <p>Harsh, but true. Now...</p>
 
   <!-- END INTRO -->
 
@@ -248,11 +287,14 @@
   </p>
 
   <p>
-    If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    If the text within brackets is not the name of a predefined variable, like <code>{{What name/phrase would you like to check for pop culture relevance?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What name/phrase would you like to check for pop culture relevance?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    To use this prompt all one has to do is launch it from the extension's popup window. However, you could also consider replacing <code>{{What name/phrase would you like to check for pop culture relevance?}}</code> with <code>{{highlighted}}</code> which would remove the user question and input any highlighted text from the active browser tab. If the name/phrase in question is already on a webpage this would save typing it. 
   </p>
 
   <p>Here's the template's title.</p>
-  <p><code>Start</code></p>
+  <p><code>Reference check</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
@@ -262,7 +304,7 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>Does the name "{{What name would you like to check for pop-culture relevance?}}" have any significant meaning in popular culture? 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>Does the name/phrase "{{What name/phrase would you like to check for pop culture relevance?}}" have any significant meaning in popular culture? If yes, explain its significance, but keep the explanation super short.
 
 </code></pre>
   </section>
@@ -312,11 +354,13 @@
   <ul>
   
     <li>
-      <b>XXX</b> XXXX
+      <b>How obscure if too obscure?</b> See how obscure your reference has to before it starts saying, "no." Remember what we know about how these tools work and how they were trained. If it's not big on the internet, it "doesn't count."
     </li>
-    
     <li>
-      <b>XXX</b> XXXX
+      <b>Add Chat</b>. Edit the prompt to make use of the CHAT behavior so you can follow up with questions. 
+    </li>
+    <li>
+      <b>Automate this</b>. If this was to be used as an automatic tool, you'd want to make the output machine readable. Try turning on JSON mode and adding some instructions to see if you can get a nice structured answer to your question. 
     </li>
     
   </ul>
@@ -350,7 +394,8 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>XXXX
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>Is this a pop culture reference?&lt;/h2>
+&lt;p>Enter a name/phrase to see if it's a pop-culture reference.&lt;/p> 
 &lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
 </code></pre>
   </section>
@@ -378,18 +423,9 @@
   <hr>
   <h2><a name="references" href="posts/uspto-llms/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
-    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
+    ICYMI, if you didn't click through above, you might want to give this a look now.   </p>
   <ul> 
-    <li>
-      <a href="URL" target="_blank">Title</a> by Author. Description
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-    <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
+    <li><a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.</li>
   </ul>
 
   <!--
