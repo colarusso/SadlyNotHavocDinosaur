@@ -5,12 +5,12 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Is This Good?: Extract sentiment from social media posts, label each, and structure output as JSON</title>
+  <title>500 Characters? I'll Make It Fit!: Use AI to shorten text</title>
   <meta property="og:type" content="website"/>
-  <meta property="og:publish_date" content="2024-02-22T00:00:00-0500"/>
-  <meta property="og:title" content="Is This Good?: Extract sentiment from social media posts, label each, and structure output as JSON"/>
-  <meta property="og:description" content="To the extent this week's templates have shared a theme, it has been analyze and structure. So, it was only a matter of time before we ran into a use case built around sentiment analysis. Today, we'll build a template that allows you to select the text of several social media posts and label each posts' sentiment while creating a JSON object to hold data about each post, including this new sentiment label. Customarily, this sort of analysis is used on social media to help product or brand management folks stay abreast of public sentiment, or to feed algorithmic stock traders—people like company, buy, people unhappy with company, sell. ;)  "/>
-  <meta property="og:image" content="images/50-days/sentiments_square.png"/>
+  <meta property="og:publish_date" content="2024-02-27T00:00:00-0500"/>
+  <meta property="og:title" content="500 Characters? I'll Make It Fit!: Use AI to shorten text"/>
+  <meta property="og:description" content="Confronted with a character limit, have you ever found your reply too long? If so, today's prompt template is for you. Compress your writing with the click of a button. No longer must we sign off with &quot;I would have written a shorter email, but I did not have the time.&quot; Eat your heart out Pascal! "/>
+  <meta property="og:image" content="images/50-days/darlings_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
 
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Is This Good?</h1>
-  <div class="post_title_02">Extract sentiment from social media posts, label each, and structure output as JSON</div>
+  <h1 class="post_title_01">500 Characters? I’ll Make It Fit!</h1>
+  <div class="post_title_02">Use AI to shorten text</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -95,97 +95,63 @@
         </span>
       </div>
     </div>-->
-    <a href="images/50-days/sentiments.png"><img src="images/50-days/sentiments.png" ALT="A grid of emoji expressing varying emotions. " class="list_img_file"/></a>
+    <a href="images/50-days/darlings.png"><img src="images/50-days/darlings.png" ALT="A collection of legal pads with ample redlines." class="list_img_file"/></a>
     <div class="caption">
-      How Do You Feel, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      Kill Your Darlings, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This is <b>the 24th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
-  <p>
-    To the extent <a href="posts/50-days-of-lit-prompts/#week5">this week's templates</a> have shared a theme, it has been <i>analyze and structure</i>. So, it was only a matter of time before we ran into a use case built around <a href="https://en.wikipedia.org/wiki/Sentiment_analysis" target="_blank">sentiment analysis</a>. Today, we'll build a template that allows you to select the text of several social media posts and label each posts' sentiment while creating a JSON object to hold data about each post, including this new sentiment label. Customarily, this sort of analysis is used on social media to help product or <a href="https://en.wikipedia.org/wiki/Brand_management" target="_blank">brand management</a> folks stay abreast of public sentiment, or to feed <a href="https://www.npr.org/sections/money/2017/04/07/522897876/meet-botus-planet-money-s-stock-trading-twitter-bot" target="_blank">algorithmic stock traders</a>—buy when sentiment is positive, sell when it's negative. ;) 
-  </p>
-  <p>
-    To show off the output, I decided to turn today's template on a <a href="https://mastodon.world/@Mer__edith/111965195258851022" target="_blank">Mastodon post</a> from earlier this week in which Meredith Whittaker announce a new Signal feature. Users can now use Signal without sharing their phone number with other users. It's a feature folks have wanted for a long time, and though the assembled replies are mostly positive, there are one or two neutral and negative comments to be found. For context, positive, nuetral, and neagtive are the triad of traditional sentiment markers. Here's output for the first ten posts, original plus replies.
-  </p>
-  <section class="line-numbers">
-    <pre class="language-javascript" style="white-space:pre-wrap;"><code>{
-      "posts": [
-        {
-          "author": "Meredith Whittaker",
-          "body": "IT IS HAPPENING! Today, Signal launches phone number privacy & usernames! These features let you use Signal w/o sharing your phone number with the people you talk to. Proud to add more privacy to Signal, & proud of the smart, careful work the team did to make this happen ♥️",
-          "sentiment": "positive"
-        },
-        {
-          "author": "Meredith Whittaker",
-          "body": "Also, note: You can sign up for beta to test these features. Note that Apple caps the number of iOS beta testers, and we have reached that limit. If you use Signal on iOS, you can get around this by signing up for Desktop beta, linked to your iOS account.",
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Janet Vertesi",
-          "body": "@Mer__edith hooray and congrats, Meredith and Signal Foundation!  a big step :))",
-          "sentiment": "positive"
-        },
-        {
-          "author": "can",
-          "body": "@Mer__edith The link for the MacOS desktop version doesn't seem to work?",
-          "sentiment": "negative"
-        },
-        {
-          "author": "f.rift :fire_blue:",
-          "body": "@Mer__edith is it still impossible to downgrade in place if you choose to leave the beta program later on android?",
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Eye",
-          "body": "@Mer__edith Thank you for enabling this 👏👍🙂",
-          "sentiment": "positive"
-        },
-        {
-          "author": "Nakul Bhalla :verified:",
-          "body": "@Mer__edith Yay!! 🥳",
-          "sentiment": "positive"
-        },
-        {
-          "author": "Marc Hedlund",
-          "body": "@Mer__edith nice! Congrats on the launch.",
-          "sentiment": "positive"
-        },
-        {
-          "author": "Ethan Marcotte",
-          "body": "@Mer__edith Yessss congratulations on the launch!",
-          "sentiment": "positive"
-        },
-        {
-          "author": "Mr. Completely",
-          "body": "@Mer__edith very welcome update, thank you",
-          "sentiment": "positive"
-        }
-      ]
-    }</code></pre>
-  </section>
+  <p><i>This is <b>the 27th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 
-  <p>What I find interesting about this template isn't its ability to assign labels but the fact that everything it does is based on a simple text input. It is identifying individual posts and their authors, assigning a sentiment, and packaging it all up in <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>. We're not parsing posts via an API; we're just dumping them all into a prompt and letting the LLM do the work. That's quite something. Of course, as with all of the outputs we've seen before, we shouldn't take it as a given that they're right. Proceed with caution. </p>
-
+  <p>
+    Confronted with a character limit, have you ever found your reply too long? If so, today's prompt template is for you. Compress your writing with the click of a button. No longer must we sign off with "I would have written a shorter email, but I did not have the time." Eat your heart out <a href="https://www.npr.org/sections/13.7/2014/02/03/270680304/this-could-have-been-shorter" target="_blank">Pascal</a>!
+  </p>
+  <p>To see the template in action, I have chosen to focus on the <a href="https://www.gutenberg.org/cache/epub/1524/pg1524-images.html#sceneII_8.2" target="_blank">sage advice</a> of Polonius:</p>
+  <blockquote>
+    This business is well ended.</br>
+    My liege, and madam, to expostulate</br>
+    What majesty should be, what duty is,</br>
+    Why day is day, night night, and time is time</br>
+    Were nothing but to waste night, day, and time.</br>
+    Therefore, since brevity is the soul of wit,</br>
+    And tediousness the limbs and outward flourishes,</br>
+    I will be brief. Your noble son is mad.</br>
+    "Mad" call I it, for, to define true madness,</br>
+    What is 't but to be nothing else but mad?</br>
+    But let that go.
+  </blockquote>
+  <p>Which today's template turned into:</p>
+  <blockquote>
+    This business is concluded. I will be brief: Your son is mad. To define true madness is to be nothing else but mad.
+  </blockquote>
+  <p>And when I ran <i>that</i> through the template I got:</p>
+  <blockquote>
+    This business is done. Your son is truly mad.
+  </blockquote>
+  <p>And since I couldn't resist, one more time!</p>
+  <blockquote>
+    The business is done. Your son is mad.
+  </blockquote>
+  <p>Polonius may think brevity is the soul of wit, but he sure doesn't act like it. ;)</p>
+  
   <!-- END INTRO -->
 
-  <h3><a name="build" href="posts/is-this-good/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <h3><a name="build" href="posts/shorten/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/is-this-good/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/shorten/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/is-this-good/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/shorten/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/is-this-good/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/shorten/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/is-this-good/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/is-this-good/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/shorten/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/shorten/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/is-this-good/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/is-this-good/#tires">Kick the Tires</a></li>
-    <li><a href="posts/is-this-good/#references">TL;DR References</a></li>
+    <li><a href="posts/shorten/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/shorten/#tires">Kick the Tires</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -198,7 +164,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="setup" href="posts/is-this-good/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/shorten/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -218,7 +184,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/is-this-good/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/shorten/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -231,7 +197,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/is-this-good/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/shorten/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
     </p>
@@ -268,7 +234,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/is-this-good/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/shorten/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
 
@@ -280,7 +246,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/is-this-good/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/shorten/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -294,11 +260,11 @@
   </p>
 
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. Like yesterday, this prompt pattern is pretty straight forward. Structurally, it also looks a lot like <a href="posts/flag-fallacies/#template">yesterday's template</a>. Highlight the text of the posts you want to examine, and run the template. 
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. This prompt pattern is pretty straight forward. Highlight some text of an email, and run the template. The LLM will generate a shortened version of the text and place it in your clipboard. To accomplish this last part, be sure to set output to "Screen + clipboard." 
   </p>
 
   <p>Here's the template's title.</p>
-  <p><code>Social Sentiment</code></p>
+  <p><code>Shorten text</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
@@ -308,30 +274,9 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>The following is a collection of posts from social media. Your job is to read them and then provide a JSON object specifying their author, content, and assigning them a sentiment (i.e., negative, positive, or neutral). I'll provide an example of the JSON after the text of the posts. Be sure to read all of the post and use the whole context to determine sentiments. 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You're a helpful editor and you're going to help trim some text. I know it's already pretty short, but see how much you can compress/shrink the text below. When you rewrite it, knock off at least 20% of the length, but keep the main points: 
 
-Here are the posts:
-
------- START POSTS ------ 
-
-{{highlighted}}}
-
------- END POSTS ------ 
-
-Now provide a JSON object listing out each of the posts and the sentiment you assigned (i.e., negative, positive, or neutral). If you see a boosted or retweeted post, and it isn't a quote tweet, use the author and text from the original post. The list should be of the following structure which shows a single post: 
-
-{
-  "posts": [
-   {
-    "author":"author of post",
-    "body":"text of the post",
-    "sentiment":"sentiment of the post"
-   }
-  ]
-}
-
-Remember, you should include objects for each of the posts found above. 
-
+{{highlighted}}
 
 </code></pre>
   </section>
@@ -345,13 +290,13 @@ Remember, you should include objects for each of the posts found above.
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
-    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li>
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-<h3><a name="working" href="posts/is-this-good/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+<h3><a name="working" href="posts/shorten/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
   <p>
     To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
   </p>
@@ -374,14 +319,14 @@ Remember, you should include objects for each of the posts found above.
     =================================================
   -->
   <hr>
-  <h2><a name="tires" href="posts/is-this-good/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <h2><a name="tires" href="posts/shorten/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
   </p>
   <ul>
   
     <li>
-      <b>Take it for a spin</b>. Find a thread or timeline you want to examine, and give it a try.
+      <b>Make it brief</b>. After adding this template to your extension, wait for the inevitable moment when you run into a character limit on the web, then give it a go.
     </li>
     
   </ul>
@@ -393,15 +338,13 @@ Remember, you should include objects for each of the posts found above.
     =================================================
   -->
   <hr>
-  <h2><a name="references" href="posts/is-this-good/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/shorten/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
-    ICYMI, if you didn't click through above, you might want to give them a look now.   </p>
+    ICYMI, if you didn't click through above, you might want to give this a look now.   </p>
   <ul> 
     <li>
-      <a href="https://www.npr.org/sections/money/2017/04/07/522897876/meet-botus-planet-money-s-stock-trading-twitter-bot" target="_blank">Planet Money Episode 763: BOTUS</a>. Wall Street is increasingly being taken over by computers and bots, even in the realm of stock-picking. Bots are cheaper, less emotional, and more disciplined than human stock-pickers, and they can process large amounts of information at once. To understand how these stock-picking bots work, the Planet Money podcast built their own bot called @BOTUS. This bot looks at President Trump's Twitter feed and trades stocks based on his tweets, using real money. If Trump tweets positively about a company, the bot buys its stock, and if he tweets negatively, the bot sells it short. The bot holds the position for 30 minutes before getting out. The Planet Money staff members have invested $1,000 of their personal funds in this experiment to see if the bot can make money.
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+      <a href="https://www.gutenberg.org/ebooks/1524" target="_blank">Hamlet, Prince of Denmark</a> by William Shakespeare. I'll take any chance I can to share the fact that Project Gutenberg has a great selection of public domain works available to read on the web or with your e-reader. This link will get you the whole play. Enjoy!
     </li>
-
   </ul>
 
   <!--
@@ -435,7 +378,7 @@ Remember, you should include objects for each of the posts found above.
 	} catch (error) {}*/
 
   (async () => {
-    prompts = await loadFile('posts/is-this-good/prompt_template.txt');
+    prompts = await loadFile('posts/shorten/prompt_template.txt');
   })()
 </script>
 

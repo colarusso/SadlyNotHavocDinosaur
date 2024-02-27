@@ -1,0 +1,13 @@
+{
+  "Shorten text": {
+    "prompt": "You're a helpful editor and you're going to help trim some text. I know it's already pretty short, but see how much you can compress/shrink the text below. When you rewrite it, knock off at least 20% of the length, but keep the main points: \n\n{{highlighted}}\n\n",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
