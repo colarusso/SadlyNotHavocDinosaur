@@ -12,6 +12,16 @@
   --> 
 
   <item>
+    <title>Magnifying Ideas with AI: In which I show you how to use AI to help write something both personal and original, bucking the assumptions that AI writing can never be personal or original</title>
+    <link>https://sadlynothavocdinosaur.com/posts/maginify/</link>
+    <description>Yesterday we used AI to shorten text. That was really a special-case summarization, not too different from our first prompt template. Today, however, we'll write a template we can use to expand text. That's right, we'll select one or two sentences and turn them into a paragraph. </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/writing_partner_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/writing_partner_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/maginify/</guid>
+    <pubDate>Wed, 28 Feb 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
     <title>500 Characters? I'll Make It Fit!: Use AI to shorten text</title>
     <link>https://sadlynothavocdinosaur.com/posts/shorten/</link>
     <description>Confronted with a character limit, have you ever found your reply too long? If so, today's prompt template is for you. Compress your writing with the click of a button. No longer must we sign off with "I would have written a shorter email, but I did not have the time." Eat your heart out Pascal! </description>

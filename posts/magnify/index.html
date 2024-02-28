@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>Magnifying Ideas and Expanding Text with AI: In which I show you how to have AI write something both personal and original, bucking the assumptions that AI writing can never be personal or original</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-02-28T00:00:00-0500"/>
+  <meta property="og:title" content="Magnifying Ideas and Expanding Text with AI: In which I show you how to have AI write something both personal and original, bucking the assumptions that AI writing can never be personal or original"/>
+  <meta property="og:description" content="Yesterday we used AI to shorten text. That was really a special-case summarization, not too different from our first prompt template. Today, however, we'll write a template we can use to expand text. That's right, we'll select one or two sentences and turn them into a paragraph.  "/>
+  <meta property="og:image" content="images/50-days/writing_partner_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Magnifying Ideas and Expanding Text with AI</h1>
+  <div class="post_title_02">In which I show you how to have AI write something both personal and original, bucking the assumptions that AI writing can never be personal or original</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/writing_partner.png"><img src="images/50-days/writing_partner.png" ALT="A woman drinks a coffee while talking to a robot who is writing on a notepad." class="list_img_file"/></a>
+    <div class="caption">
+      Writing Assistant, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 28th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+
+  <p>
+    Yesterday we used AI to <a href="posts/shorten">shorten text</a>. That was really a special-case summarization, not too different from our <a href="posts/summarize-and-question">first prompt template</a>. Today, however, we'll write a template we can use to expand text. That's right, we'll select one or two sentences and turn them into a paragraph.
+  </p>
+  <p>
+    Here it's worth remembering something else from that first post. I observed that I saw a lot of folks wanting to feed 5 words to AI and get out 500 (e.g., write me an essay discussing the lessons of the French Revolution) and suggested that this was like looking through the wrong end of the telescope. What people needed to be doing was feeding the AI 500 words and asking it to generate 5. In this way we could mitigate <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a> and the like. You may also remeber this <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">observation</a> from Ted Chiang which showed up the first time we <a href="posts/decline-requests">considered</a> having AI "write" something: 
+</p>
+<blockquote>
+  Some might say that the output of large language models doesn't look all that different from a human writer's first draft, but, again, I think this is a superficial resemblance. Your first draft isn't an unoriginal idea expressed clearly; it's an original idea expressed poorly, and it is accompanied by your amorphous dissatisfaction, your awareness of the distance between what it says and what you want it to say. That's what directs you during rewriting, and that's one of the things lacking when you start with text generated by an A.I.
+</blockquote>
+<p>
+  In our <a href="posts/decline-requests">template</a> we dodged this bullet by distinguishing between Writing with a capital W and plain old writing. That is, we employed AI's assistance only in the drafting of boilerplate form-like text. In fact, I <a href="posts/anger-translator">admitted</a> to NOT using any AI assistance in the writing of these introductions, citing that very text from Chiang and explaining, "this writing is where I figure things out." So, what gives? Am I advocating looking through the wrong end of the telescope? Not exactly. 
+</p>
+<p>
+  In the same <a href="posts/anger-translator">post</a> where I admitted to forgoing AI's assistance, I teased the idea that I would start to explore how one might responsibly use <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs) for "Writing." This is a first step in that exploration. It's also another step on our journey to create advanced simulations because the way we'll get an LLM to expand on our text in a responsible way is to have it simulate a writing assistant who questions us, the author. After our <a href="posts/socrates-lives">Socrates simulation</a>, the idea of a dialogue shouldn't be a surprise, but as we've <a href="posts/rpg-quanta">noted</a>, our dialogs have been rather shallow, lacking the ability to do anything after reaching a goal. Today that changes. 
+</p>
+<p>
+  Today's prompt will have our "assistant" ask us follow up questions inspired by our original text and subsequent answers. After it has gotten enough context, it will take a stab at writing some text to help flesh things out. The trick to expanding our short sentence into a paragraph is to have us write a couple of paragraphs. This means we avoid looking through the wrong end of the telescope by feeding the LLM more text than we get out.
+</p>
+<p>
+  Is this really Writing with a capital W? Maybe. It's hard to say. I suspect the answer depends on how you approach the LLM's questions. It is after all a tool, and it can be used with varying degrees of skill. If you put a lot into your answers, the output is recognizably yours. If you're curt, it tends to "fill in the gaps" which we know to be a <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">problem</a>. 
+</p>
+<p>
+  Here's an exchange I had with the prompt triggered by this text, "I went for a run today." Note: I said I'd show you how AI could help write something personal and original. I didn't say it would be good. ;)
+</p>
+<iframe src="posts/magnify/transcript.html" width="100%" height="350px"></iframe>
+<p>
+  Like I said, I didn't say it would be good, but as you can see the output is quite clearly my words. This is not a blury JPEG of the web. It rearranged a few things, but it's clearly my story. It might even be an okay journal entry. Also, it go me to admit something I wouldn't usually, that running is "me time." I feel a little guilty calling it that, but here we are. No doubt I fell victim to the <a href="https://en.wikipedia.org/wiki/ELIZA_effect" target="_blank">ELIZA effect</a>. Which is to say, the structure of a dialog tricked me into revealing something I might not have absent the prompt because on some level I felt like I was having a real conversation.
+</p>
+<p>
+  As we often do in this series, we have found a way to recast one of the issues with LLMs as a strength. Usually, the tendency to treat LLMs as people is a problem, but it proves a useful way to break down ones guard. Many AI supporters suggest that AI writing can help folks overcome the blank page problem. Chiang reminds us that the blank page problem isn't a bug. It's a feature. We need the struggle, but maybe, just maybe, if we're very careful, we can use LLMs to help us get the ball rolling without having them do all the hard work. This should bring to mind a quote from <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">another piece</a> by Chiang.
+</p>
+<blockquote>
+  If there is any lesson that we should take from stories about genies granting wishes, it's that the desire to get something without effort is the real problem. Think about the story of "The Sorcerer's Apprentice," in which the apprentice casts a spell to make broomsticks carry water but is unable to make them stop. The lesson of that story is not that magic is impossible to control: at the end of the story, the sorcerer comes back and immediately fixes the mess the apprentice made. The lesson is that you can't get out of doing the hard work. The apprentice wanted to avoid his chores, and looking for a shortcut was what got him into trouble. 
+</blockquote>
+<p>It turns out the way to get AI to write something interesting is to avoid using it as a shortcut. So...</p>
+
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/maginify/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/maginify/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/maginify/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/maginify/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/maginify/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/maginify/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/maginify/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/maginify/#tires">Kick the Tires</a></li>
+  </ul>
+  <p>
+    <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
+  </p>
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/maginify/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/maginify/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/maginify/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/maginify/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/maginify/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{scratch}}</code> and <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. The <code>{{scratch}}</code> variable contains the text in your Scratch Pad. Remember, the scratch pad is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. However, today we'll be using the Scratch Pad as a place to store our work as we go. Which is to say, you won't need to access it manually when using this prompt. 
+  </p>
+  <p>
+    If the text within brackets is not the name of a predefined variable, like <code>{{What made you think that?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What made you think that?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    Here we'll have the prompts write novel questions such as <code>{{What made you think that?}}</code> and pass them to the next template using the <code>{{passThrough}}</code> variable. We use the Post-run Behavior parameter to govern what happens after a template is run. If you use Post-run Behavior to send one template's output to another template, the first template's output can be read by the second template via the <code>{{passThrough}}</code> variable. 
+  </p>
+  <p>
+    We'll also use JSON mode to format some of the prompt outputs as <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, and as we know from our <a href="posts/translate-selected">translation template</a>, when the passThrough variable is JSON, you can access top-level keys by calling them like this <code>{{{{passThrough["reply"]}}*}}</code></p>
+  <p>
+    To use our template, simply select the text you want to expand and run the "Expand selected (short) text" template. That being said, this is actually the most complicated prompt we've seen so far. We'll use the DYNAMIC behavior for the first time and there are actually 6 individual templates all feeding into each other. FWIW, using the DYNAMIC Post-run Behavior will trigger the promt named in the <code>{{passThrough["next"]}}</code> variable.
+  <p>
+    Admittedly, that's a lot to deal with. So, to help make this easier to understand, I've used the LIT Prompts comments feature. That is, any text between <code>[#</code> and <code>#]</code> isn't part of the template's output. This will let me explain as we go. <b>That is, text in the comments is for YOU, not the LLM.</b> 
+  </p>
+
+  <p>Here's the first template's title.</p>
+  <p><code>Expand selected (short) text</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This template is the first in a chain of templates that can either end or loop back on itself. It works by getting the LLM to generate some dialog and send that along with text the user has highlighted to another template. That template takes an action and feeds into another template, and so on and so on. Note: we're using gpt-3.5-turbo-1106 as a model here and in some of the subsequent templates in this chain. When this model is retired it will break things and require updating. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You will ask them some questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer will start by reading what they have so far. 
+
+WRITER: {{highlighted}}
+
+Think about how your character would respond and craft an appropriate reply. You will provide the text of this reply along with one other piece of information as a JSON object. The object will have two key-value pairs. The first key-value pair's key is "transcript" and the value is that of the transcript above, starting with "WRITER:" and followed by the text of their copy. Be sure to escape an quotation marks. The second key-value pair has a key called "reply" and its value is the response you crafted above (i.e., it is the text of your character's reply to the above, your first question for the writer). Include only the text of your reply (e.g., do NOT preface the text with the name of the speaker).
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+
+  <p>Here's the next template's title.</p>
+  <p><code>Role Play 1</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{passThrough["transcript"]}}
+YOU: {{passThrough["reply"]}}
+WRITER: {{{{passThrough["reply"]}}*}} [# Here we've encased {{passThrough["reply"]}} inside a set of curly brackets. Imagine {{passThrough["reply"]}} has the value "What made you think that?" Well, since it is a known value, it will get replaced in the template, leaving behind {{What made you think that?}}. However, this is not a known value. So the user will be asked "What made you think that?" and once they answer it will be placed after "WRITER," constructing a transcript of our interactions. Why the asterisk? It's a way to force user input. Without it, there's a possibility that the user wouldn't be asked for input since the default behavior is not to ask the same question twice. Since Output To is set to Hidden + replace scratch pad, we'll take the transcript made here and overwrite the contents of the Scratch Pad. And since Post-Run Behavior is set to "Role Play 2" that template will be triggered. #]
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
+    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Hidden + replace scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen to hide the output from the screen and replace the the current text of the Scrtach Pad with this output.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+  <p>Here's the next template's title.</p>
+  <p><code>Role Play 2</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This template looks very much like the first in our chain, except it pulls from the Scratch Pad and feeds into "Role Play 3." #] You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asks them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. 
+
+{{scratch}}
+
+Think about how your character would respond and craft an appropriate reply. You will provide the text of this reply along with one other piece of information as a JSON object. The object will have two key-value pairs. The first key-value pair's key is "transcript" and the value is that of the transcript above, starting with "WRITER:" the text of their copy and the subsequent questions and answers. Be sure to escape an quotation marks. And DO NOT repeat yourself (i.e., ask new questions). The second key-value pair has a key called "reply" and its value is the response you crafted above (i.e., it is the text of your character's reply to the above, your question for the writer). Make sure it's a question. Include only the text of your reply (e.g., do NOT preface the text with the name of the speaker). 
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>2000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+  <p>Here's the next template's title.</p>
+  <p><code>Role Play 3</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>YOU: {{passThrough["reply"]}}
+WRITER: {{{{passThrough["reply"]}}*}} [# Here unlike "Role Play 1" we append to, rather than overwrite, the Scratch Pad, meaning we just add to the transcript before passing things on to "Role Play 4." Again we place an asterisk before the closing curly brackets to force user input. #]
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
+    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Hidden + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen to hide the output from the screen and append the output to the end of the text already in the Scrtach Pad.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+  <p>Here's the next template's title.</p>
+  <p><code>Role Play 4</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This looks a lot like "Role Play 2," but since it uses the Post-run Behavior DYNAMIC, it can trigger different templates based on the contents of the transcript (i.e., it will either loop back to "Role Play 2" or move us along to "Role Play 5. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asks them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. 
+
+{{scratch}}
+
+You will provide a JSON object in response to the above with a key named `next`. In your role as a writing assistant, consider if there is enough material in the above transcript to pad the original copy by 20%. You probably need at least three or four rounds of Q&A. However, if the replies are light on content, you may need more. If you have enough material to add 20% in length to the original copy, set the value of `next` to "Role Play 5".  Otherwise, if you feel you need more, the value of `next` should be "Role Play 2". 
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
+    <li><b>Post-run Behavior:</b> <code>DYNAMIC</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the promt named in the <code>passThrough["next"]</code> variable.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+  <p>Here's the next template's title.</p>
+  <p><code>Role Play 5</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# Having collected more context from the user, we're now ready to produce some new text and copy that to the clipboard (Output To = Screen + clipboard). #]You are a helpful writing assistant. You've just had a conversation with a writer about some copy they're working on, and your task is to take what you learned from that conversation and rewrite the original copy such that its about 20% longer. Here's the text of your conversation. The writer began by reading the copy they have so far.
+
+{{scratch}}
+
+Use what you learned above to rewrite the original copy, adding details learned above. Do your best to keep the writer's voice and style while adding relevant details from your conversation to that first entry. Do NOT embellish! Do NOT make things up! Keep your additions firmly based on the content of your conversation, and don't make your copy too long! You goal is simply to flesh out the original text (i.e., the writer's first utterance above), adding about 20% in length. That being said, provide your new longer copy below.
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+<h3><a name="working" href="posts/maginify/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+<p>
+  To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+</p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/maginify/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>Writes block?</b> The next time you find yourself suffering from writers block, try turning this tool on whatever you've managed to get on the page. 
+    </li>
+    <li>
+      <b>Try a different assistant.</b> Edit the prompts to change what type of questions it asks by suggesting a different persona. Give it some personality. 
+    </li>
+    
+  </ul>
+    <!--
+    =================================================
+
+                       References
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="references" href="posts/maginify/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
+  <ul> 
+
+    <li>
+      <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">ChatGPT Is a Blurry JPEG of the Web</a> by Ted Chiang. Writing at the beginning of ChatGPT's rise to prominence, this article discusses the analogy between language models like ChatGPT and lossy compression algorithms. Chiang argues that while models can repackage/compress web information, they lack true understanding. Ultimately, Chiang concludes that starting with a blurry copy is not ideal when creating original content and that the struggling to express thoughts is an essential element of the writing process. 
+    </li>
+
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+    </li>
+
+    <li>
+      <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> by Ted Chiang.
+      This article explores the potential risks and consequences of artificial intelligence (A.I.) in relation to capitalism. Chiang suggests that A.I. can be seen as a management-consulting firm, similar to McKinsey & Company, which concentrates wealth and disempowers workers. He argues that A.I. currently assists capital at the expense of labor, and questions whether there is a way for A.I. to assist workers instead of management. Chiang also discusses the need for economic policies to distribute the benefits of technology appropriately, as well as the importance of critical self-examination by those building world-shaking technologies. He concludes by emphasizing the need to question the assumption that more technology is always better and to engage in the hard work of building a better world. <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+    </li>
+
+
+  </ul>
+
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+  (async () => {
+    prompts = await loadFile('posts/maginify/prompt_template.txt');
+  })()
+</script>
+
+</BODY></HTML>
