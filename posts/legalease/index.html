@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>Translate from Legalease: AI tools for rewriting texts in plain language</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-02-29T00:00:00-0500"/>
+  <meta property="og:title" content="Translate from Legalease: AI tools for rewriting texts in plain language"/>
+  <meta property="og:description" content=" "/>
+  <meta property="og:image" content="images/50-days/explaining_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Translate from Legalease</h1>
+  <div class="post_title_02">AI tools for rewriting texts in plain language</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/explaining.png"><img src="images/50-days/explaining.png" ALT="A robot explaining the law to a group of children." class="list_img_file"/></a>
+    <div class="caption">
+      Force Majeure, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 29th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+
+  <p>
+    Instead of feeding 5 words to a <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language model</a> (LLM) and expecting 500 (e.g., write me an essay discussing the lessons of the French Revolution), more folks should be feeding their AIs 500 words and asking them to generate 5. This funneling approach tends to mitigate <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a> and the <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">biases</a> that creepin when LLM's free associate. If you're feeding in more than you expect to get out, you're looking through the wrong end of the telescope. Consequently, we've created a good number of templates that work with <a href="posts/summarize-and-question">summarization</a> and <a href="posts/summarize-and-question">entity extraction</a>. Restructuring existing text is one of the things LLMs excel at. So, today we'll ask our prompt to help turn complicated texts into plain language. 
+  </p>
+  <p>
+    This is actually a use case I have some experience with as my lab had experimented with getting LLMs to make such rewrites when summarizing <a href="https://suffolklitlab.org/docassemble-AssemblyLine-documentation/assets/files/Beyond%20Readability%20with%20RateMyPDF-306d8c3ae5c5cb2ff33d436a859d1581.pdf" target="_blank">court forms</a>. Generally speaking, LLMs do a pretty good job of making legalease into something more people could understand. That being said, a word of caution. I don't actually think these tools are at the stage where they can be trusted to rewrite complex text in plain language absent human supervision.
+  </p>
+  <p>
+    There's a quote I've included alongside every <a href="posts/legalease/#template">prompt pattern</a> from the statistician George Box, "[A]ll models are wrong, but some are useful." It reminds us not to confuse the map for the teritory. Remember, maps are models and they are to some extent wrong. They don't show everything, but they can be useful. I <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">tend to</a> draw two actionable insights from the Box quote. "Because models are wrong, their output should start, not end, discussion. To determine if a model is useful, one must ask 'compared to what?'" So, the plain language write up produced by these tools should start the discussion. It's a first draft, and I think it's helpful esp. when you consider the the alternative is rewriting the text from scrtach. In the hands of someone who can properly evaluate the output, it's a great first step. Let's see how good. Here's the current OpenAI <a href="https://openai.com/policies/business-terms" target="_blank">Business Terms</a> (the terms governing their API). 
+  </p>
+    
+
+  <textarea style="height:250px;width:100%;" readonly>Business terms
+Updated November 14, 2023
+
+(Previous versions)
+
+These OpenAI Business Terms govern use of our APIs, ChatGPT Enterprise, ChatGPT Team, and other services for businesses and developers. Use of our services for individuals, such as ChatGPT or DALL·E, are governed by the Terms of use.
+
+
+Thank you for choosing OpenAI!
+
+These Business Terms are an agreement between OpenAI, L.L.C. and you (“Customer”) that governs your use of our Services (as defined below). If you reside within a European Economic Area country or Switzerland, your agreement is with OpenAI Ireland Ltd. By signing up to use the Services, you agree to be bound by these Business Terms. You represent to us that you are lawfully able to enter into contracts and, if you are entering into these Business Terms for an entity, that you have legal authority to bind that entity. These Business Terms also refer to and incorporate the Service Terms, Sharing & Publication Policy, Usage Policies, and any other guidelines or policies we may provide in writing (the “OpenAI Policies”) and any ordering document signed by you and OpenAI or OpenAI webpage that you use to purchase the Services (an “Order Form”) (collectively, the “Agreement”).
+1. Services
+
+1.1 Use of Services. We grant you a non-exclusive right to access and use the Services during the Term (as defined below). This includes the right to use OpenAI’s application programming interfaces (“APIs”) to integrate the Services into your applications, products, or services (each a “Customer Application”) and to make Customer Applications available to End Users (as defined below). “Services” means any services for businesses and developers we make available for purchase or use, along with any of our associated software, tools, developer services, documentation, and websites, but excluding any Third Party Offering.
+
+1.2 Third-Party Offering. Third parties may offer products, services, or content through the Services (“Third Party Offering”). If you elect, in your sole discretion, to access or use a Third Party Offering (including by making it available via a Customer Application), your access and use of the Third Party Offering is subject to this Agreement and any additional terms applicable to the Third Party Offering.
+
+1.3 Responsibilities for Your Account. You must provide accurate and up-to-date account information. You are responsible for all activities that occur under your account, including the activities of any end user (each, an “End User”) who is provisioned with an account under your account (an “End User Account”) or accesses the Services through your Customer Application. You may not make account access credentials available to third parties, share individual login credentials between multiple users on an account, or resell or lease access to your account or any End User Account. You will promptly notify us if you become aware of any unauthorized access to or use of your account or our Services.
+2. Restrictions
+
+We own all right, title, and interest in and to the Services. You only receive rights to use the Services as explicitly granted in this Agreement. You will not, and will not permit End Users to:
+
+(a) use the Services or Customer Content (as defined below) in a manner that violates any applicable laws or OpenAI Policies;
+
+(b) use the Services or Customer Content in a manner that infringes, misappropriates, or otherwise violates any third party’s rights;
+
+(c) send us any personal information of children under 13 or the applicable age of digital consent or allow minors to use our Services without consent from their parent or guardian;
+
+(d) reverse assemble, reverse compile, decompile, translate, engage in model extraction or stealing attacks, or otherwise attempt to discover the source code or underlying components of the Services, algorithms, and systems of the Services (except to the extent these restrictions are contrary to applicable law);
+
+(e) use Output (as defined below) to develop any artificial intelligence models that compete with our products and services. However, you can use Output to (i) develop artificial intelligence models primarily intended to categorize, classify, or organize data (e.g., embeddings or classifiers), as long as such models are not distributed or made commercially available to third parties and (ii) fine tune models provided as part of our Services;
+
+(f) use any method to extract data from the Services other than as permitted through the APIs; or
+
+(g) buy, sell, or transfer API keys from, to or with a third party.
+3. Content
+
+3.1 Customer Content. You and End Users may provide input to the Services (“Input”), and receive output from the Services based on the Input (“Output”). We call Input and Output together “Customer Content.” As between you and OpenAI, and to the extent permitted by applicable law, you (a) retain all ownership rights in Input and (b) own all Output. We hereby assign to you all our right, title, and interest, if any, in and to Output.
+
+3.2 Our Obligations for Customer Content. We will process and store Customer Content in accordance with our Enterprise privacy commitments. We will only use Customer Content as necessary to provide you with the Services, comply with applicable law, and enforce OpenAI Policies. We will not use Customer Content to develop or improve the Services.
+
+3.3 Your Obligations for Customer Content. You are responsible for all Input and represent and warrant that you have all rights, licenses, and permissions required to provide Input to the Services. You are solely responsible for all use of the Outputs and evaluating the Output for accuracy and appropriateness for your use case, including by utilizing human review as appropriate. 
+
+3.4 Similarity of Output. You acknowledge that due to the nature of our Services and artificial intelligence generally, Output may not be unique and other users may receive similar content from our services. Responses that are requested by and generated for other users are not considered your Output. Our assignment of Output  above does not extend to other users’ output or any content delivered as part of a Third Party Offering.
+4. Confidentiality
+
+4.1 Use and Nondisclosure. “Confidential Information” means any business, technical or financial information, materials, or other subject matter disclosed by one party (“Discloser”) to the other party (“Recipient”) that is identified as confidential at the time of disclosure or should be reasonably understood by Recipient to be confidential under the circumstances. For the avoidance of doubt, Confidential Information includes Customer Content. Recipient agrees it will: (a) only use Discloser's Confidential Information to exercise its rights and fulfill its obligations under this Agreement, (b) take reasonable measures to protect the Confidential Information, and (c) not disclose the Confidential Information to any third party except as expressly permitted in this Agreement.
+
+4.2 Exceptions. The obligations in Section 4.1 do not apply to any information that (a) is or becomes generally available to the public through no fault of Recipient, (b) was in Recipient’s possession or known by it prior to receipt from Discloser, (c) was rightfully disclosed to Recipient without restriction by a third party, or (d) was independently developed without use of Discloser’s Confidential Information. Recipient may disclose Confidential Information only to its employees, contractors, and agents who have a need to know and who are bound by confidentiality obligations at least as restrictive as those of this Agreement. Recipient will be responsible for any breach of this Section 4 by its employees, contractors, and agents. Recipient may disclose Confidential Information to the extent required by law, provided that Recipient uses reasonable efforts to notify Discloser in advance.
+5. Security
+
+5.1 Our Security Program. We will maintain an information security program (including the adoption and enforcement of internal policies and procedures) designed to (a) protect the Services and Customer Content against accidental or unlawful loss, access, or disclosure, (b) identify reasonably foreseeable and internal risks to security and unauthorized access, and (c) minimize security risks, including through regular risk assessments and testing. 
+
+5.2 Our Security Obligations. As part of our information security program, we will: (a) implement and enforce policies related to electronic, network, and physical monitoring and data storage, transfer, and access; (b) deploy production infrastructure behind VPNs where possible; (c) require multi-factor authentication for employees; (d) configure network security, firewalls, accounts, and resources for least-privilege access; (e) maintain a logging and incident response process; (f) maintain corrective action plans to respond to potential security threats; and (g) conduct periodic reviews of our security and the adequacy of our information security program as aligned to industry best practices and our own policies and procedures.
+6. Privacy
+
+6.1 Personal Data. If you use the Services to process personal data, you must (a) provide legally adequate privacy notices and obtain necessary consents for the processing of personal data by the Services, (b) process personal data in accordance with applicable law, and (c) if processing “personal data” or “Personal Information” as defined under applicable data protection laws, execute our Data Processing Addendum by filling out this form.
+
+6.2 HIPAA. You agree not to use the Services to create, receive, maintain, transmit, or otherwise process any information that includes or constitutes “Protected Health Information”, as defined under the HIPAA Privacy Rule (45 C.F.R. Section 160.103), unless you have signed a Healthcare Addendum and Business Associate Agreement (together, the “Healthcare Addendum”) with us prior to creating, receiving, maintaining, transmitting, or otherwise processing this information.
+7. Payment; Taxes
+
+7.1 Fees and Billing. You agree to pay all fees charged to your account (“Fees”) according to the prices and terms on the Pricing Page, or as otherwise stated in an Order Form. Price changes on the Pricing Page will be effective immediately for all price decreases or changes made for legal reasons. All other price changes will be effective 14 days after they are posted. We have the right to correct pricing errors or mistakes even after issuing an invoice or receiving payment. You authorize us and our third-party payment processor(s) to charge the payment method provided on your account on an agreed-upon periodic basis, but we may reasonably change the date on which the charge is posted. Fees are payable in U.S. dollars and are due upon invoice issuance, unless otherwise agreed in an Order Form. Payments are nonrefundable except as provided in this Agreement.
+
+7.2 Service Credits. You may need to prepay for Services through the purchase of credits (“Service Credits”) or we may provide you with promotional Service Credits from time-to-time. All Service Credits are subject to our Service Credit Terms.
+
+7.3 Taxes. Fees are exclusive of taxes, which we will charge as required by applicable law in connection with the Services. We will use the name and address in your account as the place of supply for tax purposes. 
+
+7.4 Disputes and Late Payments. To dispute an invoice, you must contact ar@openai.com within thirty (30) days of issuance. Overdue undisputed amounts may be subject to a finance charge of 1.5% of the unpaid balance per month, and we may suspend the Services immediately after providing written notice of late payment.
+8. Term; Termination
+
+8.1 Term. The term of this Agreement will commence upon the earlier of your online acceptance of these Business Terms, the Effective Date of an Order Form, or the date you first use the Services, and will remain in effect until terminated pursuant to this Section 8 (“Term”). If you purchase a subscription to the Services, the subscription term will automatically renew for successive periods unless either of us gives the other notice of its intent not to renew. That notice must be given at least thirty days before the start of the next renewal period. 
+
+8.2 Termination. Unless you purchase Services for a committed duration, you may terminate this Agreement at any time by deleting your account. Both you and OpenAI may terminate this Agreement upon written notice (a) if the other party materially breaches this Agreement and does not cure the breach within thirty (30) days after receiving written notice of the breach or (b) if the other party ceases its business operations or becomes subject to insolvency proceedings. We may suspend your or any End User’s access to the Services or terminate this Agreement or any Order Form: (i) if required to do so by law; (ii) to prevent a security risk or other credible risk of harm or liability to us, the Services, or any third party; or (iii) for repeated or material violations of the OpenAI Policies. We will use reasonable efforts to notify you of any suspension or termination and give you the opportunity to resolve the issue prior to suspension or termination. 
+
+8.3 Effect of Termination. Termination or expiration will not affect any rights or obligations, including the payment of amounts due, which have accrued under this Agreement up to the date of termination or expiration. Upon termination or expiration of this Agreement, the provisions that are intended by their nature to survive termination will survive and continue in full force and effect in accordance with their terms, including confidentiality obligations, limitations of liability, and disclaimers. Upon termination of this Agreement, we will delete all Customer Content from our systems within 30 days, unless we are legally required to retain it.
+9. Warranties; Disclaimer
+
+9.1 Warranties. We warrant that, during the Term, when used in accordance with this Agreement, the Services will conform in all material respects with the documentation we provide to you or otherwise make publicly available.
+
+9.2 Disclaimer. Except for the warranties in this Section 9, the Services are provided “as is” and we and our affiliates and licensors hereby disclaim all warranties, express or implied, including all implied warranties of merchantability, fitness for a particular purpose and title, noninfringement, or quiet enjoyment, and any warranties arising out of course of dealing or trade usage. Despite anything to the contrary, we make no representations or warranties (a) that use of the Services will be uninterrupted, error free, or secure, (b) that defects will be corrected, (c) that Customer Content will be accurate, or (d) with respect to Third Party Offerings.
+10. Indemnification
+
+10.1 By Us. We agree to defend and indemnify you for any damages finally awarded by a court of competent jurisdiction and any settlement amounts payable to a third party arising out of a third party claim alleging that the Services (including training data we use to train a model that powers the Services) infringe any third party intellectual property right. This excludes claims to the extent arising from: (a) combination of any Services with products, services, or software not provided by us or on our behalf, (b) fine-tuning, customization, or modification of the Services by any party other than us, (c) the Input or any training data you provide to us, (d) your failure to comply with this Agreement or laws, regulations, or industry standards applicable to you, or (e) Customer Applications (if the claim would not have arisen but for your Customer Application). If we reasonably believes that all or any portion of the Services  is likely to become the subject of any infringement claim, we (x) will procure, at our expense, the right for you to continue using the Services in accordance with this Agreement, (y) will replace or modify the allegedly infringing Service so it is non-infringing, or (z), if (x) and (y) are not commercially practicable, we may, in our sole discretion, terminate this Agreement upon written notice to you and refund any prepaid amounts for unused Services. You will promptly comply with all reasonable instructions we provide you with respect to (x) through (y) above, including any instruction to replace, modify, or cease use of an impacted Service.
+
+10.2 By Customer. You agree to indemnify, defend, and hold us and our affiliates and licensors harmless against any liabilities, damages, and costs (including reasonable attorneys’ fees) payable to a third party arising out of a third party claim related to (a) use of the Services in violation of this Agreement (including violation of OpenAI Policies), (b) Customer Applications (if any), or (c) Input.
+
+10.3 Indemnification Procedure. A party seeking indemnity will provide the indemnifying party with prompt written notice upon becoming aware of any claim, reasonable cooperation in the defense of or investigation of the claim (including preserving and sharing the applicable Customer Content), and allow the indemnifying party sole control of defense and settlement of the claim, provided that the party seeking indemnity is entitled to participate in its own defense at its sole expense. The indemnifying party cannot enter into any settlement or compromise of any claim without prior written consent of the other party, which will not be unreasonably withheld, except that the indemnifying party may without consent enter into any settlement of a claim that resolves the claim without liability to the other party, impairment to any of the other party’s rights, or requiring the other party to make any admission of liability. THE REMEDIES IN THIS SECTION 10 ARE THE SOLE AND EXCLUSIVE REMEDIES FOR ANY THIRD PARTY CLAIM THAT THE SERVICES OR CUSTOMER CONTENT INFRINGE INTELLECTUAL PROPERTY RIGHTS.
+11. Limitation of Liability
+
+11.1 Limitations on Indirect Damages. Except for (i) a party’s gross negligence or willful misconduct, (ii) your breach of Section 2 (Restrictions), (iii) either party’s breach of its confidentiality obligations under Section 4 (Confidentiality), (iv) our breach of Section 5 (Security), or (v) a party’s indemnification obligations under this Agreement, neither you nor OpenAI or our respective affiliates or licensors will be liable under this Agreement for any indirect, punitive, incidental, special, consequential, or exemplary damages (including lost profits) even if that party has been advised of the possibility of those damages.
+
+11.2 Liability Cap. Except for (i) a party’s gross negligence or willful misconduct or (ii) a party’s indemnification obligations under this Agreement, each party’s total liability under the Agreement will not exceed the total amount you have paid to us in the twelve (12) months immediately prior to the event giving rise to liability. The foregoing limitations will apply despite any failure of essential purpose of any limited remedy and to the maximum extent permitted under applicable law.
+12. Trade Controls
+
+You must comply with all applicable trade laws, including sanctions and export control laws. Our Services may not be used in or for the benefit of, or exported or re-exported to (a) any U.S. embargoed country or territory or (b) any individual or entity with whom dealings are prohibited or restricted under applicable trade laws. Our Services may not be used for any end use prohibited by applicable trade laws, and your Input may not include material or information that requires a government license for release or export.
+13. Dispute Resolution
+
+YOU AGREE TO THE FOLLOWING MANDATORY ARBITRATION AND CLASS ACTION WAIVER PROVISIONS:
+
+13.1 MANDATORY ARBITRATION. You and OpenAI agree to resolve any claims arising out of or relating to this Agreement or our Services, regardless of when the claim arose, even if it was before this Agreement existed (a “Dispute”), through final and binding arbitration.
+
+13.2 Informal Dispute Resolution. We would like to understand and try to address your concerns prior to formal legal action. Before either of us files a claim against the other, we both agree to try to resolve the Dispute informally. You agree to do so by sending us notice through this form. We will do so by sending you notice to the email address associated with your account. If we are unable to resolve a Dispute within 60 days, either of us has the right to initiate arbitration. We also both agree to attend an individual settlement conference if either party requests one during this time. Any statute of limitations will be tolled during this informal resolution process.
+
+13.3 Arbitration Forum. Both you or OpenAI may commence binding arbitration through National Arbitration and Mediation (NAM), an alternative dispute resolution provider, and if NAM is not available, you and OpenAI will select an alternative arbitral forum. The initiating party must pay all filing fees for the arbitration and payment for other administrative and arbitrator’s costs will be governed by the arbitration provider’s rules. If your claim is determined to be frivolous, you are responsible for reimbursing us for all administrative, hearing, and other fees that we have incurred as a result of the frivolous claim.
+
+13.4 Arbitration Procedures. The arbitration will be conducted by telephone, based on written submissions, video conference, or in person in San Francisco, California or at another mutually agreed location. The arbitration will be conducted by a sole arbitrator by NAM under its then-prevailing rules. All issues are for the arbitrator to decide, except a California court has the authority to determine (a) whether any provision of this arbitration agreement should be severed and the consequences of said severance, (b) whether you have complied with conditions precedent to arbitration, and (c) whether an arbitration provider is available to hear the arbitration(s) under Section 13.3. The amount of any settlement offer will not be disclosed to the arbitrator by either party until after the arbitrator determines the final award, if any.
+
+13.5 Exceptions. Nothing in this Agreement requires arbitration of the following claims: (a) individual claims brought in small claims court; and (b) injunctive or other equitable relief to stop unauthorized use or abuse of the Services or intellectual property infringement.
+
+13.6 NO CLASS ACTIONS. Disputes must be brought on an individual basis only, and may not be brought as a plaintiff or class member in any purported class, consolidated, or representative proceeding. Class arbitrations, class actions, private attorney general actions, and consolidation with other arbitrations are not allowed. If for any reason a Dispute proceeds in court rather than through arbitration, each party knowingly and irrevocably waives any right to trial by jury in any action, proceeding, or counterclaim. This does not prevent either party from participating in a class-wide settlement of claims.
+
+13.7 Batch Arbitration. If 25 or more claimants represented by the same or similar counsel file demands for arbitration raising substantially similar Disputes within 90 days of each other, then you and OpenAI agree that NAM will administer them in batches of up to 50 claimants each (“Batch”), unless there are less than 50 claimants in total or after batching, which will comprise a single Batch. NAM will administer each Batch as a single consolidated arbitration with one arbitrator, one set of arbitration fees, and one hearing held by videoconference or in a location decided by the arbitrator for each Batch. If any part of this section is found to be invalid or unenforceable as to a particular claimant or Batch, it will be severed and arbitrated in individual proceedings.
+
+13.8 Severability. If any part of this Section 13 is found to be illegal or unenforceable, the remainder will remain in effect, except that if a finding of partial illegality or unenforceability would allow class or representative arbitration, this Section 13 will be unenforceable in its entirety. Nothing in this section will be deemed to waive or otherwise limit the right to seek public injunctive relief or any other non-waivable right, pending a ruling on the substance of that claim from the arbitrator.
+14. Modifications to these Business Terms and the OpenAI Policies
+
+14.1 Updates. We may update these Business Terms or the OpenAI Policies by providing you with reasonable notice, including by posting the update on our website. If, in our sole judgment, an update materially impacts your rights or obligations, we will provide at least 30 days’ notice before the update goes into effect, unless the update is necessary for us to comply with applicable law, in which case we will provide you with as much notice as reasonably possible. Any other updates will be effective on the date we post the updated Business Terms or OpenAI Policies. Your continued use of, or access to, the Services after an update goes into effect will constitute acceptance of the update. If you do not agree with an update, you may stop using the Services or terminate this Agreement under Section 8.2 (Termination). 
+
+14.2 Exceptions to Updates. Except for an update to comply with applicable law, updates to these Business Terms or the OpenAI Policies will not apply to: (a) Disputes between you and OpenAI arising prior to the update; or (b) Order Forms signed by you and OpenAI (as opposed to an automated ordering page) prior to us notifying you of the update. However, to the extent an update relates to a Service or feature launched after an Order Form is signed it will be effective upon your first use of such Service
+15. Miscellaneous
+
+15.1 Headings. Headings in these Business Terms are inserted solely for convenience and are not intended to affect the meaning or interpretation of these Business Terms.
+
+15.2 Feedback. If you provide us with feedback regarding the Services (“Feedback”), you grant us the right to use and exploit Feedback without restriction or compensation.
+
+15.3 Publicity. You may use our name and marks to describe your use of the Services solely in accordance with our Brand guidelines. We will not publicly use your name or marks without your prior written approval.
+
+15.4 U.S. Federal Agency Entities. The Services were developed solely at private expense and are commercial computer software and related documentation within the meaning of the applicable U.S. Federal Acquisition Regulation and agency supplements thereto.
+
+15.5 Entire Agreement. This Agreement is the entire agreement between you and OpenAI with respect to its subject matter and supersedes all prior or contemporaneous agreements, communications and understandings, whether written or oral. You agree that any terms and conditions contained within any purchase order you send to us will not apply to this Agreement and are null and void.
+
+15.6 Relationship of the Parties. For all purposes under this Agreement, you and OpenAI will be and act as an independent contractor and will not bind nor attempt to bind the other to any contract.
+
+15.7 No Third Party Beneficiaries. There are no intended third party beneficiaries to this Agreement, and it is your and OpenAI’s specific intent that nothing contained in this Agreement will give rise to any right or cause of action, contractual or otherwise, in or on behalf of any third party.
+
+15.8 Force Majeure. Except for payment obligations, neither you nor OpenAI will have any liability for failures or delays resulting from conditions beyond your or OpenAI’s reasonable control, including but not limited to governmental action or acts of terrorism, earthquake or other acts of God, labor conditions, or power failures. 
+
+15.9 Assignment. This Agreement cannot be assigned other than as permitted under this Section 15.9 (Assignment). We may assign this Agreement to an affiliate without notice or your consent. Both you and OpenAI may assign this Agreement to a successor to substantially all the respective party’s assets or business, provided that the assigning party provides reasonable (at least 30 days) prior written notice of the assignment. This Agreement will be binding upon the parties and their respective successors and permitted assigns. 
+
+15.10 Notices. All notices will be in writing. We may provide you notice using the registration information or the email address associated with your account. Service will be deemed given on the date of receipt if delivered by email or on the date sent via courier if delivered by post. We accept service of process at this address: OpenAI, L.L.C., 3180 18th Street, San Francisco, CA 94110, Attn: contract-notices@openai.com.
+
+15.11 Severability. In the event that any provision of this Agreement is determined to be illegal or unenforceable, that provision will be limited or eliminated so that this Agreement will otherwise remain in full force and effect and enforceable.
+
+15.12 Jurisdiction, Venue, and Choice of Law. This Agreement will be governed by the laws of the State of California, excluding California’s conflicts of law rules or principles. Except as provided in the Section 13 (Dispute Resolution), all claims arising out of or relating to this Agreement will be brought exclusively in the federal or state courts of San Francisco County, California, USA.
+  </textarea>
+
+  <p>Here's what I see when I run the above through the tools at <a href="https://wordcounter.net/" target="_blank">WordCounter</a>: 4,646 words; Reading level: college graduat; Reading time: 17 minutes.</p>
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/word_counter_01.png"><img src="images/50-days/word_counter_01.png" ALT="Screenshot of wordcounter.net showing 4,646 words; Reading level: college graduat; Reading time: 17 minutes." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>And here's the output from today's prompt with the above as input.</p>
+
+  <textarea style="height:250px;width:100%;" readonly>**Business Terms Update: November 14, 2023**
+
+**Welcome to OpenAI!**
+
+**What Are These Terms About?**
+
+These terms are a deal between OpenAI and you - we'll call you the "Customer." They're about how you can use our business services like OpenAI APIs, ChatGPT Enterprise, and ChatGPT Team. If you're using our services for yourself, like ChatGPT or DALL·E, other rules called Terms of Use apply.
+
+**The Deal**
+
+By using our services, you're saying "okay" to follow these terms. You promise you're allowed to agree to this deal. If you're saying "yes" for a company or group, you're telling us you have permission to do that. We also have some other rules and policies you need to follow, and if you buy anything, the details about that purchase are part of this deal too.
+
+**1. Using Our Services**
+
+1.1 **What You Can Do:** You can use our services while this deal is in place. This includes using our APIs to add our services to your stuff and letting your users use it too.
+
+1.2 **Third-Party Stuff:** Sometimes, other companies might offer things through our services. If you decide to use them, that's your choice, but you still have to follow this deal and any extra rules for the third-party stuff.
+
+1.3 **Keep Your Account Safe:** Make sure your account info is correct and keep your account safe. You're responsible for what happens with your account, including what your users do with it. Don't let others use your login info or sell your account access.
+
+**2. Don'ts**
+
+We own our services. You can only use them in ways we say it's okay. Specifically, don't:
+
+- Break laws or our rules.
+- Use our services to bother others or break their rights.
+- Collect personal info from kids under 13 without their parents' okay.
+- Try to mess with or steal our service's code or how it works.
+- Use what you get from us to make something that competes with us.
+- Grab data from our services in ways we haven't okayed.
+- Sell or give away your access to someone else.
+
+**3. Your Stuff**
+
+3.1 **Your Inputs and Outputs:** When you use our services, you give us stuff (input) and get stuff back (output). You own your input and the output we give you.
+
+3.2 **We'll Keep Your Stuff Safe:** We'll keep your stuff safe based on our privacy promises. We'll only use your stuff to provide you services, follow the law, or enforce our rules.
+
+3.3 **Your Responsibilities:** Make sure you're allowed to give us your stuff. It's up to you to check the output we give you and make sure it's okay for your needs.
+
+3.4 **Outputs Might Not Be Unique:** Since we use AI, the output you get might be similar to what others get. Just because you got something from us doesn't mean you own similar things others get.
+
+**4. Keeping Secrets**
+
+4.1 **Don't Share Secrets:** If we share secret stuff with you, keep it secret. Use it only for dealing with us.
+
+4.2 **When It's Okay to Share:** You don't have to keep it secret if it's already public, you already knew it, got it from someone else legally, or made it without using our secret stuff. You can share it if the law says you must, but try to tell us first.
+
+**5. We'll Keep Things Safe**
+
+We promise to protect our services and your stuff from getting lost or leaked. We'll keep things safe, like making sure only the right people can see your stuff.
+
+**6. Privacy**
+
+If you use our services with personal info, you need to follow privacy laws, tell people what you're doing, and get their okay.
+
+**7. Paying Us**
+
+You need to pay for our services as we agreed. Prices might change, but we'll tell you when they do. If you think we charged you wrong, tell us quickly. If you're late paying, we might charge extra or stop your services.
+
+**8. When This Deal Ends**
+
+This deal lasts until one of us ends it. You can end it anytime by deleting your account. We can end it if you break the rules or for a few other reasons. If the deal ends, you have to stop using our services, and we'll delete your stuff after a bit.
+
+**9. Promises and Limits**
+
+We promise our services will work as we said they would. But, we can't promise everything will be perfect. We're not responsible for big problems or lost money beyond what you paid us in the last year.
+
+**10. Solving Problems**
+
+If there's a big problem, we'll try tosolve it by talking first. If we can't fix it that way, we might have to go through arbitration, which is a way to solve disputes without going to court. But, we'll try to work it out before it gets to that point.
+
+**11. Taking Care of Problems**
+
+- **If something goes wrong because of us**, we'll help cover any costs from legal issues that come up because of how you used our services, as long as you were following this agreement.
+- **If something goes wrong because of you**, you'll need to help cover our costs for the same reasons.
+- **Working Together on Problems**: If there's a legal problem, we have to tell each other quickly and help each other out.
+
+**12. Being Careful With What You Share**
+
+You have to make sure you're not breaking any laws about sharing stuff with other countries when you use our services.
+
+**13. Figuring Out Disputes**
+
+- **Talking First**: If we have a disagreement, let's try to sort it out by talking before doing anything else.
+- **Going to Arbitration**: If talking doesn't work, we'll go to arbitration, which is like a private court, to solve the problem.
+- **No Big Lawsuits**: You can't join with other people to sue us in a big lawsuit. Any problems have to be solved one by one.
+
+**14. Changing These Terms**
+
+Sometimes, we might need to change these terms. If we do, we'll let you know. If you keep using our services after the changes, that means you agree to the new terms.
+
+**15. Other Important Stuff**
+
+- **These terms are the full deal between us** about using our services. Anything we talked about before doesn't count if it's not in here.
+- **We're both doing our own thing**: We're not partners or bosses of each other.
+- **This deal is just between us**: Nobody else can say they're part of this deal or that it gives them any rights.
+- **Stuff happens**: If something totally outside our control happens and we can't do what we promised, we won't be in trouble for it.
+- **Moving the deal**: We can transfer this deal to someone else if we need to, but we'll tell you if we do.
+- **How to reach us**: If you need to tell us something important about this deal, you have to do it in writing.
+- **Where the law applies**: If we have to go to court for anything, we'll do it in San Francisco, California, and follow California's laws.
+
+That's the big picture of our deal with you. Remember, by using our services, you're saying you're okay with everything we talked about here. Thanks for sticking with us!
+</textarea>
+
+<p>Here's what I see when I run the above through the tools at <a href="https://wordcounter.net/" target="_blank">WordCounter</a>: 1,138 words; Reading level: 9th-10th grade; Reading time: 4 minutes.</p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/word_counter_02.png"><img src="images/50-days/word_counter_02.png" ALT="Screenshot of wordcounter.net showing 1,138 words; Reading level: 9th-10th grade; Reading time: 4 minutes." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>I'm particularly tickled by the rewritten <a href="https://www.law.cornell.edu/wex/force_majeure" target="_blank">Force Majeure</a>: 
+    
+  <blockquote>
+    <b>Stuff happens</b>: If something totally outside our control happens and we can't do what we promised, we won't be in trouble for it."</p>
+  </blockquote>
+
+  <p>That being said...</p>
+    
+
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/legalease/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/legalease/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/legalease/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/legalease/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/legalease/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/legalease/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/legalease/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/legalease/#tires">Kick the Tires</a></li>
+  </ul>
+  <p>
+    <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
+  </p>
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/legalease/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/legalease/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/legalease/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/legalease/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. To use this template, select the text you wish to decomplexify and run the template. Note: we've set the Post-run Behavior to CHAT so you can reshape or question the text after it provides your rewrite. 
+  </p>
+
+  <p>Here's the template's title.</p>
+  <p><code>Translate into plain language</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You're a helpful editor. Here is some text I'd like you to rewrite:
+
+{{highlighted}}
+
+Now rewrite the above text in plain language. That is, make sure it us using active voice and that it reads at a sixth-grade reading level. Replace any jargon with cogent and concise explanations. 
+
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
+    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+<h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+<p>
+  To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+</p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/legalease/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>Decomplexify</b>. Find your favorite confusing text, it should be something you now know rather well, and see how the template does. Are there bits where it's just a little off?
+    </li>
+    
+  </ul>
+    <!--
+    =================================================
+
+                       References
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="references" href="posts/legalease/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
+  <ul> 
+    
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+    </li>
+
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3594536.3595146" target="_blank">Beyond Readability with RateMyPDF: A Combined Rule-based and Machine Learning Approach to Improving Court Forms</a> by 
+      Quinten Steenhuis, Bryce Willey, and David Colarusso. In this paper, we describe RateMyPDF, a web application that helps authors measure and improve the usability of court forms. It offers a score together with automated suggestions to improve the form drawn from both traditional machine learning approaches and the general purpose GPT-3 large language model. We worked with form authors and usability experts to determine the set of features we measure and validated them by gathering a dataset of approximately 24,000 PDF forms from 46 U.S. States and the District of Columbia. Our tool and automated measures allow a form author or court tasked with improving a large library of forms to work at scale. This paper describes the features that we find improve form usability, the results from our analysis of the large form dataset, details of the tool, and the implications of our tool on access to justice for self-represented litigants. We found that the RateMyPDF score significantly correlates to the score of expert reviewers. While the current version of the tool allows automated analysis of Microsoft Word and PDF court forms, the findings of our research apply equally to the growing number of automated wizard-driven interactive legal applications that replace paper forms with interactive websites.
+    </li>
+
+    <li>
+      <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">Unsupervised Machine Scoring of Free Response Answers—Validated Against Law School Final Exams</a> by David Colarusso. 
+      This paper presents a novel method for unsupervised machine scoring of short answer and essay question responses, relying solely on a sufficiently large set of responses to a common prompt, absent the need for pre-labeled sample answers—given said prompt is of a particular character. That is, for questions where “good” answers look similar, “wrong” answers are likely to be “wrong” in different ways. Consequently, when a collection of text embeddings for responses to a common prompt are placed in an appropriate feature space, the centroid of their placements can stand in for a model answer, providing a lodestar against which to measure individual responses. This paper examines the efficacy of this method and discusses potential applications. 
+    </li>
+
+
+  </ul>
+
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+  (async () => {
+    prompts = await loadFile('posts/legalease/prompt_template.txt');
+  })()
+</script>
+
+</BODY></HTML>
