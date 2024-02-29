@@ -110,10 +110,10 @@
     Instead of feeding 5 words to a <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language model</a> (LLM) and expecting 500 (e.g., write me an essay discussing the lessons of the French Revolution), more folks should be feeding their AIs 500 words and asking them to generate 5. This funneling approach tends to mitigate <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinations</a> and the <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">biases</a> that creepin when LLM's free associate. If you're feeding in more than you expect to get out, you're looking through the wrong end of the telescope. Consequently, we've created a good number of templates that work with <a href="posts/summarize-and-question">summarization</a> and <a href="posts/diagram-sentence">entity extraction</a>. Restructuring existing text is one of the things LLMs excel at. So, today we'll ask our prompt to help turn complicated texts into plain language. 
   </p>
   <p>
-    This is actually a use case I have some experience with as my lab has experimented with getting LLMs to make such rewrites when summarizing <a href="https://suffolklitlab.org/docassemble-AssemblyLine-documentation/assets/files/Beyond%20Readability%20with%20RateMyPDF-306d8c3ae5c5cb2ff33d436a859d1581.pdf" target="_blank">court forms</a>. Generally speaking, LLMs do a pretty good job of making legalease into something more people could understand. That being said, a word of caution. I don't actually think these tools are at the stage where they can be trusted to rewrite complex text in plain language absent human supervision.
+    This is actually a use case I have some experience with as my lab has experimented with getting LLMs to make such rewrites when summarizing <a href="https://suffolklitlab.org/docassemble-AssemblyLine-documentation/assets/files/Beyond%20Readability%20with%20RateMyPDF-306d8c3ae5c5cb2ff33d436a859d1581.pdf" target="_blank">court forms</a>. Generally speaking, LLMs do a pretty good job of making legalese into something more people could understand. That being said, a word of caution. I don't actually think these tools are at the stage where they can be trusted to rewrite complex text in plain language absent human supervision.
   </p>
   <p>
-    There's a quote I've included alongside every <a href="posts/legalease/#template">prompt pattern</a> from the statistician George Box, "[A]ll models are wrong, but some are useful." It reminds us not to confuse the map for the teritory. Remember, maps are models and they are to some extent wrong. They don't show everything, but they can be useful. I <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">tend to</a> draw two actionable insights from the Box quote. "Because models are wrong, their output should start, not end, discussion. To determine if a model is useful, one must ask 'compared to what?'" So, the plain language write up produced by these tools should start the discussion. It's a first draft, and I think it could be helpful esp. when you consider the alternative is rewriting the text from scratch. In the hands of someone who can properly evaluate the output, it's a great first step. Let's see what it can do. Here's the current OpenAI <a href="https://openai.com/policies/business-terms" target="_blank">Business Terms</a> (the terms governing their API). 
+    There's a quote I've included alongside every <a href="posts/legalese/#template">prompt pattern</a> from the statistician George Box, "[A]ll models are wrong, but some are useful." It reminds us not to confuse the map for the teritory. Remember, maps are models and they are to some extent wrong. They don't show everything, but they can be useful. I <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">tend to</a> draw two actionable insights from the Box quote. "Because models are wrong, their output should start, not end, discussion. To determine if a model is useful, one must ask 'compared to what?'" So, the plain language write up produced by these tools should start the discussion. It's a first draft, and I think it could be helpful esp. when you consider the alternative is rewriting the text from scratch. In the hands of someone who can properly evaluate the output, it's a great first step. Let's see what it can do. Here's the current OpenAI <a href="https://openai.com/policies/business-terms" target="_blank">Business Terms</a> (the terms governing their API). 
   </p>
     
 
@@ -392,19 +392,19 @@ That's the big picture of our deal with you. Remember, by using our services, yo
 
   <!-- END INTRO -->
 
-  <h3><a name="build" href="posts/legalease/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <h3><a name="build" href="posts/legalese/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/legalease/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/legalese/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/legalease/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/legalese/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/legalease/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/legalese/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/legalease/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/legalease/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/legalese/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/legalese/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/legalease/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/legalease/#tires">Kick the Tires</a></li>
+    <li><a href="posts/legalese/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/legalese/#tires">Kick the Tires</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -417,7 +417,7 @@ That's the big picture of our deal with you. Remember, by using our services, yo
     =================================================
   -->
   <hr>
-  <h2><a name="setup" href="posts/legalease/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/legalese/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -437,7 +437,7 @@ That's the big picture of our deal with you. Remember, by using our services, yo
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/legalease/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/legalese/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -450,7 +450,7 @@ That's the big picture of our deal with you. Remember, by using our services, yo
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/legalease/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/legalese/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
     </p>
@@ -487,7 +487,7 @@ That's the big picture of our deal with you. Remember, by using our services, yo
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/legalease/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/legalese/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
 
@@ -574,7 +574,7 @@ Now rewrite the above text in plain language. That is, make sure it us using act
     =================================================
   -->
   <hr>
-  <h2><a name="tires" href="posts/legalease/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <h2><a name="tires" href="posts/legalese/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
   </p>
@@ -593,7 +593,7 @@ Now rewrite the above text in plain language. That is, make sure it us using act
     =================================================
   -->
   <hr>
-  <h2><a name="references" href="posts/legalease/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/legalese/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
@@ -646,7 +646,7 @@ Now rewrite the above text in plain language. That is, make sure it us using act
 	} catch (error) {}*/
 
   (async () => {
-    prompts = await loadFile('posts/legalease/prompt_template.txt');
+    prompts = await loadFile('posts/legalese/prompt_template.txt');
   })()
 </script>
 
