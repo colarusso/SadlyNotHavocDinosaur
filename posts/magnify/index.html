@@ -157,6 +157,7 @@
     </ul>
     <li><a href="posts/maginify/#template">The Prompt Pattern (Template)</a></li>
     <li><a href="posts/maginify/#tires">Kick the Tires</a></li>
+    <li><a href="posts/maginify/#references">TL;DR References</a></li> 
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -277,6 +278,7 @@
     We'll also use JSON mode to format some of the prompt outputs as <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, and as we know from our <a href="posts/translate-selected">translation template</a>, when the passThrough variable is JSON, you can access top-level keys by calling them like this <code>{{{{passThrough["reply"]}}*}}</code></p>
   <p>
     To use our template, simply select the text you want to expand and run the "Expand selected (short) text" template. That being said, this is actually the most complicated prompt we've seen so far. We'll use the DYNAMIC behavior for the first time and there are actually 6 individual templates all feeding into each other. FWIW, using the DYNAMIC Post-run Behavior will trigger the promt named in the <code>{{passThrough["next"]}}</code> variable.
+  </p>
   <p>
     Admittedly, that's a lot to deal with. So, to help make this easier to understand, I've used the LIT Prompts comments feature. That is, any text between <code>[#</code> and <code>#]</code> isn't part of the template's output. This will let me explain as we go. <b>That is, text in the comments is for YOU, not the LLM.</b> 
   </p>
