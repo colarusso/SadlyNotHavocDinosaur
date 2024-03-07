@@ -1,13 +1,13 @@
 {
-  "Template": {
-    "prompt": "",
+  "BS with a \"bot\"": {
+    "prompt": "{{Yes?}} [# {{Yes?}} isn't a predefined variable. So, the user will be presented with a text input, and since Post-run Behavior is set to CHAT, this ends up being a plain old chat with an LLM. #]\n",
     "model": "gpt-3.5-turbo-16k",
     "temperature": 0.7,
-    "max_tokens": 250,
+    "max_tokens": 500,
     "output": 1,
     "json_mode": 0,
-    "output_to": 1,
-    "behavior": "stop",
+    "output_to": 0,
+    "behavior": "chat",
     "hide_button": false
   }
 }
