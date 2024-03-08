@@ -12,6 +12,16 @@
 
   --> 
 
+    <item>
+    <title>Three Summaries—Three Levels of Difficulty: Produce three summaries at different levels of complexity (i.e., for a child, general audiance, and expert)</title>
+    <link>https://sadlynothavocdinosaur.com/posts/levels/</link>
+    <description>We've played with summarization and simplification of texts. So, why not both in one prompt? Today's prompt will take a webpage and summarize it three times. The first summary is aimed at a 12 year old, the second at a general audience, and the third at an expert. Having long enjoyed Wired's 5 levels of difficulty videos, I really appreciate such leveled presentations for their ability to meet readers where they're comfortable. </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/writing_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/writing_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/levels/</guid>
+    <pubDate>Thu, 08 Feb 2024 05:00:00 GMT</pubDate>
+  </item>
+
   <item>
     <title>Algorithmic BS: Shoot the breeze with your base LLM</title>
     <link>https://sadlynothavocdinosaur.com/posts/bs/</link>
