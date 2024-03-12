@@ -8,9 +8,17 @@
   <atom:link href="https://sadlynothavocdinosaur.com/feed.xml" rel="self" type="application/rss+xml" />
 
   <!-- ONDECK
-
-
   --> 
+
+    <item>
+      <title>Wait, Have I Read This Book Already?: In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</title>
+      <link>https://sadlynothavocdinosaur.com/posts/archeology/</link>
+      <description>lorem ipsumlorem ipsum</description>
+      <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/reading_room_square.png" type="image/png"/>
+      <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/reading_room_square.png"/>
+      <guid>https://sadlynothavocdinosaur.com/posts/archeology/</guid>
+      <pubDate>Tue, 12 Feb 2024 05:00:00 GMT</pubDate>
+    </item>
 
     <item>
       <title>My Students Use an Interactive Tool for Reflective Journaling &amp; I Love It!: Overcome the blank page and engage with your your days through reflective journaling</title>

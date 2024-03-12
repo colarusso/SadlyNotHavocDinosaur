@@ -1,13 +1,46 @@
 {
-  "Template": {
-    "prompt": "",
-    "model": "gpt-3.5-turbo-16k",
+  "Clear scratch": {
+    "prompt": "\"title\",\"author\",\"read\"\n",
+    "model": "gpt-3.5-turbo",
     "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 0,
+    "json_mode": 0,
+    "output_to": 3,
+    "behavior": "stop",
+    "hide_button": false
+  },
+  "Get book info from email": {
+    "prompt": "I'm about to show you an email from my library letting me know a book, or books, I requested is/are available. For each book, produce a single csv row with the following column data all encased in double quotes: title, author, date book was available. Be sure to add a carriage return/line break to the end of all rows. Note: the date should be formatted as \"full month name, day, four-digit year\" (e.g., July 4, 1776).\n\nLIBRARY EMAIL\n\n{{highlighted}}\n\n---\n\nNow provide the csv row or rows.\n\n",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0,
     "max_tokens": 250,
     "output": 1,
     "json_mode": 0,
-    "output_to": 1,
+    "output_to": 2,
     "behavior": "stop",
+    "hide_button": false
+  },
+  "Get book info from on-page reading history": {
+    "prompt": "I'm about to show you a list of books from my reading history. For each book, produce a single csv row with the following column data all encased in double quotes: title, author, date book was available. Be sure to add a carriage return/line break to the end of all rows. Note: the date should be formatted as \"full month name, day, four-digit year\" (e.g., July 4, 1776). If no date is available return \"unknown.\"\n\nREADING HISTORY\n\n{{highlighted}}\n\n---\n\nNow provide the csv row or rows.\n",
+    "model": "gpt-3.5-turbo-16k",
+    "temperature": 0,
+    "max_tokens": 2000,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 2,
+    "behavior": "stop",
+    "hide_button": false
+  },
+  "Save to file": {
+    "prompt": "{{scratch}}",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 0,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "file",
     "hide_button": false
   }
 }
