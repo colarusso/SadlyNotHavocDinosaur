@@ -5,7 +5,7 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Wait, Have I Read This Book Already?: In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</title>
+  <title>Wait, Have I Read This Book Already? In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-02-12T00:00:00-0500"/>
   <meta property="og:title" content="Wait, Have I Read This Book Already?: In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a &QUOT;new&QUOT; book only to realize I've read it before"/>
@@ -107,15 +107,15 @@
   <p><i>This is <b>the 37th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 
   <p>
-    Do yourself a favor. Write down the books you've read. Otherwise, some day you'll find yourself wondering if that book looks familiar because you put it on a list to read once upon a time or because you read it once upon a time. Unfortunately, I've never had such a list, and now I'm starting to question things. 
+    Do yourself a favor. Write down the books you've read. Otherwise, you'll find yourself wondering if that book looks familiar because you put it on a list to read or because you've read it already. Unfortunately, I've never had such a list. :( 
   </p>
   <p>
-    So, today I created <a href="posts/archeology/#template">a set of LIT Prompts</a> to help me engage in some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I got as gifts et al., but these are around the house somewhere. Anywho, once the templates were ready to go, the workflow looked like this.  
+    So, today I created <a href="posts/archeology/#template">a set of LIT Prompts</a> to help me conduct some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I didn't order online, but I can always consult my shelves and this seems less of a problem for such books. Anywho, once the templates were ready to go, the workflow looked like this.  
   </p>
 
   <ol>
     <li>See if you can download a list of books you've checked out or purchased from each of the places you get books. I found about 200 books this way, but this list only went back to 2017 and didn't cover all the places I get books.</li>
-    <li>Run the <i>Clear scratch</i> template described below. This replaces the LIT Prompts' Scratch Pad with the header for a simple csv file (i.e., "title","author","read")</li>
+    <li>Run the <i>Clear scratch</i> template described <a href="posts/archeology/#template">below</a>. This replaces the LIT Prompts' Scratch Pad with the header for a simple csv file (i.e., "title","author","read")</li>
     <li>Search for emails from your library in which they tell you a book is available (e.g., from:donotreply@library.example.com).</li>
     <li>Open each email in the above results, select all (ctr-A), and run the <i>Get book info from email</i> template. This will extract book names, authors, and dates from the email and add them as entries to the Sratch Pad in the form of a csv row.</li>
     <li>For those book providers who didn't offer a downloadable csv, navigate to the history section of your account, select all (ctr-A), and run the <i>Get book info from on-page reading history</i> template. Navigate through the history page-by-page, selecting all and re-running the template. This will extract book names, authors, and dates from the page and add them as entries to the Scratch Pad in the form of a csv row. Note: I was able to do this with one of my library accounts, Amazon, and Audible though the current prompt didn't capture dates for Amazon's list. So, you might have to tweak things.</li>
