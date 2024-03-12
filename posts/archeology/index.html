@@ -112,22 +112,22 @@
   <p>
     So, today I created <a href="posts/archeology/#template">a set of LIT Prompts</a> to help me conduct some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I didn't order online, but I can always consult my shelves and this seems less of a problem for such books. Anywho, once the templates were ready to go, the workflow looked like this.  
   </p>
-
+  <h3><a name="workflow" href="posts/archeology/#workflow" class="anchor" alt="deep link to this section"></a>Extract &amp; Clean</h3>
   <ol>
-    <li>See if you can download a list of books you've checked out or purchased from each of the places you get books. I found about 200 books this way, but this list only went back to 2017 and didn't cover all the places I get books.</li>
-    <li>Run the <i>Clear scratch</i> template described <a href="posts/archeology/#template">below</a>. This replaces the LIT Prompts' Scratch Pad with the header for a simple csv file (i.e., "title","author","read")</li>
-    <li>Search for emails from your library in which they tell you a book is available (e.g., from:donotreply@library.example.com).</li>
-    <li>Open each email in the above results, select all (ctr-A), and run the <i>Get book info from email</i> template. This will extract book names, authors, and dates from the email and add them to the Sratch Pad in the form of a csv row. See animated GIF below.</li>
-    <li>For those book providers who didn't offer a downloadable csv, navigate to the history section of your account, select all (ctr-A), and run the <i>Get book info from on-page reading history</i> template. Navigate through the history page-by-page, selecting all and re-running the template. This will extract book names, authors, and dates from the page and add them as entries to the Scratch Pad in the form of a csv row. Note: I was able to do this with one of my library accounts, Amazon, and Audible though the current prompt didn't capture dates for Amazon's list. So, you might have to tweak things.</li>
-    <li>Clean up the Scratch Pad to make sure the formatting is right (e.g., I had to add line breaks so each row was on a new line).</li>
-    <li>Run the <i>Save to file</i> template.</li>
-    <li>Open the resulting spreadsheet and clean things up as needed (e.g., some dates were clearly off as they were today's date)</li>
+    <li>See if you can <b>download a list of books</b> you've checked out or purchased from each of the places you get books. I found about 200 books this way, but this list only went back to 2017 and didn't cover all the places I get books.</li>
+    <li><b>Run the <i>Clear scratch</i> template</b> described <a href="posts/archeology/#template">below</a>. This replaces the LIT Prompts' Scratch Pad with the header for a simple csv file (i.e., "title","author","read")</li>
+    <li>For those book providers who didn't offer a downloadable csv, <b>navigate to the history section of your account, select all (ctr-A), and run the <i>Get book info from on-page reading history</i> template</b>. Navigate through the history page-by-page, selecting all and re-running the template. This will extract book names, authors, and dates from the page and add them as entries to the Scratch Pad in the form of a csv row. Note: I was able to do this with one of my library accounts, Amazon, and Audible though the current prompt didn't capture dates for Amazon's list. So, you might have to tweak things.</li>
+    <li>For providers who didn't have online histories, <b>search for emails from telling you a book is available</b> (e.g., from:donotreply@library.example.com).</li>
+    <li><b>Open each email in the above results, select all (ctr-A), and run the <i>Get book info from email</i> template</b>. This will extract book names, authors, and dates from the email and add them to the Sratch Pad in the form of a csv row. See animated GIF below.</li>
+    <li><b>Clean up</b> the Scratch Pad to make sure the formatting is right (e.g., I had to add line breaks so each row was on a new line).</li>
+    <li><b>Run the <i>Save to file</i> template</b>.</li>
+    <li><b>Open the resulting spreadsheet and clean things up as needed</b> (e.g., some dates were clearly off as they were today's date). This is also where you can combine any csv files you got elsewhere.</li>
   </ol>
   
   <div class="featured_img_center" style="max-width:636px;">
-    <a href="images/50-days/get_book.gif"><img src="images/50-days/get_book.gif" ALT="Screenshot of step 4 in the above workflow." class="list_img_file" style="border: 1px solid #a5a5a5;max-width:636px;"/></a>
+    <a href="images/50-days/get_book.gif"><img src="images/50-days/get_book.gif" ALT="Screenshot of step 5 in the above workflow." class="list_img_file" style="border: 1px solid #a5a5a5;max-width:636px;"/></a>
     <div class="caption">
-      Screenshot of step 4 in the workflow above
+      Screenshot of step 5 in the workflow above
     </div>
   </div>
 
@@ -261,6 +261,10 @@
 
   <p>
     The <code>{{scratch}}</code> variable contains the text in your Scratch Pad. Remember, the scratch pad is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. Here we use the fact that you can append things to the Scratch Pad to create our list of books before saving it to a file. 
+  </p>
+
+  <p>
+    For a breakdown of how to use these templates, check out the workflow above: <a href="posts/archeology/#workflow">Extract & Clean</a>.
   </p>
 
   <p>Here's the first template's title.</p>
