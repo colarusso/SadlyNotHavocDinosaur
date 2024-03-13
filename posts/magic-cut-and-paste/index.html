@@ -5,14 +5,14 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Wait, Have I Read This Book Already? In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</title>
+  <title>Magic Cut-and-Paste: Use AI to pluck out and copy only what you want AKA entity extraction</title>
   <meta property="og:type" content="website"/>
-  <meta property="og:publish_date" content="2024-02-12T00:00:00-0500"/>
-  <meta property="og:title" content="Wait, Have I Read This Book Already?: In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a &QUOT;new&QUOT; book only to realize I've read it before"/>
-  <meta property="og:description" content=" Do yourself a favor. Write down the books you've read. Otherwise, some day you'll find yourself wondering if that book looks familiar because you put it on a list to read once upon a time or because you read it once upon a time. Unfortunately, I've never had such a list, and now I'm starting to question things. So, today I created a set of LIT Prompts to help me engage in some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I got as gifts et al., but these are around the house somewhere. Anywho, once the templates were ready to go, the workflow looked like this.  "/>
-  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/reading_room.png"/>
+  <meta property="og:publish_date" content="2024-02-13T00:00:00-0500"/>
+  <meta property="og:title" content="Magic Cut-and-Paste: Use AI to pluck out and copy only what you want AKA entity extraction"/>
+  <meta property="og:description" content=" "/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/magic_cut_and_paste_square.png"/>
   <meta property="og:image:width" content="1024" />
-  <meta property="og:image:height" content="585" />
+  <meta property="og:image:height" content="1024" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Wait, Have I Read This Book Already?</h1>
-  <div class="post_title_02">In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</div>
+  <h1 class="post_title_01">Magic Cut-and-Paste</h1>
+  <div class="post_title_02">Use AI to pluck out and copy only what you want AKA entity extraction</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -95,47 +95,63 @@
         </span>
       </div>
     </div>-->
-    <a href="images/50-days/reading_room.png"><img src="images/50-days/reading_room.png" ALT="AI-Generated image of the New York Public Library Reading Room" class="list_img_file"/></a>
+    <a href="images/50-days/magic_cut_and_paste.png"><img src="images/50-days/magic_cut_and_paste.png" ALT="A scissors and glue on a table in front of a wizard's hat" class="list_img_file"/></a>
     <div class="caption">
-      Reading Room, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+      Magic Cut-and-Paste, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
     <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This is <b>the 37th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+  <p><i>This is <b>the 38th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 
   <p>
-    Do yourself a favor. Write down the books you've read. Otherwise, you'll find yourself wondering if that book looks familiar because you put it on a list to read or because you've read it already. Unfortunately, I've never had such a list. :( 
+    Today I'll show you how to add <i>magic cut-and-paste</i> to the <a href="https://github.com/SuffolkLITLab/prompts" target="_blank">LIT Prompts extension</a>. What is <i>magic cut-and-paste</i> you ask? Well, its the name I'm giving to text-driven entity extraction. Which is a long-winded way of saying, you type what you want to copy from a page, and that content is "magiclly" copied into your clipboard. 
   </p>
   <p>
-    So, today I created <a href="posts/archeology/#template">a set of LIT Prompts</a> to help me conduct some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I didn't order online, but I can always consult my shelves and this seems less of a problem for such books. Anywho, once the templates were ready to go, the workflow looked like this.  
+    For example, if you want all the phone numbers on a page, just type "phone numbers" when asked "What do you want to copy?" Wait a bit, and presto. There's a list of phone numbers in your clipboard. Conducting such a search is actually something I've <a href="https://www.codingthelaw.org/Fall_2020/level/5/" target="_blank">taught</a> my students in the past.
   </p>
-  <h3><a name="workflow" href="posts/archeology/#workflow" class="anchor" alt="deep link to this section"></a>Extract &amp; Clean</h3>
-  <ol>
-    <li>See if you can <b>download a list of books</b> you've checked out or purchased from each of the places you get books. I found about 200 books this way, but this list only went back to 2017 and didn't cover all the places I get books.</li>
-    <li><b>Run the <i>Clear scratch</i> template</b> described <a href="posts/archeology/#template">below</a>. This replaces the LIT Prompts' Scratch Pad with the header for a simple csv file (i.e., "title","author","read")</li>
-    <li>For those book providers who didn't offer a downloadable csv, <b>navigate to the history section of your account, select all (ctr-A), and run the <i>Get book info from on-page reading history</i> template</b>. Navigate through the history page-by-page, selecting all and re-running the template. This will extract book names, authors, and dates from the page and add them as entries to the Scratch Pad in the form of a csv row. Note: I was able to do this with one of my library accounts, Amazon, and Audible though the current prompt didn't capture dates for Amazon's list. So, you might have to tweak things.</li>
-    <li>For providers who didn't have online histories, <b>search for emails from telling you a book is available</b> (e.g., from:donotreply@library.example.com).</li>
-    <li><b>Open each email in the above results, select all (ctr-A), and run the <i>Get book info from email</i> template</b>. This will extract book names, authors, and dates from the email and add them to the Sratch Pad in the form of a csv row. See animated GIF below.</li>
-    <li><b>Clean up</b> the Scratch Pad to make sure the formatting is right (e.g., I had to add line breaks so each row was on a new line).</li>
-    <li><b>Run the <i>Save to file</i> template</b>.</li>
-    <li><b>Open the resulting spreadsheet and clean things up as needed</b> (e.g., some dates were clearly off as they were today's date). This is also where you can combine any csv files you got elsewhere.</li>
-  </ol>
-  
-  <div class="featured_img_center" style="max-width:636px;">
-    <a href="images/50-days/get_book.gif"><img src="images/50-days/get_book.gif" ALT="Screenshot of step 5 in the above workflow." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  <p>
+    Alas, <i>magic cut-and-paste</i> was never an option. Instead we had to rely on something called <a href="https://www.codingthelaw.org/Fall_2020/level/5/#intro_vid" target="_blank">regular expressions</a>. Regular expressions are a wonderfully useful tool, but I must confess it takes longer to teach someone how to use them than <i>magic cut-and-paste</i>. Their also rather exacting. If you don't think of every eventuality when defining the pattern you are looking for, you'll miss things. <i>Magic cut-and-paste</i> is more forgiving in this respect. Here are some examples of <i>magic cut-and-paste</i> in action. 
+  </p>
+
+  <div class="featured_img_center" style="max-width:700px;">
+    <a href="images/50-days/magic_cut.gif"><img src="images/50-days/magic_cut.gif" ALT="Screen capture of someone using magic cut-and-paste to find phone numbers and then SSNs on a page. " class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
     <div class="caption">
-      Screenshot of step 5 in the workflow above
+      Screen capture of someone using <i>magic cut-and-paste</i> to find phone numbers and then SSNs on a page. If you want to see the rest of the comic shown in the background above, <a href="https://xkcd.com/208/" target="_blank">click here</a>.
     </div>
   </div>
 
-  <p>FWIW, here's a a partial list of what I found. Mostly, I filtered out the books I've read with my kids since that really seemed like their lists, and this list misses most of the physical books I've read, which honestly isn't that many these days. Also, you'll notice that the spreadsheet includes links where you can find the books (I added this manually). If you want to filter the entries, you'll need to <a href="https://docs.google.com/spreadsheets/d/1gYeuhAl9Yqybz_3bYf6PxVXPmKIwJwBpx0c13sHPbNU/edit?usp=sharing" target="_blank">open the sheet</a>.</p>
+  <p>The <a href="https://www.codingthelaw.org/Fall_2020/level/5/" target="_blank">page</a> in the above screen capture is the same one I use to teach my students regular expressions. As you might have noticed it has a big block of numbers, and as you might have guessed it is here that we find the phone and Social Security numbers asked for in the above screen capture. Here's the block.</p>
 
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCMnK9pUk7vWIgNrfhILsm3RLOiSaeHDxP1X-EsxMbawSktpQ7dfDyVR58bb_xZ_eIs5s8UXp0F78Y/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="350px"></iframe>
+  <p style="background:#eee;padding:15px;">01110100 555.867.5309 01101000 1.4142135623 01101001 987-01-6661 01110011 202.555.9355 00100000 01101001 3.1415926535897932384626433832795 01110011 00100000 666-12-4895 01100001 202-555-9355 00100000 01101000 (555) 867-5309 01101001 01100100 2.718281828459 01100100 01100101 01101110 00100000 01101101 555-867-5309 01100101 01110011 01110011 555/867-5309 01100001 01100111 01100101</p>
 
-  <p>The <a href="posts/archeology/#template">prompt templates</a> are pretty straight forward. The real trick is setting things such that new data is appended to the Scratch Pad. Should you wish to go on your own digital dig, I wish you luck. Of course, this approach should be rather generalizable. So, don't feel like you have to stick to books. Maybe you want a nice structured list of other online histories... </p>
+  <p>And here's the output today's template produced when asked to find "phone numbers."</p>
+
+  <blockquote>
+    555.867.5309,202.555.9355,555-867-5309,(555) 867-5309,202-555-9355,555-867-5309,555/867-5309
+  </blockquote>
+
+  <p>And here's the output today's template produced when asked to find "SSNs."</p>
+
+  <blockquote>
+    987-01-6661,666-12-4895
+  </blockquote>
+
+  <p>Don't worry these are made up.</p>
+
+  <p>
+    Now stop to think about what's going on here. If you look at the <a href="posts/archeology/#template">templates below</a> you'll see that no where do I tell it what a phone number or SSN is. Our LLM "knows" what to look for based only our simple descriptions ("phone numbers" and "SSNs"). But <i>magic cut-and-paste</i> isn't limited to looking for phone and Social Security numbers. Here's what I goy back when I asked for "proper nouns."
+  </p>
+
+  <blockquote>
+    Coding the Law,SUFFOLK LAW SCHOOL,LegalTech Adventure,Regular Expressions,Slack,XKCD,Law Technology Now,Legal Information Institute,Tom Bruce,Weapons of Math Destruction,How Not to Be Wrong,Bestlaw,Westlaw,Ars Technica,CFAA,Driverless Cars,GitHub,MassCases,Massachusetts General Laws,US Code,MA General Laws
+  </blockquote>
+
+  <p>
+    Remember, LLMs can <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinate</a>. So, you shouldn't blindly trust output from today's template, but given that the full text of the page is right there while you're using it, you don't have to. That is, you're in the perfect position to check the quality of the output in real time. That being said...
+  </p>
 
   <!-- END INTRO -->
 
@@ -246,7 +262,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/archeology/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -256,23 +272,21 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{highlighted}}</code>, and <code>{{scratch}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{innerText}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+  <p>
+    The <code>{{innerText}}</code> variable will be replaced by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank">innerText</a> of your current page (roughly speaking the hard-coded text of a page). In the template below, you'll see <code>{{innerText}}</code> on line 7. It is this text from which the prompt is directed to pull its output. 
+  </p>
+  <p>
+    If the text within brackets is not the name of a predefined variable, like <code>{{What do you want to copy?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What do you want to copy?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
 
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. We'll use this to select text on the scree from which to pull our data. 
-  </p>
-
-  <p>
-    The <code>{{scratch}}</code> variable contains the text in your Scratch Pad. Remember, the scratch pad is accessible from the extension's popup window. The button is to the right of the Settings & Templates button that you have used before. Here we use the fact that you can append things to the Scratch Pad to create our list of books before saving it to a file. 
-  </p>
-
-  <p>
-    For a breakdown of how to use these templates, check out the workflow above: <a href="posts/archeology/#workflow">Extract & Clean</a>.
+    So here we're using <code>{{What do you want to copy?}}</code> to specify what we want to plucj from <code>{{innerText}}</code>. To help contain the output text, we make use of JSON mode and pass our output to the sceen and clipboad via a seond template. We can then access this via the <code>{{passThrough}}</code> variable.
   </p>
 
   <p>Here's the first template's title.</p>
-  <p><code>Clear scratch</code></p>
+  <p><code>Magic Cut-and-Paste</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
@@ -282,7 +296,18 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>"title","author","read"
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>Your job is to create a JSON object from the following Source Text. It should have a single key-value pair. The key should be "extracted" and the value should contain "{{What do you want to copy?}}" found in the Source Text. If providing the value calls for a list, separate entries with commas followed by a space, unless the items contain commas, in which case, use semicolons. 
+
+---
+
+SOURCE TEXT
+
+{{innerText}}
+
+---
+
+Now provide the JSON object. 
+
 </code></pre>
   </section>
   <!--
@@ -294,15 +319,17 @@
   -->
   <p>And here are the template's parameters:</p>
   <ul>
-    <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-     <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
     <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
-    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-    <li><b>Output To:</b> <code>Screen + replace scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and replacing the the current text of the Scrtach Pad with this output.</li> 
-    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
+    <li><b>Post-run Behavior:</b> Copy to clipboard. Like the choice of output, we can decide what to do after a template runs. Here we will we send the output to the template named "Copy to clipboard."</li>      
+    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+  
   <p>Here's the second template's title.</p>
-  <p><code>Get book info from email</code></p>
+  <p><code>Copy to clipboard</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
@@ -312,84 +339,7 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>I'm about to show you an email from my library letting me know a book, or books, I requested is/are available. For each book, produce a single csv row with the following column data all encased in double quotes: title, author, date book was available. Be sure to add a carriage return/line break to the end of all rows. Note: the date should be formatted as "full month name, day, four-digit year" (e.g., July 4, 1776).
-
-LIBRARY EMAIL
-
-{{highlighted}}
-
----
-
-Now provide the csv row or rows.
-
-</code></pre>
-  </section>
-  <!--
-    #########################
-    #########################
-    #####    end code    ####
-    #########################
-    #########################
-  -->
-  <p>And here are the template's parameters:</p>
-  <ul>
-    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
-    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-    <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and appending the output to the end of the text already in the Scrtach Pad.</li> 
-    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-  <p>Here's the third template's title.</p>
-  <p><code>Get book info from on-page reading history</code></p>
-  <p>Here's the template's text.</p>
-  <!--
-    #########################
-    #########################
-    #####   start code   ####
-    #########################
-    #########################
-  -->
-  <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>I'm about to show you a list of books from my reading history. For each book, produce a single csv row with the following column data all encased in double quotes: title, author, date book was available. Be sure to add a carriage return/line break to the end of all rows. Note: the date should be formatted as "full month name, day, four-digit year" (e.g., July 4, 1776). If no date is available return "unknown."
-
-READING HISTORY
-
-{{highlighted}}
-
----
-
-Now provide the csv row or rows.
-</code></pre>
-  </section>
-  <!--
-    #########################
-    #########################
-    #####    end code    ####
-    #########################
-    #########################
-  -->
-  <p>And here are the template's parameters:</p>
-  <ul>
-    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>2000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
-    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-    <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and appending the output to the end of the text already in the Scrtach Pad.</li> 
-    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-  <p>Here's the fourth template's title.</p>
-  <p><code>Save to file</code></p>
-  <p>Here's the template's text.</p>
-  <!--
-    #########################
-    #########################
-    #####   start code   ####
-    #########################
-    #########################
-  -->
-  <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{scratch}}</code></pre>
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{passThrough["extracted"]}}</code></pre>
   </section>
   <!--
     #########################
@@ -405,9 +355,9 @@ Now provide the csv row or rows.
     <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
     <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
-    <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
-    <li><b>Post-run Behavior:</b> <code>SAVE TO FILE</code>. Like the choice of output, we can decide what to do after a template runs. Here we will save the output to a file. This will trigger your browser's download feature.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-<h3><a name="working" href="posts/archeology/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+    <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+<h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
 <p>
   To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 </p>
@@ -422,6 +372,7 @@ Now provide the csv row or rows.
   <div class="button_row">
     <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
   </div>
+
   <!--
     =================================================
 
@@ -437,9 +388,9 @@ Now provide the csv row or rows.
   <ul>
   
     <li>
-      <b>What have you been reading?</b> Try your hand at following the steps outlined above to extract your reading history from the digital realm. 
+      <b>Create your own</b>. Come up with new <i>magic cut-and-paste</i> targets. Test them out, and share the results with me <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
     </li>
-        
+       
   </ul>
 
   <!--

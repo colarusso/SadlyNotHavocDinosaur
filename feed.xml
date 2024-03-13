@@ -10,6 +10,17 @@
   <!-- ONDECK
   --> 
 
+
+    <item>
+      <title>Magic Cut-and-Paste: Use AI to pluck out and copy only what you want AKA entity extraction</title>
+      <link>https://sadlynothavocdinosaur.com/posts/archeology/</link>
+      <description>lorem ipsumlorem ipsum</description>
+      <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/magic_cut_and_paste_square.png" type="image/png"/>
+      <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/magic_cut_and_paste_square.png"/>
+      <guid>https://sadlynothavocdinosaur.com/posts/archeology/</guid>
+      <pubDate>Wed, 13 Mar 2024 05:00:00 GMT</pubDate>
+    </item>
+
     <item>
       <title>Wait, Have I Read This Book Already? In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</title>
       <link>https://sadlynothavocdinosaur.com/posts/archeology/</link>
@@ -17,7 +28,7 @@
       <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/reading_room.png" type="image/png"/>
       <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/reading_room.png"/>
       <guid>https://sadlynothavocdinosaur.com/posts/archeology/</guid>
-      <pubDate>Tue, 12 Feb 2024 05:00:00 GMT</pubDate>
+      <pubDate>Tue, 12 Mar 2024 05:00:00 GMT</pubDate>
     </item>
 
     <item>
@@ -27,7 +38,7 @@
       <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/self_talk_square.png" type="image/png"/>
       <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/self_talk_square.png"/>
       <guid>https://sadlynothavocdinosaur.com/posts/reflection/</guid>
-      <pubDate>Mon, 11 Feb 2024 05:00:00 GMT</pubDate>
+      <pubDate>Mon, 11 Mar 2024 05:00:00 GMT</pubDate>
     </item>
 
     <item>
@@ -37,7 +48,7 @@
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/writing_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/writing_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/levels/</guid>
-    <pubDate>Thu, 08 Feb 2024 05:00:00 GMT</pubDate>
+    <pubDate>Fri, 08 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
   <item>
@@ -47,7 +58,7 @@
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robot_bs_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robot_bs_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/bs/</guid>
-    <pubDate>Wed, 07 Feb 2024 05:00:00 GMT</pubDate>
+    <pubDate>Thu, 07 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
   <item>
@@ -57,7 +68,7 @@
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/devils_advocate_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/devils_advocate_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/devils-advocate/</guid>
-    <pubDate>Tue, 06 Feb 2024 05:00:00 GMT</pubDate>
+    <pubDate>Wed, 06 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
   <item>
@@ -67,7 +78,7 @@
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/umm-wait.gif" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/umm-wait.gif"/>
     <guid>https://sadlynothavocdinosaur.com/posts/reader-questions/</guid>
-    <pubDate>Mon, 05 Feb 2024 05:00:00 GMT</pubDate>
+    <pubDate>Tue, 05 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
   <item>
@@ -77,7 +88,7 @@
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/bens_frog.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/bens_frog.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/decodable/</guid>
-    <pubDate>Sun, 04 Feb 2024 05:00:00 GMT</pubDate>
+    <pubDate>Mon, 04 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
 
