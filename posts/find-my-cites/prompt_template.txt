@@ -1,28 +1,6 @@
 {
-  "Magic Cut-and-Paste": {
-    "prompt": "Your job is to create a JSON object from the following Source Text. It should have a single key-value pair. The key should be \"extracted\" and the value should be {{What do you want to copy?}} \n\nIf the value calls for a list, separate entries with commas followed by a space, unless the list items contain commas, in which case, use semicolons. \n\n---\n\nSOURCE TEXT\n\n{{innerText}}\n\n---\n\nNow provide the JSON object. \n\n",
-    "model": "gpt-3.5-turbo-1106",
-    "temperature": 0,
-    "max_tokens": 250,
-    "output": 1,
-    "json_mode": 1,
-    "output_to": 4,
-    "behavior": "Copy to clipboard",
-    "hide_button": false
-  },
-  "Copy to clipboard": {
-    "prompt": "{{passThrough[\"extracted\"]}}",
-    "model": "gpt-3.5-turbo",
-    "temperature": 0.7,
-    "max_tokens": 250,
-    "output": 0,
-    "json_mode": 0,
-    "output_to": 1,
-    "behavior": "stop",
-    "hide_button": true
-  },
   "Get citations from selected": {
-    "prompt": "I'm about to show you a selection of text from an academic paper, complete with citations to other works. Your job is to find all the citations and produce a csv containing a row for each citation. The csv should have the following headers: author, title, name of publication, and date. Each row should have the following data all encased in double quotes: author, title, name of publication, and date. Be sure to add a carriage return/line break to the end of each row, including the header row. If part of the information isn't available return \"unknown.\" \n\nTEXT FROM ACADEMIC PAPER\n\n{{highlighted}}\n\n---\n\nNow provide the text of the csv file.\n\n\n\n",
+    "prompt": "I'm about to show you a selection of text from an academic paper, complete with citations to other works. Your job is to find all the citations and produce the text for a csv file containing a row for each citation. The csv should have the following headers: \"author\", \"title\", \"name_of_publication\", and \"date\". Consequently, each row should have the following data all encased in double quotes: author, title, name of publication, and date. Be sure to add a carriage return/line break to the end of each row, including the header row. If part of the information isn't available return \"unknown\" for that part. \n\nTEXT FROM ACADEMIC PAPER\n\n{{highlighted}}\n\n---\n\nNow provide a line for the header and each citation (row) in the csv file. Return only the text of the file. Do NOT place it in quotes or provide any extraneous text, just the header and rows. \n",
     "model": "gpt-4-turbo-preview",
     "temperature": 0,
     "max_tokens": 3000,
