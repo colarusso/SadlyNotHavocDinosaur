@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>Not Quite Dictation: Draft emails based on pre-set scenarios and an "AI"-mediated Q&amp;A</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-03-15T00:00:00-0500"/>
+  <meta property="og:title" content="Not Quite Dictation: Draft emails based on pre-set scenarios and an "AI"-mediated Q&amp;A"/>
+  <meta property="og:description" content="It's been seven weeks since the first and last time we asked an LLM to help us write an email. That template was rather constrained in what it could say. In fact, we only trusted it to politely decline emails. See I'm Sorry, Dave Can't Do That. Today, however, we're interested in doing something a bit different. Today, we'll build upon our work creating dialogues to have an LLM read an email, ask us some questions about how we want to reply, and then draft a response. First, you should know that though I've been testing this prompt out over the past month or so, it really hasn't found its way into regular use. When you see the results, I think you'll see why. Which isn't to say it couldn't be useful. It's just that I have other ways of getting what I need. More about that in a bit.  "/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/email_bot_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Not Quite Dictation</h1>
+  <div class="post_title_02">Draft emails based on pre-set scenarios and an "AI"-mediated Q&amp;A</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/email_bot.png"><img src="images/50-days/email_bot.png" ALT="A cute robot answering emails" class="list_img_file"/></a>
+    <div class="caption">
+      Can I Help?, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 40th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
+  <p>
+    It's been seven weeks since the first and last time we asked an LLM to help us write an email. That template was rather constrained in what it could say. In fact, we only trusted it to politely decline emails. See <a href="posts/decline-requests">I'm Sorry, Dave Can't Do That</a>. Today, however, we're interested in doing something a bit different. Today, we'll build upon our work creating <a href="posts/simple-training-sims">dialogues</a> to have an LLM read an email, ask us some questions about how we want to reply, and then draft a response. First, you should know that though I've been testing this prompt out over the past month or so, it really hasn't found its way into regular use. When you see the results, I think you'll see why. Which isn't to say it couldn't be useful. It's just that I have other ways of getting what I need. More about that in a bit.
+  </p>
+  <p>
+    To help you understand how this work's here's a redacted conversation I had with the template. It's based on an email thread in which a few folks at the university were discussing the logistics of setting up a photo shoot with one of our new fellows. I trust you can imagine the thread without me sharing it. One day of the week seemed better than others. Someone had a conflict during a certain time, etc. Here's my exchange with the LLM.
+  </p>
+  <iframe src="posts/emails/transcript.html" width="100%" height="350px"></iframe>
+
+  <p>
+    A couple of things are worth noting. It understood the gist of the conversation. It even recognized the fact that one of the people on the thread couldn't make it between 2 and 4 on Tuesdays because of class. It didn't quite get that we were trying to find one time either this next Tuesday or the one after, hence the odd statment about being sure they'd "capture something great without me." FWIW, I actually answered this email without the template's assistance. here's that answer in whole:</p>
+
+  <blockquote>
+    The 26th doesn't work for me, but I could do the 19th before 1pm.
+  </blockquote>
+
+  <p>
+    Now, I have been playing with this for a while and something that I didn't do above that I probably should have was to ask the LLM to rewrite the email. I could have asked for it to be shorter or corrected the issue about only looking for one time, but that seemed a bit much. This wasn't a thread that needed AI assistance. 
+  </p>
+  <p>
+    Sometimes it's just faster to write a reply yourself. However, I alluded above to the fact that I was getting what I needed somewhere else, suggesting some other tool. It turns out that place is still within LIT Prompts. Instead of feeding an email through an LLM I do often pluck out some boilerplate text for inclusion in my emails. For example, I'll often add the text, "<code>You can see my availability and book a time to talk here: https://example.com/book-a-call</code>" Of course, I replace the example URL with my actual booking link, a link that I never remember on my own. By putting this in a template, it's only every a click or two away. 
+  </p>
+
+  <p>
+    When you get to the templates below, you'll see that I actually try to provide for these canned answer senarios in the LLM approach by laying out a set of if this do thats. That is, the template tells the LLM that if someone is asking for a call they should include my booking link in the reply. If they ask me to speak, it should point out my no manel (all-male panel) policy, etc. There's a lot more for you to dig into, and I susspect you'll have fun playing around. 
+   </p>
+   <p> 
+    If you want more time to explore how you feel about AI-generated text, I suggest you (re)read that <a href="posts/decline-requests">first email post</a>, you might also enjoy <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">this piece</a> from Ted Chiang. I would, however, ask you to distinguish between Writing with a capital W and writing. It's not clear to me that we should expect the same things from every writing exercise (e.g., making a shopping list). That will make more sense if you give those two a peek. With that said...
+  </p>
+
+
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/emails/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/emails/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/emails/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/emails/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/emails/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/emails/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/emails/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/emails/#tires">Kick the Tires</a></li>
+    <li><a href="posts/emails/#references">TL;DR References</a></li>
+  </ul>
+  <p>
+    <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
+  </p>
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/emails/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/emails/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/emails/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/emails/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. Here the idea is for you to select the email or email thread you are replying to and have the LLM "read" them before asking you how you'd like to reply.  
+  </p>
+
+  <p> 
+    It's worth taking a moment to consider one very important difference between this prompt and most of those that have come before. Here you are potentially highlighting sensitive or otherwise private data. So, you need to think carefully about the particulars of your situation. For example, if you're <a href="https://github.com/SuffolkLITLab/prompts#using-lm-studio-with-lit-prompts" target="_blank">running LM Studio locally</a> then there isn't much to consider as the information won't leave your computer. However, if you're using some other API provider, you will be sending them the contents of anything you select. One thing you have going in your favor is that as an API user you may be subject to special terms that better protect your privacy. For example, as of this writing, users of OpenAI's API were subject to a different set of terms than users of ChatGPT. Namely, they are subject to the <a href="https://openai.com/policies/business-terms" target="_blank">Business Terms</a> which importantly preclude the use of your data for training purposes. This is important because if your data is being used to train an LLM it may one day come out the other end. 
+  </p>
+
+  <p>Here's the template's title.</p>
+  <p><code>Draft email reply</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>My name is David. You are acting as my administrative assistant. You help me draft replies to emails or email threads. I want them to be thoughtful, concise, and kind without sounding sappy or inauthentic. Below you'll fine the text of an email or email thread I just received. Some things you should know first. 
+
+BACKGROUND:
+
+If someone is looking to talk or have a call, they can check my availability and book a video call at https://example.com/book-a-call
+
+If the email is an introduction, thank the sender, tell them I'm moving them to BCC to save their inbox, and suggest to the person I just "met" that they could find my availability and book a call at https://example.com/book-a-call
+
+If they are asking me to be on a panel at a conference or the like, explain that I'm open to the idea but that as a matter of personal policy I don't do manels (all-male panels).
+
+Here's the email/thread: 
+
+EMAIL/THREAD
+
+{{highlighted}}
+
+---
+
+Think about what the last email is asking of me and what you would need to know to draft a reply (e.g., Do I agree or disagree with this or that statement? What is my answer to the author's open questions?). Now, let's take a moment to engage in a dialogue where you ask one question at a time, and I will answer. This will continue until you have what you need to draft a response. Ask as few questions as possible. Remember, after you have what you need, provide me with a very brief draft reply. Keep the reply super short!
+
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-4-turbo-preview</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+
+
+  <p>As I mentioned above, I don't actually use this template regularly. Most of the time it is faster to do something else. When I use a template, it's ussually not an LLM-based template. Rather, it's a way to grab some text and save on typing it out from memory. This is esp. helpful when it includes something like a URL with some unique ID, like my booking link.</p>
+
+  <p>Here's the template's title.</p>
+  <p><code>Book call</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You can see my availability and book a time to talk here: https://example.com/book-a-call</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
+     <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+<h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+<p>
+  To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+</p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/emails/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>Inbox Zero.</b> Try using the first template to answer a few emails. I wouldn't expect your automated replies to be ready to send out of the box. Rather, If you're experience is anything like mine, you'll likely find yourself drasticly cutting from your drafts. Like a sculptor working in marble, chip away the unnecessary material to reveal the email within. 😉
+    </li>
+    <li>
+      <b>Boilerplate.</b> Create non-LLM templates like the second one above for snipets of text you use over and over again. I find these esp. useful if they have something like a URL with a random ID, the sort of thing I always have to look up when including in an email. 
+    </li>
+    
+  </ul>
+    <!--
+    =================================================
+
+                       References
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="references" href="posts/emails/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
+  <ul> 
+
+    <li>
+      <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">ChatGPT Is a Blurry JPEG of the Web</a> by Ted Chiang. Writing at the beginning of ChatGPT's rise to prominence, this article discusses the analogy between language models like ChatGPT and lossy compression algorithms. Chiang argues that while models can repackage/compress web information, they lack true understanding. Ultimately, Chiang concludes that starting with a blurry copy is not ideal when creating original content and that the struggling to express thoughts is an essential element of the writing process. 
+    </li>
+
+  </ul>
+
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://mastodon.social/@Colarusso" target="_blank">Mastodon</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by David Colarusso</span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+  (async () => {
+    prompts = await loadFile('posts/emails/prompt_template.txt');
+  })()
+</script>
+
+</BODY></HTML>
