@@ -10,7 +10,7 @@
     "behavior": "chat",
     "hide_button": false
   },
-  "Book call": {
+  "Book a call": {
     "prompt": "You can see my availability and book a time to talk here: https://example.com/book-a-call",
     "model": "gpt-3.5-turbo",
     "temperature": 0.7,
