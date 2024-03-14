@@ -13,7 +13,7 @@
     <item>
       <title>AI-assisted LIT Reviews: Create a sphreadsheet of the citations found in a paper with only a few keystrokes</title>
       <link>https://sadlynothavocdinosaur.com/posts/find-my-cites/</link>
-      <description>lorem ipsumlorem ipsum</description>
+      <description>Today's template builds on Tuesday and Wednesday's use of entity extraction. We'll be using an LLM to extract the citations from scholarly articles and save them to a csv file. After that we can add columns to the file to help make finding copies easier and to track if we've read the articles. Finding reading all the cites in a paper is often part of the larger process of conducting LIT review.</description>
       <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/cites_square.png" type="image/png"/>
       <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/cites_square.png"/>
       <guid>https://sadlynothavocdinosaur.com/posts/find-my-cites/</guid>
