@@ -5,10 +5,10 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Auto Generate Code Comments: In which "AI" suggests comments and explain a function that approximates pi (π)</title>
+  <title>Auto Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-19T00:00:00-0500"/>
-  <meta property="og:title" content="Auto Generate Code Comments: In which "AI" suggests comments and explain a function that approximates pi (π)"/>
+  <meta property="og:title" content="Auto Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)"/>
   <meta property="og:description" content=" "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/pi_square.png"/>
   <meta property="og:image:width" content="1024" />
@@ -76,7 +76,7 @@
     =================================================
   -->
   <h1 class="post_title_01">Auto Generate Code Comments</h1>
-  <div class="post_title_02">In which "AI" suggests comments and explain a function that approximates pi (π)</div>
+  <div class="post_title_02">In which "AI" suggests comments and explains a function that approximates pi (π)</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -109,7 +109,34 @@
   
   <p>
     lorem ipsum
+    <a href="https://mareentryresources.org/" target="_blank">Massachusetts Resource Directory</a>
+
+    <a href="https://myrssalgo.org/" target="_blank">My RSS Algo</a>
+
+    <a href="https://github.com/SuffolkLITLab/prompts" target="_blank">LIT Prompts extension</a>
+
   </p>
+  <section class="line-numbers">
+    <pre class="language-js" style="white-space:pre-wrap;"><code>function estimate_pi(points) {
+      let start_time = Date.now();
+      let inside = 0;
+      for (let i = 0; i < points; i++) {
+        let x = Math.random()*2-1;
+        let y = Math.random()*2-1;
+        if (x*x + y*y <= 1) {
+          inside++;
+        }
+      }
+      let end_time = Date.now();
+      console.log("Elapsed time: "+(end_time-start_time)/1000+" sec");
+      return 4 * (inside/points);
+    }
+    pi = estimate_pi(1000000);
+    console.log("π ≈ "+pi);</code></pre>
+  </section>
+  
+
+
   <iframe src="posts/code-comments/transcript.html" width="100%" height="350px"></iframe>
   <p>
     lorem ipsum
