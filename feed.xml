@@ -9,6 +9,56 @@
 
   <!-- ONDECK
 
+  <item>
+    <title>Rubric-Based Machine Evaluation of Assignments: Have students check their work against your rubric before they turn things in</title>
+    <link>https://sadlynothavocdinosaur.com/posts/ai-rubric/</link>
+    <description>SOmetime the same progam used different ways can be good or evil. lorem ipsumlorem ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/a_plus_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/a_plus_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/ai-rubric/</guid>
+    <pubDate>Fri, 22 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>Produce Simulations Based on Random Scenarios: Produce and run AI-drive text simulations that are different every time</title>
+    <link>https://sadlynothavocdinosaur.com/posts/random-sims/</link>
+    <description>lorem ipsumlorem ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/dice_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/dice_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/random-sims/</guid>
+    <pubDate>Thu, 21 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>What is Retrieval Augmented Generation (RAG)?: In which we approximate RAG using only LLMs and no vector database (based on the Roman Empire's Wikipedia page)</title>
+    <link>https://sadlynothavocdinosaur.com/posts/rag/</link>
+    <description>lorem ipsumlorem ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/robo_caesar_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/robo_caesar_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/rag/</guid>
+    <pubDate>Wed, 20 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>Auto Generate Code Comments: In which "AI" suggests comments and explain a function that approximates pi (π)</title>
+    <link>https://sadlynothavocdinosaur.com/posts/code-comments/</link>
+    <description>lorem ipsumlorem ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/pi_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/pi_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/code-comments/</guid>
+    <pubDate>Tue, 19 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <title>Build an AI-Augmented Word Processor: Include an interactive version of your style guide; predict reader questions; engage your arguments with a devil's advocate; and shorten/simply text, just to name a few possibilities</title>
+    <link>https://sadlynothavocdinosaur.com/posts/word-processor/</link>
+    <description>lorem ipsumlorem ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/word_processor_square.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/word_processor_square.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/word-processor/</guid>
+    <pubDate>Mon, 18 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
   --> 
 
   <item>

@@ -85,44 +85,61 @@ code {
 </head>
 <body>
 
-        <div id="output_window"><div class="text_wrap" id="text_1"><div class="output_text" style="white-space: pre-wrap;"><pre class="code_wrapper"><code>
-// Function to estimate the value of pi using the Monte Carlo method
-function estimate_pi(steps=1000000) {
-  var inside = 0;
-  var outside = 0;
-  var step = 0;
-  
-  // Loop through the specified number of steps
-  while (step &lt; steps) {
-     x = (Math.random()-0.5)*2;
-     y = (Math.random()-0.5)*2;
-     
-     // Check if the point (x, y) is inside the unit circle
-     if (Math.sqrt(x*x+y*y)&lt;=1) {
-       inside+=1;
-     } else {
-       outside+=1;
-     }
-     step+=1;
+        <div id="output_window"><div class="text_wrap" id="text_1"><div class="output_text" style="white-space: pre-wrap;"><pre class="code_wrapper"><code>javascript
+// Function to estimate the value of Pi using the Monte Carlo method
+function estimate_pi(points) {
+
+  // Record the start time of the function
+  let start_time = Date.now();
+
+  // Initialise the counter for points inside the quarter circle
+  let inside = 0;
+
+  // Generate the specified number of random points
+  for (let i = 0; i &lt; points; i++) {
+
+    // Generate a random x-coordinate between -1 and 1
+    let x = Math.random()*2-1;
+
+    // Generate a random y-coordinate between -1 and 1
+    let y = Math.random()*2-1;
+
+    // Check if the point is inside the unit circle (x^2 + y^2 &lt;= 1)
+    if (x*x + y*y &lt;= 1) {
+
+      // If it is, increment the counter
+      inside++;
+    }
   }
-  
-  // Return an estimate of pi using the ratio of points inside the circle to total points
-  return 4*(inside)/(inside+outside);
+
+  // Record the end time of the function
+  let end_time = Date.now();
+
+  // Print the elapsed time in seconds
+  console.log("Elapsed time: "+(end_time-start_time)/1000+" sec");
+
+  // Return the estimate of Pi (4 times the ratio of points inside the circle to the total number of points)
+  return 4 * (inside/points);
 }
 
-var d = new Date();
-start_time = d.getTime();
+// Call the function with 1,000,000 points
+pi = estimate_pi(1000000);
 
-// Call the estimate_pi function with a specified number of steps
-pi = estimate_pi(10000000);
+// Print the estimated value of Pi
 console.log("π ≈ "+pi);
+</code></pre></div></div><div class="text_wrap" id="text_2"><div class="input_text">But why does this work? Why does pi almost equal 4 times the (inside points/all points)?</div></div><div class="text_wrap" id="text_3"><div class="output_text" style="white-space: pre-wrap;">This works because it's based on the concept of probability and the geometric properties of a circle. 
 
-var d2 = new Date();
-end_time = d2.getTime();
+If we draw a square with side length 2 and inscribe a circle with radius 1 inside it, the area of the square would be 4 (2*2) and the area of the circle would be π (π*1^2).
 
-// Calculate and log the elapsed time in seconds
-console.log("Elapsed time: "+(end_time-start_time)/1000+" sec");
-</code></pre></div></div><div class="text_wrap" id="text_2"><div class="input_text">Include an explanation as to how this produces an estimate of pi. </div></div><div class="text_wrap" id="text_3"><div class="output_text" style="white-space: pre-wrap;">The code uses the Monte Carlo method to estimate the value of pi. It generates random points within a square of side length 2 and checks if each point falls within the unit circle centered at the origin. By comparing the ratio of points falling inside the circle to the total number of points generated, it calculates an estimate of pi using the formula 4*(inside)/(inside+outside). This approach leverages the geometric properties of the circle to approximate the value of pi.</div></div></div>
-      <div class='msg_text'>Saved Friday, March 15, 2024 at 9:08 am</div>
+The ratio of the area of the circle to the area of the square is π/4. 
+
+Now, if we randomly generate a large number of points within this square, the probability that any given point falls within the circle is essentially the ratio of the area of the circle to the area of the square, which is π/4. 
+
+So, in the long run, the proportion of the points that fall inside the circle (inside/points) should approach π/4. 
+
+Therefore, if we multiply this ratio by 4, we get an approximation of π. 
+
+The more points we generate, the closer our approximation should get to the actual value of π, due to the law of large numbers in probability.</div></div></div>
+      <div class='msg_text'>Saved Friday, March 15, 2024 at 2:02 pm</div>
 </body>
 </html>

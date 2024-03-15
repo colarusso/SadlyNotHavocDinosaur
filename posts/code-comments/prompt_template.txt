@@ -1,7 +1,7 @@
 {
   "Add code comments": {
     "prompt": "You are reviewing code and providing comments to help future developers understand its operation. In a moment I will give you a bit of code to read over. Your job is to add comments to the code and to return this new version to me. These comments should help explain what the code is doing. If the code includes a function there should be a description of the function's purpose and operation. Alright, here's the code: \n\n```{{highlighted}}```\n\nNow echo back a version of the code with your comments, place your code in triple tick marks (i.e., ```code```).\n\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4",
     "temperature": 0.7,
     "max_tokens": 1000,
     "output": 1,
