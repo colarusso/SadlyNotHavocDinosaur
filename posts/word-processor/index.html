@@ -9,7 +9,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-18T00:00:00-0500"/>
   <meta property="og:title" content="Build an AI-Augmented Word Processor: Include an interactive version of your style guide; predict reader questions; argue with a devil's advocate; shorten or simplify text... Move beyond spelling and grammar checks—evaluate an author's logic!"/>
-  <meta property="og:description" content="I suspect most folks hearing talk of &quot;an AI-augmented word processor&quot; imagine something that takes in 7 words and turns out 700 (e.g., write an essay on the French Revolution). I think that's a pretty unimaginative vision of AI-assisted writing. As I've said again, and again, that's looking through the wrong end of the telescope. More folks should be feeding these tools 500 words and asking for 5. Today I'll show you how to turn your prompt templates into an AI writing assistant. I'll show you what this technology can do when it's interested in helping you do the hard work, not taking a shortcut. "/>
+  <meta property="og:description" content="I fear people hear &quot;AI-augmented word processor&quot; and imagine something that takes in 7 words and turns out 700 (e.g., write an essay on the French Revolution). I think that's a pretty unimaginative vision of AI-assisted writing. As I've said again, and again, that's looking through the wrong end of the telescope. More folks should be feeding these tools 500 words and asking for 5. Today I'll show you how to turn your prompt templates into an AI writing assistant. I'll show you what this technology can do when it's interested in helping you do the hard work, not taking a shortcut. "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/robo_mop_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -111,7 +111,7 @@
   </i>
 
   <p>
-    I suspect most folks hearing talk of "an AI-augmented word processor" imagine something that takes in 7 words and turns out 700 (e.g., write an essay on the French Revolution). I think that's a pretty unimaginative vision of <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">AI-assisted writing</a>. As I've said <a href="posts/summarize-and-question">again</a>, and <a href="posts/magnify">again</a>, that's looking through the wrong end of the telescope. More folks should be feeding these tools 500 words and asking for 5. Today I'll show you how to turn your prompt templates into an AI writing assistant. I'll show you what this technology can do when it's interested in helping you do the hard work, not taking a shortcut. 
+    I fear people hear "AI-augmented word processor" and imagine something that takes in 7 words and turns out 700 (e.g., write an essay on the French Revolution). I think that's a pretty unimaginative vision of <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web" target="_blank">AI-assisted writing</a>. As I've said <a href="posts/summarize-and-question">again</a>, and <a href="posts/magnify">again</a>, that's looking through the wrong end of the telescope. More folks should be feeding these tools 500 words and asking for 5. Today I'll show you how to turn your prompt templates into an AI writing assistant. I'll show you what this technology can do when it's interested in helping you do the hard work, not taking a shortcut. 
   </p>  
 
   <blockquote>
@@ -120,7 +120,7 @@
   <p style="text-align:right;padding-right: 25px;">- <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Ted Chiang</a>
   <p>
 
-  <p>We'll be working with ten prompt templates, all based on examples from earlier in this series. Each template corresponds to one of our word processor's 10 functions. The trick here is that we'll export a single HTML file containing all of the templates to act as our <a href="ai/word-processor/" target="_blank">word processor</a>. 
+  <p>We'll be working with ten prompt templates, all based on examples from earlier in this series. Each template corresponds to one of our word processor's 10 functions. The trick here is that we'll <a href="posts/word-processor/#export">export</a> a single HTML file containing all of the templates to act as our <a href="ai/word-processor/" target="_blank">word processor</a>. 
   </p>
   <div class="featured_img_center" style="max-width:640px;">
     <a href="images/50-days/word_processor.gif"><img src="images/50-days/word_processor.gif" alt="Screenshot of the word processor in action" class="list_img_file" style="border: 1px solid #a5a5a5;"></a>
@@ -129,37 +129,39 @@
     </div>
   </div>
 
+<p><font style="font-size: 35px; line-height: 40px;color: brown;font-weight: 600;">&ldquo;Spell check was followed by grammar check, and now we have tools that can check—or at least nudge us to more honestly check—our arguments.&rdquo;</font></p>
+
   <p>
-    I'm particularly fond of the templates that engage with the author's ideas because they help us do the hard work. Spell check was followed by grammar check, and now finally, we have tools that can check (or at least nudge us to check) our thinking. Consider, functions 4, 5, and 6 below. 
+    I'm particularly fond of the templates that engage with the author's ideas because they're the ones that help us do the hard work. Spell check was followed by grammar check, and now we have tools that can check—or at least nudge us to more honestly check—our arguments. Consider, functions 4, 5, and 6 below. 
   </p>
 
 
   <div class="featured_img_right" style="max-width:400px;">
     <a href="images/50-days/geordi_llm_outputs.png"><img src="images/50-days/geordi_llm_outputs.png" alt="A meme in the form of the Drake meme with Geordi from Start trek. Hold up: LLM outputs more than you put in (e.g., write me an essay). Now You're Talking: LLM outputs less than you put in (e.g., given my essay, what questions might readers have?)" class="list_img_file"></a>
     <div class="caption">
-      Geordi talks with us about how to use LLMs responsibility
+      Geordi talks with us about how to use LLMs responsibly
     </div>
   </div>
   
 
   <p>
-    As I've noted <a href="posts/reader-questions">before</a>, one of my favorite bits of writing advice is, "let your writing breathe." That is, don't write everything in one go. Let it sit so you can come back to it with fresh eyes. Reading your work out loud, or better yet, having a computer read it to you are close contenders. It's easy to reread something you just wrote and unconsciously fill in the blanks. If you want a different perspective, historically you've needed distance or another person. Now, however, there's a third option. ;) 
+    As I've noted <a href="posts/reader-questions">before</a>, one of my favorite bits of writing advice is, "let your writing breathe." That is, don't write everything in one go. Let it sit so you can come back to it with fresh eyes. Reading your work out loud, or better yet, having a computer read it to you are both great too. It's too easy to reread something you just wrote and unconsciously fill in the blanks. If you want a different perspective on your writing, you've always needed distance or another person. Now, however, there's a third option, ask <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLM).
   </p>
 
-  <p>The <a href="ai/word-processor/" target="_blank">word processor</a>'s ten features are listed below, along with links to the posts where we first met them. I suggest clicking through those links if you want to learn more. Additionally, you can take them all for a test drive <a href="ai/word-processor/" target="_blank">here</a>. I do hope, however, you follow through below and end up adding some of your own. </p>
+  <p>The <a href="ai/word-processor/" target="_blank">word processor</a>'s ten functions are listed below, along with links to the posts where we first met them. I suggest clicking through those links if you want to learn more. You can take them all for a test drive <a href="ai/word-processor/" target="_blank">here</a>. I do hope, however, you follow through below and add some of your own. </p>
 
-  <h3><a name="features" href="posts/find-my-cites/#features" class="anchor" alt="deep link to this section"></a>Features</h3>
+  <h3><a name="functions" href="posts/find-my-cites/#functions" class="anchor" alt="deep link to this section"></a>Functions</h3>
   <ol>
-    <li><b>📖 Define word/phrase</b>. <a href="posts/define-words">A Rose by Any Other Name</a>: Define a selected word, phrase, idiom, or initialism on a webpage</li>
-<li><b>🗜️ Shorten selected text</b>. <a href="posts/shorten">500 Characters? I'll Make It Fit!</a> Use AI to shorten text</li>
-<li><b>👩🏻‍🏫 Suggest plain language</b>. <a href="posts/legalese">Translate Legalese</a>: An AI tool for rewriting texts in plain language</li>
-<li><b>🤷 Anticipate reader questions</b>. <a href="posts/reader-questions">Anticipating Reader Questions</a>: Have AI/LLMs suggest questions readers might have about your writing</li>
-<li><b>🕵🏽‍♀️ Flag logical fallacies (JSON)</b>. <a href="posts/flag-fallacies">Flag Logical Fallacies with a Browser Extension</a>: Have AI read a webpage and flag logical fallacies </li>
-<li><b>😈 Engage devil's advocate</b>. <a href="posts/devils-advocate">Summon the Demon</a>: Strengthen your arguments with an AI-powered devil's advocate</li>
-<li><b>📕 Apply house style guide</b>. <a href="posts/style-guide">The Elements of Interactive Style Guides</a>: Have AI provide writing feedback based on a house style guide</li>
-<li><b>🗞️ Suggest headlines/titles</b>. <a href="posts/headlines">Follow This One Trick to Write Great Headlines</a>: Produce a collection of possible <strike>clickbait</strike> compelling headlines based on the text of an article</li>
-<li><b>📝 Summarize and question</b>. <a href="posts/summarize-and-question">Using AI to Distill and Question Texts</a>: Summarize and question the contents of a webpage from within the browser</li>
-<li><b>🤖 🐂 💩 BS with a "bot."</b> <a href="posts/bs">Algorithmic BS</a>: Shoot the breeze with your base LLM</li>
+    <li><b>📖 Define word/phrase</b>. <a href="posts/define-words">A Rose by Any Other Name</a>: Define a selected word, phrase, idiom, or initialism</li>
+    <li><b>🗜️ Shorten selected text</b>. <a href="posts/shorten">500 Characters? I'll Make It Fit!</a> Use AI to shorten text</li>
+    <li><b>👩🏻‍🏫 Suggest plain language</b>. <a href="posts/legalese">Translate Legalese</a>: An AI tool for rewriting texts in plain language</li>
+    <li><b>🤷 Anticipate reader questions</b>. <a href="posts/reader-questions">Anticipating Reader Questions</a>: Have AI/LLMs suggest questions readers might have about your writing</li>
+    <li><b>🕵🏽‍♀️ Flag logical fallacies (JSON)</b>. <a href="posts/flag-fallacies">Flag Logical Fallacies with a Browser Extension</a>: Have AI read your text and flag logical fallacies </li>
+    <li><b>😈 Engage devil's advocate</b>. <a href="posts/devils-advocate">Summon the Demon</a>: Strengthen your arguments with an AI-powered devil's advocate</li>
+    <li><b>📕 Apply house style guide</b>. <a href="posts/style-guide">The Elements of Interactive Style Guides</a>: Have AI provide writing feedback based on a house style guide</li>
+    <li><b>🗞️ Suggest headlines/titles</b>. <a href="posts/headlines">Follow This One Trick to Write Great Headlines</a>: Produce a collection of possible <strike>clickbait</strike> compelling headlines based on the text of an article</li>
+    <li><b>📝 Summarize and question</b>. <a href="posts/summarize-and-question">Using AI to Distill and Question Texts</a>: Summarize and question text</li>
+    <li><b>🤖 🐂 💩 BS with a "bot."</b> <a href="posts/bs">Algorithmic BS</a>: Shoot the breeze with your base LLM</li>
   </ol>
   <p>There is one template I wish I could have included but didn't: <a href="posts/magnify">Magnifying Ideas and Expanding Text with AI</a>: In which I show you how to have AI write something both personal and original, bucking the assumptions that AI writing can never be personal or original. Unfortunately, this template used the Scratch Pad to store a running transcript of its conversation which conflicted with using the Scratch Pad as a place for typing your text. So, I had to leave it out. That being said...</p>
 
@@ -291,7 +293,7 @@
     If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. We'll use this functionality in one of the templates below to collect and act on user input. 
   </p>
   <p>
-    Looking for more on each of these templates? Check out the links provided in the list of <a href="posts/find-my-cites/#features">features</a>.
+    Looking for more on each of these templates? Check out the links provided in the list of <a href="posts/find-my-cites/#functions">functions</a>.
   </p>
 
   <p>Here's a template's title.</p>
@@ -803,7 +805,7 @@ Provide a short 150-word summary of the above text. If asked any follow-up quest
   <ul>
   
     <li>
-      <b>Déjà vu</b>. Seeing as how these templates have come up before, I suggest checking out how we kicked the tires back when they were first introduced. For that, consult the links found above in <a href="posts/find-my-cites/#features">features</a>.
+      <b>Déjà vu</b>. Seeing as how these templates have come up before, I suggest checking out how we kicked the tires back when they were first introduced. For that, consult the links found above in <a href="posts/find-my-cites/#functions">functions</a>.
     </li>
     
     <li>
