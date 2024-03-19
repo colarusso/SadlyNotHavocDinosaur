@@ -5,11 +5,11 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Auto Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)</title>
+  <title>Auto-Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-19T00:00:00-0500"/>
-  <meta property="og:title" content="Auto Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)"/>
-  <meta property="og:description" content=" "/>
+  <meta property="og:title" content="Auto-Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)"/>
+  <meta property="og:description" content=" Last Thursday on Pi Day, I found myself writing about a program I wrote to approximate pi, as one does, and it occurred to me that I hadn't talked at all about large language models (LLMs) and coding. I haven't written about LLMs and coding here for two main reasons: (1) I suspect as a law school instructor that my readers are more interested in the human language side of things; and (2) it's a pretty crowded space. That's not to say I don't have opinions. Over the past year, I've leaned heavily on LLMs to help get a number of projects off the ground. The LIT Prompts extension itself was written with a good deal of LLM assistance. I also used it to build an open source ago-powered RSS reader—My RSS Algo. I started using LLMs to help with my coding because an old student project, the Massachusetts Resource Directory, needed a lot of work to stay relevant, and I didn't know when I'd have time to get another student to do the update. So, I budgeted a few hours to see what I could get done with the help of an LLM, and I ended up rebuilding the site from scrtach in less than a day. The experience drove home how useful these tools could be.  "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/pi_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -75,9 +75,9 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Auto Generate Code Comments</h1>
+  <h1 class="post_title_01">Auto-Generate Code Comments</h1>
   <div class="post_title_02">In which "AI" suggests comments and explains a function that approximates pi (π)</div>
-  <div class="featured_img_right">
+  <div class="featured_img_right" style="max-width:400px;">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
         <b>Hear the author read <i>TK</i></b>
@@ -105,43 +105,47 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 42nd</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
-
-  
   <p>
-    lorem ipsum
-    <a href="https://mareentryresources.org/" target="_blank">Massachusetts Resource Directory</a>
-
-    <a href="https://myrssalgo.org/" target="_blank">My RSS Algo</a>
-
-    <a href="https://github.com/SuffolkLITLab/prompts" target="_blank">LIT Prompts extension</a>
-
+    Last Thursday on <a href="https://en.wikipedia.org/wiki/Pi_Day" target="_blank">Pi Day</a>, I found myself <a href="https://mastodon.social/@Colarusso/112094156128398017" target="_blank">writing</a> about a program I wrote to approximate pi, as one does, and it occurred to me that I hadn't talked at all about <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs) and coding. I haven't written about LLMs and coding here for two main reasons: (1) I suspect as a law school instructor that my readers are more interested in the human language side of things; and (2) it's a pretty crowded space. That's not to say I don't have opinions. Over the past year, I've leaned heavily on LLMs to help get a number of projects off the ground. The <a href="https://github.com/SuffolkLITLab/prompts" target="_blank">LIT Prompts extension</a> itself was written with a good deal of LLM assistance. I also used it to build an open source ago-powered RSS reader—<a href="https://myrssalgo.org/" target="_blank">My RSS Algo</a>. 
+  </p>
+  <p>
+    I started using LLMs to help with my coding because an old student project, the Massachusetts Resource Directory, needed a lot of work to stay relevant, and I didn't know when I'd have time to get another student to do the update. So, I budgeted a few hours to see what I could get done with the help of an LLM, and I ended up rebuilding <a href="https://mareentryresources.org/" target="_blank">the site</a> from scrtach in less than a day. The experience drove home how useful these tools could be.
+  </p>
+  <p>
+    I suspect code generation with LLMs is currently stuck in this wierd place. If you can evaluate the output, and know well enough when to ignore what it suggests, they're really quite a time saver. They're especially helpful when navigating unfamiliar syntax, but I fear if you had zero coding experience they might end up being more trouble than they're worth. Similarly, one could be overly credulous and implement everything they suggest absent any proper oversight. Which is sort of a general comment about LLMs right now. <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">What could go wrong?</a> So, as I have with my human language prompts, I'll focus on a use case that strikes me as relatively safe—providing code comments. 
+  </p>
+  <p> 
+    Here's the code I mentioned above with zero context or explanations. Don't worry is this doesn't mean anything to you. Feel free to jump to the next bit of text where we'll feed this program into a template and ask it to add comments to the code to help explain what is going on. 
   </p>
   <section class="line-numbers">
     <pre class="language-js" style="white-space:pre-wrap;"><code>function estimate_pi(points) {
-      let start_time = Date.now();
-      let inside = 0;
-      for (let i = 0; i < points; i++) {
-        let x = Math.random()*2-1;
-        let y = Math.random()*2-1;
-        if (x*x + y*y <= 1) {
-          inside++;
-        }
-      }
-      let end_time = Date.now();
-      console.log("Elapsed time: "+(end_time-start_time)/1000+" sec");
-      return 4 * (inside/points);
+  let start_time = Date.now();
+  let inside = 0;
+  for (let i = 0; i < points; i++) {
+    let x = Math.random()*2-1;
+    let y = Math.random()*2-1;
+    if (x*x + y*y <= 1) {
+      inside++;
     }
-    pi = estimate_pi(1000000);
-    console.log("π ≈ "+pi);</code></pre>
+  }
+  let end_time = Date.now();
+  console.log("Elapsed time: "+(end_time-start_time)/1000+" sec");
+  return 4 * (inside/points);
+}
+pi = estimate_pi(1000000);
+console.log("π ≈ "+pi);</code></pre>
   </section>
-  
 
+  <p>Below is a transcript of what happened when I highlighted the above code and triggered today's template.</p>
 
   <iframe src="posts/code-comments/transcript.html" width="100%" height="350px"></iframe>
-  <p>
-    lorem ipsum
-  </p>
 
+  <p>
+    For the most part I'm pretty happy with the output. The leading <code>javascript</code> text seems to be an artifact of how GPT4 deals with code comments. That is, it seems to preface code with a declaration of the code's language. Consequently, you shouldn't include this text in your actual JavaScript as it would throw an error. The comments following <code>//</code>, however, are reasonably good. They do an okay job of describing what the code is doing but stop short of explaining why I might have written the code to take those steps. So, I asked the LLM "why?" and the answer was reasonably cogent. I didn't like the use of <code>(inside/points)</code> in the fifth paragraph. I would have preferred to see <code>(points inside the circle)/(all point)</code>, but then I realized that <code>(inside/points)</code> was a direct quote from my code. So, I suppose I should have done a better job of naming my variables. In this way, I'm reminded of our template that <a href="posts/reader-questions">anticipates reader questions</a>. That is, I can use this to help make what I've written more accessible and understandable to others by using its output to challenge my assumptions. You may also recognize this as the theme of <a href="posts/word-processor"></a>yesterday's post</a>.
+  </p>
+  <p>
+    As always, the output isn't perfect, but that doesn't mean it isn't useful. If you do a lot of work in browser-based coding environments like <a href="https://en.wikipedia.org/wiki/Project_Jupyter" target="_blank">Jupyter Notebooks</a> or <a href="https://research.google.com/colaboratory" target="_blank">Google Colab</a>, having this feature in the browser could be pretty handy. That being said...
+  </p>
 
   <!-- END INTRO -->
 
@@ -267,7 +271,7 @@
   </p>
 
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. 
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. To use today's template, select the code you want to comment and trigger the template.
   </p>
 
   <p>Here's the template's title.</p>
@@ -336,11 +340,7 @@ Now echo back a version of the code with your comments, place your code in tripl
   <ul>
   
     <li>
-      <b>XXX</b> XXXX
-    </li>
-    
-    <li>
-      <b>XXX</b> XXXX
+      <b>Give it a try</b>. Find some code you know well that isn't very but is lacking in comments, and see how this does. 
     </li>
     
   </ul>
@@ -356,16 +356,7 @@ Now echo back a version of the code with your comments, place your code in tripl
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
-    <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-    <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
+    <li><a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.</li>
   </ul>
 
   <!--

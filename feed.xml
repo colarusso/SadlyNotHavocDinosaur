@@ -39,10 +39,12 @@
     <pubDate>Wed, 20 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
+  --> 
+
   <item>
-    <title>Auto Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)</title>
+    <title>Auto-Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)</title>
     <link>https://sadlynothavocdinosaur.com/posts/code-comments/</link>
-    <description>lorem ipsumlorem ipsum</description>
+    <description>Last Thursday on Pi Day, I found myself writing about a program I wrote to approximate pi, as one does, and it occurred to me that I hadn't talked at all about large language models (LLMs) and coding. I haven't written about LLMs and coding here for two main reasons: (1) I suspect as a law school instructor that my readers are more interested in the human language side of things; and (2) it's a pretty crowded space. That's not to say I don't have opinions. Over the past year, I've leaned heavily on LLMs to help get a number of projects off the ground. The LIT Prompts extension itself was written with a good deal of LLM assistance. I also used it to build an open source ago-powered RSS reader—My RSS Algo. I started using LLMs to help with my coding because an old student project, the Massachusetts Resource Directory, needed a lot of work to stay relevant, and I didn't know when I'd have time to get another student to do the update. So, I budgeted a few hours to see what I could get done with the help of an LLM, and I ended up rebuilding the site from scrtach in less than a day. The experience drove home how useful these tools could be. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/pi_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/pi_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/code-comments/</guid>
@@ -58,8 +60,6 @@
     <guid>https://sadlynothavocdinosaur.com/posts/word-processor/</guid>
     <pubDate>Mon, 18 Mar 2024 05:00:00 GMT</pubDate>
   </item>
-
-  --> 
 
   <item>
     <title>Not Quite Dictation: Draft emails based on preset scenarios and an "AI"-mediated Q&amp;A</title>
