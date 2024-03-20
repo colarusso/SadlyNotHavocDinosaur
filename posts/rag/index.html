@@ -143,7 +143,7 @@
   <font style="font-size: 35px; line-height: 40px;color: brown;font-weight: 600;">“The output of an LLM is a secondary source, and just like any secondary source, you should still check with primary sources.”</font>
 
   <p>
-    The first template takes in a question and asks an LLM to return the section most likely to contain the answer. The LLM's matchs are then used to retrieve a section of the page which we prepend to the prompt, just like we described above. The result is a system that can field individual questions of the Wikipedia page. The model we're using couldn't do this if we tried to feed in the whole page because it's too big. By breaking things up, we've found a way to look through the right end of the telescope. Does this make LLM's 100% reliable? No, and don't believe anyone who tells you otherwise. The output of an LLM is a secondary source, and just like any secondary source, you should still check with primary sources. That being said, secondary sources, like Wikipedia, exist for a reason. They're a useful, and often more accessable, starting place. 
+    The first template takes in a question and asks an LLM to return the section most likely to contain the answer. The LLM's matchs are then used to retrieve a section of the page which we prepend to the prompt, just like we described above. The result is a system that can field individual questions of the Wikipedia page. It's not perfect; if it's hard to place your question in one of the above categories, it will error. However, it does let us do things we couldn't otherwise. Mostly, the model we're using couldn't do this if we tried to feed in the whole page because it's too big. By breaking things up, we've found a way to look through the right end of the telescope. Does this make LLM's 100% reliable? No, and don't believe anyone who tells you otherwise. The output of an LLM is a secondary source, and just like any secondary source, you should still check with primary sources. That being said, secondary sources, like Wikipedia, exist for a reason. They're a useful, and often more accessable, starting place. 
   </p>
 
   <!-- END INTRO -->
@@ -778,7 +778,7 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
   <ul>
   
     <li>
-      <b>Make it your own</b>. Swap out the Roman Empire for something else, just be sure it's valid JSON. ;)
+      <b>Make it your own</b>. Swap out the Roman Empire for something else; just be sure it's valid JSON. ;)
     </li>
     
   </ul>
