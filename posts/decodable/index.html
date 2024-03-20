@@ -305,7 +305,7 @@
     Here we have a bunch of templates with word lists (e.g., "Decodable List 01") that when triggered send their content to a single template (i.e., "Write Decodable Books") using the <code>{{passThrough}}</code> variable. Remember, we use the Post-run Behavior parameter to govern what happens after a template is run. If you use Post-run Behavior to send one template's output to another template, the first template's output can be read by the second template via the <code>{{passThrough}}</code> variable. 
   </p>
   <p>
-    We'll also use JSON mode to format the prompt outputs as <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, and as we know from our <a href="posts/translate-selected">translation template</a>, when the passThrough variable is JSON, you can access top-level keys by calling them like this <code>{{{{passThrough["focus_words"]}}}}</code></p>
+    We'll also use JSON mode to format the prompt outputs as <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, and as we know from our <a href="posts/translate-selected">translation template</a>, when the passThrough variable is JSON, you can access top-level keys by calling them like this <code>{{passThrough["focus_words"]}}</code></p>
   <p>
     To use our template, simply click the list you want to use in writing a story, and answer the prompts. We set the Post-run Behavior to CHAT so you can further refine your story (e.g., ask it to rewrite with some section removed or added).
   <p>

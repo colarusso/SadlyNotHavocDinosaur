@@ -5,10 +5,10 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Produce Simulations Based on Random Scenarios: Produce and run AI-drive text simulations that are different every time</title>
+  <title>Using AI to produce simulations based on novel random scenarios: Produce and run simulations that are different every time</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-21T00:00:00-0500"/>
-  <meta property="og:title" content="Produce Simulations Based on Random Scenarios: Produce and run AI-drive text simulations that are different every time"/>
+  <meta property="og:title" content="Using AI to produce simulations based on novel random scenarios: Produce and run simulations that are different every time"/>
   <meta property="og:description" content=" "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/dice_square.png"/>
   <meta property="og:image:width" content="1024" />
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Produce Simulations Based on Random Scenarios</h1>
-  <div class="post_title_02">Produce and run AI-drive text simulations that are different every time</div>
+  <h1 class="post_title_01">Using AI to produce simulations based on novel random scenarios</h1>
+  <div class="post_title_02">Produce and run simulations that are different every time</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -97,7 +97,7 @@
     </div>-->
     <a href="images/50-days/dice.png"><img src="images/50-days/dice.png" ALT="A collection of RPG dice atop a map" class="list_img_file"/></a>
     <div class="caption">
-      Dice and Map by <a href="https://unsplash.com/photos/black-and-white-dice-on-white-and-black-textile-VrtwS-ayI5U" target="_blank" class="captionlnk">Nika Benedictova</a>
+      Anything Could Happen, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
     </div>
   </div>
   <p class="post_p">
@@ -131,7 +131,6 @@
     </ul>
     <li><a href="posts/random-sims/#template">The Prompt Pattern (Template)</a></li>
     <li><a href="posts/random-sims/#tires">Kick the Tires</a></li>
-    <li><a href="posts/random-sims/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -226,7 +225,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/random-sims/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/random-sims/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -236,15 +235,32 @@
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d6}}</code>, <code>{{d4}}</code>, and <code>{{Are you my attorney?}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
   </p>
 
   <p>
-    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. 
+    The <code>{{d6}}</code> variable will be replaced by a random number between 1 and 6. 
+  </p>
+
+  <p>FWIW, here is the full list of "random" output variables:</p>
+    <ul>
+      <li>Coin Flip (heads or tails): <code>{{coinFlip}}</code></li>
+      <li>D4 (1-4): <code>{{d4}}</code></li>
+      <li>D6 (1-6): <code>{{d6}}</code></li>
+      <li>D8 (1-8): <code>{{d8}}</code></li>
+      <li>D% (0-9): <code>{{d%}}</code></li>
+      <li>D20 (1-20): <code>{{d20}}</code></li>
+    </ul>
+  </p>  <p>
+    The <code>{{d4}}</code> variable will be replaced by a random number between 1 and 4. 
+  </p>
+
+  <p>
+    If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
   </p>
 
   <p>Here's the template's title.</p>
-  <p><code>Add code comments</code></p>
+  <p><code>Start Simulation</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
@@ -254,12 +270,27 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are reviewing code and providing comments to help future developers understand its operation. In a moment I will give you a bit of code to read over. Your job is to add comments to the code and to return this new version to me. These comments should help explain what the code is doing. If the code includes a function there should be a description of the function's purpose and operation. Alright, here's the code: 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>We're going to build a character sheet. Here's a list of possible names. 
 
-```{{highlighted}}```
+1. John
+2. Sam
+3. Jack
+4. Lee
+5. Nick
+6. Jacob 
 
-Now echo back a version of the code with your comments, place your code in triple tick marks (i.e., ```code```).
+I'm going to role a dice. Your character's name will be the name from the above list where the name is the one next to the number of the dice role. Here's the dice roll: {{d6}}. 
 
+Now let's figure out your character's job. 
+
+1. roofer
+2. journeyman carpenter
+3. journeyman plumber
+4. journeyman electrician  
+
+Again, I'm going to role a dice. Your character's job will be the job from the above list where the job is the one next to the number of the dice role. Here's the dice roll: {{d4}}. 
+
+Now return your character's name and job as a JSON object composed of two key-value pairs. The first key is "name" and the second key is "job". Their values are those we found above. 
 
 </code></pre>
   </section>
@@ -273,15 +304,63 @@ Now echo back a version of the code with your comments, place your code in tripl
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
     <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+  <p>Here's the template's title.</p>
+  <p><code>Run Simulation</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are an actor playing the role of someone charged with committing a crime.  In this scene you are interacting with your court-appointed attorney. You are currently in custody at the Rockham District Court, located in Massachusetts where you live. In a moment you will meet your attorney for the first time. Your job is to stay in character and act out your part. You are aiming for a realistic performance. To help you get into character, here is some background information.
+
+BACKGROUND
+
+Your name is {{passThrough["name"]}} Doe. You're an 18 year-old Caucasian male. You're 5 foot 9 inches tall and weigh 197 pounds. You only recently graduated from high school and have been working at your father's construction company as a {{passThrough["job"]}}. You live with your father James Doe and your mother Jill Doe. You're in a steady and supportive relationship with Sally Sparrow, a classmate of yours from Our Lady of Hope, the local Catholic School where you both graduated last year. Sally's attending the local community college. You and Sally have been dating since you were both 15. You regularly attend church with your family on Sundays and help out with local community service projects. 
+
+Last night you were arrested and charged with disorderly conduct. Recently, you've been drinking a lot after work, sometimes to the point of black out, and you really don't remember what happened last night. You know you went down to your local bar Joe Sent Me, by yourself, but from what you can gather, you were asked to leave. You've never been arrested before. You're scared but don't want to show it. Mostly, you want to know when you can get out of custody. You didn't sleep very well, and you have a wicked hangover. 
+
+You spent the night in jail, and this morning the police brought you over to court. You're currently in lock up with a few other men. The guard has called your name and you're now huddled by what looks like a large mail slot on to cell's door, and someone the guard has identified as your attorney is on the other side. 
+
+DIRECTION
+
+Be sure to keep your responses short. You "speak in sentences not paragraphs." Short and conversational, no speechifying!
+
+THE CONVERSATION SO FAR
+
+You are jumping into the scene in progress. You already greeted the you're attorney by asking "Are you my attorney?" They responded with "{{Are you my attorney?}}"
+
+Think about how your character would respond and craft an appropriate reply. Don't repeat your greeting. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply. Do NOT preface your text with the name of the speaker or place it in quotes. Return only your dialog! 
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
-    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-<h3><a name="working" href="posts/random-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+<h3><a name="working" href="posts/random-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
 <p>
-  To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
+  To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 </p>
 
   <div class="featured_img_center" style="max-width:900px;">
@@ -317,30 +396,7 @@ Now echo back a version of the code with your comments, place your code in tripl
     </li>
     
   </ul>
-    <!--
-    =================================================
-
-                       References
-
-    =================================================
-  -->
-  <hr>
-  <h2><a name="references" href="posts/random-sims/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
-  <p>
-    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
-  <ul> 
-    <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-    <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
-  </ul>
-
+  
   <!--
   =================================================
 

@@ -137,7 +137,7 @@
     <li><a href="posts/email-to-do/#docclass">Micro-Lesson: Document Classification</a></li>
   </ul>
   <p>
-    Instead of a vector database, we'll use an LLM. As you'll see <a href="posts/rag/#template">below</a> I've taken the full text of <a href="https://en.wikipedia.org/wiki/Roman_Empire">this Wikipedia page</a> on the Roman Empire, placing it into a set of prompts, each coresponding to a section of the page (i.e., "History", "Geography and demography", "Languages", "Society", "Government and military", "Economy", "Architecture and engineering", "Daily life", "Arts", "Literacy, books, and education", "Religion", "Legacy"). 
+    Instead of a vector database, we'll use an LLM. As you'll see <a href="posts/rag/#template">below</a> I've taken the full text of <a href="https://en.wikipedia.org/wiki/Roman_Empire" target="_blank">this Wikipedia page</a> on the Roman Empire, placing it into a set of prompts, each coresponding to a section of the page (i.e., "History", "Geography and demography", "Languages", "Society", "Government and military", "Economy", "Architecture and engineering", "Daily life", "Arts", "Literacy, books, and education", "Religion", "Legacy"). 
   </p>
 
   <font style="font-size: 35px; line-height: 40px;color: brown;font-weight: 600;">“The output of an LLM is a secondary source, and just like any secondary source, it doesn't remove the need to check primary sources.”</font>
@@ -255,7 +255,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/code-comments/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+  <h2><a name="template" href="posts/rag/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -748,7 +748,7 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
-<h3><a name="working" href="posts/code-comments/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+<h3><a name="working" href="posts/rag/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
 <p>
   To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 </p>
@@ -771,7 +771,7 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
     =================================================
   -->
   <hr>
-  <h2><a name="tires" href="posts/code-comments/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <h2><a name="tires" href="posts/rag/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
   </p>
@@ -790,7 +790,7 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
     =================================================
   -->
   <hr>
-  <h2><a name="export" href="posts/code-comments/#export" class="anchor" alt="deep link to this section"></a>Export and Share</h2>
+  <h2><a name="export" href="posts/rag/#export" class="anchor" alt="deep link to this section"></a>Export and Share</h2>
 
   <p>
     After you've made the templates your own and them behaving the way you like, you can export and share them with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.
@@ -828,7 +828,7 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
     Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
   </p>
   <div class="button_row">
-    <a href="posts/code-comments/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a>
+    <a href="posts/rag/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a>
     <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
   </div>
   <!--
@@ -839,7 +839,7 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
     =================================================
   -->
   <hr>
-  <h2><a name="references" href="posts/code-comments/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/rag/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
@@ -880,8 +880,8 @@ Now use the text found above in INFORMATION, and ONLY the above text, to answer 
 	} catch (error) {}*/
 
   (async () => {
-    prompts = await loadFile('posts/code-comments/prompt_template.txt');
-    exported = await loadFile('posts/code-comments/interactions.html');
+    prompts = await loadFile('posts/rag/prompt_template.txt');
+    exported = await loadFile('posts/rag/interactions.html');
   })()
 </script>
 
