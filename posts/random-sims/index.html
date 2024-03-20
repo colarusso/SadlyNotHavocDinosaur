@@ -5,11 +5,11 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>Using AI to produce simulations based on novel random scenarios: Produce and run simulations that are different every time</title>
+  <title>Simulations with LLMs and a "Roll of the Dice": Produce and run simulations with the aid of random scenario selection and an LLM </title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-21T00:00:00-0500"/>
-  <meta property="og:title" content="Using AI to produce simulations based on novel random scenarios: Produce and run simulations that are different every time"/>
-  <meta property="og:description" content=" "/>
+  <meta property="og:title" content="Simulations with LLMs and a &quot;Roll of the Dice&quot;: Produce and run simulations with the aid of random scenario selection and an LLM "/>
+  <meta property="og:description" content="More so than usual, today's template is a proof of concept. That means if you want to make it sing, you're going to have to put in some work beyond the base template. Basically, I took the Simple Training Sims template and added in a feeder template that populates the Sims prompt with a random selection of names and jobs for our client. You'll remember that this simulation is based on my experience as a public defender. It captures the first meeting between you and a client in lockup before arraignment. Here the feeder template makes use of simulated dice to select our client's name and job from a set of lists. This in itself isn't very interesting, but you could imagine the same workflow selecting more interesting bits of the simulation, like the client's motivation or what they are charged with. Such exploration is left as an exercise for the reader. ;)  "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/dice_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">Using AI to produce simulations based on novel random scenarios</h1>
-  <div class="post_title_02">Produce and run simulations that are different every time</div>
+  <h1 class="post_title_01">Simulations with LLMs and a "Roll of the Dice" </h1>
+  <div class="post_title_02">Produce and run simulations with the aid of random scenario selection and an LLM </div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -108,10 +108,10 @@
 
   
   <p>
-    More so than usual, today's template is a proof of concept. Basicly, I took the Simple Sims template and added in a feeder template that populates the Sims prompt with a random selection of names and jobs for our client. You'll remember that this simulation is based on my experience as a public defender. It captures the first meeting between you and a client in lockup before arraignment. 
+    More so than usual, today's template is a proof of concept. That means if you want to make it sing, you're going to have to put in some work beyond the base template. Basically, I took the <a href="posts/simple-training-sims">Simple Training Sims</a> template and added in a feeder template that populates the Sims prompt with a random selection of names and jobs for our client. You'll remember that this simulation is based on my experience as a public defender. It captures the first meeting between you and a client in lockup before arraignment. 
   </p>
   <p>
-    lorem ipsum
+    Here the feeder template makes use of simulated dice to select our client's name and job from a set of lists. This in itself isn't very interesting, but you could imagine the same workflow selecting more interesting bits of the simulation, like the client's motivation or what they are charged with. Such exploration is left as an exercise for the reader. ;)
   </p>
 
 
@@ -224,23 +224,21 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/random-sims/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
 
   <div class="featured_img_right">
-    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the Georeg Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
     <div class="caption">
       Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
     </div>
   </div>
 
   <p>
-    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d6}}</code>, <code>{{d4}}</code>, and <code>{{Are you my attorney?}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d6}}</code>, <code>{{d4}}</code>, and <code>{{passThrough}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
   </p>
-
   <p>
-    The <code>{{d6}}</code> variable will be replaced by a random number between 1 and 6. 
+    The <code>{{d6}}</code> variable will be replaced by a random number between 1 and 6, and the <code>{{d4}}</code> variable will be replaced by a random number between 1 and 4. Note: all dice are only roled once. So, multiple instances of <code>{{d6}}</code> would come up the same. 
   </p>
-
   <p>FWIW, here is the full list of "random" output variables:</p>
     <ul>
       <li>Coin Flip (heads or tails): <code>{{coinFlip}}</code></li>
@@ -250,15 +248,15 @@
       <li>D% (0-9): <code>{{d%}}</code></li>
       <li>D20 (1-20): <code>{{d20}}</code></li>
     </ul>
-  </p>  <p>
-    The <code>{{d4}}</code> variable will be replaced by a random number between 1 and 4. 
   </p>
-
   <p>
-    If the text within brackets is not the name of a predefined variable, like <code>{{What is your name?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "What is your name?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+    If the text within brackets is not the name of a predefined variable, like <code>{{Are you my attorney?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "Are you my attorney?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    To use this workflow, simply trigger the first template. 
   </p>
 
-  <p>Here's the template's title.</p>
+  <p>Here's the first template's title.</p>
   <p><code>Start Simulation</code></p>
   <p>Here's the template's text.</p>
   <!--
@@ -290,7 +288,6 @@ Now let's figure out your character's job.
 Again, I'm going to role a dice. Your character's job will be the job from the above list where the job is the one next to the number of the dice role. Here's the dice roll: {{d4}}. 
 
 Now return your character's name and job as a JSON object composed of two key-value pairs. The first key is "name" and the second key is "job". Their values are those we found above. 
-
 </code></pre>
   </section>
   <!--
@@ -309,7 +306,7 @@ Now return your character's name and job as a JSON object composed of two key-va
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-  <p>Here's the template's title.</p>
+  <p>Here's the second template's title.</p>
   <p><code>Run Simulation</code></p>
   <p>Here's the template's text.</p>
   <!--
@@ -336,7 +333,7 @@ Be sure to keep your responses short. You "speak in sentences not paragraphs." S
 
 THE CONVERSATION SO FAR
 
-You are jumping into the scene in progress. You already greeted the you're attorney by asking "Are you my attorney?" They responded with "{{Are you my attorney?}}"
+You are jumping into the scene in progress. You already greeted the you're attorney by asking "Are you my attorney?" They responded with "{{Are you my attorney?*}}"
 
 Think about how your character would respond and craft an appropriate reply. Don't repeat your greeting. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply. Do NOT preface your text with the name of the speaker or place it in quotes. Return only your dialog! 
 </code></pre>
@@ -357,7 +354,7 @@ Think about how your character would respond and craft an appropriate reply. Don
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
     <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
-<h3><a name="working" href="posts/random-sims/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+<h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
 <p>
   To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 </p>
@@ -372,6 +369,7 @@ Think about how your character would respond and craft an appropriate reply. Don
   <div class="button_row">
     <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
   </div>
+
   <!--
     =================================================
 
@@ -387,12 +385,9 @@ Think about how your character would respond and craft an appropriate reply. Don
   <ul>
   
     <li>
-      <b>XXX</b> XXXX
+      <b>Make it your own</b>. Choose some interview features more interesting than name and job and add them as a random selection. Note: each dice only roles once. So, all instances of <code>{{d4}}</code> will be the same. 
     </li>
     
-    <li>
-      <b>XXX</b> XXXX
-    </li>
     
   </ul>
   
