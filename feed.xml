@@ -29,6 +29,10 @@
     <pubDate>Thu, 21 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
+
+  --> 
+
+
   <item>
     <title>What is Retrieval Augmented Generation (RAG)?: In which we approximate RAG using only LLMs and no vector database (for the Roman Empire's Wikipedia page)</title>
     <link>https://sadlynothavocdinosaur.com/posts/rag/</link>
@@ -38,8 +42,6 @@
     <guid>https://sadlynothavocdinosaur.com/posts/rag/</guid>
     <pubDate>Wed, 20 Mar 2024 05:00:00 GMT</pubDate>
   </item>
-
-  --> 
 
   <item>
     <title>Auto-Generate Code Comments: In which "AI" suggests comments and explains a function that approximates pi (π)</title>
