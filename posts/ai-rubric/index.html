@@ -116,7 +116,7 @@
     There is a larger point worth making here. Sometimes the same tool used in different ways can take on different moral dimensions. Consider the possible uses of risk scores, mathematical models that attempt to classify how likely someone is to find themselves caught up in anti-social activities. Such models are wrong, because as we know, all models are wrong. The question is, "Are they useful?" To answer this, we have to consider context and the costs of getting it wrong. If such risk models are used to triage a limited set of social services the worst that happens is you provide help to someone who might not need it as much as someone else. This might be a real tragedy but when faced with how to provision scarce resources, it is a forgivable mistake, and one that leaves the ill effected no worse off than they would have been absent any intervention. If, however, you use these models to justify holding someone in jail pretrial (while they are presumed innocent), the cost of a false positive is suddenly the placement of someone in a cage who shouldn't be there. This comes with a very different moral salience, esp. when we consider the mistakes such systems are likely to make (i.e., those that reflect the biases in their training data). 
     </p>
     <p>
-      The use of an automated rubric by students to help them improve their work is very different than having a machine decide if they have done the job. One is morally defensible even in the face of an imperfect evaluation the other is not. Of course, one could change this calculus a bit by having the machine help with grading as long is it wasn't the final answer, but we would have to think very careful about fighting <a href="https://en.wikipedia.org/wiki/Automation_bias" target="_blank">automation bias</a>. Maybe instead of providing a provisional score it could simpily flag those it "thinks" are in trouble. As I like to say, context matters. 
+      The use of an automated rubric by students to help them improve their work is very different than having a machine decide if they have done the job. One is morally defensible even in the face of an imperfect evaluation the other is not. Of course, one could change this calculus a bit by having the machine help with grading as long is it wasn't the final answer, but we would have to think very careful about fighting <a href="https://en.wikipedia.org/wiki/Automation_bias" target="_blank">automation bias</a>. Maybe instead of providing a provisional score it could simpily flag those it "thinks" are in trouble. As I like to say, context matters. But there is ample <a href="https://arxiv.org/abs/2403.00742" target="_blank">evidence</a> to suggest we don't want these models making the ultimate judgment, and they should be used with an understanding of how and why they go wrong. All models are wrong, the question, as always is, "Are they useful?"
   </p>
   <p>
     I've taken the punctuation exercise from <a href="https://www.gutenberg.org/files/37134/37134-h/37134-h.htm" target="_blank">The Elements of Style</a> that <a href="posts/style-guide">we saw</a> back in week 6 and imagined it as a student answer to the prompt "Describe the circumstances and actions that led to the storming of the Bastille." 
@@ -389,16 +389,22 @@ QUESTION AND ANSWER
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
-    <li>
-      <a href="https://www.gutenberg.org/files/37134/37134-h/37134-h.htm" target="_blank">The Elements of Style</a> by William Strunk Jr. 
-      The Elements of Style is a style guide for writing American English. It was originally written by William Strunk Jr. in 1918 and published in 1920. The book includes eight rules of usage, ten principles of composition, some matters of form, a list of commonly misused words and expressions, and a list of often misspelled words.
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
-    </li>
-
 
     <li>
       <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">Unsupervised Machine Scoring of Free Response Answers—Validated Against Law School Final Exams</a> by David Colarusso. 
       This paper presents a novel method for unsupervised machine scoring of short answer and essay question responses, relying solely on a sufficiently large set of responses to a common prompt, absent the need for pre-labeled sample answers—given said prompt is of a particular character. That is, for questions where “good” answers look similar, “wrong” answers are likely to be “wrong” in different ways. Consequently, when a collection of text embeddings for responses to a common prompt are placed in an appropriate feature space, the centroid of their placements can stand in for a model answer, providing a lodestar against which to measure individual responses. This paper examines the efficacy of this method and discusses potential applications. 
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2403.00742" target="_blank">Dialect prejudice predicts AI decisions about people's character, employability, and criminality</a> by Valentin Hofmann, Pratyusha Ria Kalluri, Dan Jurafsky, Sharese King 
+      This research paper investigates the presence of covert racism in language models, specifically in relation to dialect prejudice. The study finds that language models exhibit covert stereotypes about speakers of African American English that are more negative than any human stereotypes recorded. In contrast, the language models' overt stereotypes about African Americans are more positive. The paper also demonstrates the potential harmful consequences of dialect prejudice by showing that language models are more likely to suggest assigning less prestigious jobs, convicting of crimes, and sentencing to death to speakers of African American English. The study further reveals that existing methods for mitigating racial bias in language models do not alleviate dialect prejudice and may even exacerbate the discrepancy between covert and overt stereotypes. The findings have significant implications for the fair and safe use of language technology in employment.
+      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+    </li>
+
+    <li>
+      <a href="https://www.gutenberg.org/files/37134/37134-h/37134-h.htm" target="_blank">The Elements of Style</a> by William Strunk Jr. 
+      The Elements of Style is a style guide for writing American English. It was originally written by William Strunk Jr. in 1918 and published in 1920. The book includes eight rules of usage, ten principles of composition, some matters of form, a list of commonly misused words and expressions, and a list of often misspelled words.
+      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
     </li>
 
   </ul>
