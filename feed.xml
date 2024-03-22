@@ -9,18 +9,19 @@
 
   <!-- ONDECK
 
+  --> 
+
   <item>
     <title>Rubric-Based Machine Evaluation of Assignments: Have students check their work against your rubric before they turn things in</title>
     <link>https://sadlynothavocdinosaur.com/posts/ai-rubric/</link>
-    <description>SOmetime the same progam used different ways can be good or evil. lorem ipsumlorem ipsum</description>
+    <description>I teach a project-based class at Suffolk called Coding the Law. Part of the class involves teaching students to code, not because I want to turn law students into coders, but because if you can build a thing, chances are you have a good functional understanding of that thing. It's about preparing students for the world in which they will practice, giving then a lay of the land so they know what's possible and when to call BS. A nice thing about coding projects, if you're a student, is the fact that you can get really concrete feedback about how well you did before you turn in your work. Because for the most part, you can test your work and know if it's doing the job. With writing, it's not always as clear. A large part of this has to do with the ambiguity of success criteria. Grading rubrics can help here, but in my experience, some students still turn in work that doesn't fulfill the rubric's minimum standards. When this happens, I often start to plead with the student in my head, "No, no, you had to have addressed this point somewhere, the rubric, which you've had all semester, which we've covered in class multiple times, said it was 10% of the grade. How did you miss this?" I've often wished my students could run their writing through some automatic tool that warned them that they had missed this or that point. Next year I think they will, and today we'll talk about what that might look like and show you how to build such a tool. </description>
     <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/a_plus_square.png" type="image/png"/>
     <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/a_plus_square.png"/>
     <guid>https://sadlynothavocdinosaur.com/posts/ai-rubric/</guid>
     <pubDate>Fri, 22 Mar 2024 05:00:00 GMT</pubDate>
   </item>
 
-  --> 
-
+  
   <item>
     <title>Produce Simulations Based on Random Scenarios: Produce and run AI-drive text simulations that are different every time</title>
     <link>https://sadlynothavocdinosaur.com/posts/random-sims/</link>

@@ -1,12 +1,12 @@
 {
-  "Template": {
-    "prompt": "",
-    "model": "gpt-3.5-turbo-16k",
+  "Run rubric": {
+    "prompt": "You're a teaching assistant helping evaluate student work against a rubric. In a moment I will provide you with a rubric for answering shot-answer questions, a short-answer question, and a student answer to that question. You should then respond with a score for that question along with a justification for that score based on the rubric. \n\n---\n\nRUBRIC\n\nScore Range: 0 - 5 Points\n\n    5 Points (Excellent)\n        The answer provides a comprehensive and detailed explanation of the historical events in question, including all relevant factors, actions, and outcomes.\n        It demonstrates a deep understanding of the historical context and the significance of these events.\n        The response includes specific details and examples that enrich the explanation.\n        It clearly and accurately connects the causes and effects within the historical events being discussed.\n\n    4 Points (Good)\n        The answer provides a clear explanation of the key events and factors but may lack some minor details or examples.\n        It demonstrates a good understanding of the historical context and significance of the events.\n        The response connects most of the important causes and effects but may not cover all aspects in depth.\n\n    3 Points (Satisfactory)\n        The answer mentions key events and factors but lacks detail and depth in the explanation.\n        It demonstrates a basic understanding of the historical context but may not fully elaborate on the significance of the events.\n        The response makes an effort to connect causes and effects but may miss important connections or details.\n\n    2 Points (Needs Improvement)\n        The answer provides a vague or incomplete overview of the historical events in question.\n        It shows a limited understanding of the historical context and struggles to connect relevant causes and effects.\n        Key events or factors are mentioned but not effectively explained or connected.\n\n    1 Point (Poor)\n        The answer provides an oversimplified or incorrect explanation of the events.\n        It demonstrates a lack of understanding of the historical context.\n        There is minimal or no attempt to connect causes and effects, or the information provided is largely irrelevant.\n\n    0 Points (No Attempt)\n        The answer does not address the question or is left blank.\n\n---\n\nQUESTION AND ANSWER \n\n{{highlighted}}\n",
+    "model": "gpt-4",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 1,
     "json_mode": 0,
-    "output_to": 1,
+    "output_to": 0,
     "behavior": "stop",
     "hide_button": false
   }

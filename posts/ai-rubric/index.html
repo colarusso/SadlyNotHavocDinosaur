@@ -9,7 +9,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-22T00:00:00-0500"/>
   <meta property="og:title" content="Rubric-Based Machine Evaluation of Assignments: Have students check their work against your rubric before they turn things in"/>
-  <meta property="og:description" content=" "/>
+  <meta property="og:description" content="I teach a project-based class at Suffolk called Coding the Law. Part of the class involves teaching students to code, not because I want to turn law students into coders, but because if you can build a thing, chances are you have a good functional understanding of that thing. It's about preparing students for the world in which they will practice, giving then a lay of the land so they know what's possible and when to call BS. A nice thing about coding projects, if you're a student, is the fact that you can get really concrete feedback about how well you did before you turn in your work. Because for the most part, you can test your work and know if it's doing the job. With writing, it's not always as clear. A large part of this has to do with the ambiguity of success criteria. Grading rubrics can help here, but in my experience, some students still turn in work that doesn't fulfill the rubric's minimum standards. When this happens, I often start to plead with the student in my head, &quot;No, no, you had to have addressed this point somewhere, the rubric, which you've had all semester, which we've covered in class multiple times, said it was 10% of the grade. How did you miss this?&quot; I've often wished my students could run their writing through some automatic tool that warned them that they had missed this or that point. Next year I think they will, and today we'll talk about what that might look like and show you how to build such a tool. "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/a_plus_square.png"/>
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -106,20 +106,39 @@
   </p>
   <p><i>This is <b>the 45th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 
-  
   <p>
-    SOmetime the same progam used different ways can be good or evil. lorem ipsum
+    I teach a project-based class at Suffolk called <a href="https://www.codingthelaw.org" target="_blank">Coding the Law</a>. Part of the class involves teaching students to code, not because I want to turn law students into coders, but because if you can build a thing, chances are you have a good functional understanding of that thing. It's about preparing students for the world in which they will practice, giving then a lay of the land so they know what's possible and when to call BS. A nice thing about coding projects, if you're a student, is the fact that you can get really concrete feedback about how well you did before you turn in your work. Because for the most part, you can test your work and know if it's doing the job. With writing, it's not always as clear. A large part of this has to do with the ambiguity of success criteria. Grading rubrics can help here, but in my experience, some students still turn in work that doesn't fulfill the rubric's minimum standards. When this happens, I often start to plead with the student in my head, "No, no, you had to have addressed this point somewhere, the rubric, which you've had all semester, which we've covered in class multiple times, said it was 10% of the grade. How did you miss this?" I've often wished my students could run their writing through some automatic tool that warned them that they had missed this or that point. Next year I think they will, and today we'll talk about what that might look like and show you how to build such a tool.
+  </p>
+  <p>
+    I want to be clear about something, I don't think these tools are at the point where they should be grading student work, and this comes from someone who has a provisional patent on <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">machine-based scoring of free response questions</a> using pre-LLM technology. As I've observed in every one of the previous 44 posts, a model's output should start, not end discussion. What I'm advocating for here is using LLMs to provide feedback much in the spirit of our interactive <a href="posts/style-guide">style guide</a> or our <a href="posts/flag-fallacies">logical fallacy</a> detector. The point is to provide feedback to an author so they can improve their work, not to evaluate their work product.
+    </p>
+    <p>
+    There is a larger point worth making here. Sometimes the same tool used in different ways can take on different moral dimensions. Consider the possible uses of risk scores, mathematical models that attempt to classify how likely someone is to find themselves caught up in anti-social activities. Such models are wrong, because as we know, all models are wrong. The question is, "Are they useful?" To answer this, we have to consider context and the costs of getting it wrong. If such risk models are used to triage a limited set of social services the worst that happens is you provide help to someone who might not need it as much as someone else. This might be a real tragedy but when faced with how to provision scarce resources, it is a forgivable mistake, and one that leaves the ill effected no worse off than they would have been absent any intervention. If, however, you use these models to justify holding someone in jail pretrial (while they are presumed innocent), the cost of a false positive is suddenly the placement of someone in a cage who shouldn't be there. This comes with a very different moral salience, esp. when we consider the mistakes such systems are likely to make (i.e., those that reflect the biases in their training data). 
+    </p>
+    <p>
+      The use of an automated rubric by students to help them improve their work is very different than having a machine decide if they have done the job. One is morally defensible even in the face of an imperfect evaluation the other is not. Of course, one could change this calculus a bit by having the machine help with grading as long is it wasn't the final answer, but we would have to think very careful about fighting <a href="https://en.wikipedia.org/wiki/Automation_bias" target="_blank">automation bias</a>. Maybe instead of providing a provisional score it could simpily flag those it "thinks" are in trouble. As I like to say, context matters. 
+  </p>
+  <p>
+    I've taken the punctuation exercise from <a href="https://www.gutenberg.org/files/37134/37134-h/37134-h.htm" target="_blank">The Elements of Style</a> that we saw back in week 6 and imagined it as a student answer to the prompt "Describe the circumstances and actions that led to the storming of the Bastille." 
   </p>
 
   <blockquote>
-    Text of assignment
+    Describe the circumstances and actions that led to the storming of the Bastille.<br><br>
+
+    In 1788 the King's advisers warned him that the nation was facing bankruptcy therefore he summoned a body called the States-General believing that it would authorize him to levy new taxes. The people of France however were suffering from burdensome taxation oppressive social injustice and acute scarcity of food and their representatives refused to consider projects of taxation until social and economic reforms should be granted. The King who did not realize the gravity of the situation tried to overawe them collecting soldiers in and about Versailles where the sessions were being held. The people of Paris seeing the danger organized militia companies to defend their representatives. In order to supply themselves with arms they attacked the Invalides and the Bastille which contained the principal supplies of arms and munitions in Paris.
   </blockquote>
 
-  <iframe src="posts/ai-rubric/transcript.html" width="100%" height="350px"></iframe>
-  <p>
-    lorem ipsum
-  </p>
+  <p>Here is the response I got from today's template for the above text.</p>
 
+  <blockquote>
+    Score: 4<br><br>
+
+    Justification: The student provides a clear explanation of the events and factors that led to the storming of the Bastille, including the nation's financial troubles, social injustice and food scarcity, the King's summoning of the States-General, and the organization of militia companies by the people of Paris. The answer demonstrates a good understanding of the historical context. The student connects most of the important causes and effects, such as the King's actions leading to the people's responses, but does not delve into all aspects in depth. For instance, they could have elaborated further on the significance and outcomes of the storming of the Bastille.
+  </blockquote>
+
+  <p>
+    You'll notice this when you read the template below, but it's worth saying that the rubric does not contain any of the content found in the answer. Rather it is concerned with form and structure. That is, it is a rubric that can be shared with students before they answer. That being said, the LLM is making some judgement calls, even though it doesn't have any judgement. For example, what counts as an "oversimplified or incorrect explanation of the events." My general sense is this tool is stronger when it acts like our interactive style guide, not when it trys to evaluate the correctness of an answer. We saw some of the problems with this back in <a href="posts/50-days-of-lit-prompts/#week4">Week 4</a>. That being said...
+  </p>
 
   <!-- END INTRO -->
 
@@ -231,7 +250,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/ai-rubric/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -248,8 +267,10 @@
     The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. 
   </p>
 
+<p>To use this template, highlight your question and the answer you want to evaluate, then trigger the template. </p>
+
   <p>Here's the template's title.</p>
-  <p><code>Add code comments</code></p>
+  <p><code>Run rubric</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
@@ -259,13 +280,48 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are reviewing code and providing comments to help future developers understand its operation. In a moment I will give you a bit of code to read over. Your job is to add comments to the code and to return this new version to me. These comments should help explain what the code is doing. If the code includes a function there should be a description of the function's purpose and operation. Alright, here's the code: 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You're a teaching assistant helping evaluate student work against a rubric. In a moment I will provide you with a rubric for answering shot-answer questions, a short-answer question, and a student answer to that question. You should then respond with a score for that question along with a justification for that score based on the rubric. 
 
-```{{highlighted}}```
+---
 
-Now echo back a version of the code with your comments, place your code in triple tick marks (i.e., ```code```).
+RUBRIC
 
+Score Range: 0 - 5 Points
 
+    5 Points (Excellent)
+        The answer provides a comprehensive and detailed explanation of the historical events in question, including all relevant factors, actions, and outcomes.
+        It demonstrates a deep understanding of the historical context and the significance of these events.
+        The response includes specific details and examples that enrich the explanation.
+        It clearly and accurately connects the causes and effects within the historical events being discussed.
+
+    4 Points (Good)
+        The answer provides a clear explanation of the key events and factors but may lack some minor details or examples.
+        It demonstrates a good understanding of the historical context and significance of the events.
+        The response connects most of the important causes and effects but may not cover all aspects in depth.
+
+    3 Points (Satisfactory)
+        The answer mentions key events and factors but lacks detail and depth in the explanation.
+        It demonstrates a basic understanding of the historical context but may not fully elaborate on the significance of the events.
+        The response makes an effort to connect causes and effects but may miss important connections or details.
+
+    2 Points (Needs Improvement)
+        The answer provides a vague or incomplete overview of the historical events in question.
+        It shows a limited understanding of the historical context and struggles to connect relevant causes and effects.
+        Key events or factors are mentioned but not effectively explained or connected.
+
+    1 Point (Poor)
+        The answer provides an oversimplified or incorrect explanation of the events.
+        It demonstrates a lack of understanding of the historical context.
+        There is minimal or no attempt to connect causes and effects, or the information provided is largely irrelevant.
+
+    0 Points (No Attempt)
+        The answer does not address the question or is left blank.
+
+---
+
+QUESTION AND ANSWER 
+
+{{highlighted}}
 </code></pre>
   </section>
   <!--
@@ -280,11 +336,11 @@ Now echo back a version of the code with your comments, place your code in tripl
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
     <li><b>Model:</b> <code>gpt-4</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
     <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
-    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-<h3><a name="working" href="posts/ai-rubric/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+<h3><a name="working" href="posts/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
 <p>
   To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 </p>
@@ -299,6 +355,7 @@ Now echo back a version of the code with your comments, place your code in tripl
   <div class="button_row">
     <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
   </div>
+
   <!--
     =================================================
 
@@ -314,11 +371,7 @@ Now echo back a version of the code with your comments, place your code in tripl
   <ul>
   
     <li>
-      <b>XXX</b> XXXX
-    </li>
-    
-    <li>
-      <b>XXX</b> XXXX
+      <b>Make it your own</b>. Swap in you own rubric, give it a spin. 
     </li>
     
   </ul>
@@ -335,13 +388,15 @@ Now echo back a version of the code with your comments, place your code in tripl
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
     <li>
-      <a href="" target="_blank"></a> by . 
+      <a href="https://www.gutenberg.org/files/37134/37134-h/37134-h.htm" target="_blank">The Elements of Style</a> by William Strunk Jr. 
+      The Elements of Style is a style guide for writing American English. It was originally written by William Strunk Jr. in 1918 and published in 1920. The book includes eight rules of usage, ten principles of composition, some matters of form, a list of commonly misused words and expressions, and a list of often misspelled words.
       <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
     </li>
 
+
     <li>
-      <a href="" target="_blank"></a> by . 
-      <i>Summary based on a draft from our <a href="posts/summarize-and-question">day one template</a>.</i>
+      <a href="https://law.mit.edu/pub/unsupervised-machine-scoring-of-free-response-answers/release/1" target="_blank">Unsupervised Machine Scoring of Free Response Answers—Validated Against Law School Final Exams</a> by David Colarusso. 
+      This paper presents a novel method for unsupervised machine scoring of short answer and essay question responses, relying solely on a sufficiently large set of responses to a common prompt, absent the need for pre-labeled sample answers—given said prompt is of a particular character. That is, for questions where “good” answers look similar, “wrong” answers are likely to be “wrong” in different ways. Consequently, when a collection of text embeddings for responses to a common prompt are placed in an appropriate feature space, the centroid of their placements can stand in for a model answer, providing a lodestar against which to measure individual responses. This paper examines the efficacy of this method and discusses potential applications. 
     </li>
 
   </ul>
