@@ -275,7 +275,8 @@
     Here we'll have the prompts write novel questions such as <code>{{What made you think that?}}</code> and pass them to the next template using the <code>{{passThrough}}</code> variable. We use the Post-run Behavior parameter to govern what happens after a template is run. If you use Post-run Behavior to send one template's output to another template, the first template's output can be read by the second template via the <code>{{passThrough}}</code> variable. 
   </p>
   <p>
-    We'll also use JSON mode to format some of the prompt outputs as <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, and as we know from our <a href="posts/translate-selected">translation template</a>, when the passThrough variable is JSON, you can access top-level keys by calling them like this <code>{{{{passThrough["reply"]}}*}}</code></p>
+    We'll also use JSON mode to format some of the prompt outputs as <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, and as we know from our <a href="posts/translate-selected">translation template</a>, when the passThrough variable is JSON, you can access top-level keys by calling them like this <code>{{{{passThrough["reply"]}}*}}</code>
+  </p>
   <p>
     To use our template, simply select the text you want to expand and run the "Expand selected (short) text" template. That being said, this is actually the most complicated prompt we've seen so far. We'll use the DYNAMIC behavior for the first time and there are actually 6 individual templates all feeding into each other. FWIW, using the DYNAMIC Post-run Behavior will trigger the promt named in the <code>{{passThrough["next"]}}</code> variable.
   </p>
