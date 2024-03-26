@@ -9,9 +9,17 @@
 
   <!-- ONDECK
 
-
-
   --> 
+
+    <item>
+    <title>AI Magic + Algorithmically-Driven News Feeds Minus the Surveillance Capitalism: Using AI to build open-source tools that work for their users, not their builders</title>
+    <link>https://sadlynothavocdinosaur.com/posts/rss-reader/</link>
+    <description>lorem ipsumlorem ipsum</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/newsstand.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/newsstand.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/rss-reader/</guid>
+    <pubDate>Tue, 26 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
 
   <item>
     <title>The Library of Unwritten Books: Create novel novellas on-demand, become a reader-author</title>
