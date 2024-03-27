@@ -1,0 +1,13 @@
+{
+  "Template": {
+    "prompt": "",
+    "model": "gpt-3.5-turbo-16k",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
