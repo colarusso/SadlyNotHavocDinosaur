@@ -12,6 +12,16 @@
   --> 
 
     <item>
+    <title>The AI Ouroboros: Can 2024's AI Build 2014's AI?: Using LLMs to suggest features for linear and logistic regression models</title>
+    <link>https://sadlynothavocdinosaur.com/posts/data-science/</link>
+    <description>Today if someone mentions "AI," it's a safe bet they're talking about large language models (LLMs). In 2014, however, the moniker most often referenced machine learning (ML). Below we will use today's AI (LLMs) to help make some good old-fashioned AI (ML). It's long been a joke to call statistical methods like linear and logistic regression machine learning/"AI." It's funny, however, because it's true. For nearly a decade, I've used regressions as a way to introduce AI to my students. Consequently, I'm always on the lookout for better ways to teach the subject. Recently, I made a website where students can create and train their own regression models—My Toy Models—and today we'll get an LLM to build a model we can upload there for training.</description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/ymxb.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/ymxb.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/data-science/</guid>
+    <pubDate>Wed, 27 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
+    <item>
     <title>AI Magic + Algorithmically-Driven News Feeds Minus the Surveillance Capitalism: Using AI to build open-source tools that work for their users, not their builders</title>
     <link>https://sadlynothavocdinosaur.com/posts/rss-reader/</link>
     <description> As many internet users of a certain age will tell you, Google Reader was peak Internet. I wanted to bring back some of that magic with a 21st century spin. So, I created My RSS Algo an open source client-side algorithmically-driven RSS reader. It lets users customize their algorithm and timeline behavior while keeping all that training data local, living on the user's computer. There's no login, and the site doesn't even collect analytics (no cookies). Users can manage their feeds, hide/group similar articles, set ratings cutoffs, and use regular expressions to promote or mute certain articles! All without needing to feed someone else's algo. Back when Twitter stopped being Twitter, I moved to Mastodon, and though I enjoy the community I've found there, I really missed that Twitter feed. Algorithmic feeds are really good for content discovery. They're like a news editor choosing what to put on the front page of the paper. The trick is valuing their contribution without mistaking them for the whole conversation. With My RSS Algo the algorithm works for me. It's everything I've ever wanted in a RSS reader, and if you read last Tuesday's post, you know I coded it with the aid of a large language model (LLM). So, today's post, in which I give the reader LLM-super powers just made sense. </description>

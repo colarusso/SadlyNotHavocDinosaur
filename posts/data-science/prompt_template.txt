@@ -1,0 +1,24 @@
+{
+  "Create a toy model": {
+    "prompt": "You are a data scientist building a mathematical model to answer the following question:\n\nQ: {{What question should your model answer?}}\n\nState whether the model's answer/target is a continuous or categorical. Now, provide the shortest list of ex-ante features a group of experts would agree to include as inputs for your model formatted as a JSON objects of the following form:\n\n```model = { \n             \"question\":\"the question the model is trying to answer\",\n             \"type\":\"continuous\",\n             \"features\" :[\n               { \"name\":\"mode of travel\", \"type\":\"categorical\", \"categories\":[\"on foot\",\"car\",\"train\",\"plane\",\"boat\"] },\n               { \"name\":\"height\", \"type\":\"continuous\", \"units\":\"inches\", \"lower\":0, \"upper\":100, \"mean\":70 }\n             ],\n             \"training\": {\n                           \"headers\": [\n                             \"recorded_on\",\n                             \"mode_of_travel\",\n                             \"height\",\n                             \"target\",\n                             \"note\"\n                           ],\n                           \"observations\": []\n                         },\n             \"trained_on\": 0,\n             \"coefficients\": {\n                               \"mode_of_travel\": 0,\n                               \"height\": 0,\n                               \"intercept\": 0\n                             },\n             \"performance\": {}\n           }```\n\nOR\n\n```model = { \n             \"question\":\"the question the model is trying to answer\",\n             \"type\":\"categorical\",\n             \"target\": { [\"yes\",\"no\"] },\n             \"features\" :[\n               { \"name\":\"mode of travel\", \"type\":\"categorical\", \"categories\":[\"on foot\",\"car\",\"train\",\"plane\",\"boat\"] },\n               { \"name\":\"height\", \"type\":\"continuous\", \"units\":\"inches\", \"lower\":0, \"upper\":100, \"mean\":70 }\n             ],\n             \"training\": {\n                           \"headers\": [\n                             \"recorded_on\",\n                             \"mode_of_travel\",\n                             \"height\",\n                             \"target\",\n                             \"note\"\n                           ],\n                           \"observations\": []\n                         },\n             \"trained_on\": 0,\n             \"coefficients\": {\n                               \"mode_of_travel\": 0,\n                               \"height\": 0,\n                               \"intercept\": 0\n                             },\n             \"performance\": {}\n        }```\n\nBe sure to use appropriate units and ranges. That is, make sure any units used are those in which the feature is commonly measured and make sure that the range is large enough to capture the expected variability. Also, choose a sensible value for the mean. Under \"headers\" always include \"recorded_on\", \"target\", and \"note\". Under \"coefficients\" always include \"intercept\" and set all coefficients equal to 0 like above.\n\nIf the question asks for an answer other than a continuous or categorical value, respond with the output that looks like this:\n\n```model = {\"question\":\"the question the model is trying to answer\", \"type\":\"uncomputable\"}```\n\n",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.7,
+    "max_tokens": 1000,
+    "output": 1,
+    "json_mode": 1,
+    "output_to": 3,
+    "behavior": "stop",
+    "hide_button": false
+  },
+  "Download MyToyModel file": {
+    "prompt": "{{scratch}}",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.7,
+    "max_tokens": 250,
+    "output": 0,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "file",
+    "hide_button": false
+  }
+}
