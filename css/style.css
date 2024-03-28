@@ -302,6 +302,20 @@ hr {
 	float:left;width:100%;
 }
 
+a.live_demo {
+	box-sizing: border-box;
+	float:right;
+	color: white;
+	background: rgb(74, 121, 241);
+	padding: 1px 5px;
+	border-radius: 4px;
+	font-size: 13px;
+	line-height: 16px;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	text-transform: uppercase;
+}
+
 .soon {
 	color:#787777;
 }
