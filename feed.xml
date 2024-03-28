@@ -11,6 +11,16 @@
 
   --> 
 
+  <item>
+    <title>A Simulated Speech and Debate Coach: Feedback on how to improve your performance on speech and debate simulations from a simulation</title>
+    <link>https://sadlynothavocdinosaur.com/posts/debate-coach/</link>
+    <description>Simulation has been a large part of this series. See e.g., What if Members of Talking Professions Could Log Time in Simulators Like Pilots?, If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives!, Summon the Demon, and The Library of Unwritten Books. I like this use case for large language models (LLMs) because it plays to their strengths, or depending on how you look at it, avoids their weaknesses. Sure LLMs make things up, but that's a plus if you ask them to do improv, and to the extent they regurgitate societal biases they present openings to unpack such biases and how they will effect students practice. Today we'll build a template to help provide feedback for those participating in a simulation. </description>
+    <enclosure url="https://sadlynothavocdinosaur.com/images/50-days/argument_feedback.png" type="image/png"/>
+    <media:thumbnail url="https://sadlynothavocdinosaur.com/images/50-days/argument_feedback.png"/>
+    <guid>https://sadlynothavocdinosaur.com/posts/debate-coach/</guid>
+    <pubDate>Thu, 28 Mar 2024 05:00:00 GMT</pubDate>
+  </item>
+
     <item>
     <title>The AI Ouroboros: Can 2024's AI Build 2014's AI?: Using LLMs to suggest features for linear and logistic regression models</title>
     <link>https://sadlynothavocdinosaur.com/posts/data-science/</link>
