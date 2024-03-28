@@ -5,10 +5,10 @@
   <base href="../../">
 
   <!-- Page-specific metadata -->
-  <title>A Simulated Speech and Debate Coach: Feedback on how to improve your performance on speech and debate simulations from a simulation</title>
+  <title>Constructed Criticism: Simulated feedback on how to improve your simulation performance</title>
   <meta property="og:type" content="website"/>
   <meta property="og:publish_date" content="2024-03-28T00:00:00-0500"/>
-  <meta property="og:title" content="A Simulated Speech and Debate Coach: Feedback on how to improve your performance on speech and debate simulations from a simulation"/>
+  <meta property="og:title" content="Constructed Criticism: Simulated feedback on how to improve your simulation performance"/>
   <meta property="og:description" content="Simulation has been a large part of this series. See e.g., What if Members of Talking Professions Could Log Time in Simulators Like Pilots?, If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives!, Summon the Demon, and The Library of Unwritten Books. I like this use case for large language models (LLMs) because it plays to their strengths, or depending on how you look at it, avoids their weaknesses. Sure LLMs make things up, but that's a plus if you ask them to do improv, and to the extent they regurgitate societal biases they present openings to unpack such biases and how they will effect students practice. Today we'll build a template to help provide feedback for those participating in a simulation.  "/>
   <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/argument_feedback.png"/>
   <meta property="og:image:width" content="1024" />
@@ -75,8 +75,8 @@
 
     =================================================
   -->
-  <h1 class="post_title_01">A Simulated Speech and Debate Coach</h1>
-  <div class="post_title_02">Feedback on how to improve your performance on speech and debate simulations from a simulation</div>
+  <h1 class="post_title_01">Constructed Criticism</h1>
+  <div class="post_title_02">Simulated feedback on how to improve your simulation performance</div>
   <div class="featured_img_right">
     <!--<div class="audio_container_container" style="display:show;">
       <div class="audio_container">
@@ -110,7 +110,7 @@
     Simulation has been a large part of this series. See e.g., <a href="posts/simple-training-sims">What if Members of Talking Professions Could Log Time in Simulators Like Pilots?</a>, <a href="posts/socrates-lives">If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives!</a>, <a href="posts/devils-advocate">Summon the Demon</a>, <a href="posts/reflection/" target="_blank">My Students Have Been Using an Interactive Tool for Reflective Journaling & I Love It!</a>, and <a href="posts/unwritten">The Library of Unwritten Books</a>. I like this use case for <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs) because it plays to their strengths, or depending on how you look at it, avoids their weaknesses. Sure LLMs <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">make things up</a>, but that's a plus if you ask them to do <a href="posts/simple-training-sims">improv</a>, and to the extent they <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">regurgitate societal biases</a> they present openings to unpack such biases and how they will effect students practice. Today we'll build a template to help provide feedback for those participating in a simulation. 
   </p>
   <p>
-    Previously, we've limited our exploration of these simulated experiences to the simulations themselves. That is, when we introduced a <a href="posts/simple-training-sims">client simulation</a>, that simulation stoped short of providing feedback, assuming that would come later, and though I think the best performance review would come from a clinical instructor it's worth considering the possibility that we could create something like our <a href="posts/style-guide">interactive style guide</a> or <a href="posts/ai-rubric">unit testing for writing</a> to evaluate student performance on simulations. To be clear, as I've <a href="posts/ai-rubric">said before</a>, the idea is to help with formative assessment. Yes, we're going to provide simulated feedback on the content of a simulation. Remember, however, this feedback should start, not end the discussion. Cue the <a href="https://knowyourmeme.com/memes/xzibit-yo-dawg" target="_blank">Xzibit meme</a>.
+    Previously, we've limited our exploration of these simulated experiences to the simulations themselves. That is, when we introduced a <a href="posts/simple-training-sims">client simulation</a>, that simulation stoped short of providing feedback, assuming that would come later, and though I think the best performance review would come from a clinical instructor it's worth considering the possibility that we could create something like our <a href="posts/style-guide">interactive style guide</a> or <a href="posts/ai-rubric">unit testing for writing</a> to evaluate student performance on simulations. Yes, we're going to provide simulated feedback on the content of a simulation. To be clear, as I've <a href="posts/ai-rubric">said before</a>, the idea is to help with formative assessment. This feedback should start, not end the discussion. It's like grammar check for arguments—merely a suggestion. Cue the <a href="https://knowyourmeme.com/memes/xzibit-yo-dawg" target="_blank">Xzibit meme</a>.
   </p>
   <div class="featured_img_center">
     <a href="images/50-days/xzibit.png"><img src="images/50-days/xzibit.png" ALT="Xzibit Meme: Yo dawg, I heard you like sims, so we put sims in your sim so you can sim your sims." class="list_img_file"/></a>
@@ -161,27 +161,27 @@
     <li><a href="ai/paper-chase-2.0/">The Paper Chase 2.0</a> (includes both a simulated student—a gunner—and a simulated law prof)</li>
     <li><a href="ai/examen/">An AI-Mediated Secular Daily Reflection Based on the Ignatian Examen</a> (simulated facilitator)</li>
     <li><a href="ai/word-processor/">An AI Word Processor</a> (includes a simulated Devil's Advocate)</li>
-    <li><a href="https://libraryofunwrittenbooks.org/">The Library of Unwritten Books</a> (includes the simulated inhabitants of more worlds than stars in the sky)</li>
+    <li><a href="https://libraryofunwrittenbooks.org/">The Library of Unwritten Books</a> (includes the simulated inhabitants of "more worlds than stars in the sky")</li>
   </ul>
   <p>That being said...</p>
 
 
   <!-- END INTRO -->
 
-  <h3><a name="build" href="posts/debate-coach/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <h3><a name="build" href="posts/constructed-criticism/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/debate-coach/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/constructed-criticism/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/debate-coach/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/constructed-criticism/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/debate-coach/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/constructed-criticism/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/debate-coach/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/debate-coach/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/constructed-criticism/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/constructed-criticism/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/debate-coach/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/debate-coach/#tires">Kick the Tires</a></li>
-    <li><a href="posts/debate-coach/#references">TL;DR References</a></li>
+    <li><a href="posts/constructed-criticism/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/constructed-criticism/#tires">Kick the Tires</a></li>
+    <li><a href="posts/constructed-criticism/#references">TL;DR References</a></li>
   </ul>
   <p>
     <b>Questions or comments?</b> I'm on Mastodon <a href="https://mastodon.social/@Colarusso" target="_blank">@Colarusso@mastodon.social</a>
@@ -194,7 +194,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="setup" href="posts/debate-coach/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/constructed-criticism/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -214,7 +214,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/debate-coach/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/constructed-criticism/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -227,7 +227,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/debate-coach/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/constructed-criticism/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
     </p>
@@ -264,7 +264,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/debate-coach/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/constructed-criticism/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
 
@@ -276,7 +276,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/debate-coach/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+  <h2><a name="template" href="posts/constructed-criticism/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -336,7 +336,7 @@ Now provide your feedback. Focus primarily on logical reasoning and rhetoric. Ba
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
     <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
-<h3><a name="working" href="posts/debate-coach/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+<h3><a name="working" href="posts/constructed-criticism/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
 <p>
   To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 </p>
@@ -359,7 +359,7 @@ Now provide your feedback. Focus primarily on logical reasoning and rhetoric. Ba
     =================================================
   -->
   <hr>
-  <h2><a name="tires" href="posts/debate-coach/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <h2><a name="tires" href="posts/constructed-criticism/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
   </p>
@@ -379,7 +379,7 @@ Now provide your feedback. Focus primarily on logical reasoning and rhetoric. Ba
     =================================================
   -->
   <hr>
-  <h2><a name="references" href="posts/debate-coach/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/constructed-criticism/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
@@ -426,7 +426,7 @@ Now provide your feedback. Focus primarily on logical reasoning and rhetoric. Ba
 	} catch (error) {}*/
 
   (async () => {
-    prompts = await loadFile('posts/debate-coach/prompt_template.txt');
+    prompts = await loadFile('posts/constructed-criticism/prompt_template.txt');
   })()
 </script>
 
