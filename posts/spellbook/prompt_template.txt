@@ -340,7 +340,7 @@
     "behavior": "chat",
     "hide_button": false
   },
-  "🧠 multiple choice from selected": {
+  "🧠 Multiple choice from selected": {
     "prompt": "{{highlighted}}\n\n---\n\nFor the above reading assignment produce five multiple-choice questions aimed at gauging whether or not someone read the article. Focus on important points and indicate the correct answer below each question. \n\n",
     "model": "gpt-4-turbo-preview",
     "temperature": 0,

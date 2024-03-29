@@ -106,7 +106,6 @@
   </p>
   <p><i>This is <b>the 50th</b> post in my series <a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.</p>
 
-  
   <p>
     I built the <a href="posts/spellbook/#install" onClick="expand_setup();">LIT Prompts</a> extension thinking it would be a nice sandbox for my students—a place for them to "play" with <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs). It's turned into so much more. By making it possible to write <a href="https://en.wikipedia.org/wiki/Function_(computer_programming)" target="_blank">functions</a> that operate on text in the browser it's done something I haven't really seen anywhere else. Many of the prompts I've described over the last 10 weeks can be implemented in chat with ChatGPT, Claude, Gemini, et al. However, such implementations require you to do a heck of a lot of cut-and-paste. By giving prompts access to the browser and making them reusable, editable, and interconnected, we've opened up a whole new set of possibilities. Sure, with AI being baked into all of our apps, you can find a plethora of tools to <a href="posts/summarize-and-question">summarize this page</a>, but where else have you seen someone happen upon a whole new mode of <a href="posts/magic-copy-and-paste">computer-human</a> interaction or form of <a href="posts/unwritten">collaborative storytelling</a>? What other tools offer the ability for non-coders to produce <a href="posts/uspto-llms">rapid prototypes</a> for workflows that if adopted would save millions in unnecessary litigation? What tools let you create your own <a href="posts/word-processor">AI word processor</a> in a matter of minutes? Tools that move beyond spellcheck and grammar check to introduce argument checks and <a href="posts/ai-rubric">unit tests</a> for the written word. Without intending to, I accidentally created an AI-powered extension capable of using LLMs to "do it all." <a href="posts/define-words">Define</a> text on a website, <a href="posts/translate-selected">translate text</a>, show only <a href="posts/recipe">the recipe</a> hiding at the end of a post, <a href="posts/emails">answer emails</a>, facilitate <a href="posts/reflection">self-reflection</a>... and all at the click of a button without cut-and-paste. If you haven't already, you really should <a href="posts/spellbook/#install" onClick="expand_setup();">install the extension</a>. ;)
   </p>
@@ -115,9 +114,8 @@
   </p>
   <p style="text-align: center;"><font style="font-size: 35px; line-height: 40px;color: brown;font-weight: 600;">&ldquo;AI isn't magic. It's Math!&rdquo;</font></p>
   <p>
-    Over the past 10 weeks I've been curating my own Mathemagician's spellbook. It doesn't include all of the prompts we've explored together, but it does include those I'm most likely to reach for while using my browser. I offer it to you today as a parting gift (you can download everything as one file <a href="posts/spellbook/#working">below</a>). You may also appreciate this <a href="posts/tldr-references">reading list</a> of articles I've linked to during our time together. Thank you for accompanying me on this journey. The <a href="posts/50-days-of-lit-prompts">series</a> may be ending, but it is not goodbye. These 10 weeks have given me a lot to think about, and I expect I will distill some of these thoughts into additional posts. You can follow my <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS feed</a> should you want to be on the lookout for them. Need an RSS reader? <a href="posts/rss-reader">I have you covered</a>. 
+    Over the past 10 weeks I've been curating my own Mathemagician's spellbook. It doesn't include all of the prompts we've explored together, but it does include those I'm most likely to reach for while using my browser. I offer it to you today as a parting gift (you can download everything as one file <a href="posts/spellbook/#working">below</a>). You may also appreciate this <a href="posts/tldr-references">reading list</a> of articles I've linked to during our time together. Thank you for accompanying me on this journey. The <a href="posts/50-days-of-lit-prompts">series</a> may be ending, but it is not goodbye. These 10 weeks have given me a lot to think about, and I expect I will distill some of these thoughts into additional posts. You can follow my <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS feed</a> should you want to keep an eye out for them. Need an RSS reader? <a href="posts/rss-reader">I have you covered</a>. 
   </p>
-
   <p>
     FWIW, here's a rundown of the prompts included below, and thank you again. Be seeing you.
   </p>
@@ -146,7 +144,7 @@
     <li><b>😡 Anger Translator</b>
     <li><b>🪩 Daily reflection</b>
     <li><b>🧠 Make true-false from selected</b>
-    <li><b>🧠 multiple choice from selected</b>
+    <li><b>🧠 Multiple choice from selected</b>
     <li><b>🧠 Answer selected question</b>
     <li><b>🎲 🎲 Random</b>
     <li><b>🕰️ Time2Poem</b>
@@ -269,6 +267,10 @@
       Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
     </div>
   </div>
+
+  <p>
+    Fair warning: if this is the first set of templates you're working with, this might be a little overwhelming. If you find yourself lost, I suggest heading back to the beginning of <a href="posts/50-days-of-lit-prompts">the serise</a>. You don't have to read through every post, but they are ordered to help introduce how things work, building up in complexity over time. I'd consider looking through at least the first two weeks. 
+  </p>
 
   <p>
     When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. 
@@ -2566,7 +2568,7 @@ For the above reading assignment produce ten True or False questions aimed at ga
     <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
     <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
   <p>Here's the template's title.</p>
-  <p><code>🧠 multiple choice from selected</code></p>
+  <p><code>🧠 Multiple choice from selected</code></p>
   <p>Here's the template's text.</p>
   <!--
     #########################
