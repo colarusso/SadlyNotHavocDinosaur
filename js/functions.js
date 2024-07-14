@@ -132,7 +132,7 @@ function collapse_setup() {
     document.getElementById('expand_setup').style.display='block';
 }
 
-var msg = `David's lab is hosting a <a href="https://suffolklitlab.org/LITCon/2024/" target="_blank">hybrid event at Suffolk Law</a> on April 8th on AI and law practice. Join us!`
+var msg = `` //David's lab is hosting a <a href="https://suffolklitlab.org/LITCon/2024/" target="_blank">hybrid event at Suffolk Law</a> on April 8th on AI and law practice. Join us!`
 
 function close_msg() {
     document.getElementById('msg_bar').style.display='none';
