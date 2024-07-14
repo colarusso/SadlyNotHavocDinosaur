@@ -141,7 +141,7 @@ function close_msg() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    if (localStorage.msg != msg) {
+    if (localStorage.msg != msg && msg != "") {
         document.getElementById('msg_bar').innerHTML = `<a href="javascript:close_msg();" class="ex">X</a>`+ msg;
         document.getElementById('msg_bar').style.display='block';    
     }
