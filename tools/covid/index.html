@@ -49,7 +49,7 @@
 <script>
   window.onload = function() {
     // Initialize sliders and select from localStorage if available
-    ['slider1', 'slider2', 'slider3', 'slider4', 'slider5', 'slider6', 'slider7', 'select1'].forEach(id => {
+    ['slider1', 'slider2', 'slider3', 'slider4', 'slider5', 'slider6', 'slider7', 'slider8', 'select1'].forEach(id => {
       if (localStorage.getItem(id)) {
         document.getElementById(id).value = localStorage.getItem(id);
         updateDisplay(id);
@@ -114,6 +114,8 @@
     } else {
         document.getElementById("total").textContent = Math.round(sum*10000)/100 + "%";
     }
+
+    document.getElementById("whatif").textContent = Math.round((1-(1-sum)**document.getElementById("slider8").value)*10000)/100
   }
 
 </script>
@@ -181,6 +183,12 @@
         </p>
         <input type="range" min="0" max="1" step="0.01" value="0" id="slider7" oninput="updateValue('slider7')">
     </div>
+
+    <h2>What if...</h2>
+    <p>I do this event <span id="valueslider8">0</span> times?</p>
+    <input type="range" min="1" max="365" step="1" value="0" id="slider8" oninput="updateValue('slider8')">
+    <p>The odds would be: <span id="whatif">0</span>%</p>
+
     <p style="text-align: center;">
         <a href="https://www.desmos.com/calculator/tmxtxjrtyn" target="_blank">View model &amp; assumptions</a>
     </p>
