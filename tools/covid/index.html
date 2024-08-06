@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Estemator</title>
+<title>Infection Estemator</title>
 
   <!-- Metadata for mobile -->
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -42,8 +42,24 @@
   }
   #total {
     text-align: center;
-    font-size: 60px;
-    line-height: 65px;
+    font-size: 80px;
+    line-height: 85px;
+    margin: 20px;
+  }
+  select {
+    width:100%;
+    text-align: center;
+    opacity: 1;
+    border-radius: 3px;
+    font-size: 14px;
+    color:black;
+    border: 1px solid #7b7b7b;
+    padding: 3px;
+    background: rgb(211, 211, 211);
+  }
+  hr {
+    border: 0px;
+    border-bottom: 1px solid #555;
   }
 </style>
 <script>
@@ -123,8 +139,10 @@
 <body>
 <div class="container">
   <div class="content">
-    <i>Not intended for public use. Do not rely on estimate.</i>
+    <i>Not intended for public use. Do not rely on estimate.</i> Your odds of catching COVID:<sup>&dagger;</sup>
     <h1 id="total">0%</h1>
+    <hr>
+    <h3>Observations &amp; Behavior</h3>
     <div class="slider">
       <p>
         <a href="https://data.wastewaterscan.org/tracker?charts=CjsQACABSABSBmI1MGM2NFoGTiBHZW5lcgoyMDI0LTA1LTA0cgoyMDI0LTA4LTA0igEGNjU2MWQ3uAHECA%3D%3D&selectedChartId=6561d7" target="_blank">Wastewater</a>: <span id="valueslider1">700</span> (PMMoV normalized x1 million)
@@ -189,12 +207,13 @@
     <input type="range" min="1" max="365" step="1" value="0" id="slider8" oninput="updateValue('slider8')">
     <p>The odds would be: <span id="whatif">0</span>%</p>
 
+    <hr>
     <p style="text-align: center;">
-        <a href="https://www.desmos.com/calculator/tmxtxjrtyn" target="_blank">View model &amp; assumptions</a>
+      <sup>&dagger;</sup><a href="https://www.desmos.com/calculator/tmxtxjrtyn" target="_blank">View model &amp; assumptions</a>
     </p>
 
     <br>
-    
+
   </div>
 
 </div>
