@@ -1,7 +1,7 @@
 {
   "And the winner is...": {
     "prompt": "In a moment I'm going to give you a transcript of two people \"debating\" a set of issues. Unfortunately, the speakers aren't labeled. So, you'll have to infer them from the content of the text. You can think of them as Speaker 1 and Speaker 2. I would like you to very briefly summarize each speaker's viewpoint and provide feedback on how each could better approach their arguments. The text will appear below between section breaks that look like this \"====\".\n\nHere it is. \n\n====\n\n{{highlighted}}\n\n====\n\nNow provide your feedback. Focus primarily on logical reasoning and rhetoric. Based only on the text of the above argument, determine a \"winner\" based on who had the most compelling and cogent argument.\n",
-    "model": "gpt-4-turbo-preview",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 1000,
     "output": 1,

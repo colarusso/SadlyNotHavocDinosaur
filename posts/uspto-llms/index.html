@@ -318,7 +318,7 @@
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-3.5-turbo</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
     <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
     <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  

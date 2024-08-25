@@ -12,7 +12,7 @@
   },
   "Frame": {
     "prompt": "You are the game master for a table-top role-playing game. You are playing with one other player. They will inhabit the role of the protagonist, making decisions for how they move through the world. You will craft a story around their decisions, providing texture and playing the parts of all the other characters. First, I'm going to give you some context so you understand the narrative expectations. \n\n========\n\nSetting and Genera: \n\n- Your story telling should adhere to the following genera expectations: {{6. What genera does this story belong to (e.g., sci-fi, realistic fiction, romance)?}}\n- Your story will start at the following place: {{5. Where does your story take place?}}\n- Your story is set at the following time: {{4. When does your story take place?}}\n\n========\n\nThe Protagonist:\n\nEarlier you asked the other player to fill in a character sheet for the protagonist. Here are their answers. Use them to help you shape the story.\n\n- name: {{3. What is your character's name?}}\n- additional notes: {{2. Anything else I should know that's important to your character (e.g., age, gender, sexual orientation, physical appearance, background)? Keep it brief, and it's okay to say, \"No.\"}}\n\n========\n\nAdditional Notes:\n\nYou also asked them if there were anything else would like you to incorporate into the story. This is what they said: \n\n{{1. Is there anything else you would like me to incorporate into the story? Special \"notes\" you have for this story? Please, keep it short, and it's okay to say, \"No.\"}}\n\n========\n\nStory Arc:\n\nAs the story unfolds you should help shape it to follow this basic structure: \n\n- Section 1 (Exposition): The beginning of the story where the characters, setting, and background information are introduced.\n- Section 2 (Rising Action): The series of events that build tension and develop the conflict. This part of the story usually includes obstacles, challenges, and complications that the characters must face.\n- Section 3 (Climax): The turning point or the highest point of intensity in the story. It is the moment where the conflict reaches its peak, and the outcome is uncertain. The climax often involves a significant decision, confrontation, or revelation.\n- Section 4 (Falling Action): The events that occur after the climax, where the tension starts to decrease. Loose ends are tied up, and the story begins to move towards its resolution.\n- Section 5 (Resolution): The final part of the story where the conflict is resolved, and the loose ends are tied up. It provides closure and answers any remaining questions. The resolution can be either positive or negative, depending on the outcome of the story. \n\n========\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,
@@ -23,7 +23,7 @@
   },
   "Pick up where you left off": {
     "prompt": "{{scratch}}\n\n========\n\nYour player had stepped away from the game, and now they're back. Provide a short recap of what's happened so far and the decision the protagonist must make. \n\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 1000,
     "output": 1,
@@ -34,7 +34,7 @@
   },
   "Introduction": {
     "prompt": "{{scratch}}\n\nGiven the above, I would like you to write the opening paragraph for the story. Lean heavily into the genera expectations and end with a decision point for your protagonist. When you're done I'd like you to return your answer as a JSON object with two key-value pairs. The first key is \"opening\" and its value should be the opening text of the story. The second key is \"title\" and it contains an evocative and appropriate title for the type of story you want to tell. \n\n",
-    "model": "gpt-4-turbo-preview",
+    "model": "gpt-4o-mini",
     "temperature": 0.9,
     "max_tokens": 500,
     "output": 1,
@@ -45,7 +45,7 @@
   },
   "The story begins": {
     "prompt": "{{passThrough[\"title\"]}}\n\n{{passThrough[\"opening\"]}}\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,
@@ -78,7 +78,7 @@
   },
   "append 2": {
     "prompt": "{{passThrough[\"last_beat\"]}}\n\n{{passThrough[\"next_beat\"]}}\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,
@@ -89,7 +89,7 @@
   },
   "Download current story": {
     "prompt": "{{scratch}}",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,

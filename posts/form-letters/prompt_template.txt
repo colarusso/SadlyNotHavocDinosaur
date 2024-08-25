@@ -1,7 +1,7 @@
 {
   "Generic form letter (no LLM)": {
     "prompt": "{{DayOfWeek}}, {{Month}} {{day}}, {{year}} [# These are all predefined variables, and since Output Type is set to Prompt, this will just echo out the text of this template with variables replaced. #]\n\n{{Who is this letter addressed to?}}:\n\n[This is where you ({{What's your name?}}) should put the text of your boilerplate letter.] \n\nSincerely, \n{{What's your name?}} [# Note: The user is only presented with \"What's your name?\" once because the default behavior is not to repeat user prompts. If you added an asterisk before the closing brackets, however, it would force user input. #]",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,

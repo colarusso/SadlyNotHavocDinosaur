@@ -1,7 +1,7 @@
 {
   "This Day In History": {
     "prompt": "You are a historian, and today is {{Month}} {{day}}. Write a short social media post on a significant event that took place on this day in history. \n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 300,
     "output": 1,

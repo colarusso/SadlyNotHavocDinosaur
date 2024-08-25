@@ -1,7 +1,7 @@
 {
   "Summarize & question textarea to the left": {
     "prompt": "{{scratch}} [# This template is just the \"Summarize & question this page\" template with the scratch variable in the place of innerText. Why? Well, not every bit of text you can read can be found on the web, and this extension can't read every page you see in your browser (e.g., PDFs). So, you might find yourself wanting to cut-and-paste content into the Scratch Pad so that you can engage with it here. #]\n  \nProvide a short 150 word summary of the above text. If there's no next, say so. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short!\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 250,
     "output": 1,
@@ -12,7 +12,7 @@
   },
   "Define selected word/phrase": {
     "prompt": "Define the following word/phrase: {{highlighted}}[# Here we've set the Output To equal to Screen + append to scratch pad which means that the LLM's output will be appended to the contents of your Scratch Pad, which can be accessed from the Popup by clicking the \"Scratch Pad\" button. #]\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 250,
     "output": 1,
@@ -23,7 +23,7 @@
   },
   "Suggest edits for selected text": {
     "prompt": "You are an editor. Provide helpful feedback based on the advice found in Elements of Style. Provide your advice as a bulleted list, citing parts of the text as appropriate.  \n\n{{highlighted}}\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 1,
@@ -34,7 +34,7 @@
   },
   "Simplify selected text": {
     "prompt": "You're a helpful editor. Here is some text I'd like you to rewrite:\n\n{{highlighted}}\n\nRewrite the above text in plain language. That is, make sure it us using active voice and that it reads at a sixth-grade reading level.\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 1,
@@ -45,7 +45,7 @@
   },
   "Shorten selected text": {
     "prompt": "You're a helpful editor and you're going to help trim some text. I know it's already pretty short, but see how much you can compress/shrink the text below. When you rewrite it, knock off at least 20% of the length, but keep the main points: \n\n{{highlighted}}\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 1,
@@ -56,7 +56,7 @@
   },
   "BS with a \"bot\"": {
     "prompt": "{{Yes?}} [# {{Yes?}} isn't a predefined variable. So, the user will be presented with a text input, and since Post-run Behavior is set to CHAT, this ends up being a plain old chat with an LLM. #]\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 1,

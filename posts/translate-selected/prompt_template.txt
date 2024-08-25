@@ -1,7 +1,7 @@
 {
   "Translate & reply in original language": {
     "prompt": "You are helping translate text into French. Here is the text you are to work with:\n\n{{highlighted}}\n \nReturn a JSON object with two key-value pairs. The first key is called `language`, and its value is the language of the above text. The second key is called `translation`, and its value is the above text translated into English. \n\nNow return the object: \n\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 250,
     "output": 1,
@@ -12,7 +12,7 @@
   },
   "display translation and prompt": {
     "prompt": "Translate the following text into {{passThrough[\"language\"]}}. Here's the text to translate: \n\n{{{{passThrough[\"translation\"]}}}} \n\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 250,
     "output": 1,

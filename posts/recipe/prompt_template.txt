@@ -1,7 +1,7 @@
 {
   "Just the recipe": {
     "prompt": "{{innerText}}\n\n----\n\nFind the recipe and perpetration instructions in the above text and reformat them for ease of reading. That is, return just the recipe and instructions for preparation absent any extraneous verbiage.\n\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 500,
     "output": 1,

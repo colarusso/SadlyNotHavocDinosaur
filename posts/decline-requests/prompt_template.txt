@@ -1,7 +1,7 @@
 {
   "Politely decline an email (selected text)": {
     "prompt": "{{highlighted}}\n\n---\n\nFor the above email or email thread, draft a brief professional reply politely declining its request. Keep the email super short while being responsive to the specific ask(s).\n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 1,

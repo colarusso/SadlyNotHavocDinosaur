@@ -1,7 +1,7 @@
 {
   "Coin Flip 2 Poem": {
     "prompt": "I'm going to flip a coin. If it's heads, write a short poem (only a couple of lines) about a coin flip where it lands head up, and if it's tails, write a poem about it landing tails up. Be very clear about the result of the coin flip in the poem. \n\nCoin flip: {{coinFlip}} \n\nNow give me your response/poem: \n\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.9,
     "max_tokens": 250,
     "output": 1,

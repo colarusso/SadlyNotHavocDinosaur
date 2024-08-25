@@ -277,7 +277,7 @@ Now, provide the correct answer:
 
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
     
-    <li><b>Model:</b> <code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. Note: <code>gpt-4</code> did pretty well in the tests I described above, but it's wicked expensive.</li>  
+    <li><b>Model:</b> <strike><code>gpt-3.5-turbo-16k</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. Note: <code>gpt-4</code> did pretty well in the tests I described above, but it's wicked expensive.</strike> With the impending retirement of <code>gpt-3.5-turbo-16k</code> we have updated this page to use <code>gpt-4o-mini</code>.</li>  
     
     <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
                 

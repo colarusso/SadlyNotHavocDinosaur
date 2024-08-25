@@ -1,7 +1,7 @@
 {
   "Get citations from selected": {
     "prompt": "I'm about to show you a selection of text from an academic paper, complete with citations to other works. Your job is to find all the citations and produce the text for a csv file containing a row for each citation. The csv should have the following headers: \"author\", \"title\", \"name_of_publication\", and \"date\". Consequently, each row should have the following data all encased in double quotes: author, title, name of publication, and date. Be sure to add a carriage return/line break to the end of each row, including the header row. If part of the information isn't available return \"unknown\" for that part. \n\nTEXT FROM ACADEMIC PAPER\n\n{{highlighted}}\n\n---\n\nNow provide a line for the header and each citation (row) in the csv file. Return only the text of the file. Do NOT place it in quotes or provide any extraneous text, just the header and rows. \n",
-    "model": "gpt-4-turbo-preview",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 3000,
     "output": 1,

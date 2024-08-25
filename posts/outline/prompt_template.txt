@@ -12,7 +12,7 @@
   },
   "Role Play 1": {
     "prompt": "{{passThrough[\"transcript\"]}}\nYOU: {{passThrough[\"reply\"]}}\nWRITER: {{{{passThrough[\"reply\"]}}*}} [# Here we've encased {{passThrough[\"reply\"]}} inside a set of curly brackets. Imagine {{passThrough[\"reply\"]}} has the value \"What made you think that?\" Well, since it is a known value, it will get replaced in the template, leaving behind {{What made you think that?}}. However, this is not a known value. So the user will be asked \"What made you think that?\" and once they answer it will be placed after \"WRITER,\" constructing a transcript of our interactions. Why the asterisk? It's a way to force user input. Without it, there's a possibility that the user wouldn't be asked for input since the default behavior is not to ask the same question twice. Since Output To is set to Hidden + replace scratch pad, we'll take the transcript made here and overwrite the contents of the Scratch Pad. And since Post-Run Behavior is set to \"Role Play 2\" that template will be triggered. #]\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,
@@ -34,7 +34,7 @@
   },
   "Role Play 3": {
     "prompt": "YOU: {{passThrough[\"reply\"]}}\nWRITER: {{{{passThrough[\"reply\"]}}*}} [# Here unlike \"Role Play 1\" we append to, rather than overwrite, the Scratch Pad, meaning we just add to the transcript before passing things on to \"Role Play 4.\" Again we place an asterisk before the closing curly brackets to force user input. #]\n",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 250,
     "output": 0,
@@ -56,7 +56,7 @@
   },
   "Role Play 5": {
     "prompt": "[# Having collected more context from the user, we're now ready to produce some new text and copy that to the clipboard (Output To = Screen + clipboard). #]You are a helpful writing assistant. You've just had a conversation with a writer about some copy they're working on, and your task is to take what you learned from that conversation and rewrite the original copy such that its about 20% longer. Here's the text of your conversation. The writer began by reading the copy they have so far.\n\n{{scratch}}\n\nUse what you learned above to rewrite the original copy, adding details learned above. Do your best to keep the writer's voice and style while adding relevant details from your conversation to that first entry. Do NOT embellish! Do NOT make things up! Keep your additions firmly based on the content of your conversation, and don't make your copy too long! You goal is simply to flesh out the original text (i.e., the writer's first utterance above), adding about 20% in length. That being said, provide your new longer copy below.\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0.7,
     "max_tokens": 1000,
     "output": 1,
