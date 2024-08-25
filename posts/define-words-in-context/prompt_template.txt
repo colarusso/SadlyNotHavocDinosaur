@@ -1,7 +1,7 @@
 {
   "Define selected word/phrase in context of page": {
     "prompt": "{{innerText}}\n\nUse the information above to explain who/what the following word/phrase is, i.e., provide a description/definition for the word(s) as used above: {{highlighted}}\n\n",
-    "model": "gpt-3.5-turbo-16k",
+    "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 250,
     "output": 1,
