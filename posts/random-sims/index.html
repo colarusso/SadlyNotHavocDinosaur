@@ -305,7 +305,8 @@ Now return your character's name and job as a JSON object composed of two key-va
     <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
-    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code></code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+    <li><b>Post-run Behavior:</b> <code>Run Simulation</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Run Simulation</code> template.</li>      
+    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
   <p>Here's the second template's title.</p>
   <p><code>Run Simulation</code></p>
   <p>Here's the template's text.</p>
