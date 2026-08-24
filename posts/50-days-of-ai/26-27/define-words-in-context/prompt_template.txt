@@ -1,0 +1,10 @@
+{
+  "Define selected word/phrase in context of page": {
+    "prompt": "{{innerText}}\n\nUse the information above to explain who/what the following word/phrase is, i.e., provide a description/definition for the word(s) as used above: {{highlighted}}\n\n",
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}

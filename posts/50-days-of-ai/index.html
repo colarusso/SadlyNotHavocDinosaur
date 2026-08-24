@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../">
+
+  <!-- Page-specific metadata -->
+  <title>50 Days of AI History, Harms, and Hopes | Sadly Not, Havoc Dinosaur</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-01-19T12:00:00-0500"/>
+  <meta property="og:title" content="50 Days of AI History, Harms, and Hopes | Sadly Not, Havoc Dinosaur"/>
+  <meta property="og:description" content="Every weekday for the next 10 weeks, I'll update this page with new prompt patterns and invite folks to play with them inside LIT Prompts. We'll be plugging into the technology that runs tools like ChatGPT, giving you a level of control that most people don't see. You won't have to do any &quot;coding,&quot; but we will think like coders. I'm still suspicious of the term prompt engineering, esp. when used as a job title. The idea that an entire job could be built around &quot;talking&quot; to an AI seems a bit too loosey goosey. So, we'll try to introduce some rigor. We'll aim to think about workflows and systems where writing prompts is just part of a larger endeavor. You'll be supported by the fact that LIT Prompts lets you produce reusable interconnecting prompt templates. This will let us build upon what we learn and improve our practice over time. We'll explore the promise and perils of this new technology while you build custom interactions/workflows. Plus, I'm pretty sure we'll have fun along the way."/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/lets_build_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-02-16c">
+  <script src="js/functions.js?v=2024-02-16c"></script>
+  <script src="js/spin.js"></script>
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>  
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+  <div id="page">
+ 
+  <h1 class="post_title_01">50 Days of AI History, Harms, and Hopes</i></h1>
+  <div class="post_title_02">Learn by doing with new exercise every weekday for 10 weeks</div>
+
+  <div class="featured_img_right">
+    <a href="images/50-days/lets_build.png"><img src="images/50-days/lets_build.png" ALT="In a brightly lit workshop with natural light streaming in, a young woman and a young man are intently and happily working on a complex robot placed on a cluttered table. They are both dressed in casual attire. The workshop is a blend of old and new, with clocks visible in the background, conveying an atmosphere of creativity and innovation." class="list_img_file"/></a>
+    <div class="caption">
+      Let's Build Something, latent space "photography" by <a href="https://mastodon.social/@Colarusso" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+
+  <p class="post_p">
+    <a href="https://mastodon.social/@Colarusso" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br>
+    <span class="post_date">This collection is based on a serise originally Published 2024-01-19 through 2024-03-29. New content added Aug. 2026.</span>
+  </p>
+  <p>
+    As an <a href="https://www.suffolk.edu/academics/faculty/d/c/dcolarusso" target="_blank">experiential educator</a>, I firmly believe experience is an excellent teacher. So, let's build some stuff. In the process we might just gain some perspective on this whole generative AI craze.
+  </p>
+  <p>
+    I teach law students about technology, and recently I created the <a href="https://github.com/SuffolkLITLab/prompts" target="_blank">LIT Prompts</a> browser extension to help them explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. You can download the extension <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">for Firefox</a> or <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">for Chrome</a>. 
+  </p>
+  <p>
+    Every week for the next 10 weeks, I'll update this page with new prompt patterns and invite folks to play with them inside LIT Prompts. We'll be plugging into the technology that runs tools like ChatGPT, giving you a level of control that most people don't see. You won't have to do any &quot;coding,&quot; but we will think like coders. I'm still suspicious of the term prompt engineering, esp. when used as a job title. The idea that an entire job could be built around &quot;talking&quot; to an AI seems a bit too loosey goosey. So, we'll try to introduce some rigor. We'll aim to think about workflows and systems where writing prompts is just part of a larger endeavor. You'll be supported by the fact that LIT Prompts lets you produce reusable interconnecting prompt templates. This will let us build upon what we learn and improve our practice over time. We'll explore the promise and perils of this new technology while you build custom interactions/workflows. Plus, I'm pretty sure we'll have fun along the way.  
+  </p>
+  <div class="listing" style="width:100%">
+    <h3><a name="week1" href="posts/50-days-of-lit-prompts/#week1" class="anchor" alt="deep link to this section"></a>Week 1</h3>
+    <div class="preview-flex-container">
+      <a href="posts/50-days-of-ai/26-27/summarize-and-question"><img src="images/50-days/text_distillery_125.png" alt="Monday"></a>
+      <a href="posts/50-days-of-ai/26-27/define-words"><img src="images/50-days/dictionary_125.png" alt="Tuesday"></a>
+      <a href="posts/50-days-of-ai/26-27/decline-requests"><img src="images/50-days/robo_shrug_125.png" alt="Wednesday"></a>
+      <a href="posts/50-days-of-ai/26-27/define-words-in-context"><img src="images/50-days/dictionary_train_125.png" alt="Thursday"></a>
+      <a href="posts/50-days-of-ai/26-27/coinflip-poem"><img src="images/50-days/coinflip_125.png" alt="Friday"></a>
+    </div>
+    <p>Micro-Lessons (Tuesday-Thrusday): An explination of how to build an artificial neural network</p>
+    <ol>
+      <li><a href="posts/50-days-of-ai/26-27/summarize-and-question">Using AI to Distill and Question Texts</a>: Summarize and question the contents of a webpage from within the browser</li>
+      <li><a href="posts/50-days-of-ai/26-27/define-words">A Rose by Any Other Name</a>: Define a selected word, phrase, idiom, or initialism on a webpage</li>
+      <li><a href="posts/50-days-of-ai/26-27/decline-requests">I'm Sorry, Dave Can't Do That</a>: Use the text of an email to draft a polite reply declining any request(s)</li>
+      <li><a href="posts/50-days-of-ai/26-27/define-words-in-context">You Can't Be Neutral on a Moving Train</a>: Define a selected word, phrase, idiom, or initialism given the context of the webpage on which it is found</li>
+      <li><a href="posts/50-days-of-ai/26-27/coinflip-poem">Flip a Poem; Roll an "App"</a>: Turn the outcome of a coin flip into a poem and package this as an "app"</li>
+    </ol>
+  </div>
+  
+  <!--
+
+  <div class="listing" style="width:100%">
+    <h3><a name="week2" href="posts/50-days-of-lit-prompts/#week2" class="anchor" alt="deep link to this section"></a>Week 2</h3>
+    <div class="preview-flex-container">
+      <a href="posts/papers2bots"><img src="images/50-days/talking_book_square_125.png" alt="Monday"></a>
+      <a href="posts/recipe"><img src="images/50-days/pie_crust_125.png" alt="Tuesday"></a>
+      <a href="posts/email-to-do"><img src="images/50-days/email_to_do_125.png" alt="Wednesday"></a>
+      <a href="posts/headlines"><img src="images/50-days/robot_pitch_125.png" alt="Thursday"></a>
+      <a href="posts/time-poem"><img src="images/50-days/clock_store_125.png" alt="Friday"></a>
+    </div>
+    <p>Micro-Lessons (Monday-Thrusday): Learn how to turn words into numbers with word2vec</p>
+    <ol start="6">
+      <li><a href="ai/papers/" class="live_demo" target="_blank">Live Demo</a><a href="posts/papers2bots">I Turned My Scholarly Papers Into Chatbots so People Don't Have To Read Them 🤞</a>: Turn scholarly papers into chatbots so people don't have to read every word </li>
+      <li><a href="posts/recipe">Give Me the Recipe, Not an SEO-Motivated Short Essay</a>: For an online "recipe page," return just the recipe absent extraneous verbiage</li>
+      <li><a href="posts/email-to-do">Add Email Asks to My To-Do List</a>: Find the "asks" in an email; produce a bulleted list of same; add these to a to-do list; save to a file</li>
+      <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/headlines">Follow This One Trick to Write Great Headlines</a>: Produce a collection of possible <strike>clickbait</strike> compelling headlines based on the text of an article</li> 
+      
+      <li><a href="posts/time-poem">A Pome for the Moment</a>: Turn the time of day into a poem</li>
+    </ol>
+  </div>
+
+  <div class="listing" style="width:100%">
+    <h3><a name="week3" href="posts/50-days-of-lit-prompts/#week3" class="anchor" alt="deep link to this section"></a>Week 3</h3>  
+    <div class="preview-flex-container">
+      <a href="posts/simple-training-sims"><img src="images/50-days/robot_actor_125.png" alt="Monday"></a>
+      <a href="posts/diagram-sentence"><img src="images/50-days/robo_teacher_125.png" alt="Tuesday"></a>
+      <a href="posts/translate-selected"><img src="images/50-days/hello_125.png" alt="Wednesday"></a>
+      <a href="posts/form-letters"><img src="images/50-days/movable_type_square_125.png" alt="Thursday"></a>
+      <a href="posts/this-day-in-history"><img src="images/50-days/beatles_125.png" alt="Friday"></a>
+    </div>
+    
+    <p>All of our micro-lessons have been building to this. We take on the T in GPT. That's right, we're talking <i>transformers</i>.</p>
+    <ol start="11">
+      <li><a href="ai/client-meeting-sim" class="live_demo" target="_blank">Live Demo</a><a href="posts/simple-training-sims">What if Members of Talking Professions Could Log Time in Simulators Like Pilots?</a>: Craft Simple Training Simulations with "AI actors"</li>
+      <li><a href="posts/diagram-sentence">Taming Texts or: How To Turn Unstructured Prose Into Structured Data</a> -  Diagram selected sentence, output JSON</li>
+      <li><a href="posts/translate-selected">The Dream of Universal Translation</a>: Translate text into English then translate your reply into the original language</li>
+      <li><a href="posts/form-letters">Old-School Automation</a>: Complete a "form letter" without engaging an LLM</li>
+      <li><a href="posts/this-day-in-history">This Day in History</a>: Generate fun "facts" for this day in history</li>
+      
+    </ol>
+  </div>
+
+
+  <div class="listing" style="width:100%">
+    <h3><a name="week4" href="posts/50-days-of-lit-prompts/#week4" class="anchor" alt="deep link to this section"></a>Week 4</h3>
+      <div class="preview-flex-container">
+        <a href="posts/socrates-lives"><img src="images/50-days/socrates_wide_125.png" alt="Monday"></a>
+        <a href="posts/create-multiple-choice-questions"><img src="images/50-days/robot_bubble_sheet_01_125.png" alt="Tuesday"></a>
+        <a href="posts/create-true-false-questions"><img src="images/50-days/true_false_square_125.png" alt="Wednesday"></a>
+        <a href="posts/answer-questions"><img src="images/50-days/robot_bubble_sheet_02_square_125.png" alt="Thursday"></a>
+        <a href="posts/answer-questions-with-context"><img src="images/50-days/robot_bubble_sheet_03_125.png" alt="Friday"></a>
+      </div>
+      <ol start="16">
+        <li><a href="ai/paper-chase-2.0" class="live_demo" target="_blank">Live Demo</a><a href="posts/socrates-lives">If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives!</a> A law school instructor shows you how to get AI to brief cases, explain them to a 5yo, play the gunner, and conduct a Socratic dialogue all for FREE!</li>
+        <li><a href="posts/create-multiple-choice-questions">All of the Above</a>: Use AI to draft multiple choice questions based on a reading assignment</li>
+        <li><a href="posts/create-true-false-questions">True or False?</a> Use AI to draft true or false questions based on a reading assignment</li>
+        <li><a href="posts/answer-questions">A Hawk from a Handsaw</a>: Have an AI "guess" the right answers for multiple choice and true or false questions</li>
+        <li><a href="posts/answer-questions-with-context">2.B, or Not 2.B?</a> Have an AI answer multiple choice and true or false questions based on a reading assignment</li>
+      </ol>
+  </div>
+
+  <div class="listing" style="width:100%">
+    <h3><a name="week5" href="posts/50-days-of-lit-prompts/#week5" class="anchor" alt="deep link to this section"></a>Week 5</h3>
+      <div class="preview-flex-container">
+        <a href="posts/rpg-quanta"><img src="images/50-days/dragons_and_desk_jobs_wide_125.png" alt="Monday"></a>
+        <a href="posts/tldr-post"><img src="images/50-days/robo_social_125.png" alt="Tuesday"></a>
+        <a href="posts/flag-fallacies"><img src="images/50-days/bingo_square_125.png" alt="Wednesday"></a>
+        <a href="posts/is-this-good"><img src="images/50-days/sentiments_125.png" alt="Thursday"></a>
+        <a href="posts/anger-translator"><img src="images/50-days/luther-obama_125.png" alt="Friday"></a>
+      </div>
+      <ol start="21">
+        <li><a href="ai/rpg-quanta" class="live_demo" target="_blank">Live Demo</a><a href="posts/rpg-quanta">Narrative Quanta: LLMs as RPG Building Blocks.</a> Generate the outcome of a scene for a role-playing game based on a single sentence</li>
+        <li><a href="posts/tldr-post">TL;DR LLM</a>: Blurb a webpage for social media</li>
+        <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/flag-fallacies">Flag Logical Fallacies with a Browser Extension</a>: Have AI read a webpage and flag logical fallacies</li>
+        <li><a href="posts/is-this-good">Is This Good?</a> Extract sentiment from social media posts, label each, and structure output as JSON</li>
+        <li><a href="posts/anger-translator">Your Own Personal Anger Translator</a>: Translate angry comments into thoughtful replies in context</li>
+      </ol>
+    </div>
+
+    <div class="listing" style="width:100%">
+      <h3><a name="week6" href="posts/50-days-of-lit-prompts/#week6" class="anchor" alt="deep link to this section"></a>Week 6</h3>
+        <div class="preview-flex-container">
+          <a href="posts/uspto-llms"><img src="images/50-days/harlequin_125.png" alt="Monday"></a>
+          <a href="posts/shorten"><img src="images//50-days/darlings_125.png" alt="Tuesday"></a>
+          <a href="posts/magnify"><img src="images/50-days/writing_partner_125.png" alt="Wednesday"></a>
+          <a href="posts/legalese"><img src="images/50-days/explaining_125.png" alt="Thursday"></a>
+          <a href="posts/style-guide"><img src="images/50-days/writing_helper_125.png" alt="Friday"></a>
+        </div>
+        <ol start="26">
+          <li><a href="ai/pop-culture" class="live_demo" target="_blank">Live Demo</a><a href="posts/uspto-llms">Should the USPTO ask AI for help with Pop Culture References?</a> How LLMs could help screen for bad-faith trademark applications</li>
+          <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/shorten">500 Characters? I'll Make It Fit!</a> Use AI to shorten text</li>
+          <li><a href="posts/magnify">Magnifying Ideas and Expanding Text with AI</a>: In which I show you how to have AI write something both personal and original, bucking the assumptions that AI writing can never be personal or original</li>
+          <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/legalese">Translate Legalese</a>: An AI tool for rewriting texts in plain language</li>
+          <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/style-guide">The Elements of Interactive Style Guides</a>: Have AI provide writing feedback based on a house style guide</li>
+        </ol>
+      </div>
+
+      <div class="listing" style="width:100%">
+        <h3><a name="week7" href="posts/50-days-of-lit-prompts/#week7" class="anchor" alt="deep link to this section"></a>Week 7</h3>
+          <div class="preview-flex-container">
+            <a href="posts/decodable"><img src="images/50-days/bens_frog_125.png" alt="Monday" style="border: 1px #a5a5a5 solid; border-radius: 0;"></a>
+            <a href="posts/reader-questions"><img src="images/50-days/umm-wait.gif" alt="Tuesday"></a>
+            <a href="posts/devils-advocate"><img src="images/50-days/devils_advocate_125.png" alt="Wednesday"></a>
+            <a href="posts/bs"><img src="images//50-days/robot_bs_125.png" alt="Thursday"></a>
+            <a href="posts/levels"><img src="images/50-days/writing_125.png" alt="Friday"></a>
+          </div>
+          <ol start="31">
+            <li><a href="ai/decodable" class="live_demo" target="_blank">Live Demo</a><a href="posts/decodable">Decodable Books On-Demand</a>: Use AI to create custom books for beginning readers</li>
+            <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/reader-questions">Anticipating Reader Questions</a>: Have AI/LLMs suggest questions readers might have about your writing</li>
+            <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/devils-advocate">Summon the Demon</a>: Strengthen your arguments with an AI-powered devil's advocate</li>
+            <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/bs">Algorithmic BS</a>: Shoot the breeze with your base LLM</li>
+            <li><a href="posts/levels">Three Summaries—Three Levels of Difficulty</a>: Produce three summaries at different levels of complexity (i.e., for a child, general audience, and expert)</li>
+          </ol>
+      </div>
+
+
+
+      <div class="listing" style="width:100%">
+        <h3><a name="week8" href="posts/50-days-of-lit-prompts/#week8" class="anchor" alt="deep link to this section"></a>Week 8</h3>
+          <div class="preview-flex-container">
+            <a href="posts/reflection"><img src="images/50-days/self_talk_125.png" alt="Monday"></a>
+            <a href="posts/archeology"><img src="images/50-days/reading_room_wide_125.png" alt="Tuesday"></a>
+            <a href="posts/magic-copy-and-paste"><img src="images/50-days/magic_cut_and_paste_125.png" alt="Wednesday"></a>
+            <a href="posts/find-my-cites"><img src="images/50-days/cites_wide_125.png" alt="Thursday"></a>
+            <a href="posts/emails"><img src="images/50-days/email_bot_125.png" alt="Friday"></a>
+          </div>
+          <ol start="36">
+            <li><a href="ai/examen" class="live_demo" target="_blank">Live Demo</a><a href="posts/reflection">My Students Have Been Using an Interactive Tool for Reflective Journaling & I Love It!</a> 
+              Avoid the "blank page" problem and engage your day with computer-assisted reflection</li>
+            <li><a href="posts/archeology">Wait, Have I Read This Book Already?</a> In which I extract and clean data from 10 years of emails and online receipts to reconstruct a list of 400+ books because I don't want to start a "new" book only to realize I've read it before</li>
+            <li><a href="posts/magic-copy-and-paste">Magic Copy-and-Paste</a>: Use AI to pluck out and copy only what you want AKA entity extraction</li>
+            <li><a href="posts/find-my-cites">AI-assisted LIT Reviews</a>: Create a sphreadsheet of citations found in a paper with only a few keystrokes</li>
+            <li><a href="posts/emails">Not Quite Dictation</a>: Draft emails based on preset scenarios and an "AI"-mediated Q&amp;A</li>
+          </ol>
+        </div>
+
+        <div class="listing" style="width:100%">
+          <h3><a name="week9" href="posts/50-days-of-lit-prompts/#week9" class="anchor" alt="deep link to this section"></a>Week 9</h3>
+            <div class="preview-flex-container">
+              <a href="posts/word-processor"><img src="images/50-days/robo_mop_125.png" alt="Monday"></a>
+              <a href="posts/code-comments"><img src="images/50-days/pi_125.png" alt="Tuesday"></a>
+              <a href="posts/rag"><img src="images/50-days/robo_caesar_125.png" alt="Wednesday"></a>
+              <a href="posts/random-sims"><img src="images/50-days/dice_wide_125.png" alt="Thursday"></a>
+              <a href="posts/ai-rubric"><img src="images/50-days/a_plus_square_125.png" alt="Friday"></a>
+            </div>
+            <ol start="41">
+              <li><a href="ai/word-processor" class="live_demo" target="_blank">Live Demo</a><a href="posts/word-processor">Build an AI-Augmented Word Processor</a>: Include an interactive version of your style guide; predict reader questions; argue with a devil's advocate; shorten or simplify text... Move beyond spelling and grammar checks—evaluate your logic!</li> 
+              <li><a href="posts/code-comments">Auto-Generate Code Comments</a>: In which "AI" suggests comments and explains a function that approximates pi (π)</li>
+              <li><a href="posts/rag">What is Retrieval-Augmented Generation (RAG)?</a> In which we approximate RAG using only LLMs and no vector database (for the Roman Empire's Wikipedia page)</li>
+              <li><a href="posts/random-sims">Produce Simulations Based on Random Scenarios</a>: Produce and run AI-drive text simulations that are different every time</li>
+              <li><a href="posts/ai-rubric">Rubric-Based Machine Evaluation of Assignments</a>: Have students check their work against your rubric before they turn things in (unit testing for written work)</li>
+            </ol>
+          </div>
+
+
+      <div class="listing" style="width:100%">
+        <h3><a name="week10" href="posts/50-days-of-lit-prompts/#week10" class="anchor" alt="deep link to this section"></a>Week 10</h3>
+          <div class="preview-flex-container">
+            <a href="posts/unwritten"><img src="images/50-days/library_125.png" alt="Monday"></a>
+            <a href="posts/rss-reader"><img src="images/50-days/newsstand_125.png" alt="Tuesday"></a>
+            <a href="posts/data-science"><img src="images/50-days/ymxb_short_125.png" alt="Wednesday"  style="border: 1px #a5a5a5 solid;"></a>
+            <a href="posts/constructed-criticism"><img src="images/50-days/argument_feedback_125.png" alt="Thursday"></a>
+            <a href="posts/spellbook"><img src="images/50-days/mathemagician_125.png" alt="Friday"></a>
+          </div>
+          <ol start="46">
+            <li><a href="https://libraryofunwrittenbooks.org" class="live_demo" target="_blank">Live Demo</a><a href="posts/unwritten">The Library of Unwritten Books</a>: Create novel novellas on-demand, become a reader-author</li>
+            <li><a href="https://myrssalgo.org" class="live_demo" target="_blank">Live Demo</a><a href="posts/rss-reader">AI Magic + Algorithmically-Driven News Feeds Minus the Surveillance Capitalism</a>: Using AI to build open-source tools that work for their users, not their builders</li>
+            <li><a href="ai/toy-models" class="live_demo" target="_blank">Live Demo</a><a href="posts/data-science">The AI Ouroboros: Can 2024's AI Build 2014's AI?</a>: Using LLMs to suggest features for linear and logistic regression models</li>
+            <li><a href="posts/constructed-criticism">Constructed Criticism</a>: Simulated feedback on how to improve your simulation performance</li>
+            <li><a href="posts/spellbook">The AI-Powered Everything Extension</a>: Curate a Mathemagician's spellbook w/o doing any arithmetic (LLM "functions" that run in your browser)</li>
+          </ol>
+        </div>          
+      
+      <div class="listing" style="width:100%">
+        <h3><a name="byte-sized" href="posts/50-days-of-lit-prompts/#tldr" class="anchor" alt="deep link to this section"></a>TL;DR References (A.I. &amp; Large Language Models)</h3>
+        <p> <a href="posts/tldr-references">Browse blubs</a> for a selection of works I referenced in the posts above. Functionally, it's a <a href="posts/tldr-references">reading list</a> for folks who want to get up to speed on large language models. <i>Updated regularly.</i></p>
+      </div>
+    
+ <!--
+  Yes, you've found my not so well hidden notes for upcoming weeks. These may or may not come to be the actual posts, but I find it helpful to have them here. :)
+
+  <div class="listing" style="width:100%">
+    <h3><a name="byte-sized" href="posts/50-days-of-lit-prompts/#byte-sized" class="anchor" alt="deep link to this section"></a>Mico-lessons (Omnibus Edition)</h3>
+    <p>loeum ipsum. Updated weekly.</p>
+      <li class="soon">For a webpage with a click-bait headline, return the author's answer to the headline's implied question absent extranious verbage</li>
+  </div>   
+    
+  <div class="listing" style="width:100%">
+  <h3><a name="week10" href="posts/50-days-of-lit-prompts/#week10" class="anchor" alt="deep link to this section"></a>Week 10: March 18-22, 2024</h3>
+    <p>lorum ipsum</p>
+    <div class="preview-flex-container">
+      <a href="javascript:alert('Coming Monday!')"><img src="images/comic.png" alt="Monday"></a>
+      <a href="javascript:alert('Coming Tuesday!')"><img src="images/comic.png" alt="Tuesday"></a>
+      <a href="javascript:alert('Coming Wednesday!')"><img src="images/comic.png" alt="Wednesday"></a>
+      <a href="javascript:alert('Coming Thursday!')"><img src="images/comic.png" alt="Thursday"></a>
+      <a href="javascript:alert('Coming Friday!')"><img src="images/comic.png" alt="Friday"></a>
+    </div>
+    <ol start="46">
+      <li class="soon">The Library of Unwritten Books</li>
+      <li class="soon">Use AI to Create a Daily Briefing/personalized News Update</li>
+      <li class="soon">AI Data Scientists?</li> Discuss time I worried about auto-ML
+      <li class="soon">Simulation Feedback</li>
+      <li class="soon">Build Your Own AI "Spellbook"</li>
+    </ol>
+  </div>
+
+      <li class="soon" href="posts/outline">Organizing Your Thoughts: Talk with a bot to build an outline</li>
+      <li class="soon">Breakdown problem into bite-sized chunks</li>
+      <li class="soon">Organize and structure "random" notes</li>
+
+  <div class="listing" style="width:100%">
+  <h3><a name="week10" href="posts/50-days-of-lit-prompts/#week10" class="anchor" alt="deep link to this section"></a>Week X: XX N-N, 2024</h3>
+    <p>lorum ipsum</p>
+    <div class="preview-flex-container">
+      <a href="javascript:alert('Coming Monday!')"><img src="images/comic.png" alt="Monday"></a>
+      <a href="javascript:alert('Coming Tuesday!')"><img src="images/comic.png" alt="Tuesday"></a>
+      <a href="javascript:alert('Coming Wednesday!')"><img src="images/comic.png" alt="Wednesday"></a>
+      <a href="javascript:alert('Coming Thursday!')"><img src="images/comic.png" alt="Thursday"></a>
+      <a href="javascript:alert('Coming Friday!')"><img src="images/comic.png" alt="Friday"></a>
+    </div>
+    <ol start="46">
+      <li class="soon">TBD</li>
+      <li class="soon">TBD</li>
+      <li class="soon">TBD</li>
+      <li class="soon">TBD</li>
+      <li class="soon">TBD</li>
+    </ol>
+  </div>
+
+
+-->
+
+  <!-- Preview projects -->
+  <div id="previews"></div>
+  
+  
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">Bluesky</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a> 
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by <a href="https://www.davidcolarusso.com/" class="captionlnk">David Colarusso</a></span>
+  </div>
+</div>
+
+</BODY></HTML>
+

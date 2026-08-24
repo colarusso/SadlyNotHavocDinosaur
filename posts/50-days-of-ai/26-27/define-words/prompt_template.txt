@@ -1,0 +1,10 @@
+{
+  "Define selected word/phrase": {
+    "prompt": "Define the following word/phrase: {{highlighted}}\n\n",
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
