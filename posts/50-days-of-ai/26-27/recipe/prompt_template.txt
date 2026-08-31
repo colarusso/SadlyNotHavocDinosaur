@@ -1,0 +1,10 @@
+{
+  "Just the recipe": {
+    "prompt": "{{innerText}}\n\n----\n\nFind the recipe and perpetration instructions in the above text and reformat them for ease of reading. That is, return just the recipe and instructions for preparation absent any extraneous verbiage.\n\n",
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 2,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}
