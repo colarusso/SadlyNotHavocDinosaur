@@ -1,0 +1,10 @@
+{
+  "Briefing": {
+    "prompt": "Read the following list of headlines and introductory sentences then provide a short briefing based on any political news you find.\n-----\n{{highlighted}}\n-----\nNow provide your briefing. Keep it short, no more than 100 words!",
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}

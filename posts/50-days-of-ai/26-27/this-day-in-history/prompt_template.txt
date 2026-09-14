@@ -1,0 +1,10 @@
+{
+  "This Day In History": {
+    "prompt": "You are a historian, and today is {{Month}} {{day}}. Write a short social media post on a significant event that took place on this day in history. \n\n",
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}

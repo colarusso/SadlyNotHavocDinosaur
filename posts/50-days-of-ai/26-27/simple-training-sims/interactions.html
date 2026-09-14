@@ -1778,11 +1778,11 @@ const buff_to_base64 = (buff) => btoa(
 
 // Migrate the pre-0.2.4 single API key into the endpoint-key registry.
 migrate_legacy_api_key_to_registry();
-var api_keys = get_api_key_registry();
+var api_keys = merge_api_key_defaults({"https://api.openai.com/v1/responses":""});
 
 // Standalone exports can replace this marker with a password-protected API-key bootstrap.
 var api_key_ready = Promise.resolve(true);
-api_key_ready = (async () => { const decrypted = await decryptData("UTKvKuDuQsC3oOczKbsuuvtTlvW1dr/cAGL4WvBPWMkhV3t78v/u8z3uxbgfPouq9R5kqqx9UiMK7xRnbY1xT3G0gU+/NSbajeCWf6Sw+upOfWCqkUbsSM96FkzztLgjEpt/MSgo47IX9izoVuUvlIOdM64+oNDsUtXsAcnE2jBMZe9bdbmy/z7JPkkMdH9fGayjqIcScphyvqpP6qy92v1o/qDigqT9MC3dk1LFWq1A5HrX/yzpVrPF6rJpcHEqFh1V0Qykk06Ua/oipUpr/OiNo7oZmRGrx7oMVBmtnPMbhDFZdG3JusZr5VrmMvRcrj3HLLLCvGJ0WGv4Y89hOXdtw1fHcA==","pwd"); if (!decrypted) return false; let embedded_api_keys = {}; try { const bundle = JSON.parse(decrypted); embedded_api_keys = (bundle.apiKeys && typeof bundle.apiKeys === 'object') ? bundle.apiKeys : {}; if (bundle.defaultKey && !embedded_api_keys[get_default_api_endpoint()]) embedded_api_keys[get_default_api_endpoint()] = String(bundle.defaultKey); } catch (error) { embedded_api_keys = {}; embedded_api_keys[get_default_api_endpoint()] = decrypted; } api_keys = merge_api_key_defaults(embedded_api_keys); return true; })();
+//FOR EXPORT ENCRYPTED KEY: api_key_ready = Promise.resolve(true);
 
 var api_base = get_default_api_endpoint();
 
