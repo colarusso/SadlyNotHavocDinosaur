@@ -1,0 +1,10 @@
+{
+  "Answer the selected question": {
+    "prompt": "I'm going to show you the text of a reading assignment followed by a \"multiple choice\" or \"true or false\" question for that reading. Then I'm going to ask you to correctly answer the question.\n\nREADING:\n\n{{scratch}}\n\nQUESTION: \n\n{{highlighted}}\n\nNow, provide the correct answer:\n\n",
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "stop",
+    "hide_button": false
+  }
+}

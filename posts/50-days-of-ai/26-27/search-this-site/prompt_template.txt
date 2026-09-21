@@ -1,0 +1,34 @@
+{
+  "🔍 🌎  Search this site": {
+    "prompt": "{{What are you looking for?}}",
+    "endpoint": "",
+    "model": "",
+    "temperature": "",
+    "max_tokens": "",
+    "reasoning_effort": "",
+    "verbosity": "",
+    "output": 0,
+    "json_mode": 0,
+    "json_schema": "",
+    "output_to": 4,
+    "behavior": "open search",
+    "hide_button": false,
+    "run_in_new_tab": false
+  },
+  "open search": {
+    "prompt": "var site = window.location.hostname;\nvar query = encodeURIComponent(passThrough) + \"+site:\" + encodeURIComponent(site);\nvar googleSearchUrl = \"https://www.google.com/search?q=\" + query;\nwindow.open(googleSearchUrl, '_blank');\nreturn true\n",
+    "endpoint": "",
+    "model": "",
+    "temperature": "",
+    "max_tokens": "",
+    "reasoning_effort": "",
+    "verbosity": "",
+    "output": 2,
+    "json_mode": 0,
+    "json_schema": "",
+    "output_to": 4,
+    "behavior": "close",
+    "hide_button": true,
+    "run_in_new_tab": false
+  }
+}
