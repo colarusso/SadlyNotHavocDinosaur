@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Transcript: Friday, March 15, 2024</title><style>
+* {
+  box-sizing: border-box;
+}
+
+input:focus, textarea {
+  outline: none;
+}
+
+body {
+  /*--
+  font-family: georgia, 'times new roman', times, serif; issues with accents like ă
+  --*/
+  font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  box-sizing: border-box;
+}
+
+#scratch_pad {
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  padding:20px;
+  border:0px solid #ccc;
+  resize: none;
+  overflow-y: auto;
+}
+
+.text_wrap{
+  float:left;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+.input_text {
+  float:right;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0px 5px 15px 0;
+  max-width:100%;
+  margin-left:20%;
+  background:#eee;
+  border-radius:8px;
+  padding:15px;
+}
+
+.output_text {
+  float:left;
+  background:#425dd4;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  border-radius:8px;
+  margin: 0px 0 15px 0;
+  max-width:100%;
+  margin-right:20%;
+  padding:15px;
+}
+
+code {
+  background:#2c3e8e;
+}
+
+.code_wrapper {
+  padding:3px;
+  margin: 0px;
+  width:100%;
+  overflow-x: auto;
+  background:#2c3e8e;
+}
+
+.msg_text {
+  float:left;
+  font-family: Verdana, Geneva, sans-serif;
+  font-variant: small-caps;
+  width:100%;
+  text-align: center;
+  font-size: 14px;
+  color:#7d7878;
+  margin:0 0 15px 0;
+}
+</style>
+</head>
+<body>
+
+        <div id="output_window"><div class="text_wrap" id="text_1"><div class="output_text" style="white-space: pre-wrap;"><pre class="code_wrapper"><code>javascript
+// Function to estimate the value of Pi using the Monte Carlo method
+function estimate_pi(points) {
+
+  // Record the start time of the function
+  let start_time = Date.now();
+
+  // Initialise the counter for points inside the quarter circle
+  let inside = 0;
+
+  // Generate the specified number of random points
+  for (let i = 0; i &lt; points; i++) {
+
+    // Generate a random x-coordinate between -1 and 1
+    let x = Math.random()*2-1;
+
+    // Generate a random y-coordinate between -1 and 1
+    let y = Math.random()*2-1;
+
+    // Check if the point is inside the unit circle (x^2 + y^2 &lt;= 1)
+    if (x*x + y*y &lt;= 1) {
+
+      // If it is, increment the counter
+      inside++;
+    }
+  }
+
+  // Record the end time of the function
+  let end_time = Date.now();
+
+  // Print the elapsed time in seconds
+  console.log("Elapsed time: "+(end_time-start_time)/1000+" sec");
+
+  // Return the estimate of Pi (4 times the ratio of points inside the circle to the total number of points)
+  return 4 * (inside/points);
+}
+
+// Call the function with 1,000,000 points
+pi = estimate_pi(1000000);
+
+// Print the estimated value of Pi
+console.log("π ≈ "+pi);
+</code></pre></div></div><div class="text_wrap" id="text_2"><div class="input_text">But why does this work? Why does pi almost equal 4 times the (inside points/all points)?</div></div><div class="text_wrap" id="text_3"><div class="output_text" style="white-space: pre-wrap;">This works because it's based on the concept of probability and the geometric properties of a circle. 
+
+If we draw a square with side length 2 and inscribe a circle with radius 1 inside it, the area of the square would be 4 (2*2) and the area of the circle would be π (π*1^2).
+
+The ratio of the area of the circle to the area of the square is π/4. 
+
+Now, if we randomly generate a large number of points within this square, the probability that any given point falls within the circle is essentially the ratio of the area of the circle to the area of the square, which is π/4. 
+
+So, in the long run, the proportion of the points that fall inside the circle (inside/points) should approach π/4. 
+
+Therefore, if we multiply this ratio by 4, we get an approximation of π. 
+
+The more points we generate, the closer our approximation should get to the actual value of π, due to the law of large numbers in probability.</div></div></div>
+      <div class='msg_text'>Saved Friday, March 15, 2024 at 2:02 pm</div>
+</body>
+</html>

@@ -105,7 +105,8 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 20th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
-      <span class="post_date"><a href="posts/50-days-of-ai/26-27/answer-questions-with-context">Previous&nbsp;Post</a></span></p>
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/answer-questions-with-context">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/rpg-quanta" >Next&nbsp;Post</a</span></p>
 
 <p>
     Similar to <a href="posts/50-days-of-ai/26-27/form-letters/">last Thursday's</a> post, we're taking a break from LLMs to see some more "non-AI" LIT Prompt features. We already know about two of the three possible output types (i.e., <code>LLM</code>s &amp; <code>Prompt</code>s). Today we introduce <code>JavaScript</code>. The <code>JavaScript</code> output type allows you to write a prompt containing code that runs when the prompt is triggered. If you're unfamiliar with JavaScript (JS) it's a programing language that runs a lot of the web. We're not going to spend a lot of time <a href="https://www.w3schools.com/js/" target="_blank">learning JS</a>. I expect you'll get the gist of how it works just by reading the code in the prompts below. And that's what we're going for, a high-level understanding that we can call JS in our LIT Prompts, and that in so doing we can act on the world (or at least our computer). As the subhead makes clear, this is a foundation we will later use to explore the idea of agentic AI. 
@@ -378,7 +379,7 @@ return true</code></pre>
   
   (async () => {
     prompts = await loadFile('posts/50-days-of-ai/26-27/search-this-site/prompt_template.txt');
-    //exported = await loadFile('posts/answer-questions-with-context/interactions.html');
+    //exported = await loadFile('posts/50-days-of-ai/26-27/answer-questions-with-context/interactions.html');
   })()
 </script>
 

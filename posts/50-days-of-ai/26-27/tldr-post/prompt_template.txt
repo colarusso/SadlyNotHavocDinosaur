@@ -1,0 +1,9 @@
+{
+  "Blurb for social media": {
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 1,
+    "behavior": "chat",
+    "hide_button": false
+  }
+}

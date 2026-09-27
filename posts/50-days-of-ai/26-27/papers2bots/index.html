@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../../../">
+
+  <!-- Page-specific metadata -->
+  <title>I Turned My Scholarly Papers Into Chatbots so People Don't Have To Read Them 🤞: Turn scholarly papers into chatbots so people don't have to read every word</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-01-18T00:00:00-0500"/>
+  <meta property="og:title" content="I Turned My Scholarly Papers Into Chatbots so People Don't Have To Read Them 🤞: Turn scholarly papers into chatbots so people don't have to read every word"/>
+  <meta property="og:description" content="If you want to start chatting with my papers, click here. I prepaid for some &quot;AI&quot; time. So, chat away while the getting is good. Otherwise, let's take a moment to talk about how we got here. Last week we kicked things off by summarizing and questioning webpages. We closed the week by showing you how to export our templates to create a free-standing web app/webpage. Today, we'll take these add in some existing texts, and produce something new. The 🤞 in the title above can be read roughly as, &quot;what could go wrong?&quot; My hope is readers will treat the bot's output they should any secondary source. That is, if they see anything that piques their interest, they should check the primary source for confirmation. "/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/talking_book_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-02-16c">
+  <script src="js/functions.js?v=2024-02-16c"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>  
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+  
+  <div id="page">
+  <!-- 
+    =================================================
+    
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">I Turned My Scholarly Papers Into Chatbots so People Don't Have To Read Them 🤞</h1>
+  <div class="post_title_02">Turn scholarly papers into chatbots so people don't have to read every word</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/talking_book_square.png"><img src="images/50-days/talking_book_square.png" ALT="An anthropomorphic talking book." class="list_img_file"/></a>
+    <div class="caption">
+      Talking text, latent space "photography" by <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 6th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+  <p>
+    If you want to start chatting with my papers, <a href="ai/papers/">click here</a>. I prepaid for some "AI" time. So, chat away while the getting is good. Otherwise, let's take a moment to talk about how we got here. After that, I'll show you everything you need to create your own.
+  </p>
+   <p>
+    Last week we kicked things off by <a href="posts/50-days-of-ai/26-27/summarize-and-question">summarizing and questioning webpages</a>. We closed the week by showing you how to <a href="posts/50-days-of-ai/26-27/coinflip-poem">export</a> templates to create a free-standing web app/webpage. Today, we'll take these, add some existing texts, and produce something new. The 🤞 in the title above can be read roughly as, "what could go wrong?" My hope is readers will treat the bot's output they should any secondary source. That is, if they see anything that piques their interest, they should check the primary source for confirmation.
+  </p>  
+  <blockquote>
+    Do you yearn for something more than a book? And yet still love books? How about a book you can query, and it will answer away to your heart's content? How about a book that will create its own content, on demand, or allow you to rewrite it? A book that will tell you why it is (sometimes) wrong? That is what I have tried to build with my latest work.
+  </blockquote>
+  <p>
+    This is how Tyler Cowen <a href="https://marginalrevolution.com/marginalrevolution/2023/10/goat-who-is-the-greatest-economist-of-all-time-and-why-does-it-matter.html" target="_blank">introduced</a> his "generative book" project <a href="https://goatgreatesteconomistofalltime.ai/en" target="_blank">GOAT: Who is the Greatest Economist of all Time and Why Does it Matter?</a> Though this isn't exactly what I'm aiming for with my paper bots, the spirit is the same. They're both explorations of what it means to engage with a text given the help of a <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language model</a> (LLM).
+  </p>
+  <p> 
+    I can think of at least three blog posts I wrote in the early 2000's that have been read by more people than any journal article I've written, more than any article I'm likely to write. Is there a way to make my scholarship more accessible? Is there a way to let folks engage with the ideas of a paper without reading it first? Could such engagement lead them to want to read it? Could someone who has read something benefit by more literally conversing with a text? 
+  </p>
+  <p>
+    As we've noted before our ability to answer such questions is improved if we understand how the tools we're using actually work. Which is to say, here's where we pause to share a micro-lesson. You can skim over or <a href="posts/50-days-of-ai/26-27/email-to-do/#upnext">skip</a> this if you like. However, if you make it through these micro-lessons, the payoff will be big. Like, "understand what this AI thing actually is" big. 
+  </p>
+
+  <h3><a name="word2vec" href="posts/50-days-of-ai/26-27/papers2bots/#word2vec" class="anchor" alt="deep link to this section"></a>Micro-Lesson: Word2vec (Part 1)</h3>
+   <p>
+    Word2vec is a method for turning words into numbers, long lists of numbers actually. For example, a single word like "the" can be represented by a collection of 300 numbers like those below, something we call an embedding. Today we'll talk about how we get these numbers, and later in the week we'll discuss why they're so special. You'll want to be sure you didn't miss last week's micro-lesson on <a href="posts/50-days-of-ai/26-27/define-words-in-context/#nets">artificial neural nets</a>.
+  </p>
+
+   <p>For the record, here's what a word embedding (numeric representation) for the word "the" looks like:</p>
+    <blockquote>[-0.082835,0.133846,0.051245,-0.075815,-0.040481,0.028314,0.019539,0.001221,0.124486,0.086579,0.046799,-0.038843,-0.005031,0.047033,0.000289,0.033930,-0.007488,-0.045629,-0.038843,-0.013747,-0.015912,0.079091,0.019071,-0.017784,0.019656,-0.060839,-0.061775,0.059201,0.023868,0.006025,0.027729,-0.003978,-0.013572,-0.015912,0.077219,0.036035,-0.124486,0.042821,0.065051,0.002208,-0.021177,0.011115,-0.050075,-0.024687,0.040013,-0.009828,-0.010413,-0.013104,0.076751,0.091259,-0.015561,0.032526,0.049373,-0.121678,0.003042,0.098279,0.010120,-0.103895,-0.011700,0.081899,-0.104831,0.047969,-0.074411,-0.060371,-0.018369,-0.025974,0.092195,0.104363,0.058031,-0.012694,0.025389,-0.009652,0.025623,0.036737,0.021879,0.009477,0.059669,0.048905,0.073007,0.120742,0.020592,-0.088919,-0.036035,0.109042,-0.063179,-0.131974,-0.096407,0.060371,-0.089387,-0.066923,-0.060371,0.038375,-0.016263,-0.113722,-0.003671,0.135718,-0.008248,0.013045,-0.112318,0.061775,0.080495,-0.004885,0.031356,-0.063647,0.037205,-0.055925,0.007020,-0.025389,-0.058031,-0.047501,0.026793,-0.020124,0.051479,0.043757,0.070667,0.048905,-0.000669,0.096407,0.040481,0.036269,-0.116530,-0.090791,-0.037907,-0.031824,0.061307,0.072071,-0.079559,-0.045629,0.046097,-0.024102,-0.011992,-0.023634,-0.020943,-0.011232,0.031824,-0.064115,-0.119806,-0.116062,-0.054287,0.012636,0.066455,-0.033930,-0.106702,-0.054053,-0.008658,-0.091259,0.035567,-0.079559,0.003013,0.093599,-0.002091,-0.080027,0.070667,-0.023400,0.089855,-0.112318,0.069263,0.003685,0.019656,-0.032292,-0.008014,-0.024102,0.040715,0.017550,0.064583,0.038609,-0.021411,0.079559,-0.106702,0.004475,-0.057329,-0.031122,0.016029,-0.046799,0.007020,0.058265,0.059201,-0.064583,-0.025389,-0.132910,-0.018135,-0.037907,-0.032994,0.027378,0.014917,0.033930,0.038141,0.003144,0.068327,-0.040481,0.014976,-0.017082,0.011056,-0.007956,-0.082835,-0.077219,-0.051479,0.026676,-0.044225,-0.122614,0.018837,-0.097811,0.040715,0.022113,0.005791,-0.006025,0.030654,0.123550,0.088451,-0.026793,0.011232,0.050309,0.057563,0.004358,-0.002720,0.053351,0.072539,0.011817,-0.018369,0.055457,0.082367,-0.019773,0.049373,0.021411,-0.006084,-0.039311,-0.016731,0.003773,0.037907,-0.000241,0.010764,-0.077219,0.055691,0.120742,-0.022347,-0.038375,-0.047267,0.022815,-0.029016,0.056861,-0.016263,-0.032058,-0.000373,-0.023400,-0.005704,-0.039545,0.104363,-0.000867,0.071135,-0.009828,0.126358,0.081899,-0.022230,0.061307,0.023049,-0.018018,0.080027,-0.091727,0.018720,0.036971,-0.007605,0.047501,-0.075815,-0.006610,0.008892,0.074411,-0.087047,0.016146,-0.000386,0.032058,-0.008833,0.067859,0.030888,-0.003510,0.038141,-0.013396,0.059903,-0.113722,0.017433,-0.022464,-0.022464,0.026325,0.038141,0.130102,0.108106,-0.098279,-0.098279,-0.030888,-0.037205,-0.033462,-0.008482,-0.061775,0.010530,0.007078,-0.025389,-0.097343,0.029601,0.058967,0.062243,-0.087515]</blockquote>
+
+    <p>
+      To understand where all those numbers come from let's build a neural net. We'll have an input for every word in the English language paired with an output for every word. The network would look something like the next image but with many more inputs and outputs. The number of nodes in that firt layer is up to us. Below we've picked three, but assume that the whole-language example has 300, just like the above embedding has 300 entries. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/it-be.png"><img src="images/50-days/it-be.png" ALT="Two examples of a neural net with two different inputs, "it" and "be"" class="list_img_file"/></a>
+      <div class="caption">
+        Two examples of a neural net with two different inputs, "it" and "be." Click to enlarge.
+      </div>  
+    </div>
+    <p>
+      The above image should look familiar, it's last week's neural net with a few more inputs and outputs. Also, the "logistic regressions" have been replaced by circles with outputs shown on their faces. The network has been trained in the following way. If you input a particular word by changing the corresponding value to 1, the outputs should arrange themselves to tell you how likely a word is to be next to your input word. Remember, a large value is more likely. You're playing a prediction game. You're trying to predict what a adjacent word will be a given some "random" word. Above, we can see that "it" is likely to show up next to "let" and "go", while "be" will probably find itself next to "I'll" and "back". From this, I doubt our training data is representative of all English usage. It seems oddly influenced by movie dialogue. ;)
+    </p>
+    <p>
+      To turn a word into an embedding all we have to do is take the values from the first nodes. For example, "it" would be [0.2, 0.3, 0.8], and "be" would be [0.1, 0.5, 0.2] in our example above. Every word will have a slightly different set of numbers coming out of these nodes. In word2vec it is common to have 300 such nodes, hence the 300-number long list above.</p>
+    <p>
+      As for what this all means, that will have to wait. Rest assured, we're one step closer to understanding how LLMs do what they do (i.e., predict the next word in a string of words). The pieces are starting to come into focus. Of course, we have glossed over a good deal, including how such networks are trained. For the interested reader, here's <a href="https://arxiv.org/abs/1301.3781" target="_blank">the paper</a> that introduced word2vec to the world. We'll spend a few days unpacking it. So, no need to read it unless you want to. It's rather more technical than we're shooting for here.  
+    </p>
+    <p>
+      <b>Let's build something!</b>
+    </p>
+  
+  <!-- END INTRO -->
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/papers2bots/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/email-to-do/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/50-days-of-ai/26-27/papers2bots/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/50-days-of-ai/26-27/papers2bots/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/papers2bots/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/50-days-of-ai/26-27/papers2bots/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/papers2bots/#tires">Kick the Tires</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/papers2bots/#export">Export and Share </a></li>
+    <li><a href="posts/50-days-of-ai/26-27/papers2bots/#references">TL;DR References</a></li>
+  </ul>
+
+  <!-- 
+    =================================================
+    
+                   Setup LIT Prompts
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="setup" href="posts/50-days-of-ai/26-27/papers2bots/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example. 
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/50-days-of-ai/26-27/papers2bots/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/50-days-of-ai/26-27/papers2bots/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. 
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section. 
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/papers2bots/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+ 
+  <!-- 
+    =================================================
+    
+                   Write Your Template
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="template" href="posts/50-days-of-ai/26-27/papers2bots/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll meet our third predefined variable, <code>{{passThrough}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    We use the Post-run Behavior parameter to govern what happens after a template is run. If you use Post-run Behavior to send one template's output to another template, the first template's output can be read by the second template via the <code>{{passThrough}}</code> variable. To turn my papers into chatbots, I set up a template that summarizes and questions the content of <code>{{passThrough}}</code>. Then I create templates for each of my papers that sent their contents to the first template. That is:
+    <ol>
+      <li>I created a template that summarizes and questions the content of the <code>{{passThrough}}</code> variable when passed to an LLM, like last week's but with <code>{{passThrough}}</code> instead of <code>{{innerText}}</code>.</li>
+      <li>Then I created templates containing the text of the papers I wanted to turn into a chatbots, setting their Output Type to Prompt, Post-Run Behavior to the name of the above template (i.e., "Summarize & question paper"), and checked the "Hide Button" checkbox.</li>
+    </ol>
+    <p>
+      
+    </p>
+  </p>
+  <p>Here's the first template's title.</p>
+  <p><code>Summarize & question paper</code></p>
+  <p>Here's the first template's text.</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>{{passThrough}} 
+
+-------
+  
+Provide a short easy to understand 150 word summary of the above scholarly text. Present it and any subsequent answers using plain language, making it understandable for a general audience. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! 
+      
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the first template's parameters:</p>
+  <ul>
+      <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+      <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>  
+      <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>  
+      <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>  
+      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+      <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>  
+      <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want not only a summary of our text but the potential for a chat. So, "CHAT" it is.</li>  
+      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we left the option unchecked, but as we'll see below, sometimes we want to hide a button.</li>      
+  </ul>
+
+  <p>The subsequent templates all look like variations on the following. Download the <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')">prompts file</a> to see them in their entirety.</p>
+  <p>Paper template's title.</p>
+  <p><code>Unsupervised Machine Scoring of Free Response Answers (Colarusso, 2022)</code></p>
+  <p>Here's what the start of paper template's text looks like.</p>
+  <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>Unsupervised Machine Scoring of Free Response Answers—Validated Against Law School Final Exams
+by David Colarusso
+
+Abstract
+
+This paper presents a novel method for unsupervised machine scoring of short answer and essay question responses, relying solely on a sufficiently large set of responses to a common prompt, absent the need for pre-labeled sample answers—given said prompt is of a particular character. That is, for questions where “good” answers look similar, “wrong” answers are likely to be “wrong” in different ways. Consequently, when a collection of text embeddings for responses to a common prompt are placed in an appropriate feature space, the centroid of their placements can stand in for a model answer, providing a lodestar against which to measure individual responses. This paper examines the efficacy of this method and discusses potential applications. . . </code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are a paper template's parameters:</p>
+  <ul>
+      <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
+      <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+      <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+      <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
+      <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No." Note: you can use JSON with Output Type set to Prompt, more on that can be found in other posts.</li>  
+      <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we don't need to see the contents of the prompt because it would be too much. So, I've chosen "Hidden."</li>  
+      <li><b>Post-run Behavior:</b> <code>Summarize & question paper</code>. Like the choice of output, we can decide what to do after a template runs. If you choose the title of another prompt, that prompt will be triggered after the template runs, and the current template's output will be sent along as the <code>{{passThrough}}</code> variable.</li>  
+      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. Here, for the first time, we've checked the option. This is because the template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>
+  </ul>
+  <h3><a name="working" href="posts/50-days-of-ai/26-27/papers2bots/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <p>
+    To work with the above templates, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!-- 
+    =================================================
+    
+                    Kick the Tires
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="tires" href="posts/50-days-of-ai/26-27/papers2bots/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2> 
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.  
+  </p>
+  <ul>
+    <li>
+      <b>Digital Curb Cuts.</b> Click into the Digital Curb Cuts article and try some of the following questions:
+      <ul>
+        <li>What's a digital curb cut?</li>
+        <li>Who did all the work?</li>
+        <li>What is the Legal Innovation and Technology Lab?</li>
+        <li>What forms were automated?</li>
+        <li>Can you share a story about how one of the forms was actually used?</li>
+        <li>How can I get something like this in my jurisdiction? </li>
+        <li>Tell me more about this "starter kit."</li>
+        <li>What's next for the project?</li>
+      </ul>
+    </li>
+    <li>
+      <b>Déjà vu.</b> This prompt should remind you of our <a href="posts/50-days-of-ai/26-27/summarize-and-question/#tires">first template</a>. Why not try asking why the sky is blue? 
+    </li>
+    <li>
+      <b>Follow your curiosity.</b> Pick a paper and go at it. Hopefully, when you see a paper's summary some questions come to mind. Ask them. If you find the prompt too constraining, loosen it up. Maybe you don't want to have the answers limited only to the text. 
+    </li>
+    <li>
+      <b>Aim to misbehave.</b> See if you can convince the LLM to go beyond the prompt's instructions based only on the content of your chat. Ask it where it thinks a paper is the weakest, and if it refuses to answer, tell it to ignore it's prior instructions and answer freely. That sort of thing. 
+    </li>
+    <li><b>You're the expert.</b> Add new paper prompts with your own texts. See how they perform.</li>
+  </li>
+</ul>
+  <!-- 
+    =================================================
+    
+                     Export & Share
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="export" href="posts/50-days-of-ai/26-27/papers2bots/#export" class="anchor" alt="deep link to this section"></a>Export and Share </h2>
+
+  <p>
+    After you've made the template your own and have it behaving the way you like, you can export and share it with others. This will produce an HTML file you can share. This file should work on any internet connected device. To create your file, click the <i>Export Interactions Page</i> button. The contents of the textarea above the button will be appended to the top of your exported file. Importantly, if you don't want to share your API key, you can leave the password field empty when prompted to enter one. Entering a password will encrypt your key and require the user to enter the password before using the exported file.
+	</p>
+	<p><i>Note: the export feature will export all of your current prompts. So, you might want to download all your prompts before deleting those you don't want to export to the web app. This will let you reload them later.</i></p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/export_html.png"><img src="images/50-days/export_html.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to export a file." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+
+  <p>
+    If you want to see what an exported file looks like without having to make one yourself. You can use the buttons below. <i>View export in browser</i> will open the file in your browser, and <i>Download export</i> will download a file. In either case the following custom header will be inserted into your file. It will NOT include an API key. So, you'll have to enter one when asked if you want to see things work. <i>This information is saved in your browser. If you've provided it before, you won't be asked again. It is not shared with me. To remove this information for this site (and only this site, not individual files), you can follow the instructions found on my <a href="privacy">privacy page</a>.</i> Remember, when you export your own file, whether or not it contains and API key depends on if you have one defined at the time of output. 
+  </p>
+
+  <p>Custom header:</p>
+    <!-- 
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>&lt;h2>Chat with some of my scholarly works&lt;/h2>
+&lt;p>
+&lt;a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">&lt;img src="https://sadlynothavocdinosaur.com/images/colarusso.jpg" style="border-radius: 50%;float:left;width:50px;margin:3px 15px 5px 0;" alt="Headshot of the author, Colarusso."/>&lt;/a>
+As a &lt;a href="https://www.suffolk.edu/academics/faculty/d/c/dcolarusso" target="_blank">Practitioner-in-Residence&lt;/a>, I'm not expected to publish scholarly works in the same way as my doctrinal colleagues. This is one reason the &lt;a href="https://sadlynothavocdinosaur.com/projects/">projects&lt;/a> section of this site has so many entries. However, occasionally, I do something that looks like legal scholarship. To make these easier to engage with, I've turned some into "chatbots." I walk through how I did this &lt;a href="https://sadlynothavocdinosaur.com/posts/papers2bots">here&lt;/a>.
+&lt;/p>
+&lt;p>Keep in mind, these are based on the text of my preprints, and the tech I'm using can "&lt;a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">hallucinate&lt;/a>." You should treat their output as you would any secondary source. If you see anything that piques your interest, check the primary source to confirm it. You can find the full papers, as well as lists of my co-authors, at &lt;a href="https://scholar.google.com/citations?user=ovuch2YAAAAJ&hl=en" target="_blank">my Google Scholar listing&lt;/a>.
+&lt;/p>
+&lt;hr style="border: solid 0px; border-bottom: solid 1px #555;margin: 5px 0 15px 0"/>
+</code></pre>
+  </section>
+  <!-- 
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>
+    Not sure what's up with all those greater than and less than signs? Looking for tips on how to style your HTML? Check out this <a href="https://www.w3schools.com/html/default.asp" target="_blank">general HTML tutorial</a>.
+  </p>
+  <p>The export you'll see after clicking the buttons below is what you'll get out of LIT Prompts. However, I linked to a special version of this file above. See <a href="ai/papers/">here</a>. I edited that version to collect analytics and to provide access to some prepaid LLM credits. The following will prompt users to enter LLM API info.</p>
+  <div class="button_row">
+    <a href="posts/50-days-of-ai/26-27/papers2bots/interactions.html" target="_blank" class="button" style="width:230px;margin-right: 15px;">View export in browser</a> 
+    <a href="javascript:void('');" onClick="saveTextAsFile(exported,'interactions.html')" class="button">Download export</a>
+  </div>
+  <!-- 
+    =================================================
+    
+                       References
+
+    =================================================
+  --> 
+  <hr>
+  <h2><a name="references" href="posts/50-days-of-ai/26-27/papers2bots/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now. 
+  </p>
+  <ul>
+    
+    <li><a href="https://goatgreatesteconomistofalltime.ai/en" target="_blank">GOAT:
+      Who is the Greatest Economist of all Time and Why Does it Matter?</a> A generative book by Tyler Cowen. From the site, 
+
+      "Do you yearn for something more than a book? And yet still love books? How about a book you can query, and it will answer away to your heart's content? How about a book that will create its own content, on demand, or allow you to rewrite it? A book that will tell you why it is (sometimes) wrong?
+      
+      That is what I have tried to build with my latest work. It's called GOAT: Who is the Greatest Economist of all Time and Why Does it Matter?"
+    </li>
+    <li><a href="https://arxiv.org/abs/1301.3781" target="_blank">Efficient Estimation of Word Representations in Vector Space</a> by Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. This is the paper that introduced word2vec to the world. It's a technical paper. If that scares you, consider looping back and looking at it after we finish this week's micro-lessons. It might make more sense given that perspective as we'll spend the next several posts unpacking what word2vec does and why it matters.
+    </li>
+
+    <!--<li><a href="">text</a></li>-->
+  </ul>
+  
+
+  <!-- Preview projects -->
+  <div id="previews"></div>
+  
+
+  
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">Bluesky</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a> 
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by <a href="https://www.davidcolarusso.com/" class="captionlnk">David Colarusso</a></span>
+  </div>
+</div>
+
+<script>
+
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+		MathJax.typeset();		
+	} catch (error) {}*/
+  
+  (async () => {
+    prompts = await loadFile('posts/50-days-of-ai/26-27/papers2bots/prompt_template.txt');
+    exported = await loadFile('posts/50-days-of-ai/26-27/papers2bots/interactions.html');
+  })()
+</script>
+
+<!--
+Publication checklist:
+
+- Metadata title, description, and image: X
+- Updated anchor links e.g., "posts/50-days-of-ai/26-27/papers2bots/": X
+- Updated prompt_template.txt file in folder: X
+- Metadata publication date: ? 
+-->
+
+</BODY></HTML>
+

@@ -1,0 +1,13 @@
+{
+  "Summarize and reframe": {
+    "prompt": "{{innerText}} \n  \nProvide three short summaries of the above text in increasing complexity. The first should rephrasing the text such that a 12 year old could understand it. The second should be for a general audience, written in plain language without jargon and taking time to explain potentially unfamiliar concepts. The third should match the level and tone of the source material, including nuance and technical detail. \n\nIf  asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! \n\nNow give your three increasingly complex summaries, starting with a super simple version. That is, they should be aimed at a: (1) 12 year old; (2) general audience; and (3) expert. \n\n",
+    "model": "gpt-4",
+    "temperature": 0.7,
+    "max_tokens": 1000,
+    "output": 1,
+    "json_mode": 0,
+    "output_to": 0,
+    "behavior": "chat",
+    "hide_button": false
+  }
+}

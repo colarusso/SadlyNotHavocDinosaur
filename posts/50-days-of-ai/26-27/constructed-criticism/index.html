@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../../../">
+
+  <!-- Page-specific metadata -->
+  <title>Constructed Criticism: Simulated feedback on how to improve your simulation performance</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-03-28T00:00:00-0500"/>
+  <meta property="og:title" content="Constructed Criticism: Simulated feedback on how to improve your simulation performance"/>
+  <meta property="og:description" content="Simulation has been a large part of this series. See e.g., What if Members of Talking Professions Could Log Time in Simulators Like Pilots?, If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives!, Summon the Demon, and The Library of Unwritten Books. I like this use case for large language models (LLMs) because it plays to their strengths, or depending on how you look at it, avoids their weaknesses. Sure LLMs make things up, but that's a plus if you ask them to do improv, and to the extent they regurgitate societal biases they present openings to unpack such biases and how they will effect students practice. Today we'll build a template to help provide feedback for those participating in a simulation.  "/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/argument_feedback.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="739" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Constructed Criticism</h1>
+  <div class="post_title_02">Simulated feedback on how to improve your simulation performance</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/argument_feedback.png"><img src="images/50-days/argument_feedback.png" ALT="A collage of images from prior posts involving simulations like robo Socrates and the devil's advocate" class="list_img_file"/></a>
+    <div class="caption">
+      Collage of simulation preview images by <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 49th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+
+  <p>
+    Simulation has been a large part of this series. See e.g., <a href="posts/50-days-of-ai/26-27/simple-training-sims">What if Members of Talking Professions Could Log Time in Simulators Like Pilots?</a>, <a href="posts/50-days-of-ai/26-27/socrates-lives">If a 3L Can Automate Law Students, I Can Automate Law Profs—Robo Socrates Lives!</a>, <a href="posts/50-days-of-ai/26-27/devils-advocate">Summon the Demon</a>, <a href="posts/50-days-of-ai/26-27/reflection/" target="_blank">My Students Have Been Using an Interactive Tool for Reflective Journaling & I Love It!</a>, and <a href="posts/50-days-of-ai/26-27/unwritten">The Library of Unwritten Books</a>. I like this use case for <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> (LLMs) because it plays to their strengths, or depending on how you look at it, avoids their weaknesses. Sure LLMs <a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)" target="_blank">make things up</a>, but that's a plus if you ask them to do <a href="posts/50-days-of-ai/26-27/simple-training-sims">improv</a>, and to the extent they <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">regurgitate societal biases</a> they present openings to unpack such biases and how they will effect students practice. Today we'll build a template to help provide feedback for those participating in a simulation. 
+  </p>
+  <p>
+    Previously, we've limited our exploration of these simulated experiences to the simulations themselves. That is, when we introduced a <a href="posts/50-days-of-ai/26-27/simple-training-sims">client simulation</a>, that simulation stoped short of providing feedback, assuming that would come later, and though I think the best performance review would come from a clinical instructor it's worth considering the possibility that we could create something like our <a href="posts/50-days-of-ai/26-27/style-guide">interactive style guide</a> or <a href="posts/50-days-of-ai/26-27/ai-rubric">unit testing for writing</a> to evaluate student performance on simulations. Yes, we're going to provide simulated feedback on the content of a simulation. To be clear, as I've <a href="posts/50-days-of-ai/26-27/ai-rubric">said before</a>, the idea is to help with formative assessment. This feedback should start, not end the discussion. It's like grammar check for arguments—merely a suggestion. Cue the <a href="https://knowyourmeme.com/memes/xzibit-yo-dawg" target="_blank">Xzibit meme</a>.
+  </p>
+  <div class="featured_img_center">
+    <a href="images/50-days/xzibit.png"><img src="images/50-days/xzibit.png" ALT="Xzibit Meme: Yo dawg, I heard you like sims, so we put sims in your sim so you can sim your sims." class="list_img_file"/></a>
+  </div>
+  <p>
+    To show off today's template, we'll start by revisiting our <a href="posts/50-days-of-ai/26-27/devils-advocate">simulated Devil's Advocate</a>. Below is a bit of text I wrote followed by the advocate's response to that text, along with the ensuing back and forth I had with the LLM.
+  </p>
+  <blockquote>
+    The modern authoritarian practice of “flood[ing] the zone with shit” clearly illustrates the dangers posed by <a href="https://en.wikipedia.org/wiki/Bullshit#Harry_Frankfurt's_concept" target="_blank">bullshitters</a>—i.e., those who produce plausible sounding speech with no regard for accuracy. Consequently, the broad-based concern expressed over the rise of algorithmic bullshit is both understandable and warranted. <a href="https://en.wikipedia.org/wiki/Wikipedia:Large_language_models" target="_blank">Large language models</a> (LLMs), like those powering <a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank">ChatGPT</a>, which complete text by predicting subsequent words based on patterns present in their training data are, if not the embodiment of such bullshitters, tools ripe for use by such actors. They are by design fixated on producing plausible sounding text, and since they lack understanding of their output, they cannot help but be unconcerned with accuracy. Couple this with the fact that their training texts encode the biases of their authors, and one can find themselves with what some have called <a href="https://octodon.social/@cwebber/109462369670144568" target="_blank">mansplaining as a service</a>. 
+</blockquote>
+
+<iframe src="posts/50-days-of-ai/26-27/devils-advocate/transcript.html" width="100%" height="350px"></iframe>
+
+<p>I stopped the dialogue where I did because <a href="posts/50-days-of-lit-prompts">this series</a> really is my start at an answer to the question, "How do you think we can balance the need for this critical discourse with the importance of fostering innovation and progress in AI technology?" That being said, here's how today's template responded to being fed the text above.</p>
+
+  <blockquote>
+    ### Speaker 1's Viewpoint:<br>
+    <br>
+    Speaker 1 is critical of Large Language Models (LLMs) like ChatGPT, arguing that they inherently produce "bullshit" in the technical sense—text that sounds plausible but is produced without concern for accuracy. This speaker emphasizes the dangers of such technology, including the perpetuation of biases and the risk of automation bias, where people might over-rely on AI-generated content. They argue that the creators of these technologies have a responsibility to ensure their safe use, likening the distribution of AI tools without safeguards to giving guns to children.<br>
+    <br>
+    ### Speaker 2's Viewpoint:<br>
+    <br>
+    Speaker 2 takes a more optimistic view of AI, questioning whether the issue lies not with the technology itself but with how it is used. They suggest that education and media literacy could play a significant role in mitigating the risks associated with AI-generated content. Speaker 2 also proposes that the seductiveness of AI-generated text could potentially lead to more critical engagement with digital content. They acknowledge the current challenges but emphasize the potential for society to adapt and improve the use of technology over time.<br>
+    <br>
+    ### Feedback for Speaker 1:<br>
+    <br>
+    Speaker 1 presents a strong argument grounded in the potential ethical and societal risks posed by AI. However, their argument could be strengthened by acknowledging the potential benefits of AI and discussing how these can be achieved without ignoring the risks. This would make their position more balanced and potentially more persuasive to those who are optimistic about AI. Additionally, providing specific examples of harm caused by AI-generated content could make their argument more tangible.<br>
+    <br>
+    ### Feedback for Speaker 2:<br>
+    <br>
+    Speaker 2 offers a valuable perspective on the potential for positive outcomes from AI technology. However, their argument could benefit from more directly addressing the concerns raised by Speaker 1. For instance, they could discuss specific measures that could be implemented to mitigate the risks of bias and misinformation in AI-generated content. Additionally, providing evidence for their claim that AI could lead to more critical engagement with digital content would strengthen their argument.<br>
+    <br>
+    ### Determining a "Winner":<br>
+    <br>
+    Both speakers present compelling arguments, but Speaker 1's argument is more cogent and compelling due to its focus on immediate and tangible risks associated with AI, as well as the ethical responsibility of creators. While Speaker 2 raises important points about potential positive outcomes and the role of education, their argument lacks the specificity and urgency of Speaker 1's concerns. Therefore, based on the logical reasoning and rhetoric presented, Speaker 1 has the more compelling argument. However, it's important to note that the "winner" in such a debate is subjective and depends on the values and priorities of the audience.
+  </blockquote>
+  <p>
+    As an asyncronus lesson, I can see this interaction being a pretty powerful means of getting students to do the hard work, and as <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Ted Chiang</a> observed that's the important thing.  
+  </p>
+  <blockquote>
+    If there is any lesson that we should take from stories about genies granting wishes, it's that the desire to get something without effort is the real problem. Think about the story of "The Sorcerer's Apprentice," in which the apprentice casts a spell to make broomsticks carry water but is unable to make them stop. The lesson of that story is not that magic is impossible to control: at the end of the story, the sorcerer comes back and immediately fixes the mess the apprentice made. The lesson is that you can't get out of doing the hard work. The apprentice wanted to avoid his chores, and looking for a shortcut was what got him into trouble. 
+  </blockquote>
+  <p>
+    If you missed some of the earlier posts on simulations, or if you just want to take some of them for a spin, you can find live demos at the following links:
+  </p>
+  <ul>
+    <li><a href="ai/client-meeting-sim/">First Client Meeting</a> (simulated criminal defendant)</li>
+    <li><a href="ai/paper-chase-2.0/">The Paper Chase 2.0</a> (includes both a simulated student—a gunner—and a simulated law prof)</li>
+    <li><a href="ai/examen/">An AI-Mediated Secular Daily Reflection Based on the Ignatian Examen</a> (simulated facilitator)</li>
+    <li><a href="ai/word-processor/">An AI Word Processor</a> (includes a simulated Devil's Advocate)</li>
+    <li><a href="https://libraryofunwrittenbooks.org/">The Library of Unwritten Books</a> (includes the simulated inhabitants of "more worlds than stars in the sky")</li>
+  </ul>
+  <p>That being said...</p>
+
+
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/50-days-of-ai/26-27/constructed-criticism/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/constructed-criticism/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/constructed-criticism/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/50-days-of-ai/26-27/constructed-criticism/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/50-days-of-ai/26-27/constructed-criticism/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/constructed-criticism/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/50-days-of-ai/26-27/constructed-criticism/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/constructed-criticism/#tires">Kick the Tires</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/constructed-criticism/#references">TL;DR References</a></li>
+  </ul>
+
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/50-days-of-ai/26-27/constructed-criticism/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/50-days-of-ai/26-27/constructed-criticism/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/50-days-of-ai/26-27/constructed-criticism/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/constructed-criticism/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/50-days-of-ai/26-27/constructed-criticism/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{highlighted}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. 
+  </p>
+  <p>
+    To use this template select the text fed into the Devil's Advocate sim and the ensuing dialogue. Then trigger the template. That's it. 
+  </p>
+
+  <p>Here's the template's title.</p>
+  <p><code>And the winner is...</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>In a moment I'm going to give you a transcript of two people "debating" a set of issues. Unfortunately, the speakers aren't labeled. So, you'll have to infer them from the content of the text. You can think of them as Speaker 1 and Speaker 2. I would like you to very briefly summarize each speaker's viewpoint and provide feedback on how each could better approach their arguments. The text will appear below between section breaks that look like this "====".
+
+Here it is. 
+
+====
+
+{{highlighted}}
+
+====
+
+Now provide your feedback. Focus primarily on logical reasoning and rhetoric. Based only on the text of the above argument, determine a "winner" based on who had the most compelling and cogent argument.
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
+    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+<h3><a name="working" href="posts/50-days-of-ai/26-27/constructed-criticism/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+<p>
+  To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen.
+</p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/50-days-of-ai/26-27/constructed-criticism/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>Customize your feedback</b>. Tweak the prompt to focus on different aspects of the simulation or to work with another one of our simulations. 
+    </li>
+    
+  </ul>
+  
+    <!--
+    =================================================
+
+                       References
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="references" href="posts/50-days-of-ai/26-27/constructed-criticism/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
+  <ul> 
+
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> by Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. There's a lot of history behind this paper. It was part of <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank">a chain of events</a> that forced Timnit Gebru to leave Google where she was the co-lead of their ethical AI team, but more than that, it's one of the foundational papers in AI ethics, not to be confused with the field of "AI safety," which we will discuss later. It discusses several risks associated with large language models, including environmental/financial costs, biased language, lack of cultural nuance, misdirection of research, and potential for misinformation. If you want to engage critically with LLMs, this paper is a must read.
+    </li>
+
+    <li>
+      <a href="https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey" target="_blank">Will A.I. Become the New McKinsey?</a> by Ted Chiang.
+      This article explores the potential risks and consequences of artificial intelligence (A.I.) in relation to capitalism. Chiang suggests that A.I. can be seen as a management-consulting firm, similar to McKinsey & Company, which concentrates wealth and disempowers workers. He argues that A.I. currently assists capital at the expense of labor, and questions whether there is a way for A.I. to assist workers instead of management. Chiang also discusses the need for economic policies to distribute the benefits of technology appropriately, as well as the importance of critical self-examination by those building world-shaking technologies. He concludes by emphasizing the need to question the assumption that more technology is always better and to engage in the hard work of building a better world. <i>Summary based on a draft from our <a href="posts/50-days-of-ai/26-27/summarize-and-question">day one template</a>.</i>
+    </li>
+
+  </ul>
+
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">Bluesky</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by <a href="https://www.davidcolarusso.com/" class="captionlnk">David Colarusso</a></span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+  (async () => {
+    prompts = await loadFile('posts/50-days-of-ai/26-27/constructed-criticism/prompt_template.txt');
+  })()
+</script>
+
+</BODY></HTML>

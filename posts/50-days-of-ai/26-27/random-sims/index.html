@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../../../">
+
+  <!-- Page-specific metadata -->
+  <title>Simulations with LLMs and a "Roll of the Dice": Produce and run simulations with the aid of random scenario selection and an LLM </title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-03-21T00:00:00-0500"/>
+  <meta property="og:title" content="Simulations with LLMs and a &quot;Roll of the Dice&quot;: Produce and run simulations with the aid of random scenario selection and an LLM "/>
+  <meta property="og:description" content="More so than usual, today's template is a proof of concept. That means if you want to make it sing, you're going to have to put in some work beyond the base template. Basically, I took the Simple Training Sims template and added in a feeder template that populates the Sims prompt with a random selection of names and jobs for our client. You'll remember that this simulation is based on my experience as a public defender. It captures the first meeting between you and a client in lockup before arraignment. Here the feeder template makes use of simulated dice to select our client's name and job from a set of lists. This in itself isn't very interesting, but you could imagine the same workflow selecting more interesting bits of the simulation, like the client's motivation or what they are charged with. Such exploration is left as an exercise for the reader. ;)  "/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/dice_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Simulations with LLMs and a "Roll of the Dice" </h1>
+  <div class="post_title_02">Produce and run simulations with the aid of random scenario selection and an LLM </div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="images/50-days/dice.png"><img src="images/50-days/dice.png" ALT="A collection of RPG dice atop a map" class="list_img_file"/></a>
+    <div class="caption">
+      Anything Could Happen, latent space "photography" by <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="captionlnk">Colarusso</a>
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 44th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+
+  
+  <p>
+    More so than usual, today's template is a proof of concept. That means if you want to make it sing you're going to have to put in some work beyond the base template. Basically, I took the <a href="posts/50-days-of-ai/26-27/simple-training-sims">Simple Training Sims</a> template and added a feeder template that populates the Sims prompt with a random selection of names and jobs for our client. You'll remember that this simulation is based on my experience as a public defender. It captures the first meeting between you and a client in lockup before arraignment. 
+  </p>
+  <p>
+    Here the feeder template makes use of simulated dice to select our client's name and job from a set of lists. This in itself isn't very interesting, but you could imagine the same workflow selecting more interesting bits of the simulation, like the client's motivation or what they are charged with. Such exploration is left as an exercise for the reader. ;)
+  </p>
+
+
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/50-days-of-ai/26-27/random-sims/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/random-sims/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/random-sims/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/50-days-of-ai/26-27/random-sims/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/50-days-of-ai/26-27/random-sims/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/random-sims/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/50-days-of-ai/26-27/random-sims/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/random-sims/#tires">Kick the Tires</a></li>
+  </ul>
+
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/50-days-of-ai/26-27/random-sims/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/50-days-of-ai/26-27/random-sims/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/50-days-of-ai/26-27/random-sims/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/random-sims/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/50-days-of-ai/26-27/POSTSLUG/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using <code>{{d6}}</code>, <code>{{d4}}</code>, and <code>{{passThrough}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+  <p>
+    The <code>{{d6}}</code> variable will be replaced by a random number between 1 and 6, and the <code>{{d4}}</code> variable will be replaced by a random number between 1 and 4. Note: all dice are only roled once. So, multiple instances of <code>{{d6}}</code> would come up the same. 
+  </p>
+  <p>FWIW, here is the full list of "random" output variables:</p>
+    <ul>
+      <li>Coin Flip (heads or tails): <code>{{coinFlip}}</code></li>
+      <li>D4 (1-4): <code>{{d4}}</code></li>
+      <li>D6 (1-6): <code>{{d6}}</code></li>
+      <li>D8 (1-8): <code>{{d8}}</code></li>
+      <li>D% (0-9): <code>{{d%}}</code></li>
+      <li>D20 (1-20): <code>{{d20}}</code></li>
+    </ul>
+  </p>
+  <p>
+    If the text within brackets is not the name of a predefined variable, like <code>{{Are you my attorney?}}</code>, it will trigger a prompt for your user that echo's the placeholder (e.g., a text bubble containing, "Are you my attorney?"). After the user answers, their reply will replace this placeholder. A list of predefined variables can be found in the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    To use this workflow, simply trigger the first template. 
+  </p>
+
+  <p>Here's the first template's title.</p>
+  <p><code>Start Simulation</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>We're going to build a character sheet. Here's a list of possible names. 
+
+1. John
+2. Sam
+3. Jack
+4. Lee
+5. Nick
+6. Jacob 
+
+I'm going to role a dice. Your character's name will be the name from the above list where the name is the one next to the number of the dice role. Here's the dice roll: {{d6}}. 
+
+Now let's figure out your character's job. 
+
+1. roofer
+2. journeyman carpenter
+3. journeyman plumber
+4. journeyman electrician  
+
+Again, I'm going to role a dice. Your character's job will be the job from the above list where the job is the one next to the number of the dice role. Here's the dice roll: {{d4}}. 
+
+Now return your character's name and job as a JSON object composed of two key-value pairs. The first key is "name" and the second key is "job". Their values are those we found above. 
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
+    <li><b>Post-run Behavior:</b> <code>Run Simulation</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Run Simulation</code> template.</li>      
+    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
+  <p>Here's the second template's title.</p>
+  <p><code>Run Simulation</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You are an actor playing the role of someone charged with committing a crime.  In this scene you are interacting with your court-appointed attorney. You are currently in custody at the Rockham District Court, located in Massachusetts where you live. In a moment you will meet your attorney for the first time. Your job is to stay in character and act out your part. You are aiming for a realistic performance. To help you get into character, here is some background information.
+
+BACKGROUND
+
+Your name is {{passThrough["name"]}} Doe. You're an 18 year-old Caucasian male. You're 5 foot 9 inches tall and weigh 197 pounds. You only recently graduated from high school and have been working at your father's construction company as a {{passThrough["job"]}}. You live with your father James Doe and your mother Jill Doe. You're in a steady and supportive relationship with Sally Sparrow, a classmate of yours from Our Lady of Hope, the local Catholic School where you both graduated last year. Sally's attending the local community college. You and Sally have been dating since you were both 15. You regularly attend church with your family on Sundays and help out with local community service projects. 
+
+Last night you were arrested and charged with disorderly conduct. Recently, you've been drinking a lot after work, sometimes to the point of black out, and you really don't remember what happened last night. You know you went down to your local bar Joe Sent Me, by yourself, but from what you can gather, you were asked to leave. You've never been arrested before. You're scared but don't want to show it. Mostly, you want to know when you can get out of custody. You didn't sleep very well, and you have a wicked hangover. 
+
+You spent the night in jail, and this morning the police brought you over to court. You're currently in lock up with a few other men. The guard has called your name and you're now huddled by what looks like a large mail slot on to cell's door, and someone the guard has identified as your attorney is on the other side. 
+
+DIRECTION
+
+Be sure to keep your responses short. You "speak in sentences not paragraphs." Short and conversational, no speechifying!
+
+THE CONVERSATION SO FAR
+
+You are jumping into the scene in progress. You already greeted the you're attorney by asking "Are you my attorney?" They responded with "{{Are you my attorney?*}}"
+
+Think about how your character would respond and craft an appropriate reply. Don't repeat your greeting. Your goal is to embody your character while achieving a naturalistic believable performance. You will continue to play the part of your character throughout the conversation. Whatever happens, do NOT break character! Respond only with dialog, and include only the text of your reply. Do NOT preface your text with the name of the speaker or place it in quotes. Return only your dialog! 
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
+    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
+    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
+    <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
+<h3><a name="working" href="posts/50-days-of-ai/26-27/POSTSLUG/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+<p>
+  To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen.
+</p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/50-days-of-ai/26-27/random-sims/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>Make it your own</b>. Choose some interview features more interesting than name and job and add them as a random selection. Note: each dice only roles once. So, all instances of <code>{{d4}}</code> will be the same. 
+    </li>
+    
+    
+  </ul>
+  
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">Bluesky</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by <a href="https://www.davidcolarusso.com/" class="captionlnk">David Colarusso</a></span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+  (async () => {
+    prompts = await loadFile('posts/50-days-of-ai/26-27/random-sims/prompt_template.txt');
+  })()
+</script>
+
+</BODY></HTML>

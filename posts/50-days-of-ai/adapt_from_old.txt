@@ -12,26 +12,21 @@ https://mastodon.social/@Colarusso" <-- look out for links to posts, not just th
 https://bsky.app/profile/davidcolarusso.com"
 
 REPLACE
-<a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.
-<a href="posts/50-days-of-ai/">50 Days of AI</i></a>.
 
-ADD
-&nbsp; 
+<a href="posts/50-days-of-lit-prompts">50 Days of LIT Prompts</i></a>.
+
+<a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
       <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
       <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span>
-
-SELECTIVE REPLACE
-images/50-days/
-posts/50-days-of-ai/26-27/images/
-
-REMOVE
-    <li><b>Model:</b> ...
-    <li><b>Temperature:</b> ...
-    <li><b>Max Tokens:</b> ...
 
 REPLACE
 or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen. This will replace your existing prompts.
 or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen.
+
+GENERAL TYPO
+
+more on that will following in future posts
+more on that can be found in other posts
 
 REPLACE W/ REGEX
 "posts/([^5])
@@ -41,12 +36,27 @@ REPLACE W/ REGEX
 Importantly, if you don't want to share your API key, you should temporarily remove it from your settings before exporting.\n?\s*</p>
 Importantly, if you don't want to share your API key, you can leave the password field empty when prompted to enter one. Entering a password will encrypt your key and require the user to enter the password before using the exported file.\n\t</p>\n\t<p><i>Note: the export feature will export all of your current prompts. So, you might want to download all your prompts before deleting those you don't want to export to the web app. This will let you reload them later.</i></p>
 
+REPLACE W/ REGEX
+'posts/([^/]*)/prompt_template.txt'
+'posts/50-days-of-ai/26-27/$1/prompt_template.txt'
+
+REPLACE W/ REGEX
+'posts/([^/]*)/interactions.html'
+'posts/50-days-of-ai/26-27/$1/interactions.html'
+
+
+--------
+SELECTIVE REPLACE
+images/50-days/
+posts/50-days-of-ai/26-27/images/
+
+REMOVE
+    <li><b>Model:</b> ...
+    <li><b>Temperature:</b> ...
+    <li><b>Max Tokens:</b> ...
+
 FROM prompt_template.txt REMOVE
     "model": "gpt-4o-mini",
     "temperature": 0,
     "max_tokens": 250,
-
-GENERAL TYPO
-
-more on that will following in future posts
-more on that can be found in other posts
+---------
