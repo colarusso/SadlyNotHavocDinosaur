@@ -105,8 +105,8 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 28th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
-      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
-      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/shorten">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/legalese" >Next&nbsp;Post</a></span></p>
 
   <p>
     Yesterday we used AI to <a href="posts/50-days-of-ai/26-27/shorten">shorten text</a>. Today, however, we'll write a template we can use to expand text. That's right, we'll select one or two sentences and turn them into a paragraph.
@@ -146,20 +146,20 @@
 
   <!-- END INTRO -->
 
-  <h3><a name="build" href="posts/50-days-of-ai/26-27/maginify/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <h3><a name="build" href="posts/50-days-of-ai/26-27/magnify/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
   <p>
-    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/maginify/#template">The Prompt Pattern (Template)</a>.
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/magnify/#template">The Prompt Pattern (Template)</a>.
   </p>
-  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/maginify/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/magnify/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
   <ul>
-    <li><a href="posts/50-days-of-ai/26-27/maginify/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/magnify/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
     <ul>
-      <li><a href="posts/50-days-of-ai/26-27/maginify/#install" onClick="expand_setup();">Install the extension</a></li>
-      <li><a href="posts/50-days-of-ai/26-27/maginify/#point" onClick="expand_setup();">Point it at an API</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/magnify/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/magnify/#point" onClick="expand_setup();">Point it at an API</a></li>
     </ul>
-    <li><a href="posts/50-days-of-ai/26-27/maginify/#template">The Prompt Pattern (Template)</a></li>
-    <li><a href="posts/50-days-of-ai/26-27/maginify/#tires">Kick the Tires</a></li>
-    <li><a href="posts/50-days-of-ai/26-27/maginify/#references">TL;DR References</a></li> 
+    <li><a href="posts/50-days-of-ai/26-27/magnify/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/magnify/#tires">Kick the Tires</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/magnify/#references">TL;DR References</a></li> 
   </ul>
 
   <!--
@@ -170,7 +170,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="setup" href="posts/50-days-of-ai/26-27/maginify/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <h2><a name="setup" href="posts/50-days-of-ai/26-27/magnify/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
   <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
     <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
   </div>
@@ -190,7 +190,7 @@
     <p>
       To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
-    <h3><a name="install" href="posts/50-days-of-ai/26-27/maginify/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <h3><a name="install" href="posts/50-days-of-ai/26-27/magnify/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
     <p>Follow the links for your browser.</p>
     <ul>
       <li>
@@ -203,7 +203,7 @@
     <p>
       If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
     </p>
-    <h3><a name="point" href="posts/50-days-of-ai/26-27/maginify/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <h3><a name="point" href="posts/50-days-of-ai/26-27/magnify/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
     <p>
       Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
     </p>
@@ -240,7 +240,7 @@
       <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
     </p>
     <p>
-      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/maginify/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/magnify/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
     </p>
   </div>
 
@@ -252,7 +252,7 @@
     =================================================
   -->
   <hr>
-  <h2><a name="template" href="posts/50-days-of-ai/26-27/maginify/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
+  <h2><a name="template" href="posts/50-days-of-ai/26-27/magnify/#template" class="anchor" alt="deep link to this section"></a>The Prompt Patterns (Templates)</h2>
 
   <div class="featured_img_right">
     <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
@@ -295,7 +295,7 @@
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This template is the first in a chain of templates that can either end or loop back on itself. It works by getting the LLM to generate some dialog and send that along with text the user has highlighted to another template. That template takes an action and feeds into another template, and so on and so on. Note: we're using gpt-4o-mini as a model here and in some of the subsequent templates in this chain. When this model is retired it will break things and require updating. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You will ask them some questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer will start by reading what they have so far. 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This template is the first in a chain of templates that can either end or loop back on itself. It works by getting the LLM to generate some dialog and send that along with text the user has highlighted to another template. That template takes an action and feeds into another template, and so on and so on.#]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You will ask them some questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer will start by reading what they have so far. 
 
 WRITER: {{highlighted}}
 
@@ -312,9 +312,6 @@ Think about how your character would respond and craft an appropriate reply. You
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. Here we're using <code>gpt-4o-mini</code> because of its support for JSON mode.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>Role Play 1</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 1</code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -345,9 +342,6 @@ WRITER: {{{{passThrough["reply"]}}*}} [# Here we've encased {{passThrough["reply
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
-    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
-    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Hidden + replace scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen to hide the output from the screen and replace the the current text of the Scrtach Pad with this output.</li> 
     <li><b>Post-run Behavior:</b> <code>Role Play 2</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 2</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -362,7 +356,7 @@ WRITER: {{{{passThrough["reply"]}}*}} [# Here we've encased {{passThrough["reply
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This template looks very much like the first in our chain, except it pulls from the Scratch Pad and feeds into "Role Play 3." #] You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asks them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This template looks very much like the first in our chain, except it pulls from the Scratch Pad and feeds into "Role Play 3." #] You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asking them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. 
 
 {{scratch}}
 
@@ -379,9 +373,6 @@ Think about how your character would respond and craft an appropriate reply. You
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. Here we're using <code>gpt-4o-mini</code> because of its support for JSON mode.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>2000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>Role Play 3</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 3</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -410,9 +401,6 @@ WRITER: {{{{passThrough["reply"]}}*}} [# Here unlike "Role Play 1" we append to,
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
-    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
-    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>  
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Hidden + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen to hide the output from the screen and append the output to the end of the text already in the Scrtach Pad.</li> 
     <li><b>Post-run Behavior:</b> <code>Role Play 4</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 4</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -427,7 +415,7 @@ WRITER: {{{{passThrough["reply"]}}*}} [# Here unlike "Role Play 1" we append to,
     #########################
   -->
   <section class="line-numbers">
-    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This looks a lot like "Role Play 2," but since it uses the Post-run Behavior DYNAMIC, it can trigger different templates based on the contents of the transcript (i.e., it will either loop back to "Role Play 2" or move us along to "Role Play 5. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asks them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. 
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>[# This looks a lot like "Role Play 2," but since it uses the Post-run Behavior DYNAMIC, it can trigger different templates based on the contents of the transcript (i.e., it will either loop back to "Role Play 2" or move us along to "Role Play 5. #]You are an actor playing the role of a helpful writing assistant. In this scene you will interact with a writer. You are asking them questions about some copy they are working on. You're goal is to ask them enough question such that their answers can be used to expand on the existing text. That is, you want them to give you things one could use to expand on the existing text. As this is a dialogue, we will present it in the form of a transcript. The writer began by reading the copy they have so far. 
 
 {{scratch}}
 
@@ -444,9 +432,6 @@ You will provide a JSON object in response to the above with a key named `next`.
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. Here we're using <code>gpt-4o-mini</code> because of its support for JSON mode.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>DYNAMIC</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the promt named in the <code>passThrough["next"]</code> variable.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -465,7 +450,7 @@ You will provide a JSON object in response to the above with a key named `next`.
 
 {{scratch}}
 
-Use what you learned above to rewrite the original copy, adding details learned above. Do your best to keep the writer's voice and style while adding relevant details from your conversation to that first entry. Do NOT embellish! Do NOT make things up! Keep your additions firmly based on the content of your conversation, and don't make your copy too long! You goal is simply to flesh out the original text (i.e., the writer's first utterance above), adding about 20% in length. That being said, provide your new longer copy below.
+Use what you learned above to rewrite the original copy, adding details learned above. Do your best to keep the writer's voice and style while adding relevant details from your conversation to that first entry. Do NOT embellish! Do NOT make things up! Keep your additions firmly based on the content of your conversation, and don't make your copy too long! Your goal is simply to flesh out the original text (i.e., the writer's first utterance above), adding about 20% in length. That being said, provide your new longer copy below.
 </code></pre>
   </section>
   <!--
@@ -478,13 +463,10 @@ Use what you learned above to rewrite the original copy, adding details learned 
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
-<h3><a name="working" href="posts/50-days-of-ai/26-27/maginify/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+<h3><a name="working" href="posts/50-days-of-ai/26-27/magnify/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
 <p>
   To work with the above templates, you could copy them and their parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen.
 </p>
@@ -507,7 +489,7 @@ Use what you learned above to rewrite the original copy, adding details learned 
     =================================================
   -->
   <hr>
-  <h2><a name="tires" href="posts/50-days-of-ai/26-27/maginify/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <h2><a name="tires" href="posts/50-days-of-ai/26-27/magnify/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
   <p>
     It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
   </p>
@@ -529,7 +511,7 @@ Use what you learned above to rewrite the original copy, adding details learned 
     =================================================
   -->
   <hr>
-  <h2><a name="references" href="posts/50-days-of-ai/26-27/maginify/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <h2><a name="references" href="posts/50-days-of-ai/26-27/magnify/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
   <p>
     ICYMI, here are blubs for a selection of works I linked to in this post. If you didn't click through above, you might want to give them a look now.   </p>
   <ul> 
@@ -581,7 +563,7 @@ Use what you learned above to rewrite the original copy, adding details learned 
 	} catch (error) {}*/
 
   (async () => {
-    prompts = await loadFile('posts/50-days-of-ai/26-27/maginify/prompt_template.txt');
+    prompts = await loadFile('posts/50-days-of-ai/26-27/magnify/prompt_template.txt');
   })()
 </script>
 
