@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../../../">
+
+  <!-- Page-specific metadata -->
+  <title>Making Expert Systems with LLMs: Translate text into rules</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-02-23T00:00:00-0500"/>
+  <meta property="og:title" content="Making Expert Systems with LLMs: Translate text into rules"/>
+  <meta property="og:description" content=" "/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/luther-obama.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">Making Expert Systems with LLMs</h1>
+  <div class="post_title_02">Translate text into rules</div>
+
+
+  <div class="list_vid" >
+    <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/m0n_m3NNSX8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    <div class="caption">
+      It's 2012. DACA just dropped; turn it into a flowchart.
+    </div>
+  </div>
+
+  <p class="post_p">
+    <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 31st</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/style-guide">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/reader-questions">Next&nbsp;Post</a></span></p>
+  <p>
+    A few week's back we talked about <a href="https://en.wikipedia.org/wiki/Expert_system" target="_blank">expert systems</a> as one form of AI. They were the prefered methdod for the symbols folks. Attempst to codify expert knowledge into a set of rules.  
+  </p>
+  <blockquote>
+    After the term artificial intelligence <a href="https://en.wikipedia.org/wiki/Expert_system" target="_blank">was coined</a>, two main camps emerged, the symbolicists and the connectionist. The first assumed that it would be necessary for people to program rules into computers if they wanted them to perform "human" tasks like identifying images. The latter reasoned it was better to have computers "discover" the rules in data. For a time, the focus was on the symbolic approach. Results, however, didn't scale and <a href="https://en.wikipedia.org/wiki/AI_winter" target="_blank">a winter fell upon the land</a>. With the increased availability of data and computation, the connectionist regained the spotlight thanks to <a href="https://en.wikipedia.org/wiki/Bitter_lesson" target="_blank">a bitter lesson</a>, more data and inferred rules tend to out perform expert-drafted rules. Now folks argue about if more data is really all one needs and many assume the future lays in a combination of the two approaches, and today we'll play a little at their intersection.
+  </blockquote>
+  
+  <p>
+    Well, back in 2014 I wrote a simple programming language for lawyers called <a href="https://www.qnamarkup.org/" target="_blank">Qn AMarkup</a>. You can learn everything you need to know to write QnA by watching this 10 min <a href="https://www.youtube.com/watch?v=RVhzQ1JVi3s" target="_blank">video on how to write QnA</a> or reading this <a href="https://www.qnamarkup.org/syntax/" target="_blank">How To page</a>. However, today, we're going to see if we can skip over that bit and get our prompt to write one. 
+  </p>
+  <p>The video up above is a roughly 30 min lesson on how to create flowcharts from a deep reading of a text. It's from an old class of mine. After watching it, I invite you to create a QnA Markup. However, unlike my former students, you can use the template I've created below. Importnatly, your mission can start now as we will not work on it together. You'll find more info under <a href="posts/50-days-of-ai/26-27/qna-markup/#tires">Kick the Tires</a>.</p>
+
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/50-days-of-ai/26-27/qna-markup/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/qna-markup/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/qna-markup/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/50-days-of-ai/26-27/qna-markup/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/50-days-of-ai/26-27/qna-markup/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/qna-markup/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/50-days-of-ai/26-27/qna-markup/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/qna-markup/#tires">Kick the Tires</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/qna-markup/#references">TL;DR References</a></li>
+  </ul>
+
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/50-days-of-ai/26-27/qna-markup/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/50-days-of-ai/26-27/qna-markup/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/50-days-of-ai/26-27/qna-markup/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/qna-markup/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/50-days-of-ai/26-27/qna-markup/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    When crafting a LIT Prompts template, we use a mix of plain language and variable placeholders. Specifically, you can use double curly brackets to encase predefined variables. If the text between the brackets matches one of our predefined variable names, that section of text will be replaced with the variable's value. Today we'll be using two variables we've seen before: <code>{{highlighted}}</code> and <code>{{passThrough}}</code>. See the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>. 
+  </p>
+  <p>
+    The <code>{{highlighted}}</code> variable contains any text you have highlighted/selected in the active browser tab when you open the extension. To use <code>{{passThrough}}</code>, however, we make use of the Post-run Behavior parameter to pass data from one template to another. If you use Post-run Behavior to send one template's output to another template, the first template's output can be read by the second template via the <code>{{passThrough}}</code> variable. Here we have two templates, one sending data to the other. The first "trick" is that the Post-run Behavior of the second prompt being set to "createMarkup," which is the name of our first template. This means that after the second prompt is run it will trigger "createMarkup," and pass its. Because the Output To is set to Hidden, however, the user will not see this data transfer and because the first prompt below has Hide Button set to true the user will only see the second button.
+    </p>
+    <p>
+      To use this prompt, find text with rules in it, highlight them and run. It should provide you with QnA Markup that you can paste into the editor at <a href="https://www.qnamarkup.org/" target="_blank">QnAMarkup.org</a>.
+    </p>
+
+  <p>Here's the first template's title.</p>
+  <p><code>createMarkup</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>You an attorney helping to create a decision tree for the rules found in a document. You are to read the document and then provide code for the decision tree/flowchart in QnA Markup. First I'll show you the syntax for QnA Markup, then I'll show you the document. 
+
+Here's a description of QnA Markup. 
+
+===== START QNA MARKUP =====
+
+{{passThrough}}
+
+===== END QNA MARKUP =====
+
+Noe here's the document with rules for you to encode. 
+
+===== START DOC =====
+
+{{innerText}} 
+
+===== END DOC =====
+
+Now given use what you know about QnA Markup to encode the rules set out in the document into properly formatted QnA Markup.
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
+    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>. I activly choose this model because the lates model from OpenAI didn't work as well. Model choice matters.</li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li> 
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    
+    <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. Here we want to hide this button as it wouldn't work properly if triggered before the prior prompt because it is counting on the passThrough variable.</li>
+  </ul>
+
+  <p>Of course for that prompt to work it needs to be fed the rules for making QnA Markup. The following template does that. Here's its title.</p>
+  <p><code>Encode into QnA Markup</code></p>
+  <p>Here's the template's text.</p>
+  <!--
+    #########################
+    #########################
+    #####   start code   ####
+    #########################
+    #########################
+  -->
+  <section class="line-numbers">
+    <pre class="language-xxx" style="white-space:pre-wrap;"><code>---
+name: qna-markup
+description: Write, edit, review or convert content into QnA Markup, the plain-text language (Q:, A:, X:, DOC:, GOTO:) that www.qnamarkup.org turns into interactive question-and-answer interviews, guided forms, decision trees and document assemblers. Use whenever someone asks for "a QnA", QnA Markup, an interactive interview or decision tree they can run in a browser, or asks to encode a process, checklist, policy, FAQ or document as questions and answers.
+---
+
+# QnA Markup
+
+QnA Markup is a plain-text language. A `.txt` file of it, pasted into the editor at
+https://www.qnamarkup.org/, becomes a chat-style interview: the visitor is shown one question at a
+time, answers by clicking a button or typing, and is led down a branch you wrote. It was made for
+legal-aid style guided interviews, but it is a general decision-tree / guided-form language.
+
+## What to produce
+
+Produce **plain text**, indented with **tabs**, saved or offered as a `.txt` file (or shown in a
+code block). Never a table, never Markdown bullets, never HTML around it. A minimal QnA:
+
+```
+Title: Is it a weekend?
+Q: What day is it?
+A: Saturday
+	Q: Then it's the weekend.
+A: Sunday
+	Q: Then it's the weekend.
+A: Something else
+	Q: Then it's a weekday.
+```
+
+## Workflow
+
+1. **Understand the process** before writing. Find the decision points (each becomes a `Q` with `A`
+   buttons), the facts to collect (each an `X` text field), the outcomes (leaf questions with no
+   answers), and any text to generate (`DOC:`). Ask the person, briefly, if something essential is
+   unclear; otherwise make sensible assumptions and say what they were.
+2. **Draft the tree.** One question per `Q`. Answer buttons phrased as answers ("Yes", "Under 18",
+   "I rent"), not as questions. Every path must end somewhere sensible (a closing `Q` with no
+   answers, or a `GOTO` to one). Give every question that anything jumps to a name: `Q(rent):`.
+3. **Check it against the rules below** (indentation, alternation, GOTO placement, unique names).
+   If `scripts/check.js` is available, run `node scripts/check.js file.txt`; it prints the
+   interpreter's own error messages with line numbers, or `OK`.
+4. **Hand it over** with one line on how to run it: paste into https://www.qnamarkup.org/ (or open
+   `https://www.qnamarkup.org/?source=URL` when the file is on the web with CORS enabled), then use
+   *Update Outputs*, *Link* or *HTML* to share it.
+
+## The rules that matter (the interpreter enforces them)
+
+**Tags** start a line (after indentation) and end with a colon:
+
+| tag | meaning |
+|---|---|
+| `Title:` `Author:` `Description:` | header, before the first `Q`; shown under *credits* |
+| `Before:` `After:` | HTML (and `&lt;script&gt;`) placed above / below the conversation |
+| `Q:` or `Q(name):` | a question; text follows, may span lines, may contain HTML |
+| `A:` or `A(value):` | a button; `value` is what the variable stores (default: the button text) |
+| `A[href]:` / `A:[href]` | a button that is a link (same window / new window); `javascript:` runs code |
+| `X:` | a text field instead of buttons; `X:number` for a number field; nothing else may follow the colon; one per question |
+| HTML form controls in a `Q` | `&lt;input name="dob" type="date"&gt;`, checkboxes, `&lt;select&gt;`, `&lt;textarea&gt;` written in the question text become variables named by their `name`; the `A` button submits them (see reference §Form fields) |
+| `DOC:` | text collected for a document when the `Q` right under it is shown |
+| `GOTO:name` | the last thing in a `Q`'s text: continue at that question |
+
+**Structure**
+
+* Indentation is nesting: the answers to a question sit at the **same** indentation as the question;
+  the question that follows an answer sits **one level deeper** (one tab more). Use tabs (or a
+  consistent number of spaces); mixing widths is an error.
+* Tags alternate: a `Q` is followed by its `A`/`X` tags, each `A`/`X` by at most one `Q` beneath it.
+  Two `Q`s in a row at the same level, or an `A` deeper than its `Q`, are errors.
+* Every QnA needs at least one `Q` and one `A` or `X`.
+* The conversation starts at the first top-level `Q`. Other top-level `Q`s are reachable only by
+  `GOTO` (they are where shared endings and loops live).
+* An answer with nothing beneath it ends the conversation there (fine for a closing statement:
+  put the statement in a `Q` with no answers instead, so the visitor reads it).
+
+**Names and variables**
+
+* `Q(name):` names the question and the variable it stores. Names: letters, digits, `.`, `_`, `-`;
+  unique within the QnA. Leave the parentheses out and the editor numbers the question (`Q(1.2.1):`);
+  those numbers are machine names and shift when the tree changes, so use words for anything you
+  refer to.
+* The visitor's answer is stored under the question's name: the `A(value)` (or button text), or the
+  typed text of an `X`. Show it later with `&lt;x&gt;name&lt;/x&gt;` anywhere in a `Q`, `A` or `DOC`.
+
+**GOTO**
+
+* `GOTO:target` must be the last thing in the `Q`'s text, one per `Q`, never in an `A`. The
+  target is a name (or an id). A `Q` that is only `GOTO:x` is a silent jump; text before it is
+  shown first.
+* Loops (a `GOTO` back to an earlier question) are how you retry or repeat.
+
+**Text**
+
+* Question and answer text is HTML: `&lt;b&gt;`, links, images, `&lt;br&gt;` all work. Two `&lt;br&gt;&lt;br&gt;` split a
+  question into two bubbles. Plain text is fine and usually best.
+* Keep questions short; one thing per question. Buttons are short phrases.
+
+## Templates for common asks
+
+* **"Encode this process / policy / checklist as a QnA."** Walk the source in order. Each condition
+  ("if the tenant received notice…") becomes a `Q` with the possible cases as `A`s; each step that
+  needs a fact becomes an `X`; each outcome becomes a closing `Q` (or a `GOTO` to a shared one).
+  Quote the source's wording in the outcomes so the result stays faithful. Name the questions after
+  the concepts (`Q(notice):`), not the numbering of the source.
+* **"Help me write a QnA about X."** Ask what the visitor should end up with (an answer, a document,
+  a referral), then design from the outcomes back to the first question.
+* **"Turn this form / letter into a QnA that fills it in."** Collect each field with an `X`, then a
+  `DOC:` tag above a final `Q` assembles the text with `&lt;x&gt;field&lt;/x&gt;`, and a button shows it:
+  `A[javascript:showdoc('Review, then print or save.')]: Show my letter`. See
+  `examples/letter.txt`.
+* **Adding logic** (compare a number, pick a random branch, compute something): a script in an
+  `X[javascript:…]:` or `A[javascript:…]:` bracket can call `goto('name')` and read answers with
+  `getvar('name')`. See `examples/quiz.txt`. Loading another QnA file into the conversation:
+  `loadQnA('url', 'done', 'next')`. Details in `reference.md`.
+
+## Before you hand it over
+
+* [ ] Tabs, consistent; answers level with their question; next question one level deeper.
+* [ ] Every `GOTO` names a question that exists exactly once, and is the last thing in its `Q`.
+* [ ] No `GOTO` in an `A`; nothing after `X:` on its line (except `number`); one `X` per question.
+* [ ] Every form control written in a `Q` has a `name`, and no name repeats a question's name or id.
+* [ ] Names unique, made of letters/digits/`.`/`_`/`-`; the ones referenced are words.
+* [ ] Every branch ends in a readable closing question (not in a dangling answer) unless it loops.
+* [ ] `&lt;x&gt;name&lt;/x&gt;` only for names that will have a value by then.
+* [ ] `Title:` (and `Description:`) filled in; no `Settings:` line (the editor manages that).
+
+`reference.md` has the full syntax, the predefined JavaScript functions, the error messages and
+what causes them. `examples/` has complete, checked QnAs to pattern from.
+</code></pre>
+  </section>
+  <!--
+    #########################
+    #########################
+    #####    end code    ####
+    #########################
+    #########################
+  -->
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>Prompt</code>. TBy choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values.  </li>
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're going to hide the conetnt as it is intended for the next template, not the user to see.</li> 
+    <li><b>Post-run Behavior:</b> <code>createMarkup</code>. Like the choice of output, we can decide what to do after a template runs. Here we have chosen the name of another template. So, after this template runs it will trigger that template and pass through its output.</li>    
+    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  
+  </ul>
+
+<h3><a name="working" href="posts/50-days-of-ai/26-27/qna-markup/#working" class="anchor" alt="deep link to this section"></a>Working with the above template</h3>
+  <p>
+    To work with the above template, you could copy it and its parameters into LIT Prompts one by one, or you could download a single prompts file and upload it from the extension's <i>Templates &amp; Settings</i> screen.
+  </p>
+
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    You can download a prompts file (the above template and its parameters) suitable for upload by clicking this button:
+  </p>
+
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(prompts,'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/50-days-of-ai/26-27/qna-markup/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>See how well it handels DACA</b>. Skim (or watch at 3x speed) the <a href="" target="_blank">Youtube Video above</a>. Then open up <a href="posts/50-days-of-ai/26-27/qna-markup/daca_memo.pdf" target="_blank">the original DACA Memo</a> and see how our template does. Here's an <a href="posts/50-days-of-ai/26-27/qna-markup/daca_memo.html" target="_blank">HTML version of the memo</a>. <i>Remember LIT Prompts won't work on a PDF unless you copy and past the text into something like the Scratch Pad</i>. So, I'd suggest opening the HTML version, highlighting the page and runing the prompt. It should provide you with QnA Markup that you can paste into the editor at <a href="https://www.qnamarkup.org/" target="_blank">QnAMarkup.org</a>.</li>
+     <li><b>Make your own QnA</b>. Find some text with an embedded rule and see if you can get this prompt to turn it into a QnA Markup interview. 
+    </li>
+        
+  </ul>
+    <!--
+    =================================================
+
+                       References
+
+    =================================================
+  -->
+
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">Bluesky</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by <a href="https://www.davidcolarusso.com/" class="captionlnk">David Colarusso</a></span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+  (async () => {
+    prompts = await loadFile('posts/50-days-of-ai/26-27/qna-markup/prompt_template.txt');
+  })()
+</script>
+
+</BODY></HTML>
