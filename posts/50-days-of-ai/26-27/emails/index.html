@@ -105,8 +105,8 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 40th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
-      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
-      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/find-my-cites">Previous&nbsp;Post</a> <!--| 
+      <a href="posts/50-days-of-ai/26-27/word-processor" >Next&nbsp;Post</a>--></span></p>
   <p>
     It's been seven weeks since the first and last time we asked an LLM to help us write an email. That template was rather constrained in what it could say. In fact, we only trusted it to politely decline emails. See <a href="posts/50-days-of-ai/26-27/decline-requests">I'm Sorry, Dave Can't Do That</a>. Today, however, we're interested in doing something a bit different. Today, we'll build upon our work creating <a href="posts/50-days-of-ai/26-27/simple-training-sims">dialogues</a> to have an LLM read an email, ask us some questions about how we want to reply, and then draft a response. First, you should know that though I've been testing this prompt intermittently out over the past month or so, it really hasn't found its way into regular use. When you see the results, I think you'll see why. Which isn't to say it couldn't be useful. It's just that I have other ways of getting what I need. More about that in a bit.
   </p>
@@ -116,7 +116,7 @@
   <iframe src="posts/50-days-of-ai/26-27/emails/transcript.html" width="100%" height="350px"></iframe>
 
   <p>
-    A couple of things are worth noting. It understood the gist of the conversation. It even recognized the fact that one of the people on the thread couldn't make it between 2 and 4 on Tuesdays because of class. It didn't quite get that we were trying to find one time either this next Tuesday or the one after, hence the odd statment about being sure they'd "capture something great without me." FWIW, I actually answered this email without the template's assistance. here's that answer in whole:</p>
+    A couple of things are worth noting. It understood the gist of the conversation. It even recognized the fact that one of the people on the thread couldn't make it between 2 and 4 on Tuesdays because of class. It didn't quite get that we were trying to find one time either this next Tuesday or the one after, hence the odd statement about being sure they'd "capture something great without me." FWIW, I actually answered this email without the template's assistance. here's that answer in whole:</p>
 
   <blockquote>
     The 26th doesn't work for me, but I could do the 19th before 1pm.
@@ -309,9 +309,6 @@ Think about what the last email is asking of me and what you would need to know 
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
     <li><b>Post-run Behavior:</b> <code>CHAT</code>. Like the choice of output, we can decide what to do after a template runs. Here we want to be able to follow up with additional prompts. So, "CHAT" it is.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -342,9 +339,6 @@ Think about what the last email is asking of me and what you would need to know 
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-     <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + clipboard</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and clipboard so the results will be ready to paste where we like.</li> 
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>

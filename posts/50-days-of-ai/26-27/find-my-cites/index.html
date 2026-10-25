@@ -105,8 +105,8 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 39th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
-      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
-      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/magic-copy-and-paste">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/emails" >Next&nbsp;Post</a></span></p>
   <p>
     Today's template builds on <a href="posts/50-days-of-ai/26-27/archeology">Tuesday</a> and <a href="posts/50-days-of-ai/26-27/magic-copy-and-paste">Wednesday</a>'s use of entity extraction. We'll be using an LLM to extract the citations from scholarly articles and save them to a csv file. After that we can add columns to the file to help make finding copies easier and to track if we've read the articles. Finding and reading all the cites in a paper is often part of the larger process of conducting LIT review. Here's the workflow for this AI-assisted portion.
   </p>
@@ -292,9 +292,6 @@ Now provide a line for the header and each citation (row) in the csv file. Retur
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>3000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
     <li><b>Post-run Behavior:</b> <code>SAVE TO FILE</code>. Like the choice of output, we can decide what to do after a template runs. Here we will save the output to a file. This will trigger your browser's download feature.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>

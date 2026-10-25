@@ -105,14 +105,14 @@
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
   <p><i>This is <b>the 37th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
-      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
-      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/reflection">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/magic-copy-and-paste" >Next&nbsp;Post</a></span></p>
 
   <p>
     Do yourself a favor. Write down the books you've read. Otherwise, you'll find yourself wondering if that book looks familiar because you put it on a list to read or because you've read it already. Unfortunately, I've never had such a list. :( 
   </p>
   <p>
-    So, today I created <a href="posts/50-days-of-ai/26-27/archeology/#template">a set of LIT Prompts</a> to help me conduct some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I didn't order online, but I can always consult my shelves and this seems like less of a problem for such books. Anywho, once the templates were ready to go, the workflow looked like this.  
+    So, back in late 2023 I created <a href="posts/50-days-of-ai/26-27/archeology/#template">a set of LIT Prompts</a> to help me conduct some digital archeology. They extract and clean data from old emails and online histories. So far, today alone I've been able to reconstruct about ten years' worth of online book orders, resulting in a list of 400+ books. Eventually, I'll need to add physical books I didn't order online, but I can always consult my shelves and this seems like less of a problem for such books. Anywho, once the templates were ready to go, the workflow looked like this.  
   </p>
   <h3><a name="workflow" href="posts/50-days-of-ai/26-27/archeology/#workflow" class="anchor" alt="deep link to this section"></a>Extract &amp; Clean</h3>
   <ol>
@@ -295,9 +295,6 @@
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-     <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + replace scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and replacing the the current text of the Scrtach Pad with this output.</li> 
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -334,9 +331,6 @@ Now provide the csv row or rows.
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and appending the output to the end of the text already in the Scrtach Pad.</li> 
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -372,9 +366,6 @@ Now provide the csv row or rows.
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>2000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and appending the output to the end of the text already in the Scrtach Pad.</li> 
     <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Like the choice of output, we can decide what to do after a template runs. To keep things simple, I went with "FULL STOP."</li>    <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -401,9 +392,6 @@ Now provide the csv row or rows.
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-     <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>250</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
     <li><b>Post-run Behavior:</b> <code>SAVE TO FILE</code>. Like the choice of output, we can decide what to do after a template runs. Here we will save the output to a file. This will trigger your browser's download feature.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
