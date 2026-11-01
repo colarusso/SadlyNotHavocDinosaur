@@ -63,14 +63,6 @@
     "behavior": "chat",
     "hide_button": true
   },
-  "🗞️ Suggest headlines/titles": {
-    "prompt": "You are the editor for an online publication. You're about to read a new post to your site. Once you've finished reading it, you will be asked to provide a list of possible titles/headlines to use when publishing it. \n\nHere's the text of the post\n\n---- \n\n{{highlighted}}\n\n----\n\nFor the untitled text above, provide a list of several compelling (clickable) titles/headlines that might do well to generate attention and clicks: \n\n",
-    "output": 1,
-    "json_mode": 0,
-    "output_to": 0,
-    "behavior": "stop",
-    "hide_button": false
-  },
   "📝 Summarize and question": {
     "prompt": "{{highlighted}} \n\n---\n\nProvide a short 150-word summary of the above text. If asked any follow-up questions, use the above text, and ONLY the above text, to answer them. If you can't find an answer in the above text, politely decline to answer explaining that you can't find the information. You can, however, finish a thought you started above if asked to continue, but don't write anything that isn't supported by the above text. And keep all of your replies short! But first, please provide a summary of the text. \n\n",
     "output": 1,
