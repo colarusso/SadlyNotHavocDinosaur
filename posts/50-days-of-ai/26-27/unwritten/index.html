@@ -104,9 +104,9 @@
     <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
     David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
   </p>
-  <p><i>This is <b>the 46th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
-      <span class="post_date"><a href="posts/50-days-of-ai/26-27/LAST">Previous&nbsp;Post</a> | 
-      <a href="posts/50-days-of-ai/26-27/NEXT" >Next&nbsp;Post</a></span></p>
+  <p><i>This is <b>the 47th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/goals">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/constructed-criticism" >Next&nbsp;Post</a></span></p>
 
   <p>
     <a href="https://libraryofunwrittenbooks.org/" target="_blank">The Library of Unwritten Books</a> may be the coolest thing I've ever made, not the most important, but the coolest. It creates "novel novellas" on-demand. Unlike text-adventure games with fixed texts, these stories are an open-ended exercise in collaborative storytelling. You are a reader-author. Large language models (LLMs) mediate your collaboration, re-shaping and reflecting your words and those of authors past. I'm reminded of <a href="https://www.youtube.com/watch?v=2dStjjuqM4M" target="_blank">these words</a> from Carl Sagan.
@@ -299,9 +299,6 @@
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Since we're seeking fidelity to a text, I went with the least "creative" setting—0.</li>
-    <li><b>Max Tokens:</b> <code>500</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>Frame</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Frame</code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -378,9 +375,6 @@ Unless the other player said otherwise, your prose should be high quality like t
 
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
 
-    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
         <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Hidden + replace scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen to hide the output from the screen and replace the the current text of the Scrtach Pad with this output.</li> 
     <li><b>Post-run Behavior:</b> <code>Introduction</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Introduction</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -413,9 +407,6 @@ Above is a story in progress. Provide a short recap of what's happened so far as
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.7</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Here I'm using 0.7 because I'm happy to have the text be a little "creative."</li> 
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen Only</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, we're content just to have it go to the screen.</li>
     <li><b>Post-run Behavior:</b> <code>Role Play 01</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 01</code> template.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
@@ -446,9 +437,6 @@ Given the above, write the first two or three paragraphs for the story. Lean hea
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-4o-mini</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.9</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be. Today we're all about being creative. So, I went with a pretty "creative" setting—0.9.</li>
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>The story begins</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>The story begins</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -480,11 +468,7 @@ Given the above, write the first two or three paragraphs for the story. Lean hea
   <ul>
 
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-
-    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-        <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and appending the output to the end of the text already in the Scrtach Pad.</li> 
     <li><b>Post-run Behavior:</b> <code>Role Play 01</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 01</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
   <p>Here's the template's title.</p>
@@ -543,9 +527,6 @@ Be sure to escape quotation marks in any dialogue. And again, remember to show w
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.8</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be.</li>
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>move forward</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>move forward</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -597,9 +578,6 @@ Either way, you should move the story forward adding detail and plot points. Mak
   <p>And here are the template's parameters:</p>
   <ul>
     <li><b>Output Type:</b> <code>LLM</code>. This choice means that we'll "run" the template through an LLM (i.e., this will ping an LLM and return a result). Alternatively, we could have chosen "Prompt," in which case the extension would return the text of the completed template. </li>
-    <li><b>Model:</b> <code>gpt-3.5-turbo-1106</code>. This input specifies what model we should use when running the prompt. Available models differ based on your API provider. See e.g., <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI's list of models</a>.</li>
-    <li><b>Temperature:</b> <code>0.8</code>. Temperature runs from 0 to 1 and specifies how "random" the answer should be.</li>
-    <li><b>Max Tokens:</b> <code>1000</code>. This number specifies how long the reply can be. Tokens are chunks of text the model uses to do its thing. They don't quite match up with words but are close. 1 token is something like 3/4 of a word. Smaller token limits run faster.</li>
     <li><b>JSON:</b> <code>Yes</code>. This asks the model to output its answer in something called JSON, which is a nice machine-readable way to structure data. See <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">https://en.wikipedia.org/wiki/JSON</a></li>
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>append 2</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>append 2</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
@@ -631,11 +609,7 @@ Either way, you should move the story forward adding detail and plot points. Mak
   <ul>
 
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-
-    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-        <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Screen + append to scratch pad</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the screen and appending the output to the end of the text already in the Scrtach Pad.</li> 
     <li><b>Post-run Behavior:</b> <code>Role Play 01</code>. Like the choice of output, we can decide what to do after a template runs. Here we will trigger the <code>Role Play 01</code> template.</li>      <li><b>Hide Button:</b> <code>checked</code>. This determines if a button is displayed for this template in the extension's popup window. We've checked the option because this template shouldn't be triggered by the user directly. Rather, it needs to be triggered by another template so that there's something in the <code>{{passThrough}}</code> variable.</li>  </ul>
   <p>Here's the template's title.</p>
@@ -662,11 +636,7 @@ Either way, you should move the story forward adding detail and plot points. Mak
   <ul>
 
     <li><b>Output Type:</b> <code>Prompt</code>. By choosing "Prompt" the template runs without being submitted to an LLM. It's output is just the template after slotting in variable values. </li>
-
-    <li><b>Model:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Temperature:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-    <li><b>Max Tokens:</b> <code>n/a</code>. Since Output Type is set to Prompt, we don't have to set LLM-specific parameters. </li>
-        <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
+    <li><b>JSON:</b> <code>No</code>. This asks the model to output its answer in something called JSON. We don't need to worry about that here, hence the selection of "No."</li>  
     <li><b>Output To:</b> <code>Hidden</code>. We can output the first reply from the LLM to a number of places, the screen, the clipboard... Here, I've chosen the hide the output entirely. This is uesful when passing output to another template.</li> 
     <li><b>Post-run Behavior:</b> <code>SAVE TO FILE</code>. Like the choice of output, we can decide what to do after a template runs. Here we will save the output to a file. This will trigger your browser's download feature.</li>      <li><b>Hide Button:</b> <code>unchecked</code>. This determines if a button is displayed for this template in the extension's popup window. </li>  </ul>
 <h3><a name="working" href="posts/50-days-of-ai/26-27/unwritten/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>

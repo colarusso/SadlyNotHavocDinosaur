@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+  <!-- Set base for this page equal to domain root -->
+  <base href="../../../../">
+
+  <!-- Page-specific metadata -->
+  <title>How To Achieve Almost Any Goal In 3 Easy Steps + Why AI Agents Work: Create simple AI agent by having an LLM decide when to use a tool</title>
+  <meta property="og:type" content="website"/>
+  <meta property="og:publish_date" content="2024-03-22T00:00:00-0500"/>
+  <meta property="og:title" content="How To Achieve Almost Any Goal In 3 Easy Steps (How Agents Work): Create simple AI agent by having an LLM decide when to use a tool"/>
+  <meta property="og:description" content="Create simple AI agent by having an LLM decide when to use a tool"/>
+  <meta property="og:image" content="http://www.davidcolarusso.com/images/50-days/a_plus_square.png"/>
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST9X6H808L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ST9X6H808L');
+  </script>
+
+  <!-- Metadata for mobile -->
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <link rel="apple-touch-icon" href="images/comic.png"/>
+
+  <!-- JS & style -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=2024-01-30">
+  <script src="js/functions.js?v=2024-01-30"></script>
+  <script src="js/spin.js"></script>
+
+  <link rel="stylesheet" href="css/prism.css" data-noprefix="">
+  <script type="text/javascript" src="js/prism.js"></script>
+
+  <!--<script id="MathJax-script" async src="js/mathjax/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/green-audio-player.css">
+  <script src="js/green-audio-player.js"></script>-->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Sadly Not, Havoc Dinosaur" href="https://sadlynothavocdinosaur.com/feed.xml" />
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
+
+<!-- Message Banner -->
+<div id="msg_bar" style="display:none;"></div>
+
+<!-- Title and search -->
+<div class="title_bar">
+  <div class="home">
+    <a href="./" tabindex="1"><img src="images/home.png" class="home_btn"></a>
+  </div>
+  <div class="search">
+    <a href="javascript:show_search();" tabindex="3"><img src="images/search.png" class="search_btn"></a>
+    <input id="query" type="text" tabindex="2"/>
+  </div>
+  <span id="title"><a href="./" class="title_home">Sadly Not, Havoc Dinosaur</a></span>
+</div>
+
+<div class="content">
+  <!-- START PAGE CONTENT -->
+
+  <div id="page">
+  <!--
+    =================================================
+
+                      INTRODUCTION
+
+    =================================================
+  -->
+  <h1 class="post_title_01">How To Achieve Almost Any Goal In 3 Easy Steps + Why AI Agents Work</h1>
+  <div class="post_title_02">Create simple AI agent by having an LLM decide when to use a tool</div>
+  <div class="featured_img_right">
+    <!--<div class="audio_container_container" style="display:show;">
+      <div class="audio_container">
+        <b>Hear the author read <i>TK</i></b>
+        <div class="gap-example player-accessible">
+          <audio>
+              <source src="mp3s/title.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <span class="playback">
+          Speed: <a href="javascript:void('')" onClick="set_speed(0.5)" class="playback" id="pb05">0.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1)" class="playback" id="pb10" style="font-weight:900;">1x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(1.5)" class="playback" id="pb15">1.5x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(2)" class="playback" id="pb20">2x</a> &bull;
+                  <a href="javascript:void('')" onClick="set_speed(3)" class="playback" id="pb30">3x</a>
+        </span>
+      </div>
+    </div>-->
+    <a href="posts/50-days-of-ai/26-27/images/goals.png"><img src="posts/50-days-of-ai/26-27/images/goals.png" ALT="A red hand-written A+ atop a paper next to the tip of a red pen" class="list_img_file"/></a>
+    <div class="caption">
+      A slide from one of <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="captionlnk">Colarusso</a>'s lessons on how to achive your goals
+    </div>
+  </div>
+  <p class="post_p">
+    <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank" class="body_links"><img src="images/colarusso.jpg" class="headshot_small" alt="Headshot of the author, Colarusso." style="margin-top: 7px;"/></a>
+    David Colaursso<br><span class="post_date">Co-director, Suffolk's <a href="https://suffolklitlab.org/" target="_blank" class="captionlnk">Legal Innovation &amp; Tech Lab</a></span>
+  </p>
+  <p><i>This is <b>the 46th</b> post in my series <a href="posts/50-days-of-ai/">50 Days of AI</i></a>.&nbsp; 
+      <span class="post_date"><a href="posts/50-days-of-ai/26-27/ai-rubric">Previous&nbsp;Post</a> | 
+      <a href="posts/50-days-of-ai/26-27/unwritten" >Next&nbsp;Post</a></span></p>
+
+  <p>
+ We recently reworked the syllabus for the LIT clinic and in doing so, the following gem lost its home. It was part of an earlier version that billed itself as a handbook. My co-teacher suggested I find a new home for it. So, why is it here? Because despite being written back around 2019, it perfectly captures how and why AI agents work. That is, AI agents simply follow these steps. If you give an agent the job of writing a story and the ability to pick up a tool, it will keep plugging along. This will make sense when you get to the end and after you build today's prompt. Trust me.
+     <p>
+      Today's prompt creates a very small review loop. It's based <a href="posts/50-days-of-ai/26-27/shorten/">500 Characters? I’ll Make It Fit!</a>. Unlike that prompt which sometimes produced texts larger than 500 characters, this one checks the reply length and re-runs itself if it's too big. 
+  </p>
+  <blockquote style="margin-left: 0px;">
+  <!-- INTRO: Three steps for iterative goal-setting -->
+  <div id="steps">
+    <h2>The 3 easy steps</h2>
+    <ol>
+      <li>Craft a <strong>believable</strong> story, set in the present, that ends with <strong>The Goal</strong> being achieved.<sup><a href="posts/50-days-of-ai/26-27/goals/#note-1">1</a></sup></li>
+      <li>Break the story into chapters, and have those on <strong>Team Goal</strong> do their best to act out the first chapter.<sup><a href="posts/50-days-of-ai/26-27/goals/#note-2">2</a></sup></li>
+      <li>After reality deviates from the script, the chapter ends, or the passage of some set time, repeat these steps until either <strong>The Goal</strong> is met or it becomes impossible to craft a believable story.<sup><a href="posts/50-days-of-ai/26-27/goals/#note-3">3</a></sup></li>
+    </ol>
+  </div>
+
+  <h2 id="footnotes">Footnotes</h2>
+  <div id="note-0">
+    <p><strong><sup>0.</sup></strong> This post began its life as a playbook for students working as part of the LIT Lab’s consultancy practice. Originally, I was shooting for something like the <a href="https://playbook.cio.gov/" rel="noreferrer noopener" target="_blank">Digital Services Playbook</a>. Unfortunately, my early drafts relied too much on nomenclature and industry norms unfamiliar to the average law student. I considered zooming in (providing context and explanation for every reference), but that seemed like a recipe for infinite regress. So I opted to zoom out and focus on general principles. This has freed me to use specific examples for illustrative purposes without the need for them to be all encompassing. It also allows me to highlight similarities between multiple systems for getting things done.</p>
+    <p>To avoid the trap of just telling folks to <a href="https://knowyourmeme.com/memes/how-to-draw-an-owl?full=1" rel="noreferrer noopener" target="_blank">draw the Owl</a>, I’m providing ample context for each of the steps through footnotes. Yes, this is a bit of a gimmick, and the title above is total click bait.</p>
+    <p>There are only three steps, but it takes over a thousand words to imbue them with meaning. It’s worth noting, however, that this is the case for many endeavors. Jargon gets a bad rap, and deservedly so when used to obscure meaning, but a good term of art or framing mechanism, once understood, can stand in for paragraphs of exposition. With the creation of such conceptual building blocks, discussion and reasoning can move more quickly. This is especially true for collaborations, like what we'll be doing, where a reliable shorthand eases communication.</p>
+    <p>Consider that the job of every prosecutor in a criminal trial can be boiled down to ten words: prove the elements of the crime(s) beyond a reasonable doubt. Those ten words are a good guide to action. Zoom out more, and you can describe a prosecutor’s whole job in two words: do justice. Such drastic distillation comes with benefits and risks. Done well it can provide clarity and direction. Overdo it and you’re left with pablum. Worse yet is the space between, where clarity is an illusion, everyone relying on a <em>sui generis </em>interpretation, secure in the belief their understanding is shared by all. That being said, let’s see if we can arrive at a common understanding.</p>
+  </div>
+
+  <div id="note-1">
+    <p><strong><sup>1.</sup></strong> <strong>Believable</strong> is doing a lot of work in this sentence. Here, it’s roughly synonymous with realistic or probable.</p>
+    <p>In order to tell a believable story, you have to truly understand your “characters” and their “motivations.” Sometimes you’re lucky, and your characters aren’t people. This is where the hard sciences shine. If asked to tell a story about how to place a satellite in geosynchronous orbit, the primary players (i.e., the satellite and the Earth) find themselves constrained by a set of well-understood physical laws. To achieve geosynchronous orbit we have to get the satellite to a specific distance above the Earth traveling with some set horizontal velocity. That’s it. This is an engineering problem because the story we’re asked to craft ends with an easily stated objectively measurable goal, the achievement of which relies on what you might call well understood “motivations” (physical laws).</p>
+    <p>Once your story includes considerations like how to pay for things, source materials, motivate employees, and clear political hurdles, its nature becomes much more speculative. No longer can the story be told by equations alone. <strong>We are speaking of storytelling as simulation.</strong> <strong>That is, in order to tell a believable story, we construct a series of probable events that result in the desired outcome based on our understanding of how the world works.</strong> The scope of our story and the understanding needed to craft it depend greatly on the goal(s) we seek to achieve. So to do this step well, we have to know what we want and enough about the world to tell a story that moves us from the world as it is to the world we want it to be. </p>
+    <p>Our initial story is unlikely to survive engagement with reality. So it’s important that we’re able to recognize success and change course when we fall short. Consequently, our goals must be measurable. For example, it’s not enough to say that we want to build or do a great thing. We have to define what we would see if we were to build or do a great thing. This doesn’t have to be an objective measure per se. Subjectivity is fine. If by “a great thing” we mean “Sally thinks it’s great,” or “demographic X thinks it’s great,” we can work with that. We just need to identify a measurable success metric. So our metric might be, “Does Sally say she thinks it’s great?” Admittedly, some goals are harder to measure than others, and there is a temptation to redefine our goals to correspond with easily measured metrics. Fight that temptation. Your goals are a reflection of your values, and you shouldn’t compromise them because something is hard (unless you value them less than the required effort). Pragmatism is productive, but it’s not an excuse to be lazy.</p>
+  </div>
+
+  <div id="note-2">
+    <p><strong><sup>2.</sup></strong> As you can see from step three, the end of a chapter is notable for the fact that it can trigger the creation of a new story. So chapters act as built-in checkpoints. Like the story’s ultimate Goal, they should come with measurable conclusions, but their completion should also tell us something about our overall progress, so we know if we’re moving in the right direction. If your goal is product development, this is comparable to focusing on a <a href="https://en.wikipedia.org/wiki/Minimum_viable_product" rel="noreferrer noopener" target="_blank">minimum viable product (MVP)</a> for each chapter—what some might call iterative prototyping. </p>
+    <p>As for Team Goal, this is just the collection of folks working to achieve The Goal. Your team may be a formal working group or just a collection of folks with common cause. Heck, it may be a team of one. What’s important for our purposes is that the team members are willing to work together and live out their parts in the story. Consequently, it has to be a shared story (one all the members buy into). One of the best ways to make this happen is to have the team contribute to the story’s creation. After all, if they’ll be the ones acting it out, they’re likely to have some suggestions. This of course is just a reflection of what I find to be a believable story. I clearly think that giving folks agency over a story is motivating. Maybe I’m right; maybe I’m wrong. Either way, it’s stories all the way down.</p>
+  </div>
+
+  <div id="note-3">
+    <p><strong><sup>3.</sup></strong> The important point here is that there be some regular reassessment. If things go off the rails the need for reassessment will be clear, but you need to build in structures that mandate periodic evaluations. As discussed in <a href="posts/50-days-of-ai/26-27/goals/#note-2">footnote 2</a>, chapters provide convenient opportunities for such. Setting a fixed time to check in can act as a fail safe should a chapter take longer than expected to run its course. Whatever the triggering event, step 3 is the point at which your past work becomes prologue for a new story. If you’re lucky, you can just re-number the chapters from a prior version, advancing one chapter closer to your goal. If you’re really lucky, you’ll find that you’ve reached your goal. More likely, however, you’ll have to make a few adjustments based on what went wrong and what worked well, and occasionally, you’ll discover that there just isn’t a believable story to tell.</p>
+  </div>
+
+  <h3>So what?</h3>
+  <p>These steps probably sound familiar. They come in many incarnations and clearly belong to a family of iterative processes like the <a href="https://en.wikipedia.org/wiki/Scientific_method" rel="noreferrer noopener" target="_blank">scientific method</a>, <a href="https://en.wikipedia.org/wiki/Design_thinking" rel="noreferrer noopener" target="_blank">design thinking</a>, and <a href="https://en.wikipedia.org/wiki/Agile_software_development" rel="noreferrer noopener" target="_blank">Agile software development</a>. It’s also easy to see in them reflections of <a href="https://en.wikipedia.org/wiki/Cybernetics" rel="noreferrer noopener" target="_blank">cybernetics</a> and Hosfteter’s <a href="https://en.wikipedia.org/wiki/Strange_loop" rel="noreferrer noopener" target="_blank">strange loops</a>. There is nothing more central to the human experience than telling stories. Over the semester, we may discuss methodologies like Agile, <a href="https://en.wikipedia.org/wiki/Kanban" rel="noreferrer noopener" target="_blank">Kanban</a>, design thinking, <a href="https://en.wikipedia.org/wiki/Getting_Things_Done" rel="noreferrer noopener" target="_blank">GTD</a> and the like because you’ll find their followers and evangelists out in the wild. You may be tempted to ask, “which one is right?” but that’s probably the wrong question. In my experience, any structured method for getting things done is often better than no method. These methods embody mental models that try to describe the world (believable stories), and as George Box observed, “All models are wrong, but some are useful.” So remember that since they’re “wrong” they should start, not end, conversation. Avoid dogma.</p>
+
+  <p>To know whether or not a model is useful, you have to ask “compared to what?” Models do not exist in isolation. Their adoption will replace something. Again, structure often beats its absence. Maps are models of the world. They don’t show every inch of the territory they describe. So they’re “wrong,” but this doesn’t mean they aren’t useful. Context matters. </p>
+
+  <p><strong>When you boil the sum of productivity hacks and management advice down to their essence, they’re all about capturing your goals, crafting believable stories to guide action, testing these stories against reality, and refining them over time.</strong> With this in mind, you can better evaluate all that friendly advice. Just ask yourself what it contributes to crafting better shared stories and helping folks stick to the script. If the process includes the word “innovation” or “design” it’s probably concerned with telling better stories, if it’s talking about “productivity” or “efficiency” it’s often about helping folks stick to the script (usually by telling a story that helps guide action). Either way, this advice holds, “do what works.”</p>
+</blockquote>
+  <!-- END INTRO -->
+
+  <h3><a name="build" href="posts/50-days-of-ai/26-27/goals/#build" class="anchor" alt="deep link to this section"></a>Let's build something!</h3>
+  <p>
+    We'll do our building in the LIT Prompts extension. If you aren't familiar with the LIT Prompts extension, don't worry. We'll walk you through setting things up before we start building. If you have used the LIT Prompts extension before, skip to <a href="posts/50-days-of-ai/26-27/goals/#template">The Prompt Pattern (Template)</a>.
+  </p>
+  <h3><a name="upnext" href="posts/50-days-of-ai/26-27/goals/#upnext" class="anchor" alt="deep link to this section"></a>Up Next</h3>
+  <ul>
+    <li><a href="posts/50-days-of-ai/26-27/goals/#setup" onClick="expand_setup();">Setup LIT Prompts</a></li>
+    <ul>
+      <li><a href="posts/50-days-of-ai/26-27/goals/#install" onClick="expand_setup();">Install the extension</a></li>
+      <li><a href="posts/50-days-of-ai/26-27/goals/#point" onClick="expand_setup();">Point it at an API</a></li>
+    </ul>
+    <li><a href="posts/50-days-of-ai/26-27/goals/#template">The Prompt Pattern (Template)</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/goals/#tires">Kick the Tires</a></li>
+    <li><a href="posts/50-days-of-ai/26-27/goals/#references">TL;DR References</a></li>
+  </ul>
+
+  <!--
+    =================================================
+
+                   Setup LIT Prompts
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="setup" href="posts/50-days-of-ai/26-27/goals/#setup" onClick="expand_setup();" class="anchor" alt="deep link to this section"></a>Setup LIT Prompts </h2>
+  <div id="expand_setup" style="text-align: left;display:none;font-size: small;">
+    <a href="javascript:expand_setup();" style="text-decoration: none;">&#9658; Expand</a>
+  </div>
+  <div id="collapse_setup" style="text-align: left;font-size: small;">
+    <a href="javascript:collapse_setup();" style="text-decoration: none;">&#9660; Collapse</a>
+  </div>
+  <div id="setup_extension">
+    <div class="list_vid">
+      <iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/Ql8aXGvLBGU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="caption">
+        7 min intro video
+      </div>
+    </div>
+    <p>
+      <i><b>LIT Prompts</b></i> is a browser extension built at Suffolk University Law School's <a href="https://suffolklitlab.org/" target="_blank">Legal Innovation and Technology Lab</a> to help folks explore the use of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">Large Language Models</a> (LLMs) and <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank">prompt engineering</a>. LLMs are sentence completion machines, and prompts are the text upon which they build. Feed an LLM a prompt, and it will return a plausible-sounding follow-up (e.g., "Four score and seven..." might return "years ago our fathers brought forth..."). LIT Prompts lets users create and save prompt templates based on data from an active browser window (e.g., selected text or the whole text of a webpage) along with text from a user. Below we'll walk through a specific example.
+    </p>
+    <p>
+      To get started, follow <b>the first four minutes</b> of the intro video or the steps outlined below. <i>Note: The video only shows Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+    <h3><a name="install" href="posts/50-days-of-ai/26-27/goals/#install" class="anchor" alt="deep link to this section"></a>Install the extension</h3>
+    <p>Follow the links for your browser.</p>
+    <ul>
+      <li>
+        <b>Firefox:</b> (1) visit the extension's <a href="https://addons.mozilla.org/en-US/firefox/addon/lit-prompts/" target="_blank">add-ons page</a>; (2) click "Add to Firefox;" and (3) grant permissions.
+      </li>
+      <li>
+        <b>Chrome:</b>  (1) visit the extension's <a href="https://chromewebstore.google.com/detail/lit-prompts/hfeojjmldhebkeknfapoghcohkhffcmp" target="_blank">web store page</a>; (2) click "Add to Chrome;" and (3) review permissions / "Add extension."
+      </li>
+    </ul>
+    <p>
+      If you don't have Firefox, you can <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">download it here</a>. Would you rather use Chrome? <a href="https://www.google.com/chrome/" target="_blank">Download it here</a>.
+    </p>
+    <h3><a name="point" href="posts/50-days-of-ai/26-27/goals/#point" class="anchor" alt="deep link to this section"></a>Point it at an API</h3>
+    <p>
+      Here we'll walk through how to use an LLM provided by OpenAI, but you don't have to use their offering. If you're interested in alternatives, you can find them <a href="https://github.com/SuffolkLITLab/prompts/tree/main#openai-compatible-api-integration" target="_blank">here</a>. You can even run your LLM locally, avoiding the need to share your prompts with a third-party. If you need an OpenAI account, you can <a href="https://platform.openai.com/signup" target="_blank">create one here</a>. Note: when you create a new OpenAI account you are given a limited amount of free API credits. If you created an account some time ago, however, these may have expired. If your credits have expired, you will need to enter a <a href="https://platform.openai.com/account/billing/overview" target="_blank">billing method</a> before you can use the API. You can check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>.
+    </p>
+    <p>
+      Login to <a href="https://openai.com/" target="_blank">OpenAI</a>, and navigate to the <a href="https://platform.openai.com/docs/" target="_blank">API documentation</a>.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/OpenAI_keys.png"><img src="images/50-days/OpenAI_keys.png" ALT="Screenshot of the OpenAI API Keys page showing where to click to create a new key." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>Once you are looking at the API docs, follow the steps outlined in the image above. That is:
+    <ol>
+      <li>Select "API keys" from the left menu</li>
+      <li>Click "+ Create new secret key"</li>
+    </ol>
+    <hr>
+    <p>
+      On LIT Prompt's <i>Templates & Settings</i> screen, set your API Base to <code>https://api.openai.com/v1/chat/completions</code> and your API Key equal to the value you got above after clicking "+ Create new secret key".  You get there by clicking the <i>Templates & Settings</i> button in the extension's popup:
+    </p>
+    <ol>
+      <li>open the extension</li>
+      <li>click on  <i>Templates & Settings</i></li>
+      <li>enter the API Base and Key (under the section <i>OpenAI-Compatible API Integration</i>)</li>
+    </ol>
+    <div class="featured_img_center">
+      <a href="images/50-days/popup.png"><img src="images/50-days/popup.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      Once those two bits of information (the API Base and Key) are in place, you're good to go. Now you can edit, create, and run prompt templates. Just open the LIT Prompts extension, and click one of the options. I suggest, however, that you read through the <i>Templates and Settings</i> screen to get oriented. You might even try out a few of the preloaded prompt templates. This will let you jump right in and get your hands dirty in the next section.
+    </p>
+    <div class="featured_img_center">
+      <a href="images/50-days/credentials.png"><img src="images/50-days/credentials.png" ALT="Screenshot of the LIT Prompts extension popup." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+    </div>
+    <p>
+      <span style="background:yellow;">If you receive an error when trying to run a template after entering your Base and Key, and you are using OpenAI, make sure to check the state of any credits <a href="https://platform.openai.com/usage" target="_blank">here</a>. If you don't have any credits, you will need a billing method on file.</span>
+    </p>
+    <p>
+      <i>If you found this hard to follow, consider following along with the first four minutes of the video <a href="posts/50-days-of-ai/26-27/goals/#setup">above</a>. It covers the same content. It focuses on Firefox, but once you've installed the extension, the steps are the same.</i>
+    </p>
+  </div>
+
+  <!--
+    =================================================
+
+                   Write Your Template
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="template" href="posts/50-days-of-ai/26-27/goals/#template" class="anchor" alt="deep link to this section"></a>The Prompt Pattern (Template)</h2>
+
+  <div class="featured_img_right">
+    <a href="images/boxquote.png"><img src="images/boxquote.png" ALT="A slide showing the George Box quote: All models are wrong, but some models are useful." class="list_img_file"/></a>
+    <div class="caption">
+      Maps are models; they don't show everything. That's okay as long as you don't confuse the map for the territory.
+    </div>
+  </div>
+
+  <p>
+    Let's build a shortener that checks its own work. Instead of asking an LLM to make selected text shorter and simply hoping it meets our limit, we'll connect <b>four LIT Prompts templates</b>. The first drafts a shorter version; the second checks its length; the third makes another pass when needed; and the fourth displays the result only once it passes the test. Our target is <b>strictly fewer than 500 characters</b>.
+  </p>
+  <p>
+    Like our earlier examples, these templates mix plain language with variables inside double curly brackets. <code>{{highlighted}}</code> is the text you selected in the active browser tab. When one template hands its output to another, <code>{{passThrough}}</code> carries that output forward. If the output is a JSON object, we can access its values with placeholders such as <code>{{passThrough["text"]}}</code> and <code>{{passThrough["length"]}}</code>. For more, see the extension's <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">documentation</a>.
+  </p>
+  <p>
+    To use these prompts, highlight some text in your browser, open LIT Prompts, and choose <code>🗜️ Shorten to under 500 characters</code>. That's the only visible entry point; the other three templates run automatically as part of the chain.
+  </p>
+
+  <h3>1. 🗜️ Shorten to under 500 characters</h3>
+  <p>
+    Here's our starting template. We ask the LLM to cut at least 20% from the selected text, preserve its essential meaning, and return only the revision. Its output is passed to the next template rather than displayed as the finished answer.
+  </p>
+  <p>Here's the template's text:</p>
+  <section class="line-numbers">
+    <pre class="language-none" style="white-space:pre-wrap;"><code>You're a helpful editor, and you're going to trim some selected text. First, compress it by at least 20%, keeping the main points, important facts, and intended meaning. Try to get it under 500 characters without sacrificing essential information. Return only the shortened text: no introduction, explanation, quotation marks, or character count.
+
+{{highlighted}}</code></pre>
+  </section>
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. Runs the shortening instructions through an LLM.</li>
+    <li><b>JSON:</b> <code>No</code>. We want plain text that the next template can count, not a JSON-formatted LLM response.</li>
+    <li><b>Output To:</b> <code>Hidden</code>. Hides the first draft while still passing it to the next template.</li>
+    <li><b>Post-run Behavior:</b> <code>Shortener: check character limit</code>. Automatically runs the JavaScript check after the LLM responds.</li>
+    <li><b>Hide Button:</b> <code>unchecked</code>. Keeps this starting template visible in the extension popup.</li>
+    <li><b>Run in New Tab:</b> <code>unchecked</code>. Does not open a new tab to run this step.</li>
+  </ul>
+
+  <h3>2. Shortener: check character limit</h3>
+  <p>
+    Here's where we add the test. This template uses <b>JavaScript</b>, not an LLM. It reads the preceding draft from <code>passThrough</code>, trims leading and trailing whitespace, and counts its characters with JavaScript's <code>.length</code>. If the count is below <code>LIMIT</code>, it routes the result to the display template; otherwise, it asks the LLM to shorten the draft again. The returned object's <code>next</code> field controls the next step through the <code>DYNAMIC</code> post-run behavior.
+  </p>
+  <p>Here's the template's JavaScript:</p>
+  <section class="line-numbers">
+    <pre class="language-javascript" style="white-space:pre-wrap;"><code>// Change this one constant to use a different character limit.
+const LIMIT = 500;
+
+// The preceding LLM prompt returns plain text through passThrough.
+const shortened = String(passThrough == null ? "" : passThrough).trim();
+const characterCount = shortened.length;
+
+// DYNAMIC reads "next" from this returned JavaScript object.
+return {
+  next: characterCount &lt; LIMIT ? "Shortener: display final text" : "Shortener: shorten again",
+  text: shortened,
+  length: characterCount,
+  limit: LIMIT
+};</code></pre>
+  </section>
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>JavaScript</code>. Runs the code shown above instead of sending a prompt to an LLM.</li>
+    <li><b>JSON:</b> <code>No</code>. We are not requesting a JSON-formatted response from an LLM; the JavaScript itself returns an object.</li>
+    <li><b>Output To:</b> <code>Hidden</code>. Keeps the internal character count and routing result off the screen.</li>
+    <li><b>Post-run Behavior:</b> <code>DYNAMIC</code>. Reads the returned object’s <code>next</code> value to choose either the display step or another shortening pass.</li>
+    <li><b>Hide Button:</b> <code>checked</code>. This internal step should be triggered by another template, not selected directly.</li>
+    <li><b>Run in New Tab:</b> <code>unchecked</code>. Does not open a new tab to run this step.</li>
+  </ul>
+
+  <h3>3. Shortener: shorten again</h3>
+  <p>
+    If our check fails, this template gives the LLM the last draft, its measured length, and the limit. It asks for a fresh reduction without losing essential information, then sends the new version back to the same JavaScript check. That loop continues until a revision passes.
+  </p>
+  <p>Here's the template's text:</p>
+  <section class="line-numbers">
+    <pre class="language-none" style="white-space:pre-wrap;"><code>You're a careful editor. Your last revision was {{passThrough["length"]}} characters, but it must be strictly fewer than {{passThrough["limit"]}} characters. Shorten it again. Aim to remove at least 20% of what remains, or more if necessary, while keeping essential facts, meaning, and readable grammar. Prefer concise wording over dropping key points. Output only the new, shorter text. Do not add an introduction, quotation marks, Markdown fences, or a character count.
+
+Text to shorten:
+{{passThrough["text"]}}</code></pre>
+  </section>
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>LLM</code>. Sends the current text back to the LLM for another shortening pass.</li>
+    <li><b>JSON:</b> <code>No</code>. The LLM returns revised plain text rather than a JSON-formatted response.</li>
+    <li><b>Output To:</b> <code>Hidden</code>. Keeps the revised draft out of view until it passes the check.</li>
+    <li><b>Post-run Behavior:</b> <code>Shortener: check character limit</code>. Sends the revision back for another character count.</li>
+    <li><b>Hide Button:</b> <code>checked</code>. The checker should invoke this step automatically when a draft is too long.</li>
+    <li><b>Run in New Tab:</b> <code>unchecked</code>. Does not open a new tab to run this step.</li>
+  </ul>
+
+  <h3>4. Shortener: display final text</h3>
+  <p>
+    When the character check passes, this last template pulls the approved text from <code>{{passThrough["text"]}}</code>. It's a <b>Prompt</b> output, so it simply displays the text rather than making another LLM call.
+  </p>
+  <p>Here's the template's text:</p>
+  <section class="line-numbers">
+    <pre class="language-none" style="white-space:pre-wrap;"><code>{{passThrough["text"]}}</code></pre>
+  </section>
+  <p>And here are the template's parameters:</p>
+  <ul>
+    <li><b>Output Type:</b> <code>Prompt</code>. Substitutes the final text into the template without making an LLM call.</li>
+    <li><b>JSON:</b> <code>No</code>. The goal is to display plain text, not request JSON output.</li>
+    <li><b>Output To:</b> <code>Screen Only</code>. Shows the final, checked version to the user.</li>
+    <li><b>Post-run Behavior:</b> <code>FULL STOP</code>. Ends the chain once the checked text is displayed.</li>
+    <li><b>Hide Button:</b> <code>checked</code>. This step should run only after the checker confirms the character limit.</li>
+    <li><b>Run in New Tab:</b> <code>unchecked</code>. Does not open a new tab to display the result.</li>
+  </ul>
+
+  <p>
+    All four templates have JSON mode off and leave the model and other optional model settings blank (so the LLM steps use your configured defaults). Only the first template has a visible button. In the two LLM templates, the output is hidden because the next step still needs it; the final step shows just the checked result. Note that the check uses <code>characterCount &lt; LIMIT</code>, not <code>&lt;=</code>: with <code>LIMIT = 500</code>, an accepted result has at most 499 JavaScript string characters. Because it uses JavaScript's <code>.length</code>, some Unicode characters, such as emoji, can count as two code units.
+  </p>
+  <p>
+    Want a different limit? Change <code>const LIMIT = 500</code> in the JavaScript checker, and update the wording of the two LLM prompts so they aim for the same number. The model still makes "editorial" choices, so review the final result for missing nuance or mistakes.
+  </p>
+
+  <h3><a name="working" href="posts/50-days-of-ai/26-27/goals/#working" class="anchor" alt="deep link to this section"></a>Working with the above templates</h3>
+  <p>
+    You could create all four templates in LIT Prompts by copying their text, output types, and post-run behaviors one by one. The easier route is to download the complete prompts file below and upload it from the extension's <i>Templates &amp; Settings</i> screen. This preserves the links between templates, including the dynamic branch and the retry loop.
+  </p>
+  <div class="featured_img_center" style="max-width:900px;">
+    <a href="images/50-days/template_upload.png"><img src="images/50-days/template_upload.png" ALT="Screenshot of the LIT Prompts Templates and Settings page showing where to upload prompts files." class="list_img_file" style="border: 1px solid #a5a5a5;"/></a>
+  </div>
+  <p>
+    The download contains all four templates and their settings, ready to import. It is embedded in this page so the button downloads this exact prompt set.
+  </p>
+  <script type="application/json" id="shortener-prompts-data">
+{
+  "🗜️ Shorten to under 500 characters": {
+    "prompt": "You're a helpful editor, and you're going to trim some selected text. First, compress it by at least 20%, keeping the main points, important facts, and intended meaning. Try to get it under 500 characters without sacrificing essential information. Return only the shortened text: no introduction, explanation, quotation marks, or character count.\n\n{{highlighted}}",
+    "endpoint": "",
+    "model": "",
+    "temperature": "",
+    "max_tokens": "",
+    "reasoning_effort": "",
+    "verbosity": "",
+    "output": 1,
+    "json_mode": 0,
+    "json_schema": "",
+    "output_to": 4,
+    "behavior": "Shortener: check character limit",
+    "hide_button": false,
+    "run_in_new_tab": false
+  },
+  "Shortener: check character limit": {
+    "prompt": "// Change this one constant to use a different character limit.\nconst LIMIT = 500;\n\n// The preceding LLM prompt returns plain text through passThrough.\nconst shortened = String(passThrough == null ? \"\" : passThrough).trim();\nconst characterCount = shortened.length;\n\n// DYNAMIC reads \"next\" from this returned JavaScript object.\nreturn {\n  next: characterCount \u003c LIMIT ? \"Shortener: display final text\" : \"Shortener: shorten again\",\n  text: shortened,\n  length: characterCount,\n  limit: LIMIT\n};",
+    "endpoint": "",
+    "model": "",
+    "temperature": "",
+    "max_tokens": "",
+    "reasoning_effort": "",
+    "verbosity": "",
+    "output": 2,
+    "json_mode": 0,
+    "json_schema": "",
+    "output_to": 4,
+    "behavior": "pass",
+    "hide_button": true,
+    "run_in_new_tab": false
+  },
+  "Shortener: shorten again": {
+    "prompt": "You're a careful editor. Your last revision was {{passThrough[\"length\"]}} characters, but it must be strictly fewer than {{passThrough[\"limit\"]}} characters. Shorten it again. Aim to remove at least 20% of what remains, or more if necessary, while keeping essential facts, meaning, and readable grammar. Prefer concise wording over dropping key points. Output only the new, shorter text. Do not add an introduction, quotation marks, Markdown fences, or a character count.\n\nText to shorten:\n{{passThrough[\"text\"]}}",
+    "endpoint": "",
+    "model": "",
+    "temperature": "",
+    "max_tokens": "",
+    "reasoning_effort": "",
+    "verbosity": "",
+    "output": 1,
+    "json_mode": 0,
+    "json_schema": "",
+    "output_to": 4,
+    "behavior": "Shortener: check character limit",
+    "hide_button": true,
+    "run_in_new_tab": false
+  },
+  "Shortener: display final text": {
+    "prompt": "{{passThrough[\"text\"]}}",
+    "endpoint": "",
+    "model": "",
+    "temperature": "",
+    "max_tokens": "",
+    "reasoning_effort": "",
+    "verbosity": "",
+    "output": 0,
+    "json_mode": 0,
+    "json_schema": "",
+    "output_to": 1,
+    "behavior": "stop",
+    "hide_button": true,
+    "run_in_new_tab": false
+  }
+}
+  </script>
+  <div class="button_row">
+    <a href="javascript:void('');" onClick="saveTextAsFile(document.getElementById('shortener-prompts-data').textContent.trim(),'prompt_template.txt')" class="button" style="width:220px;">Download prompts file</a>
+  </div>
+
+  <!--
+    =================================================
+
+                    Kick the Tires
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="tires" href="posts/50-days-of-ai/26-27/goals/#tires" class="anchor" alt="deep link to this section"></a>Kick the Tires</h2>
+  <p>
+    It's one thing to read about something and another to put what you've learned into practice. Let's see how this template performs.
+  </p>
+  <ul>
+  
+    <li>
+      <b>Make it your own</b>. Find and highlight a big chunk of text. Then shrink it to less than 500 characters.  
+    </li>
+    <li>
+      <b>Mix it up</b>. Edit the code to set a limit other than 500 characters. See how it goes.
+    </li>
+    
+  </ul>
+    <!--
+    =================================================
+
+                       References
+
+    =================================================
+  -->
+  <hr>
+  <h2><a name="references" href="posts/50-days-of-ai/26-27/goals/#references" class="anchor" alt="deep link to this section"></a>TL;DR References</h2>
+  <p>
+    ICYMI, here are short summaries of resources linked above. If you didn't click through earlier, these are good places to explore the ideas behind the three steps—and the tools used to put them into practice.
+  </p>
+  <ul>
+    <li>
+      <a href="https://playbook.cio.gov/" target="_blank">Digital Services Playbook</a>. This guide to building effective government digital services organizes practical advice into 13 "plays," including understanding users, working iteratively, and measuring results. It's an example of how a shared playbook can turn broad goals into concrete practices.
+    </li>
+
+    <li>
+      <a href="https://knowyourmeme.com/memes/how-to-draw-an-owl?full=1" target="_blank">How to Draw an Owl</a> (Know Your Meme). The familiar two-panel joke starts with simple circles and jumps straight to a finished owl, skipping all the difficult work in between. It's a reminder that advice can sound simple while omitting the detail needed to act on it.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Minimum_viable_product" target="_blank">Minimum Viable Product (MVP)</a>. An MVP is an early version of a product with enough functionality to put an idea in front of users and learn from their feedback. In our three-step framework, each chapter can serve a similar purpose: a manageable milestone that tests whether the larger story still seems believable.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Scientific_method" target="_blank">Scientific Method</a>. Scientific inquiry uses observations, explanations, and tests to learn how the world works. The resulting evidence can support, challenge, or refine an explanation—a close cousin of the cycle of telling a believable story, checking it against reality, and revising it.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Design_thinking" target="_blank">Design Thinking</a>. This family of design approaches emphasizes understanding people's needs, exploring possibilities, making prototypes, and testing them. It treats initial ideas as things to learn from rather than answers to defend, making iteration central to the process.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile Software Development</a>. Agile approaches favor incremental delivery, collaboration, and adaptation as teams learn more about their work. Instead of treating an initial plan as fixed, teams use short cycles and feedback to decide what to do next.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Cybernetics" target="_blank">Cybernetics</a>. Cybernetics studies communication, feedback, and control in systems, whether mechanical, biological, or social. Its focus on how systems respond to information helps explain why regular checkpoints and course corrections matter.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Strange_loop" target="_blank">Strange Loops</a>. Associated with Douglas Hofstadter, a strange loop occurs when moving through levels of a system leads back to the starting point. The idea offers a useful lens for thinking about self-reference and the way each revised plan is informed by the story that came before it.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Kanban" target="_blank">Kanban</a>. Originating in Toyota's manufacturing system, kanban uses signals to coordinate work and avoid producing more than the next stage needs. Related approaches use visible workflows and limits on work in progress to help teams see where work stands and where it is getting stuck.
+    </li>
+
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Getting_Things_Done" target="_blank">Getting Things Done (GTD)</a>. David Allen's productivity method calls for capturing commitments, clarifying next actions, organizing reminders, and reviewing them regularly. It focuses less on dreaming up a destination than on helping people keep track of—and act on—the steps needed to get there.
+    </li>
+
+    <li>
+      <a href="https://github.com/SuffolkLITLab/prompts#prompt-templates" target="_blank">LIT Prompts: Prompt Templates</a>. The extension's documentation explains how templates combine instructions with placeholders for user input or selected text. Those templates are the building blocks for the shortening workflow shown above, including the handoff from one step to the next.
+    </li>
+  </ul>
+  <p><i>Summary based on LLM summarization.</i></p>
+
+  <!--
+  =================================================
+
+                  Preview projects
+
+  =================================================
+  -->
+  <div id="previews"></div>
+
+  </div>
+  <!-- END PAGE CONTENT -->
+  <div class="footer">
+      <span class="footer_links">
+        <a href="https://bsky.app/profile/davidcolarusso.com" target="_blank">Bluesky</a>
+        | <a href="https://github.com/colarusso" target="_blank">GitHub</a>
+        | <a href="./privacy">Privacy</a>
+        | <a href="https://sadlynothavocdinosaur.com/feed.xml">RSS</a>
+      </span>
+      <span class="byline">Site by <a href="https://www.davidcolarusso.com/" class="captionlnk">David Colarusso</a></span>
+  </div>
+</div>
+
+<script>
+  /*new GreenAudioPlayer('.gap-example');
+  const audio_object = document.querySelector('.gap-example  audio');
+
+  try {
+    MathJax.typeset();
+	} catch (error) {}*/
+
+</script>
+
+</BODY></HTML>
